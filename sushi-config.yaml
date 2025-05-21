@@ -3,21 +3,21 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: PH Core Implementation Guide
-canonical: https://hl7ph.org/fhir/core/ImplementationGuide/hl7.fhir.ph.core
+id: example.fhir.ph.core
+canonical: https://example.org/fhir/core/ImplementationGuide/example.fhir.ph.core
 name: PHCoreImplementationGuide
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+title: PH Core Implementation Guide
+description: This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+jurisdiction: urn:iso:std:iso:3166#PH "Philippines" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: HL7 Philippines
-  url: https://hl7ph.org
+  name: UP Manila SILab
+  url: https://github.com/UP-Manila-SILab
   # email: test@example.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
