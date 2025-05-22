@@ -6,4 +6,4 @@ Description: "Code of the barangay from the standard geographic code."
 * ^url = "https://example.com/ph-core/fhir/StructureDefinition/Barangay"
 * ^status = #draft
 * value[x] only Coding
-* value[x] from BarangayVS (extensible)
+* value[x] from ph-core-barangay-vs (extensible)

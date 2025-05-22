@@ -1,6 +1,6 @@
 // JSC Note: This needs to be redone as a complex extension. 
 
-Extension: PHCoreOccupation
+/* Extension: PHCoreOccupation
 Id: ph-core-ofccupation
 Context: Patient
 Title: "PH Core Occupation"
@@ -16,4 +16,4 @@ Description: "Patient's occupation."
 * valueCodeableConcept ^short = "Occupation Classification"
 * valueInteger only integer
 * valueInteger ^sliceName = "valueInteger"
-* valueInteger ^short = "Length in Years"
+* valueInteger ^short = "Length in Years" */

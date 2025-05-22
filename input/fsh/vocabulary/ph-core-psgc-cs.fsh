@@ -8,7 +8,3 @@ Description: "This CodeSystem resource represents the Philippine Standard Geogra
 * ^language = #en-US
 * ^experimental = false
 * ^content = #not-present
-* ^property[0].code = #source
-* ^property[0].description = "Official PSGC URL"
-* ^property[0].type = #string
-* ^property[0].uri = "https://psa.gov.ph/classification/psgc"

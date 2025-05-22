@@ -1,10 +1,10 @@
 Profile: PHCorePhilHealthID
 Parent: Identifier
-Id: Profile: ph-core-philhealth-id
+Id: ph-core-philhealth-id
 Title: "PIN - PhilHealth Identification Number"
 Description: "The permanent and unique number issued by PhilHealth to individual members and to each and every dependent."
 * ^url = "https://example.com/ph-core/fhir/StructureDefinition/PhilHealthID"
-* type = $IdentifierType#NIIP "PIN - PhilHealth Identification Number" (exactly)
+* type = http://terminology.hl7.org/CodeSystem/v2-0203#NIIP "PIN - PhilHealth Identification Number" (exactly)
 * type.text 1..
 * type.text = "PhilHealth ID" (exactly)
 * system 1..
