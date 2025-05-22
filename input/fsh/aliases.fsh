@@ -1,5 +1,8 @@
 // Identifier Profiles
 
-Alias: $OtherID = https://example.com/ph-core/fhir/StructureDefinition/OtherID
-Alias: $PhilHealthID = https://example.com/ph-core/fhir/StructureDefinition/PhilHealthID
-Alias: $PDDRegistration = https://example.com/ph-core/fhir/StructureDefinition/PHCorePDDRegistration
+Alias $NS = https://example.com/ph-core/fhir
+Alias $SD = NS/StructureDefinition
+
+Alias: $OtherID = $SD/OtherID
+Alias: $PDDRegistration = $SD/PHCorePDDRegistration
+Alias: $PhilHealthID = $NS/PhilHealthID
