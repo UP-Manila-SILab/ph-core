@@ -1,8 +1,8 @@
-ValueSet: PHCoreProvinceVS
-Id: ph-core-province-vs
+ValueSet: ProvinceVS
+Id: province-vs
 Title: "Province Codes"
 Description: "The Province codes valueset includes all province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA)."
-* ^url = "https://example.com/ph-core/fhir/ValueSet/ph-core-province-vs"
+* ^url = "urn://example.com/ph-core/fhir/ValueSet/province-vs"
 * ^status = #draft
 * ^experimental = false
 * ^language = #en-US

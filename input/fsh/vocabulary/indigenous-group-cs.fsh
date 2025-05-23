@@ -1,11 +1,11 @@
 CodeSystem: IndigenousGroupCS
-Id: IndigenousGroupCS
+Id: indigenous-group-cs
 Title: "Indigenous Groups"
 Description: "A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."
 * ^experimental = false
 * ^status = #draft
 * ^caseSensitive = true
-* ^url = "https://example.com/ph-core/fhir/CodeSystem/IndigenousGroupCS"
+* ^url = "https://example.com/ph-core/fhir/CodeSystem/indigenous-group-cs"
 * ^status = #active
 * ^content = #complete
 * ^language = #en-US

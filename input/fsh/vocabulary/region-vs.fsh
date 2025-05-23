@@ -1,8 +1,8 @@
-ValueSet: PHCoreRegionVS
-Id: ph-core-region-vs
+ValueSet: RegionVS
+Id: region-vs
 Title: "Region Codes"
 Description: "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA)."
-* ^url = "https://example.com/ph-core/fhir/ValueSet/ph-core-region-vs"
+* ^url = "https://example.com/ph-core/fhir/ValueSet/region-vs"
 * ^status = #draft
 * ^experimental = false
 * ^language = #en-US
