@@ -1,6 +1,6 @@
 # PH Core FHIR Implementation Guide
 
-** This IG is provided to support a connectathon. It is prototypical, not officially endorsed and may contain any number of errors and omissions. There are no guarantees of quality or stability.**
+<p class="dragon">This IG is provided to support a connectathon. It is prototypical, not officially endorsed and may contain any number of errors and omissions. There are no guarantees of quality or stability.</p>
 
 [PH Core](#to-be-done) is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Philippine context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
