@@ -10,6 +10,3 @@ Description: "The permanent and unique number issued by PhilHealth to individual
 * system 1..
 * system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * value 1..
-* value ^short = "PIN - PhilHealth Identification Number"
-* value ^example.label = "PhilHealth ID"
-* value ^example.valueString = "PH123219042123"
