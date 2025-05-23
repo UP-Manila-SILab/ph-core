@@ -1,4 +1,3 @@
-
 Profile: PHCorePatient
 Parent: Patient
 Id: ph-core-patient
