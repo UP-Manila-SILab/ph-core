@@ -1,8 +1,8 @@
-ValueSet: PHCoreBarangayVS
-Id: ph-core-barangay-vs
+ValueSet: BarangayVS
+Id: barangay-vs
 Title: "Barangay Codes"
 Description: "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA)."
-* ^url = "https://example.com/ph-core/fhir/ValueSet/BarangayVS"
+* ^url = "urn://example.com/ph-core/fhir/ValueSet/ph-core-barangay-vs"
 * ^status = #draft
 * ^experimental = false
 * ^language = #en-US

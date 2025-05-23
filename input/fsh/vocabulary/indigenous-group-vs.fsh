@@ -1,5 +1,6 @@
 ValueSet: IndigenousGroupVS
-Id: IndigenousGroupVS
+Id: 
+
 Title: "Indigenous Groups"
 Description: "A value set representing the recognized Indigenous groups to which a person may belong."
 * ^url = "https://nhdr.gov.ph/fhir/ValueSet/IndigenousGroupVS"
