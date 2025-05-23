@@ -2,8 +2,6 @@
 
 <p class="dragon">This IG is provided to support a connectathon. It is prototypical, not officially endorsed and may contain any number of errors and omissions. There are no guarantees of quality or stability.</p>
 
-{% include linking.svg %}
-
 [PH Core](#to-be-done) is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Philippine context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
 PH Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. Applications that conform to PH Core can access the following information about the patient:
@@ -25,6 +23,10 @@ PH Core provides basis for profiles that define the FHIR resources to be support
 In this regard it is similar in nature to other international FHIR specifications such as US Core FHIR Implementation Guide.
 
 For a detailed description of these different usages of PH Core, see the [Conformance Requirements](#to-be-done) and [Must Support](#to-be-done) pages.
+
+Below is a diagram showing where PH Core is located in the hierarchy of profiles.
+
+{% include layers.svg %}
 
 ## Did you find an error?
 
