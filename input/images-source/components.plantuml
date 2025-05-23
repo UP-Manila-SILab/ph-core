@@ -1,0 +1,130 @@
+@startuml
+
+'More example available at https://plantuml.com/component-diagram
+
+actor me
+
+interface LAUNCH_UI as "Smart Launch Web UI"
+
+me -do-> LAUNCH_UI : define the link and launch 
+
+interface FORMS_SERVER as "SDC Forms Server"
+
+interface SMART_CDR as "Smart Clinical Data Repository"
+
+note right of SMART_CDR
+A FHIR clinical data
+repository that understands
+the SMART protocol.
+end note
+
+[SMART proxy] -up- SMART_CDR
+interface CDR as "Clinical Data Repository"
+
+note left of [SMART proxy]
+The FHIR repository we
+are using does not
+offer SMART, so we
+remove the SMART auth
+using a proxy.
+end note
+
+[SMART proxy] -do-> CDR : "localhost:8080"
+
+database "Postgres" as PG
+component HAPI <<FHIR R4>>
+
+note left of HAPI
+HAPI plays the
+role of the CDR
+end note
+
+database samples
+
+[curl]
+
+me -do-> curl : upload some samples
+
+curl -up-> samples
+
+note right of curl
+So upload some samples.
+end note
+
+note left of samples
+Before we can see
+anything in the
+launcher, there have
+to be some samples
+in the CDR.
+end note
+
+
+[HAPI] -up- CDR 
+
+note left of CDR
+A simple FHIR CDR
+end note
+
+curl -do-> HAPI
+
+[Smart Launcher] -up- LAUNCH_UI
+
+note left of [Smart Launcher]
+The Smart Launcher is an
+application that allows
+to create a trust context
+between some app and the
+place where the data is stored
+using stereotypes such as
+patient, practitioner and
+encounter.
+end note
+
+interface SMART as "Smart App"
+
+note right of SMART
+This is a SMART-on-FHIR app.
+This could be any app that works
+with FHIR data.
+end note
+
+[Smart Launcher] -do-> SMART
+
+[Smart Launcher] -do-> SMART_CDR : localhost:8081
+
+[Smart Forms] -up- SMART
+
+note right of [Smart Forms]
+In this case, the app is
+a forms renderer. It uses
+two different FHIR servers
+to store the form layouts and
+the data obtained.
+end note
+
+[Smart Forms] .do.> SMART_CDR
+
+[Smart Forms] .do.> FORMS_SERVER
+
+note right of FORMS_SERVER
+A FHIR server capable
+of storing forms
+end note
+
+
+component formsRepo <<FHIR R4>>
+
+note bottom of formsRepo
+We are using a FHIR server on the
+internet at CSIRO located at
+""smartforms.csiro.au/api/fhir""
+end note
+
+
+[formsRepo] -up- FORMS_SERVER
+
+[HAPI] -do-> PG
+
+
+@enduml
