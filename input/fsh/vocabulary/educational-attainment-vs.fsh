@@ -5,5 +5,3 @@ Description: "This ValueSet includes all categories of educational programs, cou
 * ^url = "urn://example.com/fhir/ValueSet/educational-attainment-vs"
 * ^status = #draft
 * ^experimental = false
-// JSC Note: commenting out the compose until this code system is available in a terminology server
-// * include codes from system PSCEDCS

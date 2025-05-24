@@ -6,6 +6,3 @@ Description: "The Region codes valueset includes all region values from the Phil
 * ^status = #draft
 * ^experimental = false
 * ^language = #en-US
-// JSC Note: given that the IG Publisher can't perform this since the codes aren't in any terminology server, I'm commenting out the compose for now
-// * include codes from system $PSGCCS
-// * include codes from system $PSGCCS where concept is-a #_Region
