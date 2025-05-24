@@ -1,0 +1,60 @@
+@startuml
+
+'Hide empty parts:
+hide empty fields
+hide empty methods
+hide circles
+
+'You can find more examles at https://plantuml.com/class-diagram
+
+package r4 <<fhir_version>> {
+
+class R4Patient as "Patient"
+
+}
+
+package ph_core <<IG>>{
+
+package extensions {
+
+}
+
+package profiles {
+
+class PHCoreAddress as "Address"
+class PHCoreOtherID as "OtherID"
+class PHCorePatient as "Patient"
+class PHCorePddRegistration as "Registration"
+class PHCorePhilHealthID as "PhilHealthID"
+
+PHCorePatient -up-|> R4Patient
+
+
+}
+
+package vocabulary {
+
+}
+
+package extension {
+
+}
+
+
+
+}
+
+package ph_nhdr <<IG>>{ 
+
+package profiles_nhdr as "profiles" {
+
+class NhdrPatient as "Patient"
+
+NhdrPatient -up-|> PHCorePatient
+
+}
+
+}
+
+
+@enduml
