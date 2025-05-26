@@ -9,8 +9,7 @@ Description: "Captures key demographic and administrative information about indi
     http://hl7.org/fhir/StructureDefinition/patient-religion named religion 0..* and
     indigenous-group named indigenousGroup 0..* and
     indigenous-people named indigenousPeople 0..* and
-    // Occupation named occupation 0..* and
-    // JSC Note: occupation is commented out because the extension needs to be redone as a complex extension
+    occupation named occupation 0..* and
     race named race 0..1 and
     educational-attainment named educationalAttainment 0..1
 * identifier only ph-core-philhealth-id or ph-core-pdd-registration or ph-core-other-id
