@@ -1,9 +1,9 @@
-Extension: PHCoreOccupation
-Id: ph-core-ofccupation
+Extension: Occupation
+Id: occupation
 Context: Patient
 Title: "PH Core Occupation"
 Description: "Patient's occupation."
-* ^url = "urn://example.com/ph-core/fhir/StructureDefinition/Occupation"
+* ^url = "urn://example.com/ph-core/fhir/StructureDefinition/occupation"
 * ^status = #draft
 * extension contains
     occupationClassification 1..1 and
