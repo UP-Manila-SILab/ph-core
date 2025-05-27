@@ -1,0 +1,172 @@
+{
+	"resourceType": "Bundle",
+	"type": "transaction",
+	"entry": [
+		{
+			"fullUrl": "urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b",
+			"resource": {
+				"resourceType": "Patient",
+				"id": "example-patient",
+				"name": [
+					{
+						"family": "Dela Cruz",
+						"given": [
+							"Juan"
+						]
+					}
+				],
+				"gender": "male",
+				"birthDate": "1980-01-01",
+				"address": [
+					{
+						"city": "Manila",
+						"state": "NCR",
+						"country": "PH"
+					}
+				],
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns='http://www.w3.org/1999/xhtml'>Patient Juan Dela Cruz from Manila</div>"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Patient"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae",
+			"resource": {
+				"resourceType": "Encounter",
+				"id": "example-encounter",
+				"status": "finished",
+				"class": {
+					"code": "AMB",
+					"display": "ambulatory"
+				},
+				"subject": {
+					"reference": "urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b"
+				},
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns='http://www.w3.org/1999/xhtml'>An ambulatory visit</div>"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Encounter"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:1a391d1e-a068-479a-88e3-e3d52c3a6f64",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "example-condition",
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "44054006",
+							"display": "Diabetes mellitus type 2"
+						}
+					]
+				},
+				"subject": {
+					"reference": "urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b"
+				},
+				"encounter": {
+					"reference": "urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae"
+				},
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns='http://www.w3.org/1999/xhtml'>Type 2 Diabetes Mellitus</div>"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Condition"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:024dcb47-cc23-407a-839b-b4634e95abae",
+			"resource": {
+				"resourceType": "Medication",
+				"id": "example-medication",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns='http://www.w3.org/1999/xhtml'>Metformin 500mg</div>"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Medication"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:013f46df-f245-4a2f-beaf-9eb2c47fb1a3",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "example-observation",
+				"status": "final",
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "85354-9",
+							"display": "Blood pressure panel"
+						}
+					]
+				},
+				"valueQuantity": {
+					"value": 120,
+					"unit": "mmHg"
+				},
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns='http://www.w3.org/1999/xhtml'>Blood pressure reading: 120 mmHg</div>"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:b43c67e7-d9c4-48bb-a1b4-55769eeb9066",
+			"resource": {
+				"resourceType": "AllergyIntolerance",
+				"id": "example-allergy",
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "294494002",
+							"display": "Benethamine penicillin allergy"
+						}
+					]
+				},
+				"criticality": "high",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					]
+				},
+				"patient": {
+					"reference": "urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b"
+				},
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns='http://www.w3.org/1999/xhtml'>Allergy to Penicillin</div>"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "AllergyIntolerance"
+			}
+		}
+	]
+}
