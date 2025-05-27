@@ -41,6 +41,7 @@
 				"id": "example-encounter",
 				"status": "finished",
 				"class": {
+					"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
 					"code": "AMB",
 					"display": "ambulatory"
 				},
@@ -62,6 +63,15 @@
 			"resource": {
 				"resourceType": "Condition",
 				"id": "example-condition",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					]
+				},
 				"code": {
 					"coding": [
 						{
@@ -195,11 +205,6 @@
 									"system": "http://snomed.info/sct",
 									"code": "271649006",
 									"display": "Systolic blood pressure"
-								},
-								{
-									"system": "http://acme.org/devices/clinical-codes",
-									"code": "bp-s",
-									"display": "Systolic Blood pressure"
 								}
 							]
 						},
