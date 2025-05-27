@@ -119,7 +119,8 @@
 				"id": "blood-pressure",
 				"meta": {
 					"profile": [
-						"http://hl7.org/fhir/StructureDefinition/vitalsigns"
+						"http://hl7.org/fhir/StructureDefinition/vitalsigns",
+						"http://hl7.org/fhir/StructureDefinition/bp"
 					]
 				},
 				"text": {
@@ -163,12 +164,12 @@
 					"text": "Blood pressure systolic & diastolic"
 				},
 				"subject": {
-					"reference": "Patient/example"
+					"reference": "urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b"
 				},
 				"effectiveDateTime": "2012-09-17",
 				"performer": [
 					{
-						"reference": "Practitioner/example"
+						"reference": "urn:uuid:a036fd4c-c950-497b-8905-0d2c5ec6f1d4"
 					}
 				],
 				"interpretation": [
@@ -199,11 +200,6 @@
 								{
 									"system": "http://loinc.org",
 									"code": "8480-6",
-									"display": "Systolic blood pressure"
-								},
-								{
-									"system": "http://snomed.info/sct",
-									"code": "271649006",
 									"display": "Systolic blood pressure"
 								}
 							]
@@ -298,6 +294,52 @@
 			"request": {
 				"method": "POST",
 				"url": "AllergyIntolerance"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:a036fd4c-c950-497b-8905-0d2c5ec6f1d4",
+			"resource": {
+				"resourceType": "Practitioner",
+				"id": "example-practitioner",
+				"name": [
+					{
+						"family": "Santos",
+						"given": [
+							"Maria",
+							"Clara"
+						]
+					}
+				],
+				"telecom": [
+					{
+						"system": "phone",
+						"value": "+63-912-345-6789",
+						"use": "mobile"
+					},
+					{
+						"system": "email",
+						"value": "maria.santos@example.ph",
+						"use": "work"
+					}
+				],
+				"address": [
+					{
+						"use": "home",
+						"line": [
+							"1234 Mabini Street"
+						],
+						"city": "Manila",
+						"state": "NCR",
+						"postalCode": "1000",
+						"country": "PH"
+					}
+				],
+				"gender": "female",
+				"birthDate": "1985-05-15"
+			},
+			"request": {
+				"method": "POST",
+				"url": "Practitioner"
 			}
 		}
 	]
