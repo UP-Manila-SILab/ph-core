@@ -40,17 +40,25 @@ Usage: #example
 * entry[=].request.url = "Practitioner"
 
 Instance: example-patient
-InstanceOf: Patient
+InstanceOf: urn://example.com/ph-core/fhir/StructureDefinition/ph-core-patient
 Usage: #inline
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"
+Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines."
+//* text.status = #generated
+* meta.profile[0] = "urn://example.com/ph-core/fhir/StructureDefinition/ph-core-patient"
 * name.family = "Dela Cruz"
 * name.given = "Juan"
 * gender = #male
 * birthDate = "1980-01-01"
+* address.line = "123 Mabini Street"
 * address.city = "Manila"
 * address.state = "NCR"
 * address.country = "PH"
+* identifier.type.text = "PhilHealth ID"
+* identifier.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier.value = "PH123219042123"
+* active = true
+* gender = #male
+* birthDate = "1985-06-15"
 
 Instance: example-encounter
 InstanceOf: Encounter
