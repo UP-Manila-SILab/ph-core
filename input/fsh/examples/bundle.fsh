@@ -48,7 +48,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * gender = #male
 * birthDate = "1980-01-01"
 * address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
-* address.extension.valueCoding = https://psa.gov.ph/classification/psgc#1380601001  "Barangay 1"
+* address.extension.valueCoding = https://psa.gov.ph/classification/psgc#1380100001  "Barangay 1"
 * identifier.type.text = "PhilHealth ID"
 * identifier.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier.value = "PH123219042123"

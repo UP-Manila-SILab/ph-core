@@ -37,4 +37,4 @@ Description: "Other Philippine IDs such as TIN, SSS, GSIS, Divers License, Passp
 | AN | PAN - Accreditation Number |
 
 "
-* ^url = "urn://example.com/ph-core/fhir/StructureDefinition/ph-core-other-id"
+
