@@ -1,8 +1,8 @@
 Extension: CityMunicipality
 Id: city-municipality
+Title: "City/Municipality"
 Context: Address
-Title: "City Code"
-Description: "Code of the city/municipality from the standard geographic code."
-* ^url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
+Description: "City/municipality from the standard geographic code."
+* insert ExperimentalStructureDefinition
 * value[x] only Coding
-* value[x] from city-vs (extensible)
+* value[x] from cities (extensible)

@@ -1,10 +1,5 @@
-Profile: PHCoreOtherID
-Parent: Identifier
-Id: ph-core-other-id
-Title: "List of other acceptable IDs"
-Description: "Other Philippine IDs such as TIN, SSS, GSIS, Divers License, Passport no., National ID"
-* ^purpose = "
-<html><style>table, thead, td{border:2px solid #ccc; border-collapse:collapse}</style></html>
+# Other Philippine IDs such as TIN, SSS, GSIS, Divers License, Passport no., National ID
+
 ## Combined:
 
 | **Code** | **Display** | **Use** |
@@ -33,6 +28,3 @@ Description: "Other Philippine IDs such as TIN, SSS, GSIS, Divers License, Passp
 |:---------|:------------|
 | EN | PEN - PhilHealth Employer's Number |
 | AN | PAN - Accreditation Number |
-
-"
-* ^url = "urn://example.com/ph-core/fhir/StructureDefinition/ph-core-other-id"
