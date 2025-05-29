@@ -175,7 +175,8 @@ menu:
 # * useContext
 # * copyright
 # * packageId
-#
+
+language: en-PH
 #
 # ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
 # │  The flags below configure aspects of how SUSHI processes FSH.                                 │
