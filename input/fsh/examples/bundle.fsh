@@ -40,19 +40,15 @@ Usage: #example
 * entry[=].request.url = "Practitioner"
 
 Instance: example-patient
-InstanceOf: urn://example.com/ph-core/fhir/StructureDefinition/ph-core-patient
+InstanceOf: ph-core-patient
 Usage: #inline
 Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines."
-//* text.status = #generated
-* meta.profile[0] = "urn://example.com/ph-core/fhir/StructureDefinition/ph-core-patient"
 * name.family = "Dela Cruz"
 * name.given = "Juan"
 * gender = #male
 * birthDate = "1980-01-01"
-* address.line = "123 Mabini Street"
-* address.city = "Manila"
-* address.state = "NCR"
-* address.country = "PH"
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
+* address.extension.valueCoding = https://psa.gov.ph/classification/psgc#1380601001  "Barangay 1"
 * identifier.type.text = "PhilHealth ID"
 * identifier.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier.value = "PH123219042123"
@@ -61,10 +57,9 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * birthDate = "1985-06-15"
 
 Instance: example-encounter
-InstanceOf: Encounter
+InstanceOf: ph-core-encounter
 Usage: #inline
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>An ambulatory encounter for Juan Dela Cruz that has been completed.</div>"
+Description: "An ambulatory encounter for Juan Dela Cruz that has been completed."
 * status = #finished
 * class = $v3-ActCode#AMB "ambulatory"
 * subject = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
@@ -72,8 +67,7 @@ Usage: #inline
 Instance: example-condition
 InstanceOf: Condition
 Usage: #inline
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"
+Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus."
 * clinicalStatus = $condition-clinical#active "Active"
 * code = $sct#44054006 "Diabetes mellitus type 2"
 * subject = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
@@ -82,14 +76,12 @@ Usage: #inline
 Instance: example-medication
 InstanceOf: Medication
 Usage: #inline
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>A medication resource with no specific details provided.</div>"
+Description: "A medication resource with no specific details provided."
 
 Instance: blood-pressure
-InstanceOf: Observation
+InstanceOf: ph-core-observation
 Usage: #inline
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal).</div>"
+Description: "Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal)."
 * meta.profile[0] = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/bp"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -118,8 +110,7 @@ Usage: #inline
 Instance: example-allergy
 InstanceOf: AllergyIntolerance
 Usage: #inline
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>"
+Description: "Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin."
 * code = $sct#294494002 "Benethamine penicillin allergy"
 * criticality = #high
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
@@ -128,8 +119,7 @@ Usage: #inline
 Instance: example-practitioner
 InstanceOf: Practitioner
 Usage: #inline
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.</div>"
+Description: "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph."
 * name.family = "Santos"
 * name.given[0] = "Maria"
 * name.given[+] = "Clara"
