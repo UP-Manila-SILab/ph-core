@@ -3,6 +3,7 @@ Id: occupation
 Context: Patient
 Title: "PH Core Occupation"
 Description: "Patient's occupation."
+* insert ExperimentalStructureDefinition
 * extension contains
     occupationClassification 1..1 and
     occupationLength 1..1

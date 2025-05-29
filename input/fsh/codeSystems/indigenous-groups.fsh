@@ -2,6 +2,7 @@ CodeSystem: IndigenousGroups
 Id: indigenous-groups
 Title: "Indigenous Groups"
 Description: "A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."
+* insert ShareableCodeSystem
 * #Aetas "Aetas" 
 * #Ati "Ati" 
 * #Badjaos "Badjaos" 
