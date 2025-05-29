@@ -1,7 +1,7 @@
 Extension: Occupation
 Id: occupation
 Context: Patient
-Title: "PH Core Occupation"
+Title: "Occupation"
 Description: "Patient's occupation."
 * insert ExperimentalStructureDefinition
 * extension contains
