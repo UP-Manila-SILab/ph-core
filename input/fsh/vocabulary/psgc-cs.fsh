@@ -8,3 +8,4 @@ Description: "This CodeSystem resource represents the Philippine Standard Geogra
 * ^language = #en-US
 * ^experimental = false
 * ^content = #not-present
+* #1380100001 "Barangay 1"
