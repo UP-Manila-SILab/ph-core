@@ -4,7 +4,6 @@ Context: Patient
 Title: "PH Core Occupation"
 Description: "Patient's occupation."
 * ^url = "urn://example.com/ph-core/fhir/StructureDefinition/occupation"
-* ^status = #draft
 * extension contains
     occupationClassification 1..1 and
     occupationLength 1..1

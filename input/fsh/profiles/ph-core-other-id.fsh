@@ -3,8 +3,6 @@ Parent: Identifier
 Id: ph-core-other-id
 Title: "List of other acceptable IDs"
 Description: "Other Philippine IDs such as TIN, SSS, GSIS, Divers License, Passport no., National ID"
-
-
 * ^purpose = "
 <html><style>table, thead, td{border:2px solid #ccc; border-collapse:collapse}</style></html>
 ## Combined:
