@@ -4,6 +4,6 @@ Id: ph-core-organization
 Title: "PH Core Organization"
 Description: "This profile localizes the FHIR R4 Organization resource to the Philippine context."
 * ^url = "urn://example.com/ph-core/fhir/StructureDefinition/ph-core-organization"
-* identifier only ph-core-doh-fhud-code or ph-core-other-id
+* identifier only ph-core-doh-fhud-code
 * address only ph-core-address
 * contact.address only ph-core-address
