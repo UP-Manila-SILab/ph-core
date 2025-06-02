@@ -1,4 +1,5 @@
-Instance: ExampleTransactionBundle
+Instance: example-transaction
+name = ExampleTransactionBundle
 InstanceOf: Bundle
 Usage: #example
 Description: "Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos."
