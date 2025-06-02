@@ -1,4 +1,4 @@
-Instance: PhilHealthIdentifierNamingSystem
+Instance: PhilHealthIdentifier
 InstanceOf: NamingSystem
 Usage: #definition
 Title: "PhilHealth Identification Number System"
