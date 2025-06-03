@@ -66,6 +66,13 @@ When everyone has agreed on a course of action, IG changes should be submitted a
 
 There are lots of things that the current PH Core FHIR Implementation workgroup does not have. These things will hopefully be implemented at some point. At that point in time, these links may be maintained to point somewhere. Stay tuned.
 
+{% include ip-statements.xhtml %}
+{% include cross-version-analysis.xhtml %}
+{% include dependency-table.xhtml %}
+{% include dependency-table-short.xhtml %}
+{% include dependency-table-nontech.xhtml %}
+{% include globals-table.xhtml %}
+
 ## Acknowledgements
 
 **This README text is derived from the AU Core FHIR Implementation Guide.**

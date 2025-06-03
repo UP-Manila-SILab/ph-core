@@ -1,5 +1,4 @@
-Instance: example-transaction-bundle
-name = ExampleTransaction
+Instance: transaction-ex
 InstanceOf: Bundle
 Usage: #example
 Description: "Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos."
@@ -43,9 +42,9 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * birthDate = "1980-01-01"
 * address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
 * address.extension.valueCoding = PSGC#1380100001 "Barangay 1"
-* identifier.value = "boo"
+* identifier.value = "nn-nnnnnnnnn-n"
 //* identifier.system = "https://www.philhealth.gov.ph/advisories/2016/adv2016-0012.pdf"
-* identifier.system = "urn://example.com/ph-core/fhir/NamingSystem/PhilHealthIdentifierNamingSystem"
+* identifier.system = "urn://example.com/ph-core/fhir/NamingSystem/philhealth-id-ns"
 * active = true
 * gender = #male
 * birthDate = "1985-06-15"
