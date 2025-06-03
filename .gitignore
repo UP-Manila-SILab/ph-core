@@ -6,3 +6,5 @@ Thumbs.db
 /temp
 /template
 /.asciidoctorconfig.adoc
+.vscode/settings.json
+.gitignore
