@@ -1,14 +1,7 @@
-Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias: $sct = http://snomed.info/sct
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $loinc = http://loinc.org
-Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
-
-Instance: example-transaction-bundle
+Instance: transaction-ex
 InstanceOf: Bundle
 Usage: #example
+Description: "Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos."
 * type = #transaction
 * entry[0].fullUrl = "urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b"
 * entry[=].resource = example-patient
@@ -40,25 +33,25 @@ Usage: #example
 * entry[=].request.url = "Practitioner"
 
 Instance: example-patient
-InstanceOf: ph-core-patient
-Usage: #inline
+InstanceOf: PHCorePatient
+Usage: #example
 Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines."
 * name.family = "Dela Cruz"
 * name.given = "Juan"
 * gender = #male
 * birthDate = "1980-01-01"
 * address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
-* address.extension.valueCoding = https://psa.gov.ph/classification/psgc#1380100001  "Barangay 1"
-* identifier.type.text = "PhilHealth ID"
-* identifier.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier.value = "PH123219042123"
+* address.extension.valueCoding = PSGC#1380100001 "Barangay 1"
+* identifier.value = "nn-nnnnnnnnn-n"
+//* identifier.system = "https://www.philhealth.gov.ph/advisories/2016/adv2016-0012.pdf"
+* identifier.system = "urn://example.com/ph-core/fhir/NamingSystem/philhealth-id-ns"
 * active = true
 * gender = #male
 * birthDate = "1985-06-15"
 
 Instance: example-encounter
-InstanceOf: ph-core-encounter
-Usage: #inline
+InstanceOf: PHCoreEncounter
+Usage: #example
 Description: "An ambulatory encounter for Juan Dela Cruz that has been completed."
 * status = #finished
 * class = $v3-ActCode#AMB "ambulatory"
@@ -66,7 +59,7 @@ Description: "An ambulatory encounter for Juan Dela Cruz that has been completed
 
 Instance: example-condition
 InstanceOf: Condition
-Usage: #inline
+Usage: #example
 Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus."
 * clinicalStatus = $condition-clinical#active "Active"
 * code = $sct#44054006 "Diabetes mellitus type 2"
@@ -75,12 +68,12 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 
 Instance: example-medication
 InstanceOf: Medication
-Usage: #inline
+Usage: #example
 Description: "A medication resource with no specific details provided."
 
 Instance: blood-pressure
-InstanceOf: ph-core-observation
-Usage: #inline
+InstanceOf: PHCoreObservation
+Usage: #example
 Description: "Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal)."
 * meta.profile[0] = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/bp"
@@ -109,7 +102,7 @@ Description: "Blood pressure observation for Juan Dela Cruz taken on 17 Septembe
 
 Instance: example-allergy
 InstanceOf: AllergyIntolerance
-Usage: #inline
+Usage: #example
 Description: "Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin."
 * code = $sct#294494002 "Benethamine penicillin allergy"
 * criticality = #high
@@ -118,7 +111,7 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 
 Instance: example-practitioner
 InstanceOf: Practitioner
-Usage: #inline
+Usage: #example
 Description: "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph."
 * name.family = "Santos"
 * name.given[0] = "Maria"

@@ -28,3 +28,14 @@
 |:---------|:------------|
 | EN | PEN - PhilHealth Employer's Number |
 | AN | PAN - Accreditation Number |
+
+
+```
+* ^url = "https://verification.fda.gov.ph"
+// JSC Note: the complete list can be downloaded in various formats from https://verification.fda.gov.ph/ALL_DrugProductslist.php
+// JSC Note: Note that there is also the Philippine National Drug Formulary, which I've only found in PDF form so far. Is that the same content?
+```
+
+"The Indigenous Peoples Rights Act of 1997".
+https://ncip.gov.ph/wp-content/uploads/2020/03/IPRA-LAW.pdf
+

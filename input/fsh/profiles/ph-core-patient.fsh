@@ -11,7 +11,7 @@ Description: "Captures key demographic and administrative information about indi
     occupation named occupation 0..* and
     race named race 0..1 and
     educational-attainment named educationalAttainment 0..1
-* identifier only ph-core-philhealth-id or ph-core-pdd-registration
+* identifier only PHCorePhilHealthID or PHCorePddRegistration
 * address only ph-core-address
 * maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
 * contact.relationship from http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (required)
