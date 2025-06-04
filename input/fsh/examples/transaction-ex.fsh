@@ -52,12 +52,6 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * extension[religion].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1007 "Atheism"
 * extension[indigenousGroup].url = "urn://example.com/ph-core/fhir/StructureDefinition/indigenous-group"
 * extension[indigenousGroup].valueCodeableConcept = urn://example.com/ph-core/fhir/CodeSystem/indigenous-groups#Ilongots "Ilongots" 
-* extension[indigenousPeople].url = "urn://example.com/ph-core/fhir/StructureDefinition/indigenous-people"
-* extension[indigenousPeople].valueBoolean = true
-* extension[indigenousPeople][+].url = "urn://example.com/ph-core/fhir/StructureDefinition/indigenous-people"
-* extension[indigenousPeople][=].valueBoolean = false
-* extension[indigenousPeople][+].url = "urn://example.com/ph-core/fhir/StructureDefinition/indigenous-people"
-* extension[indigenousPeople][=].valueBoolean = true
 * extension[race].url = "urn://example.com/ph-core/fhir/StructureDefinition/race"
 * extension[race].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-Race#2036-2 "Filipino"
 * identifier.system = "urn://example.com/ph-core/fhir/NamingSystem/philhealth-id-ns"
@@ -74,27 +68,28 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 
 * address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
 * address.extension.valueCoding = PSGC#1380200000 "City of Las Piñas"
+
 * address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
 * address.extension[=].valueCoding = PSGC#1380100000 "City of Caloocan"
 
-* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/regions"
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
 * address.extension.valueCoding = PSGC#0102800000  "Ilocos Norte"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/regions"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
 * address.extension[=].valueCoding = PSGC#0102900000  "Ilocos Sur"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/regions"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
 * address.extension[=].valueCoding = PSGC#0103300000  "La Union"
 
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#0403400000  "Laguna"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#0405800000  "Rizal"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#1704000000  "Marinduque"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#1705100000  "Occidental Mindoro"
 
 Instance: example-encounter
