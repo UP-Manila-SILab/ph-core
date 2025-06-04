@@ -42,8 +42,6 @@ PH Core R1 is currently in development.
 
 See [How to Register - Participant Information](#to-be-done)
 
-for information on how to participate in the PH Core Technical Design Group and Clinical Design Group as part of Sparked, the Philippine FHIR Accelerator. Visit the [HL7 Phillipines - PH Core Technical Design Group Home](#to-be-done)
-
 ### 2. Discuss an issue in chat.fhir.org
 
 If you have a question, feature request, or proposed change, the best place to start is [Zulip](#to-be-done)
