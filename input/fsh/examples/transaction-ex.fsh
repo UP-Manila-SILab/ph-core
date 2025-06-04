@@ -68,8 +68,34 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.district = "NCR"
 * address.postalCode = "1100"
 * address.country = "PH"
-* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
+
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/barangays"
 * address.extension.valueCoding = PSGC#1380100001 "Barangay 1"
+
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
+* address.extension.valueCoding = PSGC#1380200000 "City of Las Piñas"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
+* address.extension[=].valueCoding = PSGC#1380100000 "City of Caloocan"
+
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/regions"
+* address.extension.valueCoding = PSGC#0102800000  "Ilocos Norte"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/regions"
+* address.extension[=].valueCoding = PSGC#0102900000  "Ilocos Sur"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/regions"
+* address.extension[=].valueCoding = PSGC#0103300000  "La Union"
+
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[=].valueCoding = PSGC#0403400000  "Laguna"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[=].valueCoding = PSGC#0405800000  "Rizal"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[=].valueCoding = PSGC#1704000000  "Marinduque"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/provinces"
+* address.extension[=].valueCoding = PSGC#1705100000  "Occidental Mindoro"
 
 Instance: example-encounter
 InstanceOf: PHCoreEncounter
