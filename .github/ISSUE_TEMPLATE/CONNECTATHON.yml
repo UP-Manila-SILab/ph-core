@@ -26,6 +26,7 @@ body:
         - Create
         - Update
         - Validate
+        - Search
         - Other
     validations:
       required: true
