@@ -63,7 +63,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.postalCode = "1100"
 * address.country = "PH"
 
-* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/barangays"
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/barangay"
 * address.extension.valueCoding = PSGC#1380100001 "Barangay 1"
 
 * address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
