@@ -6,3 +6,6 @@
 
 #   This is an experimental IG and does not require stable code systems
 MSG_EXPERIMENTAL
+
+#   The deprecation is caused by R5 validation, which cannot be suppressed.
+MSG_DEPENDS_ON_DEPRECATED
