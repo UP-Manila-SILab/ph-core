@@ -152,6 +152,31 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * patient = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
 
+
+Instance: example-immunization
+InstanceOf: PHCoreImmunization
+Description: "Flu shot for H5N1-1203."
+Usage: #example
+* doseQuantity = 5 'mg'
+* encounter = Reference(Encounter/encounter-single-ex)
+* expirationDate = "2015-02-15"
+* fundingSource = $immunization-funding-source#private
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+* isSubpotent = true
+* lotNumber = "AAJN11K"
+* note.text = "Notes on adminstration of vaccine"
+* occurrenceDateTime = "2013-01-10"
+* patient = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
+* performer.actor = Reference(urn:uuid:a036fd4c-c950-497b-8905-0d2c5ec6f1d4)
+* performer.function = $v2-0443#OP
+* primarySource = true
+* route = $v3-RouteOfAdministration#IM "Injection, intramuscular"
+* site = $v3-ActSite#LA "left arm"
+* status = #completed
+* vaccineCode = http://hl7.org/fhir/sid/cvx#123
+* vaccineCode.text = "influenza, H5N1-1203"
+
 Instance: example-practitioner
 InstanceOf: PHCorePractitioner
 Usage: #example

@@ -5,6 +5,7 @@ Alias: $v3-ActSite = http://terminology.hl7.org/CodeSystem/v3-ActSite
 
 Instance: immunization-single-ex
 InstanceOf: PHCoreImmunization
+Description: "Flu shot for H5N1-1203."
 Usage: #example
 * doseQuantity = 5 'mg'
 * encounter = Reference(Encounter/encounter-single-ex)
