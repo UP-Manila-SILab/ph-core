@@ -110,7 +110,7 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 * encounter = Reference(urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae)
 
 Instance: example-medication
-InstanceOf: Medication
+InstanceOf: PHCoreMedication
 Usage: #example
 Description: "A medication resource with no specific details provided."
 
@@ -153,7 +153,7 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 * patient = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
 
 Instance: example-practitioner
-InstanceOf: Practitioner
+InstanceOf: PHCorePractitioner
 Usage: #example
 Description: "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph."
 * name.family = "Santos"
