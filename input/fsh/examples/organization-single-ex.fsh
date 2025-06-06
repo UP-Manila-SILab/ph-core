@@ -24,4 +24,4 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 * contact.address.country = "PH"
 
 * address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
-* address.extension.valueCoding = PSGC#0102800000  "Ilocos Norte"
+* address.extension.valueCoding = $PSGC#0102800000  "Ilocos Norte"
