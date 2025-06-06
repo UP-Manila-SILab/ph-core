@@ -37,17 +37,62 @@ InstanceOf: PHCorePatient
 Usage: #example
 Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines."
 * name.family = "Dela Cruz"
-* name.given = "Juan"
+* name.given = "Juan Jane"
+* name.given[+] = "Dela Fuente"
 * gender = #male
 * birthDate = "1980-01-01"
-* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
-* address.extension.valueCoding = PSGC#1380100001 "Barangay 1"
-* identifier.value = "nn-nnnnnnnnn-n"
 //* identifier.system = "https://www.philhealth.gov.ph/advisories/2016/adv2016-0012.pdf"
-* identifier.system = "urn://example.com/ph-core/fhir/NamingSystem/philhealth-id-ns"
 * active = true
 * gender = #male
 * birthDate = "1985-06-15"
+* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines"
+* extension[nationality].extension[period].valuePeriod.start = "2020-01-01"
+* extension[nationality].extension[period].valuePeriod.end = "2023-01-01"
+* extension[religion].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+* extension[religion].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1007 "Atheism"
+* extension[indigenousPeople].url = "urn://example.com/ph-core/fhir/StructureDefinition/indigenous-people"
+* extension[indigenousPeople].valueBoolean = true
+* extension[indigenousGroup].url = "urn://example.com/ph-core/fhir/StructureDefinition/indigenous-group"
+* extension[indigenousGroup].valueCodeableConcept = urn://example.com/ph-core/fhir/CodeSystem/indigenous-groups#Ilongots "Ilongots" 
+* extension[race].url = "urn://example.com/ph-core/fhir/StructureDefinition/race"
+* extension[race].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-Race#2036-2 "Filipino"
+* identifier.system = "urn://example.com/ph-core/fhir/NamingSystem/philhealth-id-ns"
+* identifier.value = "63-584789845-5"
+* address.line = "123 Mabini Street"
+* address.line[+] = "Barangay Malinis"
+* address.city = "Quezon City"
+* address.district = "NCR"
+* address.postalCode = "1100"
+* address.country = "PH"
+
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/barangay"
+* address.extension.valueCoding = PSGC#1380100001 "Barangay 1"
+
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
+* address.extension.valueCoding = PSGC#1380200000 "City of Las Piñas"
+
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
+* address.extension[=].valueCoding = PSGC#1380100000 "City of Caloocan"
+
+* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
+* address.extension.valueCoding = PSGC#0102800000  "Ilocos Norte"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
+* address.extension[=].valueCoding = PSGC#0102900000  "Ilocos Sur"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
+* address.extension[=].valueCoding = PSGC#0103300000  "La Union"
+
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
+* address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
+* address.extension[=].valueCoding = PSGC#0403400000  "Laguna"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
+* address.extension[=].valueCoding = PSGC#0405800000  "Rizal"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
+* address.extension[=].valueCoding = PSGC#1704000000  "Marinduque"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
+* address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
+* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
+* address.extension[=].valueCoding = PSGC#1705100000  "Occidental Mindoro"
 
 Instance: example-encounter
 InstanceOf: PHCoreEncounter
@@ -67,7 +112,7 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 * encounter = Reference(urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae)
 
 Instance: example-medication
-InstanceOf: Medication
+InstanceOf: PHCoreMedication
 Usage: #example
 Description: "A medication resource with no specific details provided."
 
@@ -109,8 +154,33 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * patient = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
 
+
+Instance: example-immunization
+InstanceOf: PHCoreImmunization
+Description: "Flu shot for H5N1-1203."
+Usage: #example
+* doseQuantity = 5 'mg'
+* encounter = Reference(Encounter/encounter-single-ex)
+* expirationDate = "2015-02-15"
+* fundingSource = $immunization-funding-source#private
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+* isSubpotent = true
+* lotNumber = "AAJN11K"
+* note.text = "Notes on adminstration of vaccine"
+* occurrenceDateTime = "2013-01-10"
+* patient = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
+* performer.actor = Reference(urn:uuid:a036fd4c-c950-497b-8905-0d2c5ec6f1d4)
+* performer.function = $v2-0443#OP
+* primarySource = true
+* route = $v3-RouteOfAdministration#IM "Injection, intramuscular"
+* site = $v3-ActSite#LA "left arm"
+* status = #completed
+* vaccineCode = http://hl7.org/fhir/sid/cvx#123
+* vaccineCode.text = "influenza, H5N1-1203"
+
 Instance: example-practitioner
-InstanceOf: Practitioner
+InstanceOf: PHCorePractitioner
 Usage: #example
 Description: "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph."
 * name.family = "Santos"
