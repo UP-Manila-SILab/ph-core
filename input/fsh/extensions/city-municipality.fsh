@@ -5,4 +5,3 @@ Context: Address
 Description: "City/municipality from the standard geographic code."
 * insert ExperimentalStructureDefinition
 * value[x] only Coding
-* value[x] from cities (extensible)

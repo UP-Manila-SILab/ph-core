@@ -5,4 +5,3 @@ Title: "Region"
 Description: "Region from the standard geographic code."
 * insert ExperimentalStructureDefinition
 * value[x] only Coding
-* value[x] from regions (extensible)
