@@ -4,8 +4,8 @@ Id: ph-core-patient
 Title: "PH Core Patient"
 Description: "Captures key demographic and administrative information about individuals receiving care or other health-related services."
 * extension contains
-    http://hl7.org/fhir/StructureDefinition/patient-nationality|4.0.1 named nationality 0..* and
-    http://hl7.org/fhir/StructureDefinition/patient-religion|4.0.1 named religion 0..* and
+    http://hl7.org/fhir/StructureDefinition/patient-nationality named nationality 0..* and
+    http://hl7.org/fhir/StructureDefinition/patient-religion named religion 0..* and
     indigenous-group named indigenousGroup 0..* and
     indigenous-people named indigenousPeople 1..1 and
     occupation named occupation 0..* and
