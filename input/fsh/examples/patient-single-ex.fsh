@@ -58,3 +58,5 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
 * address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#1705100000  "Occidental Mindoro"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"

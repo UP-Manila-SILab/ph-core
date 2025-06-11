@@ -94,6 +94,9 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#1705100000  "Occidental Mindoro"
 
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"
+
 Instance: example-encounter
 InstanceOf: PHCoreEncounter
 Usage: #example
@@ -101,6 +104,8 @@ Description: "An ambulatory encounter for Juan Dela Cruz that has been completed
 * status = #finished
 * class = $v3-ActCode#AMB "ambulatory"
 * subject = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">An ambulatory encounter for Juan Dela Cruz that has been completed.</div>"
 
 Instance: example-condition
 InstanceOf: Condition
@@ -110,11 +115,15 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 * code = $sct#44054006 "Diabetes mellitus type 2"
 * subject = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
 * encounter = Reference(urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"
 
 Instance: example-medication
 InstanceOf: PHCoreMedication
 Usage: #example
 Description: "A medication resource with no specific details provided."
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">A medication resource has been created, but no specific details are provided.</div>"
 
 Instance: blood-pressure
 InstanceOf: PHCoreObservation
@@ -133,7 +142,7 @@ Description: "Blood pressure observation for Juan Dela Cruz taken on 17 Septembe
 * subject = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
 * effectiveDateTime = "2012-09-17"
 * performer = Reference(urn:uuid:a036fd4c-c950-497b-8905-0d2c5ec6f1d4)
-* interpretation = $v3-ObservationInterpretation#L "low"
+* interpretation = $v3-ObservationInterpretation#L "Low"
 * interpretation.text = "Below low normal"
 * bodySite = $sct#368209003 "Right arm"
 * component[0].code = $loinc#8480-6 "Systolic blood pressure"
@@ -142,8 +151,10 @@ Description: "Blood pressure observation for Juan Dela Cruz taken on 17 Septembe
 * component[=].interpretation.text = "Normal"
 * component[+].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[=].valueQuantity = 60 'mm[Hg]' "mmHg"
-* component[=].interpretation = $v3-ObservationInterpretation#L "low"
+* component[=].interpretation = $v3-ObservationInterpretation#L "Low"
 * component[=].interpretation.text = "Below low normal"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">On 17 September 2012, a blood pressure observation was recorded for Juan Dela Cruz. The systolic pressure was 107 mmHg (Normal), and the diastolic pressure was 60 mmHg (Below low normal). The measurement was taken from the right arm and performed by a practitioner.</div>"
 
 Instance: example-allergy
 InstanceOf: AllergyIntolerance
@@ -153,7 +164,8 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 * criticality = #high
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * patient = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
-
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>"
 
 Instance: example-immunization
 InstanceOf: PHCoreImmunization
@@ -178,6 +190,8 @@ Usage: #example
 * status = #completed
 * vaccineCode = http://hl7.org/fhir/sid/cvx#123
 * vaccineCode.text = "influenza, H5N1-1203"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz received a completed intramuscular flu shot (H5N1-1203) in the left arm on January 10, 2013. The vaccine lot number was AAJN11K and it was privately funded.</div>"
 
 Instance: example-practitioner
 InstanceOf: PHCorePractitioner
@@ -200,3 +214,5 @@ Description: "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, 
 * address.country = "PH"
 * gender = #female
 * birthDate = "1985-05-15"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos is a female practitioner born on May 15, 1985. She resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.</div>"
