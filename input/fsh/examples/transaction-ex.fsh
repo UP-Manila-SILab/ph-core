@@ -147,7 +147,7 @@ Description: "Blood pressure observation for Juan Dela Cruz taken on 17 Septembe
 * bodySite = $sct#368209003 "Right arm"
 * component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity = 107 'mm[Hg]' "mmHg"
-* component[=].interpretation = $v3-ObservationInterpretation#N "normal"
+* component[=].interpretation = $v3-ObservationInterpretation#N "Normal"
 * component[=].interpretation.text = "Normal"
 * component[+].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[=].valueQuantity = 60 'mm[Hg]' "mmHg"
