@@ -26,3 +26,5 @@ Usage: #example
 * status = #completed
 * vaccineCode = http://hl7.org/fhir/sid/cvx#123
 * vaccineCode.text = "influenza, H5N1-1203"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz received a completed intramuscular flu shot (H5N1-1203) in the left arm on January 10, 2013. The vaccine lot number was AAJN11K and it was privately funded.</div>"
