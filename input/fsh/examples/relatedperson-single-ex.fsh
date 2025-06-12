@@ -5,7 +5,7 @@ Description: "Maria Cruz Santos is a female born on 1 January 1955."
 * identifier.system = "urn://example.com/ph-core/fhir/NamingSystem/philsys-id-ns"
 * identifier.value = "1234-1234567-1"
 * patient = Reference(patient-single-ex)
-* relationship = $relationship-type#MTH
+* relationship = $v3-roleCode#MTH
 * name.family = "Santos"
 * name.given = "Maria"
 * name.given[+] = "Cruz"
