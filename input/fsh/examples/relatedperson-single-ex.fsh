@@ -22,3 +22,5 @@ Description: "Maria Cruz Santos is a female born on 1 January 1955."
 * address.extension.valueCoding = PSGC#0102800000  "Ilocos Norte"
 * address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#1705100000  "Occidental Mindoro"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Maria Cruz Santos, born on January 1, 1955, is the mother of the patient. She resides at 123 Mabini Street, 1100, Philippines, with regional associations to Ilocos Norte and Occidental Mindoro. Her PhilSys ID is 1234-1234567-1.</div>"
