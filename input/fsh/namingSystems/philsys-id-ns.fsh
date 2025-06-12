@@ -10,4 +10,4 @@ Description: "The National ID Number is a unique and randomly-generated 12-digit
 * jurisdiction.coding = urn:iso:std:iso:3166#PH
 * publisher = "Philippine National Indentification System"
 * uniqueId.type = #uri
-* uniqueId.value = "ttps://philsys.gov.ph"
+* uniqueId.value = "https://philsys.gov.ph"
