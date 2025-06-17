@@ -1,0 +1,51 @@
+FHIR IG,Track,Profile,Feedback / Comments,Submitter,Notes,
+PH Core IG,Track 1 - FHIR Data Submission,Patient,,,,
+NHDR IG,Track 1 - FHIR Data Submission,Bundle,"In the example resource ClaimsForm1-1, fullUrl is invalid for a UUID (patient-1)",M. Lawley (CSIRO),Best practice to clarify UUID,
+,,Other,,,,
+PH Core IG,Track 1 - FHIR Data Submission,Patient,"Indentifier should be an open slice, otherwhise we can't assign identifiers of other types.
+Now identifier could be only PHCorePhilHealthID or PHCorePddRegistration",Ilya Beda (Beda Software),NHDR IG allows multiple identifiers.,
+PH Core IG,Track 1 - FHIR Data Submission,Other,"Drugs valueset https://build.fhir.org/ig/UP-Manila-SILab/ph-core/ValueSet-drugs.html 
+that is used in https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-ph-core-medication.html
+is empty",Ilya Beda (Beda Software),"Value Set for drugs not yet implemented in the Terminology Service.
+
+Essential drugs: FDA / DOH",
+PH Core IG,Track 1 - FHIR Data Submission,Patient,"https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-occupation.html 
+it uses valueInteger to capture occupation length. From my point of view valuePeriod is more convinient and flexible.",Ilya Beda (Beda Software),Agrees.,
+PH Core IG,Track 1 - FHIR Data Submission,Encounter,PH Core Encounter references for patinet and practitioner should be PH Core Patinet and PH Core Practitioner (or  PH Core PractitionerRole),Ilya Beda (Beda Software),Agrees.,
+PH Core IG,Track 1 - FHIR Data Submission,Organization,"Indentifier should be an open slice, otherwhise we can't assign identifiers of other types.
+Now identifier could be only PHCoreDOHfhudCode, but it is posible to have many of the same type",Ilya Beda (Beda Software),"Agrees.
+Possible use case, PhilHealth Accrediation Number.",
+PH Core IG,Track 1 - FHIR Data Submission,Other,Add contsraint in PH Core IG to require indigenousGroup value if indigenousPeople is true,Les Batay-an (BGHMC),Formalize change to the actual indigenousPeople - escalate to DH TWG.,Raise to DH TWG for now it will be optional (phic and DOH)
+NHDR IG,,,,,,
+PH Core IG,Track 1 - FHIR Data Submission,Patient,"PHCorePhilHealthID, PHCorePddRegistration -  An identifier for patient, Where is PhilSys ID?",John Lemuel Dalisay (IPHO South Cotabato),Added - considered before build freeze.,"It will be in the PH Core, it's not included yet in the current version."
+PH Core IG,Track 1 - FHIR Data Submission,Patient,Patient descriptions (and other strings) should have character limitations based on PHIC eClaims constrictions,Dr. PM Baquiano (Iligan CHO),"From IG perspective, no restriction in character count.","It can be added to a usecase, it will differ in the business rules of the use case"
+PH Core IG,Track 1 - FHIR Data Submission,Other,"Medication resource sample is not sufficient to appreciate the resource. Have more details like Drug, Route, Freq, Start and Number of Doses.",Ken Vitug (SLMC),"MedicationStatement, MedicationDispense
+
+Medication is just a 'product'",
+PH Core IG,Track 1 - FHIR Data Submission,Other,Medication resource has no element to get wether the medcation is prescribed or despensed ,Quinry Senilla (PHIC - EA NHDR),"Medication resource is only about the medication itself.
+For prescribing / dispensing there are other resources: eg MedictionRequest and MedicationAdministration",There are other Resources that can be used for thet 
+PH Core IG,Track 1 - FHIR Data Submission,Patient,include extension for pwd or disability status?,Les Batay-an (BGHMC),Escalate to DH TWG.,Can be included in the PH Core and the NHDR can follow since there's no use case yet under the NHDR IG. Raise to TWG
+,,,,,,
+PH Core IG,Track 1 - FHIR Data Submission,Patient,"indigenousPeople (Boolean) should be 0..1 instead of 1..1 not unless otherwise we have a policy requiring this documented. It's not always that we collect this data in clinics in my ""possible"" usecase",Thomas Reyes (UPM Silab),See Row #10.,Already discussed
+PH Core IG,Track 1 - FHIR Data Submission,Practitioner,,,,
+,,Patient,"In Patient resource, there would be a facility who first added the patient record, should managingOrganization be captured for this to track who first added and managed the patient?",Ryan Michael Gelig - SugboDoc,For escalation,For discussion in the CCB
+,,Other,,,,
+PH Core IG,Track 1 - FHIR Data Submission,Other,,,,
+PH Core IG,Track 1 - FHIR Data Submission,Other,The number of extensions on Address make me uneasy. Are people really collecting this? As codes? Need clear mapping from PH Address to Address,Grahame Grieve,For consideration.,For discussion in DH TWG
+PH Core IG,Track 1 - FHIR Data Submission,Other,the PHCorePhilHealthID and PHCorePddRegistration should nail down the fields that aren't going to be used,Grahame Grieve,For consideration.,For discussion in DH TWG
+PH Core IG,Track 1 - FHIR Data Submission,Patient,There's lots of extensions here that feel like government department data wishes. Are they really collected by the healthcare system? should check ,Grahame Grieve,For consideration.,For discussion in DH TWG
+PH Core IG,Track 1 - FHIR Data Submission,Organization,What if the Facility is not registered in NHFR?,John Lemuel Dalisay (IPHO South Cotabato),DOH: All facility should be in the NHFR.,All facility shoould be registered and licensed.
+NHDR IG,Track 1 - FHIR Data Submission,Patient,"indigenousPeople (Boolean) should be 0..1 not 0..*  ; you can't have indigenousPeople : [true,false,true,..] which doesn't make sense. However, it is alrite for indigenousGroup [CodeableConcept] 0..* [race1,race2,. ]",Thomas Reyes (UPM Silab),See Row #10.,
+PH Core IG,Track 1 - FHIR Data Submission,Practitioner,Practitioner and Patient can refer to Person where you can associate the National ID and Philhealth id. Why not use a Person resource to assoc the IDs and relate the patient and practitioner?,Noel Del Castillo (SeeYouDoc),For consideration.,For discussion in DH TWG
+PH Core IG,Track 1 - FHIR Data Submission,Practitioner,Practitioner does not have PRC (Professional Regulation Commission) license codes,PM Baquiano (Iligan),For consideration.,"For discussion in DH TWG. The question actually is just for the PH Core, there's a FHIR Path for this"
+PH Core IG,Track 1 - FHIR Data Submission,Other,"Why not add the coordinates in the Address (Region, Province, Barangay)? This will be useful for analytics.",Noel Del Castillo (SeeYouDoc),For consideration.,For discussion in DH TWG
+PH Core IG,Track 1 - FHIR Data Submission,Other,Can we include in the identifier the system identifier to represent the ids from the database tables of other 3rd party systems? This will help validate the record from the source.,Noel Del Castillo (SeeYouDoc),"The more identifiers, the better.",For discussion in DH TWG
+,,,"END - NOTHING FOLLLOWS - JUNE 16
+[ YOU MAY ADD AGAIN AFTER THE PROGRAM]",,,
+PH Core IG,Track 1 - FHIR Data Submission,Other,"For FHIR Medication Resource, code is bound to SNOMED CT Medication Codes. For Philippine implementation, should we instead bind Medication.code to a national drug terminology? For example: Philippine FDA Drug Products - https://verification.fda.gov.ph/ALL_DrugProductslist.php",Ryan Michael Gelig (SugboDoc),,
+PH Core IG,Track 1 - FHIR Data Submission,Other,"For AllergyIntolerance Resource Philippine implementation, code is bound to SNOMED CT. Are we using the SNOMED CT Global Patient Set (GPS) for these bindings as mentioned yesterday?
+
+If so, are we applying the SNOMED CT Global Patient Set (GPS) to other resources that cite SNOMED CT (e.g., Condition.code, Observation.code, Procedure.code, etc.)?",Ryan Michael Gelig (SugboDoc),,
+PH Core IG,Track 1 - FHIR Data Submission,Other,"For the Condition resource, the current Philippine implementation specifies SNOMED CT. Should we instead use ICD-10 to align with PhilHealth eClaims requirements?",Ryan Michael Gelig (SugboDoc),,
+PH Core IG,Track 1 - FHIR Data Submission,Procedure,"The Procedure Resource is not yet included in ph-core-resources. Once added, I suggest binding it to a coding system aligned with PhilHealth eClaims, to avoid additional mapping. PhilHealth currently uses RVS codes (Relative Value Scale) for procedures under its case rate system.",Ryan Michael Gelig (SugboDoc),,
+NHDR IG,Track 1 - FHIR Data Submission,Patient,"The NHDR IG does not have the RelatedPerson resource -- necessary for maternal and newborn care, the creation of family folders in primary care, etc",Dr. PM Baquiano (Iligan),,
