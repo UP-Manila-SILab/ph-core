@@ -11,4 +11,4 @@ Description: "Patient's occupation."
 * extension[occupationClassification].valueCodeableConcept from occupational-classifications (extensible)
 * extension[occupationClassification] ^short = "Occupation Classification"
 * extension[occupationLength].value[x] only integer or Period
-* extension[occupationLength] ^short = "Length in Years"
+* extension[occupationLength] ^short = "Length of time in occupation expressed as a date range or a number of years."
