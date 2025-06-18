@@ -11,7 +11,29 @@ Description: "Captures key demographic and administrative information about indi
     occupation named occupation 0..* and
     race named race 0..1 and
     educational-attainment named educationalAttainment 0..1
-* identifier only PHCorePhilHealthID or PHCorePddRegistration
+    
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slicing based on identifier system"
+* identifier ^slicing.ordered = false
+
+* identifier contains
+    PHCorePhilHealthID 0..* MS and
+    PHCorePddRegistration 0..* MS
+
+* identifier[PHCorePhilHealthID] ^short = "PhilHealth ID"
+* identifier[PHCorePhilHealthID] ^definition = "PhilHealth ID"
+* identifier[PHCorePhilHealthID].system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"
+* identifier[PHCorePhilHealthID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
+* identifier[PHCorePhilHealthID].type.coding.code = #NH (exactly)
+
+* identifier[PHCorePddRegistration] ^short = "PDD Registration Number"
+* identifier[PHCorePddRegistration] ^definition = "PhilHealth Dialysis Database Registration Number"
+* identifier[PHCorePddRegistration].system = "http://doh.gov.ph/fhir/Identifier/pdd-registration"
+* identifier[PHCorePddRegistration].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
+* identifier[PHCorePddRegistration].type.coding.code = #NH (exactly)
+
 * address only ph-core-address
 * maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
 * contact.relationship from http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (required)
