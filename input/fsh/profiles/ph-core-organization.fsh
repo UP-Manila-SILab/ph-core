@@ -3,7 +3,7 @@ Parent: Organization
 Id: ph-core-organization
 Title: "PH Core Organization"
 Description: "This profile localizes the FHIR R4 Organization resource to the Philippine context."
-* identifier only ph-core-doh-fhud-code
+
 
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -18,6 +18,7 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 * identifier[NhfrCode].system = "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code" (exactly)
 * identifier[NhfrCode].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
 * identifier[NhfrCode].type.coding.code = #FI (exactly)
+* identifier[NhfrCode].use = #official
 
 * address only ph-core-address
 * contact.address only ph-core-address

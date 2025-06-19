@@ -3,7 +3,7 @@ InstanceOf: PHCoreOrganization
 Title: "Example PH Core Organization"
 Description: "An example instance of a PH Core Organization conforming to the Philippine localization profile."
 
-* identifier.value = "1234567890"
+* identifier[NhfrCode].value = "1234567890"
 * name = "Department of Health - Central Office"
 * address.use = #work
 * address.line = "San Lazaro Compound"
