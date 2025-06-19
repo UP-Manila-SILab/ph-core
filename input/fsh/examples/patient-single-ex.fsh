@@ -39,13 +39,6 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
 * address.extension[=].valueCoding = PSGC#1380100000 "City of Caloocan"
 
-* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
-* address.extension.valueCoding = PSGC#0102800000  "Ilocos Norte"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
-* address.extension[=].valueCoding = PSGC#0102900000  "Ilocos Sur"
-* address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
-* address.extension[=].valueCoding = PSGC#0103300000  "La Union"
-
 * address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
 * address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
