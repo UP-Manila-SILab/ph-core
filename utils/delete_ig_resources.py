@@ -45,7 +45,14 @@ def delete_resources(fhir_base_url, headers, resource_type):
         next_link = next((link["url"] for link in bundle.get("link", []) if link["relation"] == "next"), None)
         if next_link:
             response = requests.get(next_link, headers=headers)
-            bundle = response.json()
+            if response.status_code != 200:
+                logging.error(f"Failed to fetch next page: {response.status_code}")
+                break
+            try:
+                bundle = response.json()
+            except requests.exceptions.JSONDecodeError as e:
+                logging.error(f"Failed to decode JSON from next page response: {e}")
+                break
             entries = bundle.get("entry", [])
         else:
             break
