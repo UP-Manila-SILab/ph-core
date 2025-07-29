@@ -56,7 +56,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * extension[indigenousGroup].valueCodeableConcept = urn://example.com/ph-core/fhir/CodeSystem/indigenous-groups#Ilongots "Ilongots" 
 * extension[race].url = "urn://example.com/ph-core/fhir/StructureDefinition/race"
 * extension[race].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-Race#2036-2 "Filipino"
-* identifier.system = "urn://example.com/ph-core/fhir/NamingSystem/philhealth-id-ns"
+* identifier.system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"
 * identifier.value = "63-584789845-5"
 * address.line = "123 Mabini Street"
 * address.line[+] = "Barangay Malinis"
