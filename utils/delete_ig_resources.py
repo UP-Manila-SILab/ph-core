@@ -21,9 +21,9 @@ ig_conformance_resources = [
     "NamingSystem"
 ]
 
-def delete_resources(fhir_base_url, headers, resource_type):
+def delete_resources(fhir_base_url, headers, resource_type, page_size):
     logging.info(f"Starting deletion of {resource_type} resources...")
-    search_url = f"{fhir_base_url}/{resource_type}?_count=1000"
+    search_url = f"{fhir_base_url}/{resource_type}?_count={page_size}"
     response = requests.get(search_url, headers=headers)
     if response.status_code != 200:
         logging.error(f"Failed to fetch {resource_type}: {response.status_code}, Response: {response.text}")
