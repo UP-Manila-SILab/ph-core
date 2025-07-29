@@ -50,7 +50,7 @@ def delete_resources(fhir_base_url, headers, resource_type, page_size):
                 break
             try:
                 bundle = response.json()
-            except requests.exceptions.JSONDecodeError as e:
+            except json.JSONDecodeError as e:
                 logging.error(f"Failed to decode JSON from next page response: {e}")
                 break
             entries = bundle.get("entry", [])
