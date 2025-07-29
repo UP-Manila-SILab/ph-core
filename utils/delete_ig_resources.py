@@ -69,8 +69,9 @@ def main():
     if args.token:
         headers["Authorization"] = f"Bearer {args.token}"
 
-    for resource in ig_conformance_resources:
-        delete_resources(args.server_url, headers, resource)
+    resources_to_delete = args.filter if args.filter else ig_conformance_resources
+    for resource in resources_to_delete:
+        delete_resources(args.server_url, headers, resource, dry_run=args.dry_run)
 
 if __name__ == "__main__":
     main()
