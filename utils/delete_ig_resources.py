@@ -26,7 +26,7 @@ def delete_resources(fhir_base_url, headers, resource_type):
     search_url = f"{fhir_base_url}/{resource_type}?_count=1000"
     response = requests.get(search_url, headers=headers)
     if response.status_code != 200:
-        logging.error(f"Failed to fetch {resource_type}: {response.status_code}")
+        logging.error(f"Failed to fetch {resource_type}: {response.status_code}, Response: {response.text}")
         return
 
     bundle = response.json()
