@@ -1,6 +1,8 @@
 ### Introduction
 
-PH Core is provided in its initial DRAFT form to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in the Philippines context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems. The FHIR IG for testing purpose only and not suitable for production systems. 
+PH Core is provided in its initial DRAFT form to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in the Philippines context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems. 
+
+This FHIR IG is still under development and not yet ready for public consumption. 
 
 PH Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. 
 
