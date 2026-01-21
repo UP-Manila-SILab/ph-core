@@ -6,7 +6,7 @@
 id: example.fhir.ph.core
 canonical: urn://example.com/ph-core/fhir
 name: PHCoreImplementationGuide
-title: PH Core Implementation Guide
+title: Draft PH Core Implementation Guide
 description: This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
@@ -16,8 +16,8 @@ releaseLabel: ci-build
 license: CC-BY-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#PH "Philippines" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: UP Manila SILab
-  url: https://github.com/UP-Manila-SILab
+  name: UP Manila National TeleHealth Center
+  url: https://github.com/UP-NTHC
   # email: test@example.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
