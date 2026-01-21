@@ -1,3 +1,5 @@
+**Project Status: In Development (Draft)** > This Implementation Guide is under active development and is not yet available for public or production use. Content, data models, and implementation details are subject to change.
+
 # Draft Philippine Core FHIR Implementation Guide (PH Core IG)
 
 The Philippine Core FHIR Implementation Guide (PH Core IG) defines the nationally agreed core clinical and administrative data standards for interoperable health information exchange in the Philippines. It provides a common, implementable foundation for health systems to consistently exchange data using the HL7® FHIR® standard.
