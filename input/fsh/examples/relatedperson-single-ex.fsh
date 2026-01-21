@@ -18,8 +18,6 @@ Description: "Maria Cruz Santos is a female born on 1 January 1955."
 * address.extension.valueCoding = PSGC#1380100001 "Barangay 1"
 * address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/city-municipality"
 * address.extension.valueCoding = PSGC#1380200000 "City of Las Piñas"
-* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
-* address.extension.valueCoding = PSGC#0102800000  "Ilocos Norte"
 * address.extension[+].url = "urn://example.com/ph-core/fhir/StructureDefinition/province"
 * address.extension[=].valueCoding = PSGC#1705100000  "Occidental Mindoro"
 * text.status = #generated
