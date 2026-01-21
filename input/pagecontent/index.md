@@ -1,24 +1,36 @@
-### Introduction
+# Philippine Core FHIR Implementation Guide (PH Core IG)
 
-PH Core is provided in its initial DRAFT form to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in the Philippines context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems. 
+The Philippine Core FHIR Implementation Guide (PH Core IG) defines the nationally agreed core clinical and administrative data standards for interoperable health information exchange in the Philippines. It provides a common, implementable foundation for health systems to consistently exchange data using the HL7® FHIR® standard.
 
-This FHIR IG is still under development and not yet ready for public consumption. 
+PH Core IG sits between the PH Base IG (foundational national rules) and program- or use case–specific IGs (such as the NHDR IG). It standardizes commonly used FHIR profiles, extensions, terminology bindings, and conformance expectations that are applicable across health programs, facilities, and systems nationwide.
 
-PH Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. 
+# Project Backgrouond
 
-- Basic patient details
-- Problems / Conditions
-- Medication orders, dispense, administration and usage
-- Immunization
-- Vital signs, and other clinical observations
-
-### Project Backgrouond
-
-PH Core is actively being developed by UP Manila SILab, under the guidance of the Phillippines Department of Health, with technical assistance from CSIRO Australia, and input from PHIC NHDR and SILab Community of Practice. 
+PH Core is actively being developed by UP Manila National TeleHealth Center, under the guidance of the Phillippines Department of Health, with technical assistance from CSIRO Australia.
 
 The initial draft of IG will be tested in the Connectathon to validate proof of concept and direction settings for the Philippines Core IG development process. 
 
-### Relationship with other IGs
+# Purpose and Scope
+
+The PH Core IG aims to:
+1. Promote nationwide consistency and interoperability of health data
+2. Support alignment with national policies such as JAO 2021-0002
+3. Enable reuse of HL7 and international FHIR artifacts
+4. Provide clear, testable specifications for system implementers
+
+This guide focuses on core clinical and administrative resources (e.g., Patient, Practitioner, Organization, Encounter, Observation) that are widely applicable across multiple use cases. It does not define program-specific workflows or reporting payloads, which are addressed by downstream Implementation Guides.
+
+# Usage of this Guide
+- Health information systems implement PH Core profiles as a baseline for interoperability
+- Program-specific IGs inherit from PH Core and apply additional constraints
+- Developers and vendors use the guide to build and validate FHIR-conformant systems
+- Policy and governance bodies use it as a reference for national standardization
+
+# Development and Governance
+
+The PH Core IG is developed through a collaborative, open, and standards-based process, involving the Department of Health (DOH), PhilHealth, UP Manila, and key technical partners. Development follows international best practices, uses open-source tooling (FHIR Shorthand, GitHub, IG Publisher), and is governed through structured review and change control mechanisms.
+
+# Relationship with other IGs
 
 **PH Core:**
 - defines a set of conformance requirements that enforce a set of ‘minimum requirements’ on the local concepts, specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions.
@@ -29,7 +41,7 @@ The context of PH Core within the set of FHIR Standards is shown in the diagram 
 
 {% include layers.svg %}
 
-### Usage
+# Usage
 
 PH Core is particularly useful in defining:
 
@@ -43,7 +55,7 @@ This document is a working specification that may be directly implemented by FHI
 
 FHIR®© Connectathon events are key to the verification of the guide as being suitable for implementation. This implementation guide will be used as the basis for the Philippines Connectathon events.
 
-### Dependencies
+# Dependencies
 
 {% include ip-statements.xhtml %}
 {% include cross-version-analysis.xhtml %}
@@ -52,8 +64,3 @@ FHIR®© Connectathon events are key to the verification of the guide as being s
 {% include dependency-table-nontech.xhtml %}
 {% include globals-table.xhtml %}
 
-## Feedback
-
-Feedback specific to this specification can provided through:
-
-Sending an email to silab.upm@up.edu.ph
