@@ -1,5 +1,6 @@
 # Draft Philippine Core Implementation Guide (PH CORE IG)
 
+<p align="center"> <img src="input/includes/disclaimer.svg" alt="This is still under development and not yet for public consumption. Content data models and implementation details are subject to change" width="100%"> </p>
 
 
 ## Disclaimer:
