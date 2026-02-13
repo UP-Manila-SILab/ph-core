@@ -274,7 +274,7 @@ def generate_hierarchy_tree(csv_file_path):
             if fhir_path != 'Patient':  # Exclude the top-level Patient element
                 paths.append(fhir_path)
     
-    # Build a tree structure with full hierarchy
+    # Build a tree structure dynamically without hardcoded categories
     tree = {}
     
     # Process each path to build the tree
@@ -351,6 +351,302 @@ def generate_hierarchy_tree(csv_file_path):
     
     return "\n".join(tree_lines)
 
+def generate_bubble_mindmap_html(csv_file_path, output_html_path):
+    """
+    Generate an interactive bubble mind map HTML visualization
+    """
+    # Parse the CSV to get all FHIR paths
+    paths = []
+    
+    with open(csv_file_path, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+        
+        # Find where the actual data starts
+        start_idx = 0
+        for i, line in enumerate(lines):
+            if line.strip().startswith('FHIRPath,'):
+                start_idx = i
+                break
+        
+        # Process the CSV data
+        reader = csv.reader(lines[start_idx:])
+        next(reader)  # Skip the header row
+        
+        for row in reader:
+            if len(row) == 0 or row[0].strip() == '':
+                continue
+                
+            fhir_path = row[0].strip()
+            if fhir_path != 'Patient':  # Exclude the top-level Patient element
+                paths.append(fhir_path)
+    
+    # Build a tree structure dynamically
+    tree = {}
+    
+    # Process each path to build the tree
+    for path in paths:
+        segments = path.split('.')
+        if segments and segments[0] == 'Patient':
+            segments = segments[1:]
+        
+        if not segments:
+            continue
+        
+        # Navigate to the correct position in the tree
+        current = tree
+        
+        # Process each segment in the path
+        for i, segment in enumerate(segments):
+            # Check if this is a special segment (extension or identifier)
+            if i == 0 and (segment.startswith('extension:') or segment.startswith('identifier:')):
+                # Determine the parent category
+                if segment.startswith('extension:'):
+                    parent_category = 'extension'
+                    actual_name = segment.split(':', 1)[1]  # Get part after ':'
+                elif segment.startswith('identifier:'):
+                    parent_category = 'identifier'
+                    actual_name = segment.split(':', 1)[1]  # Get part after ':'
+                
+                # Create parent category if it doesn't exist
+                if parent_category not in current:
+                    current[parent_category] = {}
+                
+                # Navigate to the parent category
+                current = current[parent_category]
+                
+                # Now add the actual extension/identifier name
+                if actual_name not in current:
+                    current[actual_name] = {}
+                
+                # Navigate to the specific extension/identifier
+                current = current[actual_name]
+            else:
+                # Regular segment
+                if segment not in current:
+                    current[segment] = {}
+                current = current[segment]
+    
+    # Count occurrences of each node to determine bubble sizes
+    node_counts = {}
+    
+    def count_nodes(node, prefix=""):
+        for key, value in node.items():
+            full_key = f"{prefix}.{key}" if prefix else key
+            node_counts[full_key] = node_counts.get(full_key, 0) + 1
+            if value:
+                count_nodes(value, full_key)
+    
+    # Count nodes for sizing
+    for top_level_key, top_level_children in tree.items():
+        node_counts[top_level_key] = node_counts.get(top_level_key, 0) + 1
+        if top_level_children:
+            count_nodes(top_level_children, top_level_key)
+    
+    # Generate the HTML with D3.js bubble chart
+    html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FHIR Patient Profile Bubble Mind Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        #chart {
+            width: 100%;
+            height: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            overflow: hidden;
+        }
+        .bubble {
+            stroke: #000;
+            stroke-width: 0.5;
+            cursor: pointer;
+            transition: r 0.3s;
+        }
+        .bubble:hover {
+            opacity: 0.8;
+        }
+        .bubble-text {
+            font-size: 10px;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            pointer-events: none;
+            fill: #333;
+            font-weight: bold;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .instructions {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0c5460;
+        }
+        .legend {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>FHIR Patient Profile Bubble Mind Map</h1>
+    <div class="instructions">Click on bubbles to explore the FHIR Patient profile structure. Hover over bubbles to see details.</div>
+    <div id="chart"></div>
+    <div class="legend">Bubble size represents the complexity/number of sub-elements in each category</div>
+    
+    <script>
+        // Prepare data for D3
+        const data = {
+            name: "Patient",
+            children: ["""
+    
+    # Add children to the data structure
+    for top_level_key, top_level_children in tree.items():
+        sanitized_key = sanitize_for_mermaid(top_level_key)
+        count = node_counts.get(top_level_key, 1)
+        
+        if top_level_children:
+            # This node has children, so add them
+            html_content += f"""{{
+                name: "{sanitized_key}",
+                value: {count},
+                children: ["""
+            
+            def add_children_to_data(node, prefix=sanitized_key):
+                children_str = ""
+                for key, value in node.items():
+                    child_sanitized = sanitize_for_mermaid(key)
+                    child_full_name = f"{prefix}.{child_sanitized}"
+                    child_count = node_counts.get(child_full_name, 1)
+                    
+                    if value:
+                        # This child has grandchildren
+                        children_str += f"""{{
+                            name: "{child_sanitized}",
+                            value: {child_count},
+                            children: ["""
+                        
+                        children_str += add_children_to_data(value, child_full_name)
+                        
+                        children_str += "]}},"
+                    else:
+                        # This is a leaf node
+                        children_str += f"""{{name: "{child_sanitized}", value: {child_count}}},"""
+                return children_str
+            
+            html_content += add_children_to_data(top_level_children)
+            html_content += "]}},"
+        else:
+            # This is a leaf node at the top level
+            html_content += f"""{{name: "{sanitized_key}", value: {count}}},"""
+    
+    html_content += """]
+        };
+        
+        // Set up dimensions
+        const width = document.getElementById('chart').clientWidth;
+        const height = document.getElementById('chart').clientHeight;
+        const diameter = Math.min(width, height);
+        
+        // Create bubble pack layout
+        const bubble = d3.pack()
+            .size([diameter, diameter])
+            .padding(1.5);
+        
+        // Create SVG
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewBox", `0 0 ${diameter} ${diameter}`)
+            .attr("class", "bubble");
+        
+        // Process the data
+        const root = d3.hierarchy(data)
+            .sum(d => d.value)
+            .sort((a, b) => b.value - a.value);
+        
+        // Apply the bubble pack layout
+        bubble(root);
+        
+        // Create the bubbles
+        const node = svg.selectAll(".node")
+            .data(root.children)
+            .enter()
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", d => `translate(${d.x},${d.y})`);
+        
+        // Add circles for each node
+        node.append("circle")
+            .attr("class", "bubble")
+            .attr("r", d => d.r)
+            .style("fill", d => {
+                // Color based on depth
+                if (d.depth === 1) return "#4e79a7"; // Blue for top level
+                if (d.depth === 2) return "#f28e2c"; // Orange for second level
+                if (d.depth === 3) return "#e15759"; // Red for third level
+                if (d.depth === 4) return "#76b7b2"; // Teal for fourth level
+                return "#59a14f"; // Green for deeper levels
+            })
+            .on("click", function(event, d) {
+                alert(`Node: ${d.data.name}\\nValue: ${d.data.value}\\nDepth: ${d.depth}`);
+            });
+        
+        // Add labels inside the bubbles
+        node.append("text")
+            .attr("class", "bubble-text")
+            .attr("dy", ".3em")
+            .style("text-anchor", "middle")
+            .text(d => {
+                // Truncate long names to fit in bubble
+                const name = d.data.name;
+                return name.length > 12 ? name.substring(0, 10) + ".." : name;
+            })
+            .style("font-size", d => {
+                // Adjust font size based on bubble radius
+                return Math.max(8, Math.min(12, d.r / 4)) + "px";
+            });
+        
+        // Add tooltips
+        node.append("title")
+            .text(d => `${d.data.name}\\nValue: ${d.data.value}`);
+        
+        // Make the chart responsive
+        window.addEventListener("resize", function() {
+            const newWidth = document.getElementById('chart').clientWidth;
+            const newHeight = document.getElementById('chart').clientHeight;
+            const newDiameter = Math.min(newWidth, newHeight);
+            
+            d3.select("svg")
+                .attr("width", newWidth)
+                .attr("height", newHeight)
+                .attr("viewBox", `0 0 ${newDiameter} ${newDiameter}`);
+        });
+    </script>
+</body>
+</html>"""
+    
+    # Write the HTML to file
+    with open(output_html_path, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+    
+    print(f"Bubble mind map HTML saved to {output_html_path}")
+
 def create_markdown_with_diagrams(csv_file_path, output_md_path):
     """
     Create a markdown file with multiple Mermaid diagrams
@@ -380,7 +676,10 @@ def create_markdown_with_diagrams(csv_file_path, output_md_path):
 if __name__ == "__main__":
     csv_file_path = "../utils/patient.csv"  # Relative path from script location
     output_md_path = "../tree.md"  # Output markdown file
+    output_html_path = "../tree.html"  # Output HTML file for bubble mind map
     
     print("Generating FHIR paths visualization...")
     create_markdown_with_diagrams(csv_file_path, output_md_path)
+    generate_bubble_mindmap_html(csv_file_path, output_html_path)
     print(f"Successfully created {output_md_path} with Mermaid diagrams.")
+    print(f"Successfully created {output_html_path} with bubble mind map.")

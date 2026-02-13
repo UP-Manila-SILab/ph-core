@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FHIR Patient Profile Bubble Mind Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        #chart {
+            width: 100%;
+            height: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            overflow: hidden;
+        }
+        .bubble {
+            stroke: #000;
+            stroke-width: 0.5;
+            cursor: pointer;
+            transition: r 0.3s;
+        }
+        .bubble:hover {
+            opacity: 0.8;
+        }
+        .bubble-text {
+            font-size: 10px;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            pointer-events: none;
+            fill: #333;
+            font-weight: bold;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .instructions {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0c5460;
+        }
+        .legend {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>FHIR Patient Profile Bubble Mind Map</h1>
+    <div class="instructions">Click on bubbles to explore the FHIR Patient profile structure. Hover over bubbles to see details.</div>
+    <div id="chart"></div>
+    <div class="legend">Bubble size represents the complexity/number of sub-elements in each category</div>
+    
+    <script>
+        // Prepare data for D3
+        const data = {
+            name: "Patient",
+            children: [{name: "identifier", value: 1, children: [{name: "PHCorePddRegistration", value: 1, children: [{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1, children: [{name: "coding", value: 1, children: [{name: "code", value: 1},{name: "display", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "system", value: 1},{name: "userSelected", value: 1},{name: "version", value: 1}]},{name: "extension", value: 1},{name: "id", value: 1},{name: "text", value: 1}]},{name: "use", value: 1},{name: "value", value: 1}]},{name: "PhilHealthID", value: 1, children: [{name: "type", value: 1, children: [{name: "coding", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "text", value: 1}]},{name: "use", value: 1},{name: "value", value: 1},{name: "system", value: 1},{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1}]},{name: "PHCorePhilHealthID", value: 1, children: [{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1, children: [{name: "coding", value: 1, children: [{name: "code", value: 1},{name: "display", value: 1},{name: "id", value: 1},{name: "system", value: 1},{name: "userSelected", value: 1},{name: "version", value: 1},{name: "extension", value: 1}]},{name: "extension", value: 1},{name: "id", value: 1},{name: "text", value: 1}]},{name: "use", value: 1},{name: "value", value: 1}]},{name: "TIN", value: 1, children: [{name: "value", value: 1},{name: "use", value: 1},{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1, children: [{name: "coding", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "text", value: 1}]}]},{name: "SSS-GSIS", value: 1, children: [{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1, children: [{name: "coding", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "text", value: 1}]},{name: "use", value: 1},{name: "value", value: 1},{name: "extension", value: 1},{name: "assigner", value: 1}]},{name: "DriversLicense", value: 1, children: [{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1, children: [{name: "coding", value: 1},{name: "extension", value: 1},{name: "text", value: 1},{name: "id", value: 1}]},{name: "use", value: 1},{name: "value", value: 1}]},{name: "PDD", value: 1, children: [{name: "type", value: 1, children: [{name: "extension", value: 1},{name: "id", value: 1},{name: "text", value: 1},{name: "coding", value: 1}]},{name: "use", value: 1},{name: "value", value: 1},{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1}]},{name: "PassportNumber", value: 1, children: [{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "system", value: 1},{name: "type", value: 1, children: [{name: "coding", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "text", value: 1}]},{name: "use", value: 1},{name: "value", value: 1},{name: "period", value: 1}]},{name: "patientHospitalID", value: 1, children: [{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1},{name: "use", value: 1},{name: "value", value: 1}]},{name: "PhilSysID", value: 1, children: [{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1, children: [{name: "coding", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "text", value: 1}]},{name: "use", value: 1},{name: "value", value: 1}]},{name: "uic", value: 1, children: [{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1},{name: "use", value: 1},{name: "value", value: 1},{name: "id", value: 1},{name: "assigner", value: 1},{name: "extension", value: 1}]},{name: "patientCode", value: 1, children: [{name: "assigner", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1},{name: "use", value: 1},{name: "value", value: 1}]},{name: "philhealthNo", value: 1, children: [{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "system", value: 1},{name: "type", value: 1},{name: "use", value: 1},{name: "value", value: 1},{name: "assigner", value: 1}]}]},{name: "address", value: 1, children: [{name: "line", value: 1},{name: "city", value: 1},{name: "country", value: 1},{name: "district", value: 1},{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "postalCode", value: 1},{name: "state", value: 1},{name: "text", value: 1},{name: "type", value: 1},{name: "use", value: 1},{name: "extension_barangay", value: 1},{name: "extension_cityMunicipality", value: 1},{name: "extension_province", value: 1}]},{name: "birthDate", value: 1},{name: "communication", value: 1, children: [{name: "extension", value: 1},{name: "id", value: 1},{name: "language", value: 1},{name: "modifierExtension", value: 1},{name: "preferred", value: 1}]},{name: "id", value: 1},{name: "generalPractitioner", value: 1},{name: "gender", value: 1},{name: "contact", value: 1, children: [{name: "address", value: 1},{name: "extension", value: 1},{name: "gender", value: 1},{name: "id", value: 1},{name: "modifierExtension", value: 1},{name: "name", value: 1, children: [{name: "extension", value: 1},{name: "family", value: 1},{name: "given", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "prefix", value: 1},{name: "suffix", value: 1},{name: "text", value: 1},{name: "use", value: 1}]},{name: "organization", value: 1},{name: "period", value: 1},{name: "relationship", value: 1},{name: "telecom", value: 1, children: [{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "rank", value: 1},{name: "system", value: 1},{name: "use", value: 1},{name: "value", value: 1}]}]},{name: "extension", value: 1, children: [{name: "religion", value: 1, children: [{name: "id", value: 1},{name: "url", value: 1},{name: "value_x_", value: 1},{name: "extension", value: 1}]},{name: "race", value: 1},{name: "occupation", value: 1},{name: "nationality", value: 1},{name: "indigenousPeople", value: 1},{name: "indigenousGroup", value: 1},{name: "educationalAttainment", value: 1},{name: "type", value: 1},{name: "memberType", value: 1},{name: "sex", value: 1},{name: "indigenousMember", value: 1},{name: "FatherName", value: 1},{name: "MotherName", value: 1},{name: "Nationality", value: 1}]},{name: "deceased_x_", value: 1},{name: "contained", value: 1},{name: "managingOrganization", value: 1},{name: "link", value: 1, children: [{name: "type", value: 1},{name: "other", value: 1},{name: "modifierExtension", value: 1},{name: "id", value: 1},{name: "extension", value: 1}]},{name: "language", value: 1},{name: "implicitRules", value: 1},{name: "maritalStatus", value: 1},{name: "meta", value: 1, children: [{name: "extension", value: 1},{name: "extension_hfLastUpdated", value: 1},{name: "extension_hfRecordedDate", value: 1},{name: "id", value: 1},{name: "lastUpdated", value: 1},{name: "profile", value: 1},{name: "security", value: 1},{name: "source", value: 1},{name: "versionId", value: 1},{name: "tag", value: 1}]},{name: "modifierExtension", value: 1},{name: "multipleBirth_x_", value: 1},{name: "active", value: 1},{name: "name", value: 1, children: [{name: "extension", value: 1},{name: "family", value: 1},{name: "given", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "prefix", value: 1},{name: "suffix", value: 1},{name: "text", value: 1},{name: "use", value: 1},{name: "given_first", value: 1},{name: "given_middle", value: 1}]},{name: "photo", value: 1},{name: "telecom", value: 1, children: [{name: "extension", value: 1},{name: "id", value: 1},{name: "period", value: 1},{name: "rank", value: 1},{name: "system", value: 1},{name: "use", value: 1},{name: "value", value: 1}]},{name: "text", value: 1}]}
+        };
+        
+        // Set up dimensions
+        const width = document.getElementById('chart').clientWidth;
+        const height = document.getElementById('chart').clientHeight;
+        const diameter = Math.min(width, height);
+        
+        // Create bubble pack layout
+        const bubble = d3.pack()
+            .size([diameter, diameter])
+            .padding(1.5);
+        
+        // Create SVG
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewBox", `0 0 ${diameter} ${diameter}`)
+            .attr("class", "bubble");
+        
+        // Process the data
+        const root = d3.hierarchy(data)
+            .sum(d => d.value)
+            .sort((a, b) => b.value - a.value);
+        
+        // Apply the bubble pack layout
+        bubble(root);
+        
+        // Create the bubbles
+        const node = svg.selectAll(".node")
+            .data(root.children)
+            .enter()
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", d => `translate(${d.x},${d.y})`);
+        
+        // Add circles for each node
+        node.append("circle")
+            .attr("class", "bubble")
+            .attr("r", d => d.r)
+            .style("fill", d => {
+                // Color based on depth
+                if (d.depth === 1) return "#4e79a7"; // Blue for top level
+                if (d.depth === 2) return "#f28e2c"; // Orange for second level
+                if (d.depth === 3) return "#e15759"; // Red for third level
+                if (d.depth === 4) return "#76b7b2"; // Teal for fourth level
+                return "#59a14f"; // Green for deeper levels
+            })
+            .on("click", function(event, d) {
+                alert(`Node: ${d.data.name}\nValue: ${d.data.value}\nDepth: ${d.depth}`);
+            });
+        
+        // Add labels inside the bubbles
+        node.append("text")
+            .attr("class", "bubble-text")
+            .attr("dy", ".3em")
+            .style("text-anchor", "middle")
+            .text(d => {
+                // Truncate long names to fit in bubble
+                const name = d.data.name;
+                return name.length > 12 ? name.substring(0, 10) + ".." : name;
+            })
+            .style("font-size", d => {
+                // Adjust font size based on bubble radius
+                return Math.max(8, Math.min(12, d.r / 4)) + "px";
+            });
+        
+        // Add tooltips
+        node.append("title")
+            .text(d => `${d.data.name}\nValue: ${d.data.value}`);
+        
+        // Make the chart responsive
+        window.addEventListener("resize", function() {
+            const newWidth = document.getElementById('chart').clientWidth;
+            const newHeight = document.getElementById('chart').clientHeight;
+            const newDiameter = Math.min(newWidth, newHeight);
+            
+            d3.select("svg")
+                .attr("width", newWidth)
+                .attr("height", newHeight)
+                .attr("viewBox", `0 0 ${newDiameter} ${diameter}`);
+        });
+    </script>
+</body>
+</html>
