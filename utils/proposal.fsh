@@ -11,6 +11,59 @@ Description: "Captures key demographic and administrative information about indi
 
 * active 0..1 // Patient.active - seir-patient: 0..1
 * address 0..* MS // Patient.address - seir-patient: 0..* MS
+* birthDate 0..1 MS // Patient.birthDate - seir-patient: 0..1 MS
+* communication 0..* // Patient.communication - seir-patient: 0..*
+* contact 0..* // Patient.contact - seir-patient: 0..*
+* contained 0..* // Patient.contained - seir-patient: 0..*
+* deceased[x] 0..1 // Patient.deceased[x] - seir-patient: 0..1
+* extension 0..* // Patient.extension - seir-patient: 0..*
+* gender 0..1 MS // Patient.gender - seir-patient: 0..1 MS
+* generalPractitioner 0..* // Patient.generalPractitioner - seir-patient: 0..*
+* id 0..1 // Patient.id - seir-patient: 0..1
+* identifier 0..* MS // Patient.identifier - seir-patient: 0..* MS
+* implicitRules 0..1 // Patient.implicitRules - seir-patient: 0..1
+* language 0..1 // Patient.language - seir-patient: 0..1
+* link 0..* // Patient.link - seir-patient: 0..*
+* managingOrganization 0..1 // Patient.managingOrganization - seir-patient: 0..1
+* maritalStatus 0..1 // Patient.maritalStatus - seir-patient: 0..1
+* meta 0..1 // Patient.meta - seir-patient: 0..1
+* modifierExtension 0..* // Patient.modifierExtension - seir-patient: 0..*
+* multipleBirth[x] 0..1 // Patient.multipleBirth[x] - seir-patient: 0..1
+* name 0..* MS // Patient.name - seir-patient: 0..* MS
+* photo 0..* // Patient.photo - seir-patient: 0..*
+* telecom 0..* MS // Patient.telecom - seir-patient: 0..* MS
+* text 0..1 // Patient.text - seir-patient: 0..1
+* extension contains
+    FatherName 0..1 and
+    MotherName 0..1 and
+    Nationality 0..1 and
+    educationalAttainment 0..1 and
+    indigenousGroup 0..* and
+    indigenousMember 1..1 MS and
+    indigenousPeople 0..* and
+    memberType 0..1 and
+    nationality 0..* and
+    occupation 0..* and
+    race 0..1 and
+    religion 0..* and
+    sex 0..1 and
+    type 0..1
+
+* identifier contains
+    DriversLicense 0..1 and
+    PDD 0..1 and
+    PHCorePddRegistration 0..* MS and
+    PHCorePhilHealthID 0..* MS and
+    PassportNumber 0..1 and
+    PhilHealthID 0..* MS and
+    PhilSysID 0..* MS and
+    SSS-GSIS 0..2 and
+    TIN 0..1 and
+    patientCode 1..1 and
+    patientHospitalID 0..1 and
+    philhealthNo 1..1 and
+    uic 1..1
+
 * address.city 0..1 // Patient.address.city - : 0..1
 * address.country 0..1 // Patient.address.country - : 0..1
 * address.district 0..1 // Patient.address.district - : 0..1
@@ -26,14 +79,11 @@ Description: "Captures key demographic and administrative information about indi
 * address.text 0..1 // Patient.address.text - : 0..1
 * address.type 0..1 // Patient.address.type - : 0..1
 * address.use 0..1 // Patient.address.use - : 0..1
-* birthDate 0..1 MS // Patient.birthDate - seir-patient: 0..1 MS
-* communication 0..* // Patient.communication - seir-patient: 0..*
 * communication.extension 0..* // Patient.communication.extension - seir-patient: 0..*
 * communication.id 0..1 // Patient.communication.id - seir-patient: 0..1
 * communication.language 1..1 // Patient.communication.language - seir-patient: 1..1
 * communication.modifierExtension 0..* // Patient.communication.modifierExtension - seir-patient: 0..*
 * communication.preferred 0..1 // Patient.communication.preferred - seir-patient: 0..1
-* contact 0..* // Patient.contact - seir-patient: 0..*
 * contact.address 0..1 // Patient.contact.address - seir-patient: 0..1
 * contact.extension 0..* // Patient.contact.extension - seir-patient: 0..*
 * contact.gender 0..1 // Patient.contact.gender - seir-patient: 0..1
@@ -60,32 +110,10 @@ Description: "Captures key demographic and administrative information about indi
 * contact.telecom.system 0..1 // Patient.contact.telecom.system - : 0..1
 * contact.telecom.use 0..0 // Patient.contact.telecom.use - : 0..0
 * contact.telecom.value 0..1 // Patient.contact.telecom.value - : 0..1
-* contained 0..* // Patient.contained - seir-patient: 0..*
-* deceased[x] 0..1 // Patient.deceased[x] - seir-patient: 0..1
-* extension 0..* // Patient.extension - seir-patient: 0..*
-* extension:FatherName 0..1 // Patient.extension:FatherName - : 0..1
-* extension:MotherName 0..1 // Patient.extension:MotherName - : 0..1
-* extension:Nationality 0..1 // Patient.extension:Nationality - : 0..1
-* extension:educationalAttainment 0..1 // Patient.extension:educationalAttainment - seir-patient: 0..1
-* extension:indigenousGroup 0..* // Patient.extension:indigenousGroup - seir-patient: 0..*
-* extension:indigenousMember 1..1 MS // Patient.extension:indigenousMember - seir-patient: 1..1 MS
-* extension:indigenousPeople 0..* // Patient.extension:indigenousPeople - seir-patient: 0..*
-* extension:memberType 0..1 // Patient.extension:memberType - : 0..1
-* extension:nationality 0..* // Patient.extension:nationality - seir-patient: 0..*
-* extension:occupation 0..* // Patient.extension:occupation - seir-patient: 0..*
-* extension:race 0..1 // Patient.extension:race - seir-patient: 0..1
-* extension:religion 0..* // Patient.extension:religion - seir-patient: 0..*
 * extension:religion.extension 0..0 // Patient.extension:religion.extension - : 0..0
 * extension:religion.id 0..1 // Patient.extension:religion.id - : 0..1
 * extension:religion.url 1..1 // Patient.extension:religion.url - : 1..1
 * extension:religion.value[x] 1..1 // Patient.extension:religion.value[x] - : 1..1
-* extension:sex 0..1 // Patient.extension:sex - : 0..1
-* extension:type 0..1 // Patient.extension:type - : 0..1
-* gender 0..1 MS // Patient.gender - seir-patient: 0..1 MS
-* generalPractitioner 0..* // Patient.generalPractitioner - seir-patient: 0..*
-* id 0..1 // Patient.id - seir-patient: 0..1
-* identifier 0..* MS // Patient.identifier - seir-patient: 0..* MS
-* identifier:DriversLicense 0..1 // Patient.identifier:DriversLicense - : 0..1
 * identifier:DriversLicense.assigner 0..1 // Patient.identifier:DriversLicense.assigner - : 0..1
 * identifier:DriversLicense.extension 0..* // Patient.identifier:DriversLicense.extension - : 0..*
 * identifier:DriversLicense.id 0..1 // Patient.identifier:DriversLicense.id - : 0..1
@@ -98,7 +126,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:DriversLicense.type.text 0..1 // Patient.identifier:DriversLicense.type.text - : 0..1
 * identifier:DriversLicense.use 0..1 // Patient.identifier:DriversLicense.use - : 0..1
 * identifier:DriversLicense.value 0..1 // Patient.identifier:DriversLicense.value - : 0..1
-* identifier:PDD 0..1 // Patient.identifier:PDD - : 0..1
 * identifier:PDD.assigner 0..1 // Patient.identifier:PDD.assigner - : 0..1
 * identifier:PDD.extension 0..* // Patient.identifier:PDD.extension - : 0..*
 * identifier:PDD.id 0..1 // Patient.identifier:PDD.id - : 0..1
@@ -111,7 +138,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:PDD.type.text 0..1 // Patient.identifier:PDD.type.text - : 0..1
 * identifier:PDD.use 0..1 // Patient.identifier:PDD.use - : 0..1
 * identifier:PDD.value 0..1 // Patient.identifier:PDD.value - : 0..1
-* identifier:PHCorePddRegistration 0..* MS // Patient.identifier:PHCorePddRegistration - seir-patient: 0..* MS
 * identifier:PHCorePddRegistration.assigner 0..1 // Patient.identifier:PHCorePddRegistration.assigner - seir-patient: 0..1
 * identifier:PHCorePddRegistration.extension 0..* // Patient.identifier:PHCorePddRegistration.extension - seir-patient: 0..*
 * identifier:PHCorePddRegistration.id 0..1 // Patient.identifier:PHCorePddRegistration.id - seir-patient: 0..1
@@ -131,7 +157,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:PHCorePddRegistration.type.text 0..1 // Patient.identifier:PHCorePddRegistration.type.text - seir-patient: 0..1
 * identifier:PHCorePddRegistration.use 0..1 // Patient.identifier:PHCorePddRegistration.use - seir-patient: 0..1
 * identifier:PHCorePddRegistration.value 0..1 // Patient.identifier:PHCorePddRegistration.value - seir-patient: 0..1
-* identifier:PHCorePhilHealthID 0..* MS // Patient.identifier:PHCorePhilHealthID - seir-patient: 0..* MS
 * identifier:PHCorePhilHealthID.assigner 0..1 // Patient.identifier:PHCorePhilHealthID.assigner - seir-patient: 0..1
 * identifier:PHCorePhilHealthID.extension 0..* // Patient.identifier:PHCorePhilHealthID.extension - seir-patient: 0..*
 * identifier:PHCorePhilHealthID.id 0..1 // Patient.identifier:PHCorePhilHealthID.id - seir-patient: 0..1
@@ -151,7 +176,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:PHCorePhilHealthID.type.text 0..1 // Patient.identifier:PHCorePhilHealthID.type.text - seir-patient: 0..1
 * identifier:PHCorePhilHealthID.use 0..1 // Patient.identifier:PHCorePhilHealthID.use - seir-patient: 0..1
 * identifier:PHCorePhilHealthID.value 0..1 // Patient.identifier:PHCorePhilHealthID.value - seir-patient: 0..1
-* identifier:PassportNumber 0..1 // Patient.identifier:PassportNumber - : 0..1
 * identifier:PassportNumber.assigner 0..1 // Patient.identifier:PassportNumber.assigner - : 0..1
 * identifier:PassportNumber.extension 0..* // Patient.identifier:PassportNumber.extension - : 0..*
 * identifier:PassportNumber.id 0..1 // Patient.identifier:PassportNumber.id - : 0..1
@@ -164,7 +188,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:PassportNumber.type.text 0..1 // Patient.identifier:PassportNumber.type.text - : 0..1
 * identifier:PassportNumber.use 0..1 // Patient.identifier:PassportNumber.use - : 0..1
 * identifier:PassportNumber.value 0..1 // Patient.identifier:PassportNumber.value - : 0..1
-* identifier:PhilHealthID 0..* MS // Patient.identifier:PhilHealthID - seir-patient: 0..* MS
 * identifier:PhilHealthID.assigner 0..1 // Patient.identifier:PhilHealthID.assigner - seir-patient: 0..1
 * identifier:PhilHealthID.extension 0..* // Patient.identifier:PhilHealthID.extension - seir-patient: 0..*
 * identifier:PhilHealthID.id 0..1 // Patient.identifier:PhilHealthID.id - seir-patient: 0..1
@@ -177,7 +200,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:PhilHealthID.type.text 0..1 // Patient.identifier:PhilHealthID.type.text - seir-patient: 0..1
 * identifier:PhilHealthID.use 0..1 // Patient.identifier:PhilHealthID.use - seir-patient: 0..1
 * identifier:PhilHealthID.value 0..1 // Patient.identifier:PhilHealthID.value - seir-patient: 0..1
-* identifier:PhilSysID 0..* MS // Patient.identifier:PhilSysID - seir-patient: 0..* MS
 * identifier:PhilSysID.assigner 0..1 // Patient.identifier:PhilSysID.assigner - seir-patient: 0..1
 * identifier:PhilSysID.extension 0..* // Patient.identifier:PhilSysID.extension - seir-patient: 0..*
 * identifier:PhilSysID.id 0..1 // Patient.identifier:PhilSysID.id - seir-patient: 0..1
@@ -190,7 +212,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:PhilSysID.type.text 0..1 // Patient.identifier:PhilSysID.type.text - seir-patient: 0..1
 * identifier:PhilSysID.use 0..1 // Patient.identifier:PhilSysID.use - seir-patient: 0..1
 * identifier:PhilSysID.value 0..1 // Patient.identifier:PhilSysID.value - seir-patient: 0..1
-* identifier:SSS-GSIS 0..2 // Patient.identifier:SSS-GSIS - : 0..2
 * identifier:SSS-GSIS.assigner 0..1 // Patient.identifier:SSS-GSIS.assigner - : 0..1
 * identifier:SSS-GSIS.extension 0..* // Patient.identifier:SSS-GSIS.extension - : 0..*
 * identifier:SSS-GSIS.id 0..1 // Patient.identifier:SSS-GSIS.id - : 0..1
@@ -203,7 +224,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:SSS-GSIS.type.text 0..1 // Patient.identifier:SSS-GSIS.type.text - : 0..1
 * identifier:SSS-GSIS.use 0..1 // Patient.identifier:SSS-GSIS.use - : 0..1
 * identifier:SSS-GSIS.value 0..1 // Patient.identifier:SSS-GSIS.value - : 0..1
-* identifier:TIN 0..1 // Patient.identifier:TIN - : 0..1
 * identifier:TIN.assigner 0..1 // Patient.identifier:TIN.assigner - : 0..1
 * identifier:TIN.extension 0..* // Patient.identifier:TIN.extension - : 0..*
 * identifier:TIN.id 0..1 // Patient.identifier:TIN.id - : 0..1
@@ -216,7 +236,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:TIN.type.text 0..1 // Patient.identifier:TIN.type.text - : 0..1
 * identifier:TIN.use 0..1 // Patient.identifier:TIN.use - : 0..1
 * identifier:TIN.value 0..1 // Patient.identifier:TIN.value - : 0..1
-* identifier:patientCode 1..1 // Patient.identifier:patientCode - : 1..1
 * identifier:patientCode.assigner 0..1 // Patient.identifier:patientCode.assigner - : 0..1
 * identifier:patientCode.extension 0..* // Patient.identifier:patientCode.extension - : 0..*
 * identifier:patientCode.id 0..1 // Patient.identifier:patientCode.id - : 0..1
@@ -225,7 +244,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:patientCode.type 0..1 // Patient.identifier:patientCode.type - : 0..1
 * identifier:patientCode.use 1..1 // Patient.identifier:patientCode.use - : 1..1
 * identifier:patientCode.value 1..1 // Patient.identifier:patientCode.value - : 1..1
-* identifier:patientHospitalID 0..1 // Patient.identifier:patientHospitalID - : 0..1
 * identifier:patientHospitalID.assigner 0..1 // Patient.identifier:patientHospitalID.assigner - : 0..1
 * identifier:patientHospitalID.extension 0..* // Patient.identifier:patientHospitalID.extension - : 0..*
 * identifier:patientHospitalID.id 0..1 // Patient.identifier:patientHospitalID.id - : 0..1
@@ -234,7 +252,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:patientHospitalID.type 0..1 // Patient.identifier:patientHospitalID.type - : 0..1
 * identifier:patientHospitalID.use 0..1 // Patient.identifier:patientHospitalID.use - : 0..1
 * identifier:patientHospitalID.value 0..1 // Patient.identifier:patientHospitalID.value - : 0..1
-* identifier:philhealthNo 1..1 // Patient.identifier:philhealthNo - : 1..1
 * identifier:philhealthNo.assigner 0..1 // Patient.identifier:philhealthNo.assigner - : 0..1
 * identifier:philhealthNo.extension 0..* // Patient.identifier:philhealthNo.extension - : 0..*
 * identifier:philhealthNo.id 0..1 // Patient.identifier:philhealthNo.id - : 0..1
@@ -243,7 +260,6 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:philhealthNo.type 0..1 // Patient.identifier:philhealthNo.type - : 0..1
 * identifier:philhealthNo.use 1..1 // Patient.identifier:philhealthNo.use - : 1..1
 * identifier:philhealthNo.value 1..1 // Patient.identifier:philhealthNo.value - : 1..1
-* identifier:uic 1..1 // Patient.identifier:uic - : 1..1
 * identifier:uic.assigner 0..1 // Patient.identifier:uic.assigner - : 0..1
 * identifier:uic.extension 0..* // Patient.identifier:uic.extension - : 0..*
 * identifier:uic.id 0..1 // Patient.identifier:uic.id - : 0..1
@@ -252,17 +268,11 @@ Description: "Captures key demographic and administrative information about indi
 * identifier:uic.type 0..1 // Patient.identifier:uic.type - : 0..1
 * identifier:uic.use 1..1 // Patient.identifier:uic.use - : 1..1
 * identifier:uic.value 1..1 // Patient.identifier:uic.value - : 1..1
-* implicitRules 0..1 // Patient.implicitRules - seir-patient: 0..1
-* language 0..1 // Patient.language - seir-patient: 0..1
-* link 0..* // Patient.link - seir-patient: 0..*
 * link.extension 0..* // Patient.link.extension - seir-patient: 0..*
 * link.id 0..1 // Patient.link.id - seir-patient: 0..1
 * link.modifierExtension 0..* // Patient.link.modifierExtension - seir-patient: 0..*
 * link.other 1..1 // Patient.link.other - seir-patient: 1..1
 * link.type 1..1 // Patient.link.type - seir-patient: 1..1
-* managingOrganization 0..1 // Patient.managingOrganization - seir-patient: 0..1
-* maritalStatus 0..1 // Patient.maritalStatus - seir-patient: 0..1
-* meta 0..1 // Patient.meta - seir-patient: 0..1
 * meta.extension 0..* // Patient.meta.extension - : 0..*
 * meta.extension:hfLastUpdated 0..* // Patient.meta.extension:hfLastUpdated - : 0..*
 * meta.extension:hfRecordedDate 0..1 // Patient.meta.extension:hfRecordedDate - : 0..1
@@ -273,9 +283,6 @@ Description: "Captures key demographic and administrative information about indi
 * meta.source 0..1 // Patient.meta.source - : 0..1
 * meta.tag 0..* // Patient.meta.tag - : 0..*
 * meta.versionId 0..1 // Patient.meta.versionId - : 0..1
-* modifierExtension 0..* // Patient.modifierExtension - seir-patient: 0..*
-* multipleBirth[x] 0..1 // Patient.multipleBirth[x] - seir-patient: 0..1
-* name 0..* MS // Patient.name - seir-patient: 0..* MS
 * name.extension 0..* // Patient.name.extension - seir-patient: 0..*
 * name.family 0..1 MS // Patient.name.family - seir-patient: 0..1 MS
 * name.given 0..* MS // Patient.name.given - seir-patient: 0..* MS
@@ -287,8 +294,6 @@ Description: "Captures key demographic and administrative information about indi
 * name.suffix 0..* MS // Patient.name.suffix - seir-patient: 0..* MS
 * name.text 0..1 // Patient.name.text - seir-patient: 0..1
 * name.use 0..1 // Patient.name.use - seir-patient: 0..1
-* photo 0..* // Patient.photo - seir-patient: 0..*
-* telecom 0..* MS // Patient.telecom - seir-patient: 0..* MS
 * telecom.extension 0..* // Patient.telecom.extension - : 0..*
 * telecom.id 0..1 // Patient.telecom.id - : 0..1
 * telecom.period 0..1 // Patient.telecom.period - : 0..1
@@ -296,4 +301,3 @@ Description: "Captures key demographic and administrative information about indi
 * telecom.system 0..1 // Patient.telecom.system - : 0..1
 * telecom.use 0..1 // Patient.telecom.use - : 0..1
 * telecom.value 0..1 // Patient.telecom.value - : 0..1
-* text 0..1 // Patient.text - seir-patient: 0..1
