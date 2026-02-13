@@ -66,29 +66,43 @@ def determine_final_recommendation(ig_data):
     
     return cardinality, final_ms
 
+def extract_fsh_header(fsh_path):
+    """Extract the profile header from existing FSH file"""
+    header_lines = []
+    profile_parent = None
+    
+    with open(fsh_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            stripped = line.strip()
+            
+            # Extract the parent profile for automatic skipping
+            if stripped.startswith('Parent:'):
+                profile_parent = stripped.split(':')[1].strip()
+            
+            # Header ends when we hit the first profile rule (line starting with *)
+            if stripped.startswith('*'):
+                break
+                
+            # Keep all header lines (including comments and empty lines for structure)
+            header_lines.append(line.rstrip())
+    
+    return header_lines, profile_parent
+
 def map_fhir_path_to_fsh(fhir_path):
     """Convert FHIR paths like 'Patient.gender' to FSH paths like 'gender'"""
     if fhir_path.startswith('Patient.'):
         return fhir_path[8:]  # Remove 'Patient.' prefix
     return fhir_path
 
-def generate_fsh_proposal(csv_data):
-    """Generate a complete FSH proposal from CSV data"""
+def generate_fsh_proposal(csv_data, profile_parent=None):
+    """Generate the FSH content (without header) from CSV data"""
     lines = []
     
-    # Header
+    # Add separator comment
     lines.append("// ============================================")
     lines.append("// FSH PROPOSAL GENERATED FROM patient.csv")
     lines.append("// Uses loosest cardinalities and MS flags from all IGs")
     lines.append("// ============================================")
-    lines.append("")
-    
-    # Profile definition
-    lines.append("Profile: PHCorePatient")
-    lines.append("Parent: Patient")
-    lines.append("Id: ph-core-patient")
-    lines.append("Title: \"PH Core Patient\"")
-    lines.append("Description: \"Captures key demographic and administrative information about individuals receiving care or other health-related services.\"")
     lines.append("")
     
     # Process each FHIR path and generate FSH rules
@@ -96,6 +110,14 @@ def generate_fsh_proposal(csv_data):
         cardinality, ms = determine_final_recommendation(ig_data)
         fsh_path = map_fhir_path_to_fsh(fhir_path)
         
+        # Automatically skip the parent profile path and other unwanted paths
+        unwanted_paths = ['FHIRPath']
+        if profile_parent:
+            unwanted_paths.append(profile_parent)
+        
+        if fsh_path in unwanted_paths:
+            continue
+            
         # Create comment with IG details
         ig_comments = []
         for ig in ig_data:
@@ -111,36 +133,45 @@ def generate_fsh_proposal(csv_data):
             ig_comments.append(f"{ig_name}: {ig_card} {ms_flag}".strip())
         
         comment = f"// {fhir_path} - " + ", ".join(ig_comments)
-        lines.append(comment)
         
-        # Generate FSH rule
+        # Generate FSH rule with inline comment
         fsh_line = f"* {fsh_path} {cardinality}"
         if ms:
             fsh_line += " MS"
+        fsh_line += f" {comment}"
         lines.append(fsh_line)
-        lines.append("")
     
     return lines
 
 def main():
-    # Paths
+    # Configurable paths - easy to change for different profiles
     csv_path = Path("utils/patient.csv")
+    fsh_path = Path("input/fsh/profiles/ph-core-patient.fsh")
     output_path = Path("utils/proposal.fsh")
     
     print(f"Reading CSV data from: {csv_path}")
     csv_data = read_csv_data(csv_path)
     print(f"Found {len(csv_data)} unique FHIR paths in CSV")
     
+    print(f"Extracting header from: {fsh_path}")
+    header_lines, profile_parent = extract_fsh_header(fsh_path)
+    print(f"Extracted {len(header_lines)} header lines")
+    print(f"Detected parent profile: {profile_parent}")
+    
     print("Generating FSH proposal...")
-    fsh_lines = generate_fsh_proposal(csv_data)
+    fsh_lines = generate_fsh_proposal(csv_data, profile_parent)
+    
+    # Combine header and generated content
+    final_lines = header_lines + [''] + fsh_lines  # Add blank line between header and content
     
     print(f"Writing proposal to: {output_path}")
     with open(output_path, 'w', encoding='utf-8') as f:
-        f.writelines(line + '\n' for line in fsh_lines)
+        f.writelines(line + '\n' for line in final_lines)
     
     print("✅ Proposal generation complete!")
-    print(f"📝 Generated {len(fsh_lines)} lines")
+    print(f"📝 Generated {len(final_lines)} total lines ({len(header_lines)} header + {len(fsh_lines)} content)")
     print(f"📄 Output file: {output_path}")
+    print("💡 To reuse for other profiles, modify the CSV path and FSH path variables")
 
 if __name__ == "__main__":
     main()
