@@ -1,6 +1,25 @@
-**Project Status: In Development (Draft)** > This Implementation Guide is under active development and is not yet available for public or production use. Content, data models, and implementation details are subject to change.
+<style>
+/* Container centers inline content */
+.svg-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center; /* center smaller images without forcing them to grow */
+}
 
+/* Keep intrinsic size (no upscaling), allow downscaling to fit width,
+   but constrain very tall/large images by viewport height so they don't stretch the page. */
+.svg-wrap svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;       /* allow downscaling to container width */
+  height: auto !important; 
+  box-sizing: border-box;
+}
+</style>
 # Draft Philippine Core FHIR Implementation Guide (PH Core IG)
+<div class="svg-wrap"> {% include disclaimer.svg %} </div>
+> **Project Status: In Development**  
+> This Implementation Guide is under active development and is not yet available for public or production use. Content, data models, and implementation details are subject to change.
 
 The Philippine Core FHIR Implementation Guide (PH Core IG) defines the nationally agreed core clinical and administrative data standards for interoperable health information exchange in the Philippines. It provides a common, implementable foundation for health systems to consistently exchange data using the HL7® FHIR® standard.
 
