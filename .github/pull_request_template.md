@@ -22,22 +22,6 @@ Clearly describe the submitted changes with lots of details. Include images wher
 
 <!-- What does this PR fix or improve? -->
 
-### Build Verification
-
-<!-- Confirm that you have tested your changes locally -->
-- [ ] I have run `_build.sh` (or `_build.bat`) and it completed without errors
-- [ ] I have run `sushi .` and it completed without errors
-- [ ] I have run `_genonce.sh` (or `_genonce.bat`) and the IG built successfully
-- [ ] I have reviewed the generated output in `output/index.html`
-
-### Testing Performed
-
-<!-- Describe the testing you have done to validate your changes -->
-
-- [ ] SUSHI compilation successful
-- [ ] IG Publisher build successful
-- [ ] Verified in output HTML
-
 ### Related Issues
 
 <!-- Does this PR fix a bug or fulfill a Feature Request? Link related Issues here. -->
