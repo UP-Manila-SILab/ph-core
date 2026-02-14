@@ -11,7 +11,7 @@ Thank you for your interest in contributing to the PH Core Implementation Guide!
 3. [Branching Strategy](#3-branching-strategy)
 4. [Process for Code Review](#4-process-for-code-review)
 5. [Development Setup](#5-development-setup)
-6. [Issue and Feature Request Templates](#6-issue-and-feature-request-templates)
+6. [Internal Contributing Workflow](#6-internal-contributing-workflow-ph-core-team)
 
 ---
 
@@ -53,7 +53,7 @@ Use the following prefixes for issue titles:
 
 2. **Clone the Fork**: Clone your fork locally to work on your changes.
    ```bash
-   git clone https://github.com/YOUR-USERNAME/PH-Core.git
+   git clone https://github.com/YOUR-USERNAME/ph-core.git
    ```
 
 3. **Create a Branch**: Use a meaningful branch name (see [Branching Strategy](#3-branching-strategy)).
@@ -79,7 +79,7 @@ Use the following prefixes for issue titles:
 
 6. **Commit Changes**: Write clear and concise commit messages. Follow the format:
    ```bash
-   git commit -m "Fix #<issue-number>: Describe the changes made"
+   git commit -m "Describe the changes made"
    ```
 
 7. **Push the Changes**: Push your branch to your forked repository.
@@ -150,29 +150,23 @@ Severity: #error
 
 ## 3. Branching Strategy
 
-We follow a **Gitflow**-inspired branching model to ensure an organized and efficient workflow.
-
 ### **Main Branches:**
 
-* **main**: The default branch. It should always contain stable, production-ready code.
-* **develop**: This branch contains the latest working code and is where new features are merged before going to production.
+* **main**: This branch contains the latest working code and is where new features are merged before going to production.
+* **releases-tag**: These are tagged branches which contains versioned latest production ready code.
 
 ### **Feature Branches:**
 
-* Create a feature branch from `develop` for new features or bug fixes.
-* Branch naming convention:
-  * **Feature branch:** `feature/<short-description>` or `feature/<issue-number>-short-description`
-  * **Bugfix branch:** `bugfix/<short-description>`
-  * **Hotfix branch:** `hotfix/<short-description>`
-* Merge your feature branch back into `develop` when your work is done, and submit a pull request.
+* Create a feature branch from `main` for new features or bug fixes.
+* Merge your feature branch back into `main` when your work is done, and submit a pull request.
 
 ### **Hotfix Branches:**
 
-* If an urgent bug needs fixing in production, create a `hotfix/<description>` branch off `main`, fix the issue, then merge it back into `main` and `develop`.
+* If an urgent bug needs fixing in production, create a `hotfix/<description>` branch off `main`, fix the issue, then merge it back into `main`.
 
 ### **Release Branches:**
 
-* When preparing a new production release, create a `release/x.x.x` branch from `develop`, make final adjustments, and merge it into both `main` and `develop` after testing.
+* When preparing a new production release, create a `v#.#.#` branch from `main`, after final adjustments and after testing.
 
 ---
 
@@ -205,7 +199,7 @@ We follow a **Gitflow**-inspired branching model to ensure an organized and effi
 
 #### **Merging:**
 
-* After approval, the PR will be merged into the target branch (typically `develop` for features or `main` for hotfixes).
+* After approval, the PR will be merged into the target branch `main`.
 * The PR will be **squash merged** to maintain a clean commit history.
 
 #### **Post-Merge:**
@@ -285,3 +279,43 @@ We follow a **Gitflow**-inspired branching model to ensure an organized and effi
 
 5. **Preview**
    Open `output/index.html` in your browser to preview.
+
+---
+
+## 6. Internal Contributing Workflow (PH Core Team)
+
+For PH Core team members, follow this workflow:
+
+### Branching
+
+**Create issue:**
+- Create branch from Github UI, copy the recommended commands OR
+- run terminal commands
+  ```sh
+  git pull origin
+  git checkout {branch name generated}
+  ```
+
+![Branching workflow](https://github.com/user-attachments/assets/7d62020a-7f9b-4ee6-bbb3-27fe59215214)
+
+
+### Commit & PR
+
+- Make small, focused commits with clear messages.
+- Build and test locally before pushing.
+- Push your branch and open a Pull Request (PR) to `main`.
+
+### Pull Request Policy
+
+1. ✅ Only merge when **CI is green**.
+2. 📝 **Merge notes required** (unless history is self-explanatory).
+3. 🔄 **Preferred merge method:** Squash and Merge.
+4. 🌿 **Delete the feature branch** after merge.
+5. ✅ **Mark all files as reviewed** in GitHub UI.
+
+### Reviewer Checklist
+
+- Does the IG build locally and in CI?
+- Are new artifacts linked in the IG?
+- Are identifiers and canonical URLs correct?
+- Are changes documented in PR notes?
