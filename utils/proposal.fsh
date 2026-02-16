@@ -9,45 +9,49 @@ Description: "Captures key demographic and administrative information about indi
 // Uses loosest cardinalities and MS flags from all IGs
 // ============================================
 
-* active 0..1 // Patient.active - seir-patient: 0..1
+// * active 0..1 // Patient.active - seir-patient: 0..1
 // * address 0..* MS // Patient.address - seir-patient: 0..* MS
-* birthDate 0..1 MS // Patient.birthDate - seir-patient: 0..1 MS
-* communication 0..* // Patient.communication - seir-patient: 0..*
-* contact 0..* // Patient.contact - seir-patient: 0..*
-* contained 0..* // Patient.contained - seir-patient: 0..*
-* deceased[x] 0..1 // Patient.deceased[x] - seir-patient: 0..1
-* extension 0..* // Patient.extension - seir-patient: 0..*
+// * birthDate 0..1 MS // Patient.birthDate - seir-patient: 0..1 MS
+// * communication 0..* // Patient.communication - seir-patient: 0..*
+// * contact 0..* // Patient.contact - seir-patient: 0..*
+// * contained 0..* // Patient.contained - seir-patient: 0..*
+// * deceased[x] 0..1 // Patient.deceased[x] - seir-patient: 0..1
+// * extension 0..* // Patient.extension - seir-patient: 0..*
 // * gender 0..1 MS // Patient.gender - seir-patient: 0..1 MS
-* generalPractitioner 0..* // Patient.generalPractitioner - seir-patient: 0..*
-* id 0..1 // Patient.id - seir-patient: 0..1
-* identifier 0..* MS // Patient.identifier - seir-patient: 0..* MS
-* implicitRules 0..1 // Patient.implicitRules - seir-patient: 0..1
-* language 0..1 // Patient.language - seir-patient: 0..1
-* link 0..* // Patient.link - seir-patient: 0..*
-* managingOrganization 0..1 // Patient.managingOrganization - seir-patient: 0..1
-* maritalStatus 0..1 // Patient.maritalStatus - seir-patient: 0..1
-* meta 0..1 // Patient.meta - seir-patient: 0..1
-* modifierExtension 0..* // Patient.modifierExtension - seir-patient: 0..*
-* multipleBirth[x] 0..1 // Patient.multipleBirth[x] - seir-patient: 0..1
-* name 0..* MS // Patient.name - seir-patient: 0..* MS
-* photo 0..* // Patient.photo - seir-patient: 0..*
-* telecom 0..* MS // Patient.telecom - seir-patient: 0..* MS
-* text 0..1 // Patient.text - seir-patient: 0..1
+// * generalPractitioner 0..* // Patient.generalPractitioner - seir-patient: 0..*
+// * id 0..1 // Patient.id - seir-patient: 0..1
+// * identifier 0..* MS // Patient.identifier - seir-patient: 0..* MS
+// * implicitRules 0..1 // Patient.implicitRules - seir-patient: 0..1
+// * language 0..1 // Patient.language - seir-patient: 0..1
+// * link 0..* // Patient.link - seir-patient: 0..*
+// * managingOrganization 0..1 // Patient.managingOrganization - seir-patient: 0..1
+// * maritalStatus 0..1 // Patient.maritalStatus - seir-patient: 0..1
+// * meta 0..1 // Patient.meta - seir-patient: 0..1
+// * modifierExtension 0..* // Patient.modifierExtension - seir-patient: 0..*
+// * multipleBirth[x] 0..1 // Patient.multipleBirth[x] - seir-patient: 0..1
+// * name 0..* MS // Patient.name - seir-patient: 0..* MS
+// * photo 0..* // Patient.photo - seir-patient: 0..*
+// * telecom 0..* MS // Patient.telecom - seir-patient: 0..* MS
+// * text 0..1 // Patient.text - seir-patient: 0..1
 * extension contains
     FatherName 0..1 and // TDG: Move to RelatedPerson
     MotherName 0..1 and // TDG: Move to RelatedPerson
     // Nationality 0..1 and // Use FHIR Extension: https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-nationality.html
-    educationalAttainment 0..1 and
+    // educationalAttainment 0..1 and // Observation or Extension - CDG; 
     // indigenousGroup 0..* and
     // indigenousMember 1..1 MS and // For CDG: Assertion - Remove
     // indigenousPeople 0..* and // For CDG: Assertion - Maintain
-    memberType 0..1 and
+    // memberType 0..1 and // Bench For CDG: is this Philhealth Usecase
     // nationality 0..* and
     // occupation 0..* and
     // race 0..1 and
     // religion 0..* and
-    sex 0..1 and
-    type 0..1
+    // sex 0..1 and // see fhir extension
+    // type 0..1 // Bench For CDG NHDR Usecase Specific : Bench. Still for CDG with PHIC
+
+// Observation.code = http://loinc.org|76689-9 "Educational Attainment"
+// Observation.valueCodeableConcept from PSAClassification (required)
+// https://psa.gov.ph/classification/psced/level
 
 // * identifier contains
 //     DriversLicense 0..1 and
@@ -64,56 +68,62 @@ Description: "Captures key demographic and administrative information about indi
 //     philhealthNo 1..1 and
 //     uic 1..1
 
-* address.city 0..1 // Patient.address.city - : 0..1
-* address.country 0..1 // Patient.address.country - : 0..1
-* address.district 0..1 // Patient.address.district - : 0..1
-* address.extension 0..* MS // Patient.address.extension - : 0..* MS
-* address.extension:barangay 0..* // Patient.address.extension:barangay - : 0..*
-* address.extension:cityMunicipality 0..* // Patient.address.extension:cityMunicipality - : 0..*
-* address.extension:province 0..* // Patient.address.extension:province - : 0..*
-* address.id 0..1 // Patient.address.id - : 0..1
-* address.line 0..* MS // Patient.address.line - : 0..* MS
-* address.period 0..1 // Patient.address.period - : 0..1
-* address.postalCode 0..1 // Patient.address.postalCode - : 0..1
-* address.state 0..1 // Patient.address.state - : 0..1
-* address.text 0..1 // Patient.address.text - : 0..1
-* address.type 0..1 // Patient.address.type - : 0..1
-* address.use 0..1 // Patient.address.use - : 0..1
-* communication.extension 0..* // Patient.communication.extension - seir-patient: 0..*
-* communication.id 0..1 // Patient.communication.id - seir-patient: 0..1
-* communication.language 1..1 // Patient.communication.language - seir-patient: 1..1
-* communication.modifierExtension 0..* // Patient.communication.modifierExtension - seir-patient: 0..*
-* communication.preferred 0..1 // Patient.communication.preferred - seir-patient: 0..1
-* contact.address 0..1 // Patient.contact.address - seir-patient: 0..1
-* contact.extension 0..* // Patient.contact.extension - seir-patient: 0..*
-* contact.gender 0..1 // Patient.contact.gender - seir-patient: 0..1
-* contact.id 0..1 // Patient.contact.id - seir-patient: 0..1
-* contact.modifierExtension 0..* // Patient.contact.modifierExtension - seir-patient: 0..*
-* contact.name 0..1 // Patient.contact.name - seir-patient: 0..1
-* contact.name.extension 0..* // Patient.contact.name.extension - : 0..*
-* contact.name.family 0..1 // Patient.contact.name.family - : 0..1
-* contact.name.given 0..* // Patient.contact.name.given - : 0..*
-* contact.name.id 0..0 // Patient.contact.name.id - : 0..0
-* contact.name.period 0..0 // Patient.contact.name.period - : 0..0
-* contact.name.prefix 0..0 // Patient.contact.name.prefix - : 0..0
-* contact.name.suffix 0..* // Patient.contact.name.suffix - : 0..*
-* contact.name.text 0..0 // Patient.contact.name.text - : 0..0
-* contact.name.use 0..0 // Patient.contact.name.use - : 0..0
-* contact.organization 0..1 // Patient.contact.organization - seir-patient: 0..1
-* contact.period 0..1 // Patient.contact.period - seir-patient: 0..1
-* contact.relationship 0..* // Patient.contact.relationship - seir-patient: 0..*
-* contact.telecom 0..* // Patient.contact.telecom - seir-patient: 0..*
-* contact.telecom.extension 0..* // Patient.contact.telecom.extension - : 0..*
-* contact.telecom.id 0..0 // Patient.contact.telecom.id - : 0..0
-* contact.telecom.period 0..0 // Patient.contact.telecom.period - : 0..0
-* contact.telecom.rank 0..0 // Patient.contact.telecom.rank - : 0..0
-* contact.telecom.system 0..1 // Patient.contact.telecom.system - : 0..1
-* contact.telecom.use 0..0 // Patient.contact.telecom.use - : 0..0
-* contact.telecom.value 0..1 // Patient.contact.telecom.value - : 0..1
-* extension:religion.extension 0..0 // Patient.extension:religion.extension - : 0..0
-* extension:religion.id 0..1 // Patient.extension:religion.id - : 0..1
-* extension:religion.url 1..1 // Patient.extension:religion.url - : 1..1
-* extension:religion.value[x] 1..1 // Patient.extension:religion.value[x] - : 1..1
+// Address
+// * address.city 0..1 // Patient.address.city - : 0..1
+// * address.country 0..1 // Patient.address.country - : 0..1
+// * address.district 0..1 // Patient.address.district - : 0..1
+// * address.extension 0..* MS // Patient.address.extension - : 0..* MS
+// * address.extension:barangay 0..* // Patient.address.extension:barangay - : 0..*
+// * address.extension:cityMunicipality 0..* // Patient.address.extension:cityMunicipality - : 0..*
+// * address.extension:province 0..* // Patient.address.extension:province - : 0..*
+// * address.id 0..1 // Patient.address.id - : 0..1
+// * address.line 0..* MS // Patient.address.line - : 0..* MS
+// * address.period 0..1 // Patient.address.period - : 0..1
+// * address.postalCode 0..1 // Patient.address.postalCode - : 0..1
+// * address.state 0..1 // Patient.address.state - : 0..1
+// * address.text 0..1 // Patient.address.text - : 0..1
+// * address.type 0..1 // Patient.address.type - : 0..1
+// * address.use 0..1 // Patient.address.use - : 0..1
+
+// * communication.extension 0..* // Patient.communication.extension - seir-patient: 0..*
+// * communication.id 0..1 // Patient.communication.id - seir-patient: 0..1
+// * communication.language 1..1 // Patient.communication.language - seir-patient: 1..1
+// * communication.modifierExtension 0..* // Patient.communication.modifierExtension - seir-patient: 0..*
+// * communication.preferred 0..1 // Patient.communication.preferred - seir-patient: 0..1
+
+// * contact.address 0..1 // Patient.contact.address - seir-patient: 0..1
+// * contact.extension 0..* // Patient.contact.extension - seir-patient: 0..*
+// * contact.gender 0..1 // Patient.contact.gender - seir-patient: 0..1
+// * contact.id 0..1 // Patient.contact.id - seir-patient: 0..1
+// * contact.modifierExtension 0..* // Patient.contact.modifierExtension - seir-patient: 0..*
+
+// * contact.name 0..1 // Patient.contact.name - seir-patient: 0..1
+// * contact.name.extension 0..* // Patient.contact.name.extension - : 0..*
+// * contact.name.family 0..1 // Patient.contact.name.family - : 0..1
+// * contact.name.given 0..* // Patient.contact.name.given - : 0..*
+// * contact.name.id 0..0 // Patient.contact.name.id - : 0..0
+// * contact.name.period 0..0 // Patient.contact.name.period - : 0..0
+// * contact.name.prefix 0..0 // Patient.contact.name.prefix - : 0..0
+// * contact.name.suffix 0..* // Patient.contact.name.suffix - : 0..*
+// * contact.name.text 0..0 // Patient.contact.name.text - : 0..0
+// * contact.name.use 0..0 // Patient.contact.name.use - : 0..0
+
+// * contact.organization 0..1 // Patient.contact.organization - seir-patient: 0..1
+// * contact.period 0..1 // Patient.contact.period - seir-patient: 0..1
+// * contact.relationship 0..* // Patient.contact.relationship - seir-patient: 0..*
+// * contact.telecom 0..* // Patient.contact.telecom - seir-patient: 0..*
+// * contact.telecom.extension 0..* // Patient.contact.telecom.extension - : 0..*
+// * contact.telecom.id 0..0 // Patient.contact.telecom.id - : 0..0
+// * contact.telecom.period 0..0 // Patient.contact.telecom.period - : 0..0
+// * contact.telecom.rank 0..0 // Patient.contact.telecom.rank - : 0..0
+// * contact.telecom.system 0..1 // Patient.contact.telecom.system - : 0..1
+// * contact.telecom.use 0..0 // Patient.contact.telecom.use - : 0..0
+// * contact.telecom.value 0..1 // Patient.contact.telecom.value - : 0..1
+
+// * extension:religion.extension 0..0 // Patient.extension:religion.extension - : 0..0
+// * extension:religion.id 0..1 // Patient.extension:religion.id - : 0..1
+// * extension:religion.url 1..1 // Patient.extension:religion.url - : 1..1
+// * extension:religion.value[x] 1..1 // Patient.extension:religion.value[x] - : 1..1
 
 // Bench Driver's License
 // * identifier:DriversLicense.assigner 0..1 // Patient.identifier:DriversLicense.assigner - : 0..1
@@ -288,36 +298,38 @@ Description: "Captures key demographic and administrative information about indi
 // * identifier:uic.use 1..1 // Patient.identifier:uic.use - : 1..1
 // * identifier:uic.value 1..1 // Patient.identifier:uic.value - : 1..1
 
-* link.extension 0..* // Patient.link.extension - seir-patient: 0..*
-* link.id 0..1 // Patient.link.id - seir-patient: 0..1
-* link.modifierExtension 0..* // Patient.link.modifierExtension - seir-patient: 0..*
-* link.other 1..1 // Patient.link.other - seir-patient: 1..1
-* link.type 1..1 // Patient.link.type - seir-patient: 1..1
-* meta.extension 0..* // Patient.meta.extension - : 0..*
-* meta.extension:hfLastUpdated 0..* // Patient.meta.extension:hfLastUpdated - : 0..*
-* meta.extension:hfRecordedDate 0..1 // Patient.meta.extension:hfRecordedDate - : 0..1
-* meta.id 0..1 // Patient.meta.id - : 0..1
-* meta.lastUpdated 0..1 // Patient.meta.lastUpdated - : 0..1
-* meta.profile 0..* // Patient.meta.profile - : 0..*
-* meta.security 0..* // Patient.meta.security - : 0..*
-* meta.source 0..1 // Patient.meta.source - : 0..1
-* meta.tag 0..* // Patient.meta.tag - : 0..*
-* meta.versionId 0..1 // Patient.meta.versionId - : 0..1
-* name.extension 0..* // Patient.name.extension - seir-patient: 0..*
-* name.family 0..1 MS // Patient.name.family - seir-patient: 0..1 MS
-* name.given 0..* MS // Patient.name.given - seir-patient: 0..* MS
-* name.given:first 1..* MS // Patient.name.given:first - seir-patient: 1..* MS
-* name.given:middle 0..* MS // Patient.name.given:middle - seir-patient: 0..* MS
-* name.id 0..1 // Patient.name.id - seir-patient: 0..1
-* name.period 0..1 // Patient.name.period - seir-patient: 0..1
-* name.prefix 0..* // Patient.name.prefix - seir-patient: 0..*
-* name.suffix 0..* MS // Patient.name.suffix - seir-patient: 0..* MS
-* name.text 0..1 // Patient.name.text - seir-patient: 0..1
-* name.use 0..1 // Patient.name.use - seir-patient: 0..1
-* telecom.extension 0..* // Patient.telecom.extension - : 0..*
-* telecom.id 0..1 // Patient.telecom.id - : 0..1
-* telecom.period 0..1 // Patient.telecom.period - : 0..1
-* telecom.rank 0..1 // Patient.telecom.rank - : 0..1
-* telecom.system 0..1 // Patient.telecom.system - : 0..1
-* telecom.use 0..1 // Patient.telecom.use - : 0..1
-* telecom.value 0..1 // Patient.telecom.value - : 0..1
+// * link.extension 0..* // Patient.link.extension - seir-patient: 0..*
+// * link.id 0..1 // Patient.link.id - seir-patient: 0..1
+// * link.modifierExtension 0..* // Patient.link.modifierExtension - seir-patient: 0..*
+// * link.other 1..1 // Patient.link.other - seir-patient: 1..1
+// * link.type 1..1 // Patient.link.type - seir-patient: 1..1
+
+// * meta.extension 0..* // Patient.meta.extension - : 0..*
+// * meta.extension:hfLastUpdated 0..* // Patient.meta.extension:hfLastUpdated - : 0..*
+// * meta.extension:hfRecordedDate 0..1 // Patient.meta.extension:hfRecordedDate - : 0..1
+// * meta.id 0..1 // Patient.meta.id - : 0..1
+// * meta.lastUpdated 0..1 // Patient.meta.lastUpdated - : 0..1
+// * meta.profile 0..* // Patient.meta.profile - : 0..*
+// * meta.security 0..* // Patient.meta.security - : 0..*
+// * meta.source 0..1 // Patient.meta.source - : 0..1
+// * meta.tag 0..* // Patient.meta.tag - : 0..*
+// * meta.versionId 0..1 // Patient.meta.versionId - : 0..1
+
+// * name.extension 0..* // Patient.name.extension - seir-patient: 0..*
+// * name.family 0..1 MS // Patient.name.family - seir-patient: 0..1 MS
+// * name.given 0..* MS // Patient.name.given - seir-patient: 0..* MS
+// * name.given:first 1..* MS // Patient.name.given:first - seir-patient: 1..* MS
+// * name.given:middle 0..* MS // Patient.name.given:middle - seir-patient: 0..* MS
+// * name.id 0..1 // Patient.name.id - seir-patient: 0..1
+// * name.period 0..1 // Patient.name.period - seir-patient: 0..1
+// * name.prefix 0..* // Patient.name.prefix - seir-patient: 0..*
+// * name.suffix 0..* MS // Patient.name.suffix - seir-patient: 0..* MS
+// * name.text 0..1 // Patient.name.text - seir-patient: 0..1
+// * name.use 0..1 // Patient.name.use - seir-patient: 0..1
+// * telecom.extension 0..* // Patient.telecom.extension - : 0..*
+// * telecom.id 0..1 // Patient.telecom.id - : 0..1
+// * telecom.period 0..1 // Patient.telecom.period - : 0..1
+// * telecom.rank 0..1 // Patient.telecom.rank - : 0..1
+// * telecom.system 0..1 // Patient.telecom.system - : 0..1
+// * telecom.use 0..1 // Patient.telecom.use - : 0..1
+// * telecom.value 0..1 // Patient.telecom.value - : 0..1
