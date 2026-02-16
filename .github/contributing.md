@@ -319,3 +319,8 @@ For PH Core team members, follow this workflow:
 - Are new artifacts linked in the IG?
 - Are identifiers and canonical URLs correct?
 - Are changes documented in PR notes?
+
+### Contact Us:
+
+- Email: nih-nthc.upmanila@up.edu.ph
+- Facebook Page: https://www.facebook.com/UPMTelehealth
