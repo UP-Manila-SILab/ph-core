@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: fhir.ph.core
-canonical: https://doh.gov.ph/ph-core/fhir
+canonical: http://doh.gov.ph/fhir/ph-core
 name: PHCoreImplementationGuide
 title: Draft PH Core Implementation Guide
 description: This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.
