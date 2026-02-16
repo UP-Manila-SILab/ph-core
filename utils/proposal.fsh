@@ -49,20 +49,20 @@ Description: "Captures key demographic and administrative information about indi
     sex 0..1 and
     type 0..1
 
-* identifier contains
-    DriversLicense 0..1 and
-    PDD 0..1 and
-    PHCorePddRegistration 0..* MS and
-    PHCorePhilHealthID 0..* MS and
-    PassportNumber 0..1 and
-    PhilHealthID 0..* MS and
-    PhilSysID 0..* MS and
-    SSS-GSIS 0..2 and
-    TIN 0..1 and
-    patientCode 1..1 and
-    patientHospitalID 0..1 and
-    philhealthNo 1..1 and
-    uic 1..1
+// * identifier contains
+//     DriversLicense 0..1 and
+//     PDD 0..1 and
+//     PHCorePddRegistration 0..* MS and
+//     PHCorePhilHealthID 0..* MS and
+//     PassportNumber 0..1 and
+//     PhilHealthID 0..* MS and
+//     PhilSysID 0..* MS and
+//     SSS-GSIS 0..2 and
+//     TIN 0..1 and
+//     patientCode 1..1 and
+//     patientHospitalID 0..1 and
+//     philhealthNo 1..1 and
+//     uic 1..1
 
 * address.city 0..1 // Patient.address.city - : 0..1
 * address.country 0..1 // Patient.address.country - : 0..1
@@ -162,117 +162,132 @@ Description: "Captures key demographic and administrative information about indi
 // * identifier:PHCorePddRegistration.use 0..1 // Patient.identifier:PHCorePddRegistration.use - seir-patient: 0..1
 // * identifier:PHCorePddRegistration.value 0..1 // Patient.identifier:PHCorePddRegistration.value - seir-patient: 0..1
 
-* identifier:PHCorePhilHealthID.assigner 0..1 // Patient.identifier:PHCorePhilHealthID.assigner - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.extension 0..* // Patient.identifier:PHCorePhilHealthID.extension - seir-patient: 0..*
-* identifier:PHCorePhilHealthID.id 0..1 // Patient.identifier:PHCorePhilHealthID.id - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.period 0..1 // Patient.identifier:PHCorePhilHealthID.period - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.system 1..1 // Patient.identifier:PHCorePhilHealthID.system - seir-patient: 1..1
-* identifier:PHCorePhilHealthID.type 0..1 // Patient.identifier:PHCorePhilHealthID.type - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.type.coding 0..* // Patient.identifier:PHCorePhilHealthID.type.coding - seir-patient: 0..*
-* identifier:PHCorePhilHealthID.type.coding.code 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.code - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.type.coding.display 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.display - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.type.coding.extension 0..* // Patient.identifier:PHCorePhilHealthID.type.coding.extension - seir-patient: 0..*
-* identifier:PHCorePhilHealthID.type.coding.id 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.id - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.type.coding.system 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.system - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.type.coding.userSelected 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.userSelected - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.type.coding.version 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.version - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.type.extension 0..* // Patient.identifier:PHCorePhilHealthID.type.extension - seir-patient: 0..*
-* identifier:PHCorePhilHealthID.type.id 0..1 // Patient.identifier:PHCorePhilHealthID.type.id - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.type.text 0..1 // Patient.identifier:PHCorePhilHealthID.type.text - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.use 0..1 // Patient.identifier:PHCorePhilHealthID.use - seir-patient: 0..1
-* identifier:PHCorePhilHealthID.value 0..1 // Patient.identifier:PHCorePhilHealthID.value - seir-patient: 0..1
-* identifier:PassportNumber.assigner 0..1 // Patient.identifier:PassportNumber.assigner - : 0..1
-* identifier:PassportNumber.extension 0..* // Patient.identifier:PassportNumber.extension - : 0..*
-* identifier:PassportNumber.id 0..1 // Patient.identifier:PassportNumber.id - : 0..1
-* identifier:PassportNumber.period 0..1 // Patient.identifier:PassportNumber.period - : 0..1
-* identifier:PassportNumber.system 1..1 // Patient.identifier:PassportNumber.system - : 1..1
-* identifier:PassportNumber.type 0..1 // Patient.identifier:PassportNumber.type - : 0..1
-* identifier:PassportNumber.type.coding 0..* // Patient.identifier:PassportNumber.type.coding - : 0..*
-* identifier:PassportNumber.type.extension 0..* // Patient.identifier:PassportNumber.type.extension - : 0..*
-* identifier:PassportNumber.type.id 0..1 // Patient.identifier:PassportNumber.type.id - : 0..1
-* identifier:PassportNumber.type.text 0..1 // Patient.identifier:PassportNumber.type.text - : 0..1
-* identifier:PassportNumber.use 0..1 // Patient.identifier:PassportNumber.use - : 0..1
-* identifier:PassportNumber.value 0..1 // Patient.identifier:PassportNumber.value - : 0..1
-* identifier:PhilHealthID.assigner 0..1 // Patient.identifier:PhilHealthID.assigner - seir-patient: 0..1
-* identifier:PhilHealthID.extension 0..* // Patient.identifier:PhilHealthID.extension - seir-patient: 0..*
-* identifier:PhilHealthID.id 0..1 // Patient.identifier:PhilHealthID.id - seir-patient: 0..1
-* identifier:PhilHealthID.period 0..1 // Patient.identifier:PhilHealthID.period - seir-patient: 0..1
-* identifier:PhilHealthID.system 1..1 // Patient.identifier:PhilHealthID.system - seir-patient: 1..1
-* identifier:PhilHealthID.type 0..1 // Patient.identifier:PhilHealthID.type - seir-patient: 0..1
-* identifier:PhilHealthID.type.coding 0..* // Patient.identifier:PhilHealthID.type.coding - seir-patient: 0..*
-* identifier:PhilHealthID.type.extension 0..* // Patient.identifier:PhilHealthID.type.extension - seir-patient: 0..*
-* identifier:PhilHealthID.type.id 0..1 // Patient.identifier:PhilHealthID.type.id - seir-patient: 0..1
-* identifier:PhilHealthID.type.text 0..1 // Patient.identifier:PhilHealthID.type.text - seir-patient: 0..1
-* identifier:PhilHealthID.use 0..1 // Patient.identifier:PhilHealthID.use - seir-patient: 0..1
-* identifier:PhilHealthID.value 0..1 // Patient.identifier:PhilHealthID.value - seir-patient: 0..1
-* identifier:PhilSysID.assigner 0..1 // Patient.identifier:PhilSysID.assigner - seir-patient: 0..1
-* identifier:PhilSysID.extension 0..* // Patient.identifier:PhilSysID.extension - seir-patient: 0..*
-* identifier:PhilSysID.id 0..1 // Patient.identifier:PhilSysID.id - seir-patient: 0..1
-* identifier:PhilSysID.period 0..1 // Patient.identifier:PhilSysID.period - seir-patient: 0..1
-* identifier:PhilSysID.system 1..1 // Patient.identifier:PhilSysID.system - seir-patient: 1..1
-* identifier:PhilSysID.type 0..1 // Patient.identifier:PhilSysID.type - seir-patient: 0..1
-* identifier:PhilSysID.type.coding 0..* // Patient.identifier:PhilSysID.type.coding - seir-patient: 0..*
-* identifier:PhilSysID.type.extension 0..* // Patient.identifier:PhilSysID.type.extension - seir-patient: 0..*
-* identifier:PhilSysID.type.id 0..1 // Patient.identifier:PhilSysID.type.id - seir-patient: 0..1
-* identifier:PhilSysID.type.text 0..1 // Patient.identifier:PhilSysID.type.text - seir-patient: 0..1
-* identifier:PhilSysID.use 0..1 // Patient.identifier:PhilSysID.use - seir-patient: 0..1
-* identifier:PhilSysID.value 0..1 // Patient.identifier:PhilSysID.value - seir-patient: 0..1
-* identifier:SSS-GSIS.assigner 0..1 // Patient.identifier:SSS-GSIS.assigner - : 0..1
-* identifier:SSS-GSIS.extension 0..* // Patient.identifier:SSS-GSIS.extension - : 0..*
-* identifier:SSS-GSIS.id 0..1 // Patient.identifier:SSS-GSIS.id - : 0..1
-* identifier:SSS-GSIS.period 0..1 // Patient.identifier:SSS-GSIS.period - : 0..1
-* identifier:SSS-GSIS.system 1..1 // Patient.identifier:SSS-GSIS.system - : 1..1
-* identifier:SSS-GSIS.type 0..1 // Patient.identifier:SSS-GSIS.type - : 0..1
-* identifier:SSS-GSIS.type.coding 0..* // Patient.identifier:SSS-GSIS.type.coding - : 0..*
-* identifier:SSS-GSIS.type.extension 0..* // Patient.identifier:SSS-GSIS.type.extension - : 0..*
-* identifier:SSS-GSIS.type.id 0..1 // Patient.identifier:SSS-GSIS.type.id - : 0..1
-* identifier:SSS-GSIS.type.text 0..1 // Patient.identifier:SSS-GSIS.type.text - : 0..1
-* identifier:SSS-GSIS.use 0..1 // Patient.identifier:SSS-GSIS.use - : 0..1
-* identifier:SSS-GSIS.value 0..1 // Patient.identifier:SSS-GSIS.value - : 0..1
-* identifier:TIN.assigner 0..1 // Patient.identifier:TIN.assigner - : 0..1
-* identifier:TIN.extension 0..* // Patient.identifier:TIN.extension - : 0..*
-* identifier:TIN.id 0..1 // Patient.identifier:TIN.id - : 0..1
-* identifier:TIN.period 0..1 // Patient.identifier:TIN.period - : 0..1
-* identifier:TIN.system 1..1 // Patient.identifier:TIN.system - : 1..1
-* identifier:TIN.type 0..1 // Patient.identifier:TIN.type - : 0..1
-* identifier:TIN.type.coding 0..* // Patient.identifier:TIN.type.coding - : 0..*
-* identifier:TIN.type.extension 0..* // Patient.identifier:TIN.type.extension - : 0..*
-* identifier:TIN.type.id 0..1 // Patient.identifier:TIN.type.id - : 0..1
-* identifier:TIN.type.text 0..1 // Patient.identifier:TIN.type.text - : 0..1
-* identifier:TIN.use 0..1 // Patient.identifier:TIN.use - : 0..1
-* identifier:TIN.value 0..1 // Patient.identifier:TIN.value - : 0..1
-* identifier:patientCode.assigner 0..1 // Patient.identifier:patientCode.assigner - : 0..1
-* identifier:patientCode.extension 0..* // Patient.identifier:patientCode.extension - : 0..*
-* identifier:patientCode.id 0..1 // Patient.identifier:patientCode.id - : 0..1
-* identifier:patientCode.period 0..1 // Patient.identifier:patientCode.period - : 0..1
-* identifier:patientCode.system 0..1 // Patient.identifier:patientCode.system - : 0..1
-* identifier:patientCode.type 0..1 // Patient.identifier:patientCode.type - : 0..1
-* identifier:patientCode.use 1..1 // Patient.identifier:patientCode.use - : 1..1
-* identifier:patientCode.value 1..1 // Patient.identifier:patientCode.value - : 1..1
-* identifier:patientHospitalID.assigner 0..1 // Patient.identifier:patientHospitalID.assigner - : 0..1
-* identifier:patientHospitalID.extension 0..* // Patient.identifier:patientHospitalID.extension - : 0..*
-* identifier:patientHospitalID.id 0..1 // Patient.identifier:patientHospitalID.id - : 0..1
-* identifier:patientHospitalID.period 0..1 // Patient.identifier:patientHospitalID.period - : 0..1
-* identifier:patientHospitalID.system 1..1 // Patient.identifier:patientHospitalID.system - : 1..1
-* identifier:patientHospitalID.type 0..1 // Patient.identifier:patientHospitalID.type - : 0..1
-* identifier:patientHospitalID.use 0..1 // Patient.identifier:patientHospitalID.use - : 0..1
-* identifier:patientHospitalID.value 0..1 // Patient.identifier:patientHospitalID.value - : 0..1
-* identifier:philhealthNo.assigner 0..1 // Patient.identifier:philhealthNo.assigner - : 0..1
-* identifier:philhealthNo.extension 0..* // Patient.identifier:philhealthNo.extension - : 0..*
-* identifier:philhealthNo.id 0..1 // Patient.identifier:philhealthNo.id - : 0..1
-* identifier:philhealthNo.period 0..1 // Patient.identifier:philhealthNo.period - : 0..1
-* identifier:philhealthNo.system 0..1 // Patient.identifier:philhealthNo.system - : 0..1
-* identifier:philhealthNo.type 0..1 // Patient.identifier:philhealthNo.type - : 0..1
-* identifier:philhealthNo.use 1..1 // Patient.identifier:philhealthNo.use - : 1..1
-* identifier:philhealthNo.value 1..1 // Patient.identifier:philhealthNo.value - : 1..1
-* identifier:uic.assigner 0..1 // Patient.identifier:uic.assigner - : 0..1
-* identifier:uic.extension 0..* // Patient.identifier:uic.extension - : 0..*
-* identifier:uic.id 0..1 // Patient.identifier:uic.id - : 0..1
-* identifier:uic.period 0..1 // Patient.identifier:uic.period - : 0..1
-* identifier:uic.system 0..1 // Patient.identifier:uic.system - : 0..1
-* identifier:uic.type 0..1 // Patient.identifier:uic.type - : 0..1
-* identifier:uic.use 1..1 // Patient.identifier:uic.use - : 1..1
-* identifier:uic.value 1..1 // Patient.identifier:uic.value - : 1..1
+// * identifier:PHCorePhilHealthID.assigner 0..1 // Patient.identifier:PHCorePhilHealthID.assigner - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.extension 0..* // Patient.identifier:PHCorePhilHealthID.extension - seir-patient: 0..*
+// * identifier:PHCorePhilHealthID.id 0..1 // Patient.identifier:PHCorePhilHealthID.id - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.period 0..1 // Patient.identifier:PHCorePhilHealthID.period - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.system 1..1 // Patient.identifier:PHCorePhilHealthID.system - seir-patient: 1..1
+// * identifier:PHCorePhilHealthID.type 0..1 // Patient.identifier:PHCorePhilHealthID.type - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.type.coding 0..* // Patient.identifier:PHCorePhilHealthID.type.coding - seir-patient: 0..*
+// * identifier:PHCorePhilHealthID.type.coding.code 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.code - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.type.coding.display 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.display - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.type.coding.extension 0..* // Patient.identifier:PHCorePhilHealthID.type.coding.extension - seir-patient: 0..*
+// * identifier:PHCorePhilHealthID.type.coding.id 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.id - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.type.coding.system 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.system - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.type.coding.userSelected 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.userSelected - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.type.coding.version 0..1 // Patient.identifier:PHCorePhilHealthID.type.coding.version - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.type.extension 0..* // Patient.identifier:PHCorePhilHealthID.type.extension - seir-patient: 0..*
+// * identifier:PHCorePhilHealthID.type.id 0..1 // Patient.identifier:PHCorePhilHealthID.type.id - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.type.text 0..1 // Patient.identifier:PHCorePhilHealthID.type.text - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.use 0..1 // Patient.identifier:PHCorePhilHealthID.use - seir-patient: 0..1
+// * identifier:PHCorePhilHealthID.value 0..1 // Patient.identifier:PHCorePhilHealthID.value - seir-patient: 0..1
+
+// Bench Passport Number
+// * identifier:PassportNumber.assigner 0..1 // Patient.identifier:PassportNumber.assigner - : 0..1
+// * identifier:PassportNumber.extension 0..* // Patient.identifier:PassportNumber.extension - : 0..*
+// * identifier:PassportNumber.id 0..1 // Patient.identifier:PassportNumber.id - : 0..1
+// * identifier:PassportNumber.period 0..1 // Patient.identifier:PassportNumber.period - : 0..1
+// * identifier:PassportNumber.system 1..1 // Patient.identifier:PassportNumber.system - : 1..1
+// * identifier:PassportNumber.type 0..1 // Patient.identifier:PassportNumber.type - : 0..1
+// * identifier:PassportNumber.type.coding 0..* // Patient.identifier:PassportNumber.type.coding - : 0..*
+// * identifier:PassportNumber.type.extension 0..* // Patient.identifier:PassportNumber.type.extension - : 0..*
+// * identifier:PassportNumber.type.id 0..1 // Patient.identifier:PassportNumber.type.id - : 0..1
+// * identifier:PassportNumber.type.text 0..1 // Patient.identifier:PassportNumber.type.text - : 0..1
+// * identifier:PassportNumber.use 0..1 // Patient.identifier:PassportNumber.use - : 0..1
+// * identifier:PassportNumber.value 0..1 // Patient.identifier:PassportNumber.value - : 0..1
+
+// * identifier:PhilHealthID.assigner 0..1 // Patient.identifier:PhilHealthID.assigner - seir-patient: 0..1
+// * identifier:PhilHealthID.extension 0..* // Patient.identifier:PhilHealthID.extension - seir-patient: 0..*
+// * identifier:PhilHealthID.id 0..1 // Patient.identifier:PhilHealthID.id - seir-patient: 0..1
+// * identifier:PhilHealthID.period 0..1 // Patient.identifier:PhilHealthID.period - seir-patient: 0..1
+// * identifier:PhilHealthID.system 1..1 // Patient.identifier:PhilHealthID.system - seir-patient: 1..1
+// * identifier:PhilHealthID.type 0..1 // Patient.identifier:PhilHealthID.type - seir-patient: 0..1
+// * identifier:PhilHealthID.type.coding 0..* // Patient.identifier:PhilHealthID.type.coding - seir-patient: 0..*
+// * identifier:PhilHealthID.type.extension 0..* // Patient.identifier:PhilHealthID.type.extension - seir-patient: 0..*
+// * identifier:PhilHealthID.type.id 0..1 // Patient.identifier:PhilHealthID.type.id - seir-patient: 0..1
+// * identifier:PhilHealthID.type.text 0..1 // Patient.identifier:PhilHealthID.type.text - seir-patient: 0..1
+// * identifier:PhilHealthID.use 0..1 // Patient.identifier:PhilHealthID.use - seir-patient: 0..1
+// * identifier:PhilHealthID.value 0..1 // Patient.identifier:PhilHealthID.value - seir-patient: 0..1
+
+// * identifier:PhilSysID.assigner 0..1 // Patient.identifier:PhilSysID.assigner - seir-patient: 0..1
+// * identifier:PhilSysID.extension 0..* // Patient.identifier:PhilSysID.extension - seir-patient: 0..*
+// * identifier:PhilSysID.id 0..1 // Patient.identifier:PhilSysID.id - seir-patient: 0..1
+// * identifier:PhilSysID.period 0..1 // Patient.identifier:PhilSysID.period - seir-patient: 0..1
+// * identifier:PhilSysID.system 1..1 // Patient.identifier:PhilSysID.system - seir-patient: 1..1
+// * identifier:PhilSysID.type 0..1 // Patient.identifier:PhilSysID.type - seir-patient: 0..1
+// * identifier:PhilSysID.type.coding 0..* // Patient.identifier:PhilSysID.type.coding - seir-patient: 0..*
+// * identifier:PhilSysID.type.extension 0..* // Patient.identifier:PhilSysID.type.extension - seir-patient: 0..*
+// * identifier:PhilSysID.type.id 0..1 // Patient.identifier:PhilSysID.type.id - seir-patient: 0..1
+// * identifier:PhilSysID.type.text 0..1 // Patient.identifier:PhilSysID.type.text - seir-patient: 0..1
+// * identifier:PhilSysID.use 0..1 // Patient.identifier:PhilSysID.use - seir-patient: 0..1
+// * identifier:PhilSysID.value 0..1 // Patient.identifier:PhilSysID.value - seir-patient: 0..1
+
+// Bench SSS-GSIS
+// * identifier:SSS-GSIS.assigner 0..1 // Patient.identifier:SSS-GSIS.assigner - : 0..1
+// * identifier:SSS-GSIS.extension 0..* // Patient.identifier:SSS-GSIS.extension - : 0..*
+// * identifier:SSS-GSIS.id 0..1 // Patient.identifier:SSS-GSIS.id - : 0..1
+// * identifier:SSS-GSIS.period 0..1 // Patient.identifier:SSS-GSIS.period - : 0..1
+// * identifier:SSS-GSIS.system 1..1 // Patient.identifier:SSS-GSIS.system - : 1..1
+// * identifier:SSS-GSIS.type 0..1 // Patient.identifier:SSS-GSIS.type - : 0..1
+// * identifier:SSS-GSIS.type.coding 0..* // Patient.identifier:SSS-GSIS.type.coding - : 0..*
+// * identifier:SSS-GSIS.type.extension 0..* // Patient.identifier:SSS-GSIS.type.extension - : 0..*
+// * identifier:SSS-GSIS.type.id 0..1 // Patient.identifier:SSS-GSIS.type.id - : 0..1
+// * identifier:SSS-GSIS.type.text 0..1 // Patient.identifier:SSS-GSIS.type.text - : 0..1
+// * identifier:SSS-GSIS.use 0..1 // Patient.identifier:SSS-GSIS.use - : 0..1
+// * identifier:SSS-GSIS.value 0..1 // Patient.identifier:SSS-GSIS.value - : 0..1
+// * identifier:TIN.assigner 0..1 // Patient.identifier:TIN.assigner - : 0..1
+// * identifier:TIN.extension 0..* // Patient.identifier:TIN.extension - : 0..*
+// * identifier:TIN.id 0..1 // Patient.identifier:TIN.id - : 0..1
+// * identifier:TIN.period 0..1 // Patient.identifier:TIN.period - : 0..1
+// * identifier:TIN.system 1..1 // Patient.identifier:TIN.system - : 1..1
+// * identifier:TIN.type 0..1 // Patient.identifier:TIN.type - : 0..1
+// * identifier:TIN.type.coding 0..* // Patient.identifier:TIN.type.coding - : 0..*
+// * identifier:TIN.type.extension 0..* // Patient.identifier:TIN.type.extension - : 0..*
+// * identifier:TIN.type.id 0..1 // Patient.identifier:TIN.type.id - : 0..1
+// * identifier:TIN.type.text 0..1 // Patient.identifier:TIN.type.text - : 0..1
+// * identifier:TIN.use 0..1 // Patient.identifier:TIN.use - : 0..1
+// * identifier:TIN.value 0..1 // Patient.identifier:TIN.value - : 0..1
+
+// Usecase Specific for Viral Hep
+// * identifier:patientCode.assigner 0..1 // Patient.identifier:patientCode.assigner - : 0..1
+// * identifier:patientCode.extension 0..* // Patient.identifier:patientCode.extension - : 0..*
+// * identifier:patientCode.id 0..1 // Patient.identifier:patientCode.id - : 0..1
+// * identifier:patientCode.period 0..1 // Patient.identifier:patientCode.period - : 0..1
+// * identifier:patientCode.system 0..1 // Patient.identifier:patientCode.system - : 0..1
+// * identifier:patientCode.type 0..1 // Patient.identifier:patientCode.type - : 0..1
+// * identifier:patientCode.use 1..1 // Patient.identifier:patientCode.use - : 1..1
+// * identifier:patientCode.value 1..1 // Patient.identifier:patientCode.value - : 1..1
+
+// Bench, for IPS
+// * identifier:patientHospitalID.assigner 0..1 // Patient.identifier:patientHospitalID.assigner - : 0..1
+// * identifier:patientHospitalID.extension 0..* // Patient.identifier:patientHospitalID.extension - : 0..*
+// * identifier:patientHospitalID.id 0..1 // Patient.identifier:patientHospitalID.id - : 0..1
+// * identifier:patientHospitalID.period 0..1 // Patient.identifier:patientHospitalID.period - : 0..1
+// * identifier:patientHospitalID.system 1..1 // Patient.identifier:patientHospitalID.system - : 1..1
+// * identifier:patientHospitalID.type 0..1 // Patient.identifier:patientHospitalID.type - : 0..1
+// * identifier:patientHospitalID.use 0..1 // Patient.identifier:patientHospitalID.use - : 0..1
+// * identifier:patientHospitalID.value 0..1 // Patient.identifier:patientHospitalID.value - : 0..1
+
+// Duplicate of above
+// * identifier:philhealthNo.assigner 0..1 // Patient.identifier:philhealthNo.assigner - : 0..1
+// * identifier:philhealthNo.extension 0..* // Patient.identifier:philhealthNo.extension - : 0..*
+// * identifier:philhealthNo.id 0..1 // Patient.identifier:philhealthNo.id - : 0..1
+// * identifier:philhealthNo.period 0..1 // Patient.identifier:philhealthNo.period - : 0..1
+// * identifier:philhealthNo.system 0..1 // Patient.identifier:philhealthNo.system - : 0..1
+// * identifier:philhealthNo.type 0..1 // Patient.identifier:philhealthNo.type - : 0..1
+// * identifier:philhealthNo.use 1..1 // Patient.identifier:philhealthNo.use - : 1..1
+// * identifier:philhealthNo.value 1..1 // Patient.identifier:philhealthNo.value - : 1..1
+
+// Viral Hep Usecase Specific
+// * identifier:uic.assigner 0..1 // Patient.identifier:uic.assigner - : 0..1
+// * identifier:uic.extension 0..* // Patient.identifier:uic.extension - : 0..*
+// * identifier:uic.id 0..1 // Patient.identifier:uic.id - : 0..1
+// * identifier:uic.period 0..1 // Patient.identifier:uic.period - : 0..1
+// * identifier:uic.system 0..1 // Patient.identifier:uic.system - : 0..1
+// * identifier:uic.type 0..1 // Patient.identifier:uic.type - : 0..1
+// * identifier:uic.use 1..1 // Patient.identifier:uic.use - : 1..1
+// * identifier:uic.value 1..1 // Patient.identifier:uic.value - : 1..1
+
 * link.extension 0..* // Patient.link.extension - seir-patient: 0..*
 * link.id 0..1 // Patient.link.id - seir-patient: 0..1
 * link.modifierExtension 0..* // Patient.link.modifierExtension - seir-patient: 0..*

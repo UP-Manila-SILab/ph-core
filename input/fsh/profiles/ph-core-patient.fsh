@@ -19,24 +19,20 @@ Description: "Captures key demographic and administrative information about indi
     educational-attainment named educationalAttainment 0..1
     
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.path = "system" // Review if need to cite system url when Patient is being reviewed
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slicing based on identifier system"
 * identifier ^slicing.ordered = false
 
 * identifier contains
-    PHCorePhilHealthID 0..* MS
-    // PHCorePddRegistration 0..* MS
+    PHCorePhilHealthID 0..* MS and
+    PHCorePhilSysID 0..* MS
 
 * identifier[PHCorePhilHealthID] only PHCorePhilHealthID
-* identifier[PHCorePhilHealthID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
-* identifier[PHCorePhilHealthID].type.coding.code = #NH (exactly)
+* identifier[PHCorePhilSysID] only PHCorePhilSysID
 
-// * identifier[PHCorePddRegistration] ^short = "PDD Registration Number"
-// * identifier[PHCorePddRegistration] ^definition = "PhilHealth Dialysis Database Registration Number"
-// * identifier[PHCorePddRegistration].system = "http://doh.gov.ph/fhir/Identifier/pdd-registration"
-// * identifier[PHCorePddRegistration].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
-// * identifier[PHCorePddRegistration].type.coding.code = #NH (exactly)
+// Task: PH Core Update NTHC IGs referring to PH Core 
+// to use PHCorePhilHealthID and PHCorePhilSysID profiles
 
 * address only ph-core-address
 * maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
