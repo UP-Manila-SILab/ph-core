@@ -20,19 +20,10 @@ Description: "Captures key demographic and administrative information about indi
 
 * identifier contains
     PHCorePhilHealthID 0..* MS and
-    PHCorePddRegistration 0..* MS
+    PHCorePhilSysID 0..* MS
 
-* identifier[PHCorePhilHealthID] ^short = "PhilHealth ID"
-* identifier[PHCorePhilHealthID] ^definition = "PhilHealth ID"
-* identifier[PHCorePhilHealthID].system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"
-* identifier[PHCorePhilHealthID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
-* identifier[PHCorePhilHealthID].type.coding.code = #NH (exactly)
-
-* identifier[PHCorePddRegistration] ^short = "PDD Registration Number"
-* identifier[PHCorePddRegistration] ^definition = "PhilHealth Dialysis Database Registration Number"
-* identifier[PHCorePddRegistration].system = "http://doh.gov.ph/fhir/Identifier/pdd-registration"
-* identifier[PHCorePddRegistration].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
-* identifier[PHCorePddRegistration].type.coding.code = #NH (exactly)
+* identifier[PHCorePhilHealthID] only PHCorePhilHealthID
+* identifier[PHCorePhilSysID] only PHCorePhilSysID
 
 * address only ph-core-address
 * maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
