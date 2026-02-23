@@ -1,5 +1,5 @@
-CodeSystem: IndigenousGroups
-Id: indigenous-groups
+CodeSystem: IndigenousGroupsCS
+Id: indigenous-groups-cs
 Title: "Indigenous Groups"
 Description: "A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."
 * insert ShareableCodeSystem
