@@ -20,5 +20,8 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 * identifier[NhfrCode].type.coding.code = #FI (exactly)
 * identifier[NhfrCode].use = #official
 
-* address only ph-core-address
-* contact.address only ph-core-address
+* address MS
+* address only PHCoreAddress or Address
+
+* contact.address MS
+* contact.address only PHCoreAddress or Address
