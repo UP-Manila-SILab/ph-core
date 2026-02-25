@@ -4,6 +4,7 @@ Id: ph-core-address
 Title: "PH Core Address"
 Description: "An address for the individual."
 * extension contains
-    province named province 0..* and
-    city-municipality named cityMunicipality 0..* and
-    barangay named barangay 0..*
+    Region named region 0..1 and
+    Province named province 0..1 and
+    CityMunicipality named cityMunicipality 0..1 and
+    Barangay named barangay 0..1

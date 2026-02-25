@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Draft PH Core Implementation Guide Documentation
+    url: https://github.com/UP-Manila-SILab/ph-core/blob/main/README.md
+    about: Check the README for general project information.
+  - name: Contributing Guidelines
+    url: https://github.com/UP-Manila-SILab/ph-core/blob/main/.github/contributing.md
+    about: Please read our contributing guidelines before submitting issues or PRs.

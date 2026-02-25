@@ -23,7 +23,7 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 * contact.address.postalCode = "1003"
 * contact.address.country = "PH"
 
-* address.extension.url = "urn://example.com/ph-core/fhir/StructureDefinition/region"
+* address.extension.url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region"
 * address.extension.valueCoding = PSGC#0102800000  "Ilocos Norte"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Department of Health - Central Office is a PH Core Organization located at San Lazaro Compound, Rizal Avenue, Manila, NCR, 1003, Philippines. The organization can be contacted through its health facility contact at +63-2-8651-7800. The regional designation is Ilocos Norte.</div>"
