@@ -34,8 +34,12 @@ Description: "Captures key demographic and administrative information about indi
 * identifier[PHCorePddRegistration].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
 * identifier[PHCorePddRegistration].type.coding.code = #NH (exactly)
 
+* name MS
+* name only PHCoreName
+
 * address only ph-core-address
 * maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
 * contact.relationship from http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (required)
+* contact.name MS
 * contact.name only PHCoreName
 * contact.address only ph-core-address
