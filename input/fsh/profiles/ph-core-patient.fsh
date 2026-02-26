@@ -8,9 +8,9 @@ Description: "Captures key demographic and administrative information about indi
     http://hl7.org/fhir/StructureDefinition/patient-religion|5.2.0 named religion 0..* and
     indigenous-group named indigenousGroup 0..* and
     indigenous-people named indigenousPeople 1..1 and
-    occupation named occupation 0..* and
-    race named race 0..1 and
-    educational-attainment named educationalAttainment 0..1
+    Occupation named occupation 0..* and
+    Race named race 0..1 and
+    EducationalAttainment named educationalAttainment 0..1
     
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
