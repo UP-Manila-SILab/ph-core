@@ -6,36 +6,9 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 * subject 1..1
 * subject only Reference(PHCorePatient)
 
-* participant 0..*
-* participant.individual 0..1
-* participant.individual only Reference(PHCorePractitioner or PHCoreRelatedPerson or Practitioner or PractitionerRole or RelatedPerson) //Add PHCorePractitionerRole when implemented
 * participant 0..* MS
-
-* account 0..*
-* appointment 0..*
-* basedOn 0..*
-* basedOn 0..*
-
-* class 1..1 MS
-* class.code 0..1
-* class.display 0..1
-* class.extension 0..*
-* class.id 0..1
-* class.system 0..1
-* class.userSelected 0..1
-* class.version 0..1
-
-* classHistory 0..*
-* classHistory.class 1..1
-* classHistory.extension 0..*
-* classHistory.id 0..1
-* classHistory.modifierExtension 0..*
-* classHistory.period 1..1
+* participant.individual only Reference(PHCorePractitioner or PHCoreRelatedPerson or Practitioner or PractitionerRole or RelatedPerson) //Add PH Core PractitionerRole once available
 
 * diagnosis 0..*
 * diagnosis.condition 1..1
-* diagnosis.extension 0..*
-* diagnosis.id 0..1
-* diagnosis.modifierExtension 0..*
-* diagnosis.rank 0..1
-* diagnosis.use 0..1
+* diagnosis.condition only Reference(Condition or Procedure or PHCoreProcedure) // Add PHCoreCondition once available
