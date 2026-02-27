@@ -8,6 +8,7 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 
 * participant 0..*
 * participant.individual 0..1
+* participant.individual only Reference(PHCorePractitioner or PHCoreRelatedPerson or Practitioner or PractitionerRole or RelatedPerson) //Add PHCorePractitionerRole when implemented
 * participant 0..* MS
 
 * account 0..*
