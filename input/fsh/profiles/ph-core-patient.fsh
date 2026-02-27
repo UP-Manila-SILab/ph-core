@@ -11,7 +11,7 @@ Description: "Captures key demographic and administrative information about indi
     occupation named occupation 0..* and
     race named race 0..1 and
     educational-attainment named educationalAttainment 0..1
-    
+
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
