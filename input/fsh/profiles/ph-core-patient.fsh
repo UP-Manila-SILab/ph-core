@@ -6,12 +6,16 @@ Description: "Captures key demographic and administrative information about indi
 * extension contains
     http://hl7.org/fhir/StructureDefinition/patient-nationality|5.2.0 named nationality 0..* and
     http://hl7.org/fhir/StructureDefinition/patient-religion|5.2.0 named religion 0..* and
+    http://hl7.org/fhir/StructureDefinition/individual-genderIdentity|5.2.0 named genderIdentity 0..* and
     indigenous-group named indigenousGroup 0..* and
     indigenous-people named indigenousPeople 1..1 and
     occupation named occupation 0..* and
     race named race 0..1 and
-    educational-attainment named educationalAttainment 0..1
-
+    educational-attainment named educationalAttainment 0..1 and
+    http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.2.0 named sex 0..*
+* extension[genderIdentity] ^short = "Gender Identity - in compliance with SOGIE Bill"
+* extension[sex] ^short = "Sex assigned at birth - in compliance with SOGIE Bill"
+    
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
