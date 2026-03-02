@@ -11,8 +11,6 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 * participant 0..* MS
 * participant.individual only Reference(PHCorePractitioner or PHCoreRelatedPerson or Practitioner or PractitionerRole or RelatedPerson) //Add PH Core PractitionerRole once available
 
-* diagnosis 0..*
-* diagnosis.condition 1..1
 * diagnosis.condition only Reference(Condition or Procedure or PHCoreProcedure) // Add PHCoreCondition once available
 
 
