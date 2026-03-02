@@ -13,7 +13,6 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 
 * diagnosis.condition only Reference(Condition or Procedure or PHCoreProcedure) // Add PHCoreCondition once available
 
-
 //Since we have a PHCorePhilHealthID profile, we can use that as a slicing discriminator for the identifier element in Encounter. This will allow us to specify that if an Encounter has a PhilHealth ID, it must conform to the PHCorePhilHealthID profile. This is important for ensuring that any PhilHealth IDs used in Encounters are consistent and conform to the expected structure and constraints defined in the PHCorePhilHealthID profile.
 * identifier ^slicing.discriminator.type = #profile
 * identifier ^slicing.discriminator.path = "$this"
@@ -21,3 +20,9 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 
 * identifier contains PhilHealthID 0..1 MS 
 * identifier[PhilHealthID] only PHCorePhilHealthID
+
+* period.extension 0..*
+* period.id 0..1
+* period.start 1..1 MS
+* period.end 0..1
+
