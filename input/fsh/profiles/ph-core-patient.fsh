@@ -9,9 +9,9 @@ Description: "Captures key demographic and administrative information about indi
     http://hl7.org/fhir/StructureDefinition/individual-genderIdentity|5.2.0 named genderIdentity 0..* and
     IndigenousGroup named indigenousGroup 0..* and
     IndigenousPeople named indigenousPeople 0..1 and
-    occupation named occupation 0..* and
-    race named race 0..1 and
-    educational-attainment named educationalAttainment 0..1 and
+    Occupation named occupation 0..* and
+    Race named race 0..1 and
+    EducationalAttainment named educationalAttainment 0..1 and
     http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.2.0 named sex 0..*
 * extension[genderIdentity] ^short = "Gender Identity - in compliance with SOGIE Bill"
 * extension[sex] ^short = "Sex assigned at birth - in compliance with SOGIE Bill"
