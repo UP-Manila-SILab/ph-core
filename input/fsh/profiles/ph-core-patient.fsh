@@ -25,9 +25,17 @@ Description: "Captures key demographic and administrative information about indi
 * identifier[PHCorePhilHealthID] only PHCorePhilHealthID
 * identifier[PHCorePhilSysID] only PHCorePhilSysID
 
-* address MS
+* address 0..* MS
 * address only PHCoreAddress or Address
+
+* birthDate 0..1 MS
+* gender 0..1 MS
+* gender ^short = "Administrative Gender - for backward compatibility with existing implementations"
 * maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
+* name 0..* MS
+* name only PHCoreName or HumanName
+* telecom 0..* MS
+* contact.name only PHCoreName or HumanName
 * contact.relationship from http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (required)
 
 * contact.address MS
