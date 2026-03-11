@@ -1,4 +1,4 @@
-Instance: transaction-ex
+Instance: transaction-example
 InstanceOf: Bundle
 Usage: #example
 Description: "Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos."
@@ -164,7 +164,7 @@ InstanceOf: PHCoreImmunization
 Description: "Flu shot for H5N1-1203."
 Usage: #example
 * doseQuantity = 5 'mg'
-* encounter = Reference(Encounter/encounter-single-ex)
+* encounter = Reference(Encounter/encounter-single-example)
 * expirationDate = "2015-02-15"
 * fundingSource = $immunization-funding-source#private
 * identifier.system = "urn:ietf:rfc:3986"
