@@ -18,7 +18,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * extension[indigenousPeople].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people"
 * extension[indigenousPeople].valueBoolean = true
 * extension[indigenousGroup].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-group"
-* extension[indigenousGroup].valueCodeableConcept = http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups#Ilongots "Ilongots" 
+* extension[indigenousGroup].valueCodeableConcept = IndigenousGroupsCS#Aetas "Aetas" 
 * extension[race].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/race"
 * extension[race].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-Race#2036-2 "Filipino"
 * identifier.system = "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"
