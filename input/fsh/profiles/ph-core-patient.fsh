@@ -37,9 +37,9 @@ Description: "Captures key demographic and administrative information about indi
 * gender ^short = "Administrative Gender - for backward compatibility with existing implementations"
 * maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
 * name 0..* MS
-* name only PHCoreName or HumanName
+* name only PHCoreName
 * telecom 0..* MS
-* contact.name only PHCoreName or HumanName
+* contact.name only PHCoreName
 * contact.relationship from http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (required)
 
 * contact.address MS
