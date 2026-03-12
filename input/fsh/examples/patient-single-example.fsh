@@ -1,4 +1,4 @@
-Instance: patient-single-ex
+Instance: patient-single-example
 InstanceOf: PHCorePatient
 Usage: #example
 Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines."
