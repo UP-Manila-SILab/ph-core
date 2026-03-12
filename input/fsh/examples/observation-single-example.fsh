@@ -1,4 +1,4 @@
-Instance: observation-single-ex
+Instance: observation-single-example
 InstanceOf: PHCoreObservation
 Usage: #example
 Description: "Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal)."
@@ -12,9 +12,9 @@ Description: "Blood pressure observation for Juan Dela Cruz taken on 17 Septembe
 * category = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * code.text = "Blood pressure systolic & diastolic"
-* subject = Reference(Patient/patient-single-ex)
+* subject = Reference(Patient/patient-single-example)
 * effectiveDateTime = "2012-09-17"
-* performer = Reference(Practitioner/practitioner-single-ex)
+* performer = Reference(Practitioner/practitioner-single-example)
 * interpretation = $v3-ObservationInterpretation#L "Low"
 * interpretation.text = "Below low normal"
 * bodySite = $sct#368209003 "Right arm"

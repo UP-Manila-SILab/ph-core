@@ -1,4 +1,4 @@
-Instance: organization-single-ex
+Instance: organization-single-example
 InstanceOf: PHCoreOrganization
 Title: "Example PH Core Organization"
 Description: "An example instance of a PH Core Organization conforming to the Philippine localization profile."

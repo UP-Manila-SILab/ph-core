@@ -1,5 +1,5 @@
 Extension: MiddleName
-Id: middle-name-ex
+Id: middle-name
 Title: "Middle Name"
 Description: "Extension to capture middle name information for a person"
 * extension 0..0
