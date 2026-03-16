@@ -2,13 +2,15 @@ name: Build, Test, and Deploy PH Core FHIR IG
 
 on:
   pull_request:
-    branches: [dev, main]
+    branches: ["main"]
   push:
-    branches: [dev, main]
-  workflow_dispatch:
+    branches: ["main"]
+
+permissions:
+  contents: write
 
 concurrency:
-  group: fhir-core-ig-${{ github.workflow }}-${{ github.ref }}
+  group: fhir-ig-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -16,20 +18,17 @@ jobs:
     name: CI - Build & QA (Core IG)
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-
     env:
-      JAVA_VERSION: "17"
-      NODE_VERSION: "18"
-      RUBY_VERSION: "3.1"
-
-    
+      JAVA_VERSION: "21"
+      NODE_VERSION: "20"
+      RUBY_VERSION: "3.2"
       IG_PUBLISHER_VERSION: "latest"
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -53,6 +52,12 @@ jobs:
       - name: Install SUSHI
         run: npm install -g fsh-sushi
 
+      - name: Install Graphviz (for PlantUML dot renderer)
+        run: |
+          sudo apt-get install -y graphviz
+          which dot
+          dot -v
+          
       - name: Cache publisher + packages
         uses: actions/cache@v4
         with:
@@ -120,150 +125,38 @@ jobs:
           name: core-ig-output
           path: output
 
-  deploy_dev:
-    name: CD - Deploy Dev (Core IG)
-    needs: [ci]
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main')
-    environment: dev
-
-    steps:
-      - name: Download IG artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: core-ig-output
-          path: output
-
-      - name: Add VERSION files
+      - name: Prepare publish directory (dev) (added push event to main only)
+        if: github.event_name == 'push'
         run: |
-          echo "${GITHUB_SHA}" > output/VERSION.txt
-          echo "<html><body>Current Core IG version: ${GITHUB_SHA}</body></html>" > output/version.html
-
-      - name: Ensure target dir exists (server)
-        uses: appleboy/ssh-action@v0.1.8
-        with:
-          host: ${{ secrets.ADMIN_HOST }}
-          username: ${{ secrets.ADMIN_USER }}
-          key: ${{ secrets.ADMIN_KEY }}
-          port: ${{ secrets.ADMIN_PORT }}
-          script: |
-            set -e
-            mkdir -p "${{ secrets.DEPLOY_BASE }}/Dev/Core/${GITHUB_SHA}"
-
-      - name: Upload to server (Dev)
-        uses: appleboy/scp-action@v1
-        with:
-          host: ${{ secrets.ADMIN_HOST }}
-          username: ${{ secrets.ADMIN_USER }}
-          key: ${{ secrets.ADMIN_KEY }}
-          port: ${{ secrets.ADMIN_PORT }}
-          source: "output/*"
-          target: "${{ secrets.DEPLOY_BASE }}/Dev/Core/${{ github.sha }}"
-          overwrite: true
-          debug: true
-
-      - name: Update current + fix perms (Dev)
-        uses: appleboy/ssh-action@v0.1.8
-        with:
-          host: ${{ secrets.ADMIN_HOST }}
-          username: ${{ secrets.ADMIN_USER }}
-          key: ${{ secrets.ADMIN_KEY }}
-          port: ${{ secrets.ADMIN_PORT }}
-          script: |
-            set -e
-            CORE_DIR="${{ secrets.DEPLOY_BASE }}/Dev/Core"
-            SHA="${GITHUB_SHA}"
-            TARGET_DIR="$CORE_DIR/$SHA"
-
-            test -d "$TARGET_DIR" || (echo "Missing target dir: $TARGET_DIR" && exit 1)
-
-            ln -sfn "$TARGET_DIR" "$CORE_DIR/current"
-
-            echo "$SHA" > "$CORE_DIR/VERSION.txt"
-            echo "<html><body>Current Core IG version: $SHA</body></html>" > "$CORE_DIR/version.html"
-
-            echo "<html><body><h2>PH Core IG Versions</h2><ul>" > "$CORE_DIR/versions.html"
-            echo "<li><a href='current/index.html'>Current version</a></li>" >> "$CORE_DIR/versions.html"
-            for d in $(ls -1 "$CORE_DIR" | grep -E '^[0-9a-f]{40}$' || true); do
-              echo "<li><a href='$d/index.html'>$d</a></li>" >> "$CORE_DIR/versions.html"
-            done
-            echo "</ul></body></html>" >> "$CORE_DIR/versions.html"
-
-            find "$TARGET_DIR" -type d -exec chmod 755 {} \;
-            find "$TARGET_DIR" -type f -exec chmod 644 {} \;
-
-            echo "Dev deployment complete. current/ -> $TARGET_DIR"
-
-  deploy_staging:
-    name: CD - Deploy Staging (Core IG)
-    needs: [ci, deploy_dev]
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    environment: staging
-
-    steps:
-      - name: Download IG artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: core-ig-output
-          path: output
-
-      - name: Add VERSION files
+          set -euo pipefail
+          rm -rf .publish
+          mkdir -p .publish/dev
+          rsync -a output/ .publish/dev/  
+                  
+      - name: Create root index.html (added push event to main only)
+        if: github.event_name == 'push'
         run: |
-          echo "${GITHUB_SHA}" > output/VERSION.txt
-          echo "<html><body>Current Core IG version: ${GITHUB_SHA}</body></html>" > output/version.html
+          cat > .publish/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>PH Core FHIR IG</title>
+          </head>
+          <body>
+            <h1>PH Core FHIR IG</h1>
+            <p><a href="./dev/">Open latest dev build</a></p>
+          </body>
+          </html>
+          EOF
 
-      - name: Ensure target dir exists (server)
-        uses: appleboy/ssh-action@v0.1.8
+      - name: Publish to gh-pages:/dev/
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          host: ${{ secrets.ADMIN_HOST }}
-          username: ${{ secrets.ADMIN_USER }}
-          key: ${{ secrets.ADMIN_KEY }}
-          port: ${{ secrets.ADMIN_PORT }}
-          script: |
-            set -e
-            mkdir -p "${{ secrets.DEPLOY_BASE }}/Staging/Core/${GITHUB_SHA}"
-
-      - name: Upload to server (Staging)
-        uses: appleboy/scp-action@v1
-        with:
-          host: ${{ secrets.ADMIN_HOST }}
-          username: ${{ secrets.ADMIN_USER }}
-          key: ${{ secrets.ADMIN_KEY }}
-          port: ${{ secrets.ADMIN_PORT }}
-          source: "output/*"
-          target: "${{ secrets.DEPLOY_BASE }}/Staging/Core/${{ github.sha }}"
-          overwrite: true
-          debug: true
-
-      - name: Update current + fix perms (Staging)
-        uses: appleboy/ssh-action@v0.1.8
-        with:
-          host: ${{ secrets.ADMIN_HOST }}
-          username: ${{ secrets.ADMIN_USER }}
-          key: ${{ secrets.ADMIN_KEY }}
-          port: ${{ secrets.ADMIN_PORT }}
-          script: |
-            set -e
-            CORE_DIR="${{ secrets.DEPLOY_BASE }}/Staging/Core"
-            SHA="${GITHUB_SHA}"
-            TARGET_DIR="$CORE_DIR/$SHA"
-
-            test -d "$TARGET_DIR" || (echo "Missing target dir: $TARGET_DIR" && exit 1)
-
-            ln -sfn "$TARGET_DIR" "$CORE_DIR/current"
-
-            echo "$SHA" > "$CORE_DIR/VERSION.txt"
-            echo "<html><body>Current Core IG version: $SHA</body></html>" > "$CORE_DIR/version.html"
-
-            echo "<html><body><h2>PH Core IG Versions</h2><ul>" > "$CORE_DIR/versions.html"
-            echo "<li><a href='current/index.html'>Current version</a></li>" >> "$CORE_DIR/versions.html"
-            for d in $(ls -1 "$CORE_DIR" | grep -E '^[0-9a-f]{40}$' || true); do
-              echo "<li><a href='$d/index.html'>$d</a></li>" >> "$CORE_DIR/versions.html"
-            done
-            echo "</ul></body></html>" >> "$CORE_DIR/versions.html"
-
-            find "$TARGET_DIR" -type d -exec chmod 755 {} \;
-            find "$TARGET_DIR" -type f -exec chmod 644 {} \;
-
-            echo "Staging deployment complete. current/ -> $TARGET_DIR"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .publish
+          keep_files: true
+          commit_message: "ci(dev): publish dev build from ${{ github.sha }}"
