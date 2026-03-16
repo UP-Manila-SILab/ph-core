@@ -3,12 +3,12 @@ Alias: $v2-0443 = http://terminology.hl7.org/CodeSystem/v2-0443
 Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 Alias: $v3-ActSite = http://terminology.hl7.org/CodeSystem/v3-ActSite
 
-Instance: immunization-single-ex
+Instance: immunization-single-example
 InstanceOf: PHCoreImmunization
 Description: "Flu shot for H5N1-1203."
 Usage: #example
 * doseQuantity = 5 'mg'
-* encounter = Reference(Encounter/encounter-single-ex)
+* encounter = Reference(Encounter/encounter-single-example)
 * expirationDate = "2015-02-15"
 * fundingSource = $immunization-funding-source#private
 * identifier.system = "urn:ietf:rfc:3986"
@@ -17,8 +17,8 @@ Usage: #example
 * lotNumber = "AAJN11K"
 * note.text = "Notes on adminstration of vaccine"
 * occurrenceDateTime = "2013-01-10"
-* patient = Reference(Patient/patient-single-ex)
-* performer.actor = Reference(Practitioner/practitioner-single-ex)
+* patient = Reference(Patient/patient-single-example)
+* performer.actor = Reference(Practitioner/practitioner-single-example)
 * performer.function = $v2-0443#OP
 * primarySource = true
 * route = $v3-RouteOfAdministration#IM "Injection, intramuscular"
