@@ -1,4 +1,4 @@
-Instance: medication-single-ex
+Instance: medication-single-example
 InstanceOf: PHCoreMedication
 Usage: #example
 Description: "A medication resource with no specific details provided."

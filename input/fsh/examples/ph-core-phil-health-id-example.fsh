@@ -1,4 +1,4 @@
-Instance: ph-core-phil-health-id-ex
+Instance: ph-core-phil-health-id-example
 InstanceOf: PHCorePhilHealthID
 Title: "Example PhilHealth Identification Number"
 Usage: #inline

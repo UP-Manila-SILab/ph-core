@@ -1,4 +1,4 @@
-Instance: practitioner-single-ex
+Instance: practitioner-single-example
 InstanceOf: PHCorePractitioner
 Usage: #example
 Description: "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph."
