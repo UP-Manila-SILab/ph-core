@@ -30,3 +30,5 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 
 * contact.address MS
 * contact.address only PHCoreAddress or Address
+
+* partOf only Reference(PHCoreOrganization)
