@@ -4,17 +4,52 @@ Id: ph-core-encounter
 Title: "PH Core Encounter"
 Description: "This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [FHIR R4 Encounter](https://www.hl7.org/fhir/R4/encounter.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context."
 
+* class 1..1 MS
 
-* subject 1..1
-* subject only Reference(PHCorePatient)
+* diagnosis.condition only Reference(Condition or PHCoreProcedure) //Add PHCoreCondition once available.
+
+* hospitalization 0..1 MS
+* hospitalization.dischargeDisposition 0..1 MS
+* hospitalization.dischargeDisposition only CodeableConcept
+* hospitalization.origin 0..1 MS
+* hospitalization.origin only Reference(PHCoreLocation or PHCoreOrganization)
+
+* location 0..* MS
+* location.location MS 
+* location.location only Reference(PHCoreLocation)
+
+* identifier 0..* MS
 
 * participant 0..* MS
-* participant.individual only Reference(PHCorePractitioner or PHCoreRelatedPerson or Practitioner or PractitionerRole or RelatedPerson) //Add PH Core PractitionerRole once available
+* participant.individual only Reference(PHCorePractitioner or PHCoreRelatedPerson or PractitionerRole) //Add PH Core PractitionerRole once available
 
-* diagnosis.condition only Reference(Condition or Procedure or PHCoreProcedure) // Add PHCoreCondition once available
+* participant.type 0..* MS
 
-* period.extension 0..*
-* period.id 0..1
-* period.start 1..1 MS
+* period 0..1 MS
+* period.start 0..1 MS
 * period.end 0..1
+
+* reasonCode 0..* MS
+* reasonCode only CodeableConcept
+
+* reasonReference 0..* MS
+* reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure) //Add PHCoreCondition once available.
+
+* serviceProvider 0..1 MS
+* serviceProvider only Reference(PHCoreOrganization)
+
+* status 1..1 MS
+
+* subject 1..1 MS
+* subject only Reference(PHCorePatient)
+
+* type 0..* MS
+
+
+
+
+
+
+
+
 
