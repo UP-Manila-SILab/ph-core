@@ -10,8 +10,6 @@ Description: "A comprehensive example of an appendectomy procedure performed on 
 * identifier[=].system = "http://philhealth.gov.ph/procedure"
 * identifier[=].value = "PH-APP-789456"
 
-* instantiatesUri = "http://doh.gov.ph/clinical-protocols/appendectomy/v1"
-
 * basedOn.display = "ServiceRequest for emergency appendectomy"
 
 * partOf.display = "Episode of care for acute abdomen treatment"
