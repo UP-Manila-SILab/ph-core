@@ -12,8 +12,8 @@ Description: "Captures key FHIR Medication Request data for the Philippine conte
 * requester only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization or PHCorePatient or PHCoreRelatedPerson or Device)
 * performer only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization or PHCorePatient or Device or PHCoreRelatedPerson or CareTeam)
 * recorder only Reference(PHCorePractitioner or PHCorePractitionerRole)
-* reasonReference only Reference(PHCoreCondition or PHCoreObservation)
-* basedOn only Reference(PHCoreCarePlan or PHCoreMedicationRequest or PHCoreServiceRequest or ImmunizationRecommendation)
+* reasonReference only Reference(Condition or PHCoreObservation)
+* basedOn only Reference(CarePlan or PHCoreMedicationRequest or ServiceRequest or ImmunizationRecommendation)
 * priorPrescription only Reference(PHCoreMedicationRequest)
 
 // Philippine-specific binding for medication codes

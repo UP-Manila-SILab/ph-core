@@ -11,7 +11,7 @@ Description: "Captures key FHIR Medication Statement data for the Philippine con
 * medicationReference only Reference(PHCoreMedication)
 * informationSource only Reference(PHCorePatient or PHCorePractitioner or PHCorePractitionerRole or PHCoreRelatedPerson or PHCoreOrganization)
 * derivedFrom only Reference(PHCoreMedicationStatement or PHCoreMedicationRequest or PHCoreMedicationDispense or PHCoreMedicationAdministration or PHCoreProcedure or PHCoreObservation)
-* reasonReference only Reference(PHCoreCondition or PHCoreObservation or PHCoreDiagnosticReport)
+* reasonReference only Reference(Condition or PHCoreObservation or DiagnosticReport)
 
 // Philippine-specific binding for medication codes
 * medicationCodeableConcept from DrugsVS (extensible)
@@ -20,4 +20,4 @@ Description: "Captures key FHIR Medication Statement data for the Philippine con
 * partOf only Reference(PHCoreMedicationAdministration or PHCoreMedicationDispense or PHCoreMedicationStatement or PHCoreProcedure or PHCoreObservation)
 
 // BasedOn references to PH Core profiles
-* basedOn only Reference(PHCoreMedicationRequest or PHCoreCarePlan or PHCoreServiceRequest)
+* basedOn only Reference(PHCoreMedicationRequest or CarePlan or ServiceRequest)

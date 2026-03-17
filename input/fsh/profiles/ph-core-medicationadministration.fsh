@@ -10,7 +10,7 @@ Description: "Captures key FHIR Medication Administration data for the Philippin
 * context only Reference(PHCoreEncounter or EpisodeOfCare)
 * medicationReference only Reference(PHCoreMedication)
 * performer.actor only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCorePatient or PHCoreRelatedPerson or Device)
-* reasonReference only Reference(PHCoreCondition or PHCoreObservation or PHCoreDiagnosticReport)
+* reasonReference only Reference(Condition or PHCoreObservation or DiagnosticReport)
 * request only Reference(PHCoreMedicationRequest)
 * partOf only Reference(PHCoreMedicationAdministration or PHCoreProcedure)
 
