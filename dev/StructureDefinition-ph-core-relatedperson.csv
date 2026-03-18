@@ -61,7 +61,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "RelatedPerson.birthDate","RelatedPerson.birthDate","","","",0,1,"","","Y","date {[]} {[]}
 ","The date on which the related person was born","The date on which the related person was born.","","","","","","","","","",,,,,"",,,,"RelatedPerson.birthDate",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","player.birthTime"
-"RelatedPerson.address","RelatedPerson.address","","","",0,*,"Y","","Y","Address {[CanonicalType[http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address], CanonicalType[http://hl7.org/fhir/StructureDefinition/Address]]} {[]}
+"RelatedPerson.address","RelatedPerson.address","","","",0,*,"Y","","Y","Address {[CanonicalType[http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address]]} {[]}
 ","Address where the related person can be contacted or visited","Address where the related person can be contacted or visited.","","Need to keep track where the related person can be contacted per postal mail or visited.","","","","","","","",,,,,"",,,,"RelatedPerson.address",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","addr","NK1-4"
 "RelatedPerson.photo","RelatedPerson.photo","","","",0,*,"","","","Attachment {[]} {[]}

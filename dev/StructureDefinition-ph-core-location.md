@@ -16,7 +16,7 @@ This profile localizes the FHIR R4 Location resource to the Philippine context.
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Location](StructureDefinition-ph-core-location.md) and [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md)
+* Refer to this Profile: [PH Core Location](StructureDefinition-ph-core-location.md), [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md) and [PH Core Task](StructureDefinition-ph-core-task.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-location)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-location.csv
   "name" : "PHCoreLocation",
   "title" : "PH Core Location",
   "status" : "draft",
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -84,8 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-location.csv
       "path" : "Location.address",
       "type" : [{
         "code" : "Address",
-        "profile" : ["http://hl7.org/fhir/StructureDefinition/Address",
-        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }]
     },
     {

@@ -48,11 +48,18 @@
   "name" : "DohNhfrCode"
 },
 {
-  "id" : "pdd-registration-ns",
+  "id" : "philhealth-accreditation-no",
   "type" : "NamingSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/pdd-registration-ns",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-accreditation-no",
   "version" : "0.1.0",
-  "name" : "PddRegistration"
+  "name" : "PhilHealth Accreditation Number"
+},
+{
+  "id" : "philhealth-employer-no",
+  "type" : "NamingSystem",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-employer-no",
+  "version" : "0.1.0",
+  "name" : "PhilHealth Employer Number"
 },
 {
   "id" : "philhealth-id-ns",
@@ -228,6 +235,13 @@
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson",
   "version" : "0.1.0",
   "name" : "PHCoreRelatedPerson"
+},
+{
+  "id" : "ph-core-task",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task",
+  "version" : "0.1.0",
+  "name" : "PHCoreTask"
 },
 {
   "id" : "province",

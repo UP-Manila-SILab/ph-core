@@ -16,7 +16,7 @@ Captures key demographic and administrative information about individuals receiv
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md), [PH Core Immunization](StructureDefinition-ph-core-immunization.md), [PH Core Observation](StructureDefinition-ph-core-observation.md) and [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
+* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md), [PH Core Immunization](StructureDefinition-ph-core-immunization.md), [PH Core Observation](StructureDefinition-ph-core-observation.md), [PH Core Procedure](StructureDefinition-ph-core-procedure.md) and [PH Core Task](StructureDefinition-ph-core-task.md)
 * Examples for this Profile: [Patient/MiddleNameExample](Patient-MiddleNameExample.md), [Patient/example-patient](Patient-example-patient.md) and [Patient/patient-single-example](Patient-patient-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-patient)
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-patient.csv)
   "name" : "PHCorePatient",
   "title" : "PH Core Patient",
   "status" : "draft",
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -275,8 +275,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-patient.csv)
       "path" : "Patient.address",
       "type" : [{
         "code" : "Address",
-        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address",
-        "http://hl7.org/fhir/StructureDefinition/Address"]
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }],
       "mustSupport" : true
     },
@@ -309,8 +308,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-patient.csv)
       "path" : "Patient.contact.address",
       "type" : [{
         "code" : "Address",
-        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address",
-        "http://hl7.org/fhir/StructureDefinition/Address"]
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }],
       "mustSupport" : true
     }]

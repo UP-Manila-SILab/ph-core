@@ -6,7 +6,7 @@
 
 ## Example Organization: Example PH Core Organization
 
-The Department of Health - Central Office is a PH Core Organization located at San Lazaro Compound, Rizal Avenue, Manila, NCR, 1003, Philippines. The organization can be contacted through its health facility contact at +63-2-8651-7800. The regional designation is Ilocos Norte.
+The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789, PEN: PEN-987654321) is an active PH Core Organization located at 123, Barangay 1, City of Las Piñas, Benguet, 1740, Philippines. The organization can be contacted via phone at +63-2-8651-7800 or email at contact@doh.gov.ph.
 
 
 
@@ -20,24 +20,54 @@ The Department of Health - Central Office is a PH Core Organization located at S
     "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"]
   },
   "identifier" : [{
-    "system" : "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code",
     "value" : "1234567890"
+  },
+  {
+    "value" : "PAN-2024-56789"
+  },
+  {
+    "value" : "PEN-987654321"
   }],
-  "name" : "Department of Health - Central Office",
+  "active" : true,
+  "name" : "Department of Health - Sattelite Office",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-2-8651-7800",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "contact@doh.gov.ph",
+    "use" : "work"
+  }],
   "address" : [{
     "extension" : [{
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region",
       "valueCoding" : {
         "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-        "code" : "0102800000",
-        "display" : "Ilocos Norte"
+        "code" : "1401100000",
+        "display" : "Benguet"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "1380200000",
+        "display" : "City of Las Piñas"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "1380100001",
+        "display" : "Barangay 1"
       }
     }],
     "use" : "work",
-    "line" : ["San Lazaro Compound", "Rizal Avenue", "Rizal Avenue"],
-    "city" : "Manila",
-    "state" : "NCR",
-    "postalCode" : "1003",
+    "line" : ["123 Hospital Street"],
+    "postalCode" : "1740",
     "country" : "PH"
   }],
   "contact" : [{
@@ -49,10 +79,33 @@ The Department of Health - Central Office is a PH Core Organization located at S
       "value" : "+63-2-8651-7800"
     }],
     "address" : {
+      "extension" : [{
+        "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region",
+        "valueCoding" : {
+          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "code" : "1401100000",
+          "display" : "Benguet"
+        }
+      },
+      {
+        "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
+        "valueCoding" : {
+          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "code" : "1380200000",
+          "display" : "City of Las Piñas"
+        }
+      },
+      {
+        "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
+        "valueCoding" : {
+          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "code" : "1380100001",
+          "display" : "Barangay 1"
+        }
+      }],
       "use" : "work",
-      "city" : "Manila",
-      "state" : "NCR",
-      "postalCode" : "1003",
+      "line" : ["125 Central Office Street"],
+      "postalCode" : "1740",
       "country" : "PH"
     }
   }]

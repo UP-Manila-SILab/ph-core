@@ -20,7 +20,7 @@ Region from the standard geographic code.
 **Usages:**
 
 * Use this Extension: [PH Core Address](StructureDefinition-ph-core-address.md)
-* Examples for this Extension: [Department of Health - Central Office](Organization-organization-single-example.md) and [RelatedPerson/relatedperson-single-example](RelatedPerson-relatedperson-single-example.md)
+* Examples for this Extension: [Department of Health - Sattelite Office](Organization-organization-single-example.md) and [RelatedPerson/relatedperson-single-example](RelatedPerson-relatedperson-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/region)
 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-region.csv), [Excel]
   "title" : "Region",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

@@ -193,15 +193,25 @@
         "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson",
         "title": "PH Core RelatedPerson"
       }
+    ],
+    "Task": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task",
+        "title": "PH Core Task"
+      }
     ]
   },
   "usage": {
     "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay": [
-      "Address"
+      "Address",
+      "Organization.address",
+      "Organization.contact.address"
     ],
     "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality": [
       "Address",
       "Bundle.entry.resource.address",
+      "Organization.address",
+      "Organization.contact.address",
       "Patient.address"
     ],
     "http://doh.gov.ph/fhir/ph-core/StructureDefinition/educational-attainment": [
@@ -232,6 +242,7 @@
     "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region": [
       "Address",
       "Organization.address",
+      "Organization.contact.address",
       "RelatedPerson.address"
     ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url": [

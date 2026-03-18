@@ -16,7 +16,7 @@ The PH Core Practitioner Profile inherits from the [FHIR R4 Practitioner resourc
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md) and [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md)
+* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md), [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md) and [PH Core Task](StructureDefinition-ph-core-task.md)
 * Examples for this Profile: [Practitioner/example-practitioner](Practitioner-example-practitioner.md) and [Practitioner/practitioner-single-example](Practitioner-practitioner-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-practitioner)
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-practitioner
   "name" : "PHCorePractitioner",
   "title" : "PH Core Practitioner",
   "status" : "draft",
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -95,8 +95,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-practitioner
       "path" : "Practitioner.address",
       "type" : [{
         "code" : "Address",
-        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address",
-        "http://hl7.org/fhir/StructureDefinition/Address"]
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }],
       "mustSupport" : true
     }]

@@ -20,6 +20,7 @@ Barangay from the standard geographic code.
 **Usages:**
 
 * Use this Extension: [PH Core Address](StructureDefinition-ph-core-address.md)
+* Examples for this Extension: [Department of Health - Sattelite Office](Organization-organization-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/barangay)
 
@@ -48,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-barangay.csv), [Exce
   "name" : "Barangay",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

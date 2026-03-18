@@ -16,8 +16,8 @@ This profile localizes the FHIR R4 Organization resource to the Philippine conte
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Location](StructureDefinition-ph-core-location.md) and [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md)
-* Examples for this Profile: [Department of Health - Central Office](Organization-organization-single-example.md)
+* Refer to this Profile: [PH Core Location](StructureDefinition-ph-core-location.md), [PH Core Organization](StructureDefinition-ph-core-organization.md), [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md) and [PH Core Task](StructureDefinition-ph-core-task.md)
+* Examples for this Profile: [Department of Health - Sattelite Office](Organization-organization-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-organization)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-organization
   "name" : "PHCoreOrganization",
   "title" : "PH Core Organization",
   "status" : "draft",
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -114,43 +114,65 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-organization
       "mustSupport" : true
     },
     {
-      "id" : "Organization.identifier:NhfrCode.use",
-      "path" : "Organization.identifier.use",
-      "patternCode" : "official"
+      "id" : "Organization.identifier:PAN",
+      "path" : "Organization.identifier",
+      "sliceName" : "PAN",
+      "short" : "PhilHealth Accreditation Number",
+      "min" : 0,
+      "max" : "*",
+      "mustSupport" : true
     },
     {
-      "id" : "Organization.identifier:NhfrCode.type.coding.system",
-      "path" : "Organization.identifier.type.coding.system",
-      "fixedUri" : "http://terminology.hl7.org/CodeSystem/v2-0203"
+      "id" : "Organization.identifier:PEN",
+      "path" : "Organization.identifier",
+      "sliceName" : "PEN",
+      "short" : "PhilHealth Employer Number",
+      "min" : 0,
+      "max" : "*",
+      "mustSupport" : true
     },
     {
-      "id" : "Organization.identifier:NhfrCode.type.coding.code",
-      "path" : "Organization.identifier.type.coding.code",
-      "fixedCode" : "FI"
+      "id" : "Organization.active",
+      "path" : "Organization.active",
+      "mustSupport" : true
     },
     {
-      "id" : "Organization.identifier:NhfrCode.system",
-      "path" : "Organization.identifier.system",
-      "min" : 1,
-      "fixedUri" : "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"
+      "id" : "Organization.name",
+      "path" : "Organization.name",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.telecom",
+      "path" : "Organization.telecom",
+      "mustSupport" : true
     },
     {
       "id" : "Organization.address",
       "path" : "Organization.address",
       "type" : [{
         "code" : "Address",
-        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address",
-        "http://hl7.org/fhir/StructureDefinition/Address"]
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }],
       "mustSupport" : true
+    },
+    {
+      "id" : "Organization.partOf",
+      "path" : "Organization.partOf",
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
+          "valueBoolean" : true
+        }],
+        "code" : "Reference",
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"]
+      }]
     },
     {
       "id" : "Organization.contact.address",
       "path" : "Organization.contact.address",
       "type" : [{
         "code" : "Address",
-        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address",
-        "http://hl7.org/fhir/StructureDefinition/Address"]
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }],
       "mustSupport" : true
     }]

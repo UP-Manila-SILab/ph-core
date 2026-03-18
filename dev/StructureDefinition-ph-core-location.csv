@@ -59,7 +59,7 @@ For searching knowing previous names that the location was known by can be very 
 "Location.telecom","Location.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
 ","Contact details of the location","The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.","","","","","","","","","",,,,,"",,,,"Location.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".telecom"
-"Location.address","Location.address","","","",0,1,"","","","Address {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Address], CanonicalType[http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address]]} {[]}
+"Location.address","Location.address","","","",0,1,"","","","Address {[CanonicalType[http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address]]} {[]}
 ","Physical location","Physical location.","Additional addresses should be recorded using another instance of the Location resource, or via the Organization.","If locations can be visited, we need to keep track of their address.","","","","","","","",,,,,"",,,,"Location.address",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".addr"
 "Location.physicalType","Location.physicalType","","","",0,1,"","","Y","CodeableConcept {[]} {[]}

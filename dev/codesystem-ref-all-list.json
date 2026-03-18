@@ -8,10 +8,10 @@
     "description" : "Mock of the Philippine Standard Geographic Code.",
     "uses" : {
     },
-    "ValueSet-regions.html" : "Regions",
-    "ValueSet-cities.html" : "Cities",
+    "ValueSet-provinces.html" : "Provinces",
     "ValueSet-barangays.html" : "Barangays",
-    "ValueSet-provinces.html" : "Provinces"
+    "ValueSet-regions.html" : "Regions",
+    "ValueSet-cities.html" : "Cities"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
@@ -35,6 +35,18 @@
     "uses" : {
     },
     "http://hl7.org/fhir/R4/valueset-medication-status.html" : "Medication  status  codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/CodeSystem/task-code",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "TaskCode",
+    "title" : "Task Codes",
+    "description" : "Codes indicating the type of action that is expected to be performed",
+    "oids" : ["2.16.840.1.113883.4.642.4.1397"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-code.html" : "Task Codes"
   },
   {
     "url" : "http://hl7.org/fhir/address-type",
@@ -142,8 +154,8 @@
     "oids" : ["2.16.840.1.113883.4.642.4.110"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-event-status.html" : "EventStatus",
-    "http://hl7.org/fhir/R4/valueset-immunization-status.html" : "Immunization Status Codes"
+    "http://hl7.org/fhir/R4/valueset-immunization-status.html" : "Immunization Status Codes",
+    "http://hl7.org/fhir/R4/valueset-event-status.html" : "EventStatus"
   },
   {
     "url" : "http://hl7.org/fhir/identifier-use",
@@ -218,6 +230,54 @@
     "http://hl7.org/fhir/R4/valueset-observation-status.html" : "ObservationStatus"
   },
   {
+    "url" : "http://hl7.org/fhir/request-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestIntent",
+    "title" : "RequestIntent",
+    "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.114"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-intent.html" : "TaskIntent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "RequestPriority",
+    "description" : "Identifies the level of importance to be assigned to actioning the request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.116"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-request-priority.html" : "Request priority"
+  },
+  {
+    "url" : "http://hl7.org/fhir/task-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskIntent",
+    "title" : "TaskIntent",
+    "description" : "Distinguishes whether the task is a proposal, plan or full order.",
+    "oids" : ["2.16.840.1.113883.4.642.4.1241"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-intent.html" : "TaskIntent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/task-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskStatus",
+    "title" : "TaskStatus",
+    "description" : "The current status of the task.",
+    "oids" : ["2.16.840.1.113883.4.642.4.791"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-status.html" : "TaskStatus"
+  },
+  {
     "url" : "http://snomed.info/sct",
     "version" : null,
     "status" : "active",
@@ -227,26 +287,26 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-immunization-reason.html" : "Immunization Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-practitioner-role.html" : "Practitioner role",
-    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
-    "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
-    "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
     "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-    "http://hl7.org/fhir/R4/valueset-immunization-status-reason.html" : "Immunization Status Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-immunization-target-disease.html" : "Immunization Target Disease Codes",
     "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+    "http://hl7.org/fhir/R4/valueset-immunization-status-reason.html" : "Immunization Status Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "http://hl7.org/fhir/R4/valueset-immunization-target-disease.html" : "Immunization Target Disease Codes",
     "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
     "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
-    "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
     "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-medication-form-codes.html" : "SNOMED CT Form Codes"
+    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
+    "http://hl7.org/fhir/R4/valueset-immunization-reason.html" : "Immunization Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
+    "http://hl7.org/fhir/R4/valueset-medication-form-codes.html" : "SNOMED CT Form Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-practitioner-role.html" : "Practitioner role",
+    "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/admit-source",
@@ -618,8 +678,8 @@
     "oids" : ["2.16.840.1.113883.5.1008"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus",
-    "http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html" : "Special courtesy"
+    "http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html" : "Special courtesy",
+    "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
@@ -667,8 +727,8 @@
     "oids" : ["2.16.840.1.113883.5.111"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType",
-    "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type"
+    "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type",
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",

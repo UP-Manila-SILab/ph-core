@@ -11,7 +11,7 @@
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -783,7 +783,7 @@
         "reference" : "Organization/organization-single-example"
       },
       "name" : "Example PH Core Organization",
-      "description" : "An example instance of a PH Core Organization conforming to the Philippine localization profile.",
+      "description" : "An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, PAN, PEN) and Must Support fields.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"
     },
     {
@@ -1041,6 +1041,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/philhealth-accreditation-no"
+      },
+      "name" : "PAN - PhilHealth Accreditation Number",
+      "description" : "The unique number issued by PhilHealth to accredited institutions.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -1049,6 +1061,18 @@
       "name" : "patient-single-example",
       "description" : "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/philhealth-employer-no"
+      },
+      "name" : "PEN - PhilHealth Employer Number",
+      "description" : "The unique number issued by PhilHealth to employers.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1161,18 +1185,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "NamingSystem"
-      }],
-      "reference" : {
-        "reference" : "NamingSystem/pdd-registration-ns"
-      },
-      "name" : "PH Core PhilHealth Dialysis Database Registration Number",
-      "description" : "PH Core PhilHealth Dialysis Database Registration Number",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1216,6 +1228,18 @@
       },
       "name" : "PH Core RelatedPerson",
       "description" : "This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-task"
+      },
+      "name" : "PH Core Task",
+      "description" : "This profile localizes the FHIR R4 Task resource to the Philippine context.",
       "exampleBoolean" : false
     },
     {
@@ -1349,6 +1373,18 @@
       "name" : "relatedperson-single-example",
       "description" : "Maria Cruz Santos is a female born on 1 January 1955.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/task-single-example"
+      },
+      "name" : "task-single-example",
+      "description" : "A laboratory task for Juan Dela Cruz requested by Dr. Maria Clara Santos. The task is to collect a blood sample for a routine CBC test.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task"
     },
     {
       "extension" : [{

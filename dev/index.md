@@ -82,7 +82,7 @@ This publication includes IP covered under the following statements.
 
 * This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
 
-* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://hl7.org/fhir/R4/codesystem-snomedct.html): [AllergyIntolerance/allergy-single-example](AllergyIntolerance-allergy-single-example.md), [AllergyIntolerance/example-allergy](AllergyIntolerance-example-allergy.md)... Show 5 more, [Bundle/transaction-example](Bundle-transaction-example.md), [Condition/condition-single-example](Condition-condition-single-example.md), [Condition/example-condition](Condition-example-condition.md), [Observation/blood-pressure](Observation-blood-pressure.md) and [Observation/observation-single-example](Observation-observation-single-example.md)
+* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://hl7.org/fhir/R4/codesystem-snomedct.html): [AllergyIntolerance/allergy-single-example](AllergyIntolerance-allergy-single-example.md), [AllergyIntolerance/example-allergy](AllergyIntolerance-example-allergy.md)... Show 6 more, [Bundle/transaction-example](Bundle-transaction-example.md), [Condition/condition-single-example](Condition-condition-single-example.md), [Condition/example-condition](Condition-example-condition.md), [Observation/blood-pressure](Observation-blood-pressure.md), [Observation/observation-single-example](Observation-observation-single-example.md) and [Task/task-single-example](Task-task-single-example.md)
 
 
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
@@ -130,7 +130,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -902,7 +902,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "reference" : "Organization/organization-single-example"
       },
       "name" : "Example PH Core Organization",
-      "description" : "An example instance of a PH Core Organization conforming to the Philippine localization profile.",
+      "description" : "An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, PAN, PEN) and Must Support fields.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"
     },
     {
@@ -1160,6 +1160,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/philhealth-accreditation-no"
+      },
+      "name" : "PAN - PhilHealth Accreditation Number",
+      "description" : "The unique number issued by PhilHealth to accredited institutions.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -1168,6 +1180,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       "name" : "patient-single-example",
       "description" : "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/philhealth-employer-no"
+      },
+      "name" : "PEN - PhilHealth Employer Number",
+      "description" : "The unique number issued by PhilHealth to employers.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1280,18 +1304,6 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "NamingSystem"
-      }],
-      "reference" : {
-        "reference" : "NamingSystem/pdd-registration-ns"
-      },
-      "name" : "PH Core PhilHealth Dialysis Database Registration Number",
-      "description" : "PH Core PhilHealth Dialysis Database Registration Number",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1335,6 +1347,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       },
       "name" : "PH Core RelatedPerson",
       "description" : "This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-task"
+      },
+      "name" : "PH Core Task",
+      "description" : "This profile localizes the FHIR R4 Task resource to the Philippine context.",
       "exampleBoolean" : false
     },
     {
@@ -1468,6 +1492,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       "name" : "relatedperson-single-example",
       "description" : "Maria Cruz Santos is a female born on 1 January 1955.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/task-single-example"
+      },
+      "name" : "task-single-example",
+      "description" : "A laboratory task for Juan Dela Cruz requested by Dr. Maria Clara Santos. The task is to collect a blood sample for a routine CBC test.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task"
     },
     {
       "extension" : [{

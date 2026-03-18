@@ -24,6 +24,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md) | The PH Core Practitioner Role Profile inherits from the [FHIR R4 PractitionerRole resource](https://hl7.org/fhir/R4/practitionerrole.html); refer to it for scope and usage definitions. This profile sets minimum expectations for the PractitionerRole resource to record, search, and fetch basic demographics and administrative information about an individual practitioner role in a Philippine context. It specifies which core elements, extensions, vocabularies, and value sets SHALL be present and constrains how the elements are used. It provides the floor for standards development for Philippine use cases. |
 | [PH Core Procedure](StructureDefinition-ph-core-procedure.md) | An action that is or was performed on or for a patient, practitioner, device, organization, or location. |
 | [PH Core RelatedPerson](StructureDefinition-ph-core-relatedperson.md) | This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context. |
+| [PH Core Task](StructureDefinition-ph-core-task.md) | This profile localizes the FHIR R4 Task resource to the Philippine context. |
 
 ### Structures: Data Type Profiles 
 
@@ -88,7 +89,8 @@ These define identifier and/or code system identities used by systems conforming
 | | |
 | :--- | :--- |
 | [DOH National Health Faciities Registry Code](NamingSystem-doh-nhfr-code-ns.md) | Health Facility Code (HFC) from the National Health Facility Registry. |
-| [PH Core PhilHealth Dialysis Database Registration Number](NamingSystem-pdd-registration-ns.md) | PH Core PhilHealth Dialysis Database Registration Number |
+| [PAN - PhilHealth Accreditation Number](NamingSystem-philhealth-accreditation-no.md) | The unique number issued by PhilHealth to accredited institutions. |
+| [PEN - PhilHealth Employer Number](NamingSystem-philhealth-employer-no.md) | The unique number issued by PhilHealth to employers. |
 | [PIN - PhilHealth Identification Number](NamingSystem-philhealth-id-ns.md) | The permanent and unique number issued by PhilHealth to individual members and to each and every dependent. |
 | [PhilSys Identification Number (PhilSys ID)](NamingSystem-philsys-id-ns.md) | The National ID Number is a unique and randomly-generated 12-digit permanent identification number that is assigned to every citizen or resident alien upon successful registration to National ID system. |
 
@@ -98,7 +100,7 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
-| [Example PH Core Organization](Organization-organization-single-example.md) | An example instance of a PH Core Organization conforming to the Philippine localization profile. |
+| [Example PH Core Organization](Organization-organization-single-example.md) | An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, PAN, PEN) and Must Support fields. |
 | [MiddleNameExample](Patient-MiddleNameExample.md) | Juan Jane Macalalad Buenaventura (born 1980). |
 | [allergy-single-example](AllergyIntolerance-allergy-single-example.md) | Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin. |
 | [blood-pressure](Observation-blood-pressure.md) | Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal). |
@@ -117,5 +119,6 @@ These are example instances that show what data produced and consumed by systems
 | [patient-single-example](Patient-patient-single-example.md) | Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines. |
 | [practitioner-single-example](Practitioner-practitioner-single-example.md) | Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. |
 | [relatedperson-single-example](RelatedPerson-relatedperson-single-example.md) | Maria Cruz Santos is a female born on 1 January 1955. |
+| [task-single-example](Task-task-single-example.md) | A laboratory task for Juan Dela Cruz requested by Dr. Maria Clara Santos. The task is to collect a blood sample for a routine CBC test. |
 | [transaction-example](Bundle-transaction-example.md) | Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos. |
 

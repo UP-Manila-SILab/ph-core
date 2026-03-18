@@ -16,7 +16,7 @@ The PH Core Practitioner Role Profile inherits from the [FHIR R4 PractitionerRol
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Implementation Guide
+* Refer to this Profile: [PH Core Task](StructureDefinition-ph-core-task.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-practitionerrole)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-practitioner
   "name" : "PHCorePractitionerRole",
   "title" : "PH Core PractitionerRole",
   "status" : "draft",
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

@@ -16,7 +16,7 @@ This profile sets minimum expectations for an Encounter resource to record, sear
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Immunization](StructureDefinition-ph-core-immunization.md), [PH Core Observation](StructureDefinition-ph-core-observation.md) and [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
+* Refer to this Profile: [PH Core Immunization](StructureDefinition-ph-core-immunization.md), [PH Core Observation](StructureDefinition-ph-core-observation.md), [PH Core Procedure](StructureDefinition-ph-core-procedure.md) and [PH Core Task](StructureDefinition-ph-core-task.md)
 * Examples for this Profile: [Encounter/encounter-single-example](Encounter-encounter-single-example.md) and [Encounter/example-encounter](Encounter-example-encounter.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-encounter)
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
   "name" : "PHCoreEncounter",
   "title" : "PH Core Encounter",
   "status" : "draft",
-  "date" : "2026-03-18T03:12:48+00:00",
+  "date" : "2026-03-18T09:54:13+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

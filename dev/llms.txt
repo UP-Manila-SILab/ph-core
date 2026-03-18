@@ -48,6 +48,7 @@
 * [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md)
 * [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
 * [PH Core RelatedPerson](StructureDefinition-ph-core-relatedperson.md)
+* [PH Core Task](StructureDefinition-ph-core-task.md)
 
 ### Extensions
 
@@ -69,7 +70,8 @@
 ### NamingSystems
 
 * [DohNhfrCode](NamingSystem-doh-nhfr-code-ns.md)
-* [PddRegistration](NamingSystem-pdd-registration-ns.md)
+* [PhilHealth Accreditation Number](NamingSystem-philhealth-accreditation-no.md)
+* [PhilHealth Employer Number](NamingSystem-philhealth-employer-no.md)
 * [PhilHealthID](NamingSystem-philhealth-id-ns.md)
 * [PhilSysID](NamingSystem-philsys-id-ns.md)
 
@@ -88,10 +90,11 @@
 * [medication-single-example (Medication)](Medication-medication-single-example.md)
 * [blood-pressure (Observation)](Observation-blood-pressure.md)
 * [observation-single-example (Observation)](Observation-observation-single-example.md)
-* [Department of Health - Central Office (Organization)](Organization-organization-single-example.md)
+* [Department of Health - Sattelite Office (Organization)](Organization-organization-single-example.md)
 * [MiddleNameExample (Patient)](Patient-MiddleNameExample.md)
 * [example-patient (Patient)](Patient-example-patient.md)
 * [patient-single-example (Patient)](Patient-patient-single-example.md)
 * [example-practitioner (Practitioner)](Practitioner-example-practitioner.md)
 * [practitioner-single-example (Practitioner)](Practitioner-practitioner-single-example.md)
 * [relatedperson-single-example (RelatedPerson)](RelatedPerson-relatedperson-single-example.md)
+* [task-single-example (Task)](Task-task-single-example.md)

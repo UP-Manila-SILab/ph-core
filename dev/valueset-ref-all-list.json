@@ -133,8 +133,8 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
-    "StructureDefinition-ph-core-patient.html" : "PH Core Patient",
-    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner"
+    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
+    "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/body-site",
@@ -461,9 +461,8 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
-    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)"
+    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -478,9 +477,8 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
-    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)"
+    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/immunization-function",
@@ -649,17 +647,18 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
-    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
     "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
     "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
+    "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
+    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
+    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
+    "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
+    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
     "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
     "StructureDefinition-ph-core-location.html" : "PH Core Location",
-    "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
-    "StructureDefinition-ph-core-patient.html" : "PH Core Patient",
-    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner"
+    "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -871,6 +870,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.433"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
     "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
@@ -1018,6 +1018,20 @@
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "Request priority",
+    "description" : "The clinical priority of a diagnostic order.",
+    "systems" : ["http://hl7.org/fhir/request-priority"],
+    "oids" : ["2.16.840.1.113883.4.642.3.115"],
+    "sources" : ["2.16.840.1.113883.4.642.3.115"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-task.html" : "PH Core Task"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/service-type",
     "version" : "4.0.1",
     "status" : "draft",
@@ -1030,6 +1044,49 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/task-code",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "TaskCode",
+    "title" : "Task Codes",
+    "description" : "Codes indicating the type of action that is expected to be performed",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/task-code"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1396"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1396"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-task.html" : "PH Core Task"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/task-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskIntent",
+    "title" : "TaskIntent",
+    "description" : "Distinguishes whether the task is a proposal, plan or full order.",
+    "systems" : ["http://hl7.org/fhir/request-intent",
+    "http://hl7.org/fhir/task-intent"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1240"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1240"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-task.html" : "PH Core Task"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/task-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskStatus",
+    "title" : "TaskStatus",
+    "description" : "The current status of the task.",
+    "systems" : ["http://hl7.org/fhir/task-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.790"],
+    "sources" : ["2.16.840.1.113883.4.642.3.790"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-task.html" : "PH Core Task"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/vaccine-code",

@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-18T03:12:48+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-18T09:54:13+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -1605,7 +1605,7 @@
          fhir:reference [ fhir:v "Organization/organization-single-example" ]
        ] ;
        fhir:name [ fhir:v "Example PH Core Organization" ] ;
-       fhir:description [ fhir:v "An example instance of a PH Core Organization conforming to the Philippine localization profile." ] ;
+       fhir:description [ fhir:v "An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, PAN, PEN) and Must Support fields." ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"^^xsd:anyURI ;
@@ -2069,6 +2069,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "NamingSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-accreditation-no> ;
+         fhir:reference [ fhir:v "NamingSystem/philhealth-accreditation-no" ]
+       ] ;
+       fhir:name [ fhir:v "PAN - PhilHealth Accreditation Number" ] ;
+       fhir:description [ fhir:v "The unique number issued by PhilHealth to accredited institutions." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Patient"
          ]
        ] ) ;
@@ -2082,6 +2103,27 @@
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"^^xsd:anyURI ;
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "NamingSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-employer-no> ;
+         fhir:reference [ fhir:v "NamingSystem/philhealth-employer-no" ]
+       ] ;
+       fhir:name [ fhir:v "PEN - PhilHealth Employer Number" ] ;
+       fhir:description [ fhir:v "The unique number issued by PhilHealth to employers." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
@@ -2280,27 +2322,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "NamingSystem"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/pdd-registration-ns> ;
-         fhir:reference [ fhir:v "NamingSystem/pdd-registration-ns" ]
-       ] ;
-       fhir:name [ fhir:v "PH Core PhilHealth Dialysis Database Registration Number" ] ;
-       fhir:description [ fhir:v "PH Core PhilHealth Dialysis Database Registration Number" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -2373,6 +2394,27 @@
        ] ;
        fhir:name [ fhir:v "PH Core RelatedPerson" ] ;
        fhir:description [ fhir:v "This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-task" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Task" ] ;
+       fhir:description [ fhir:v "This profile localizes the FHIR R4 Task resource to the Philippine context." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2609,6 +2651,28 @@
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"^^xsd:anyURI ;
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Task/task-single-example> ;
+         fhir:reference [ fhir:v "Task/task-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "task-single-example" ] ;
+       fhir:description [ fhir:v "A laboratory task for Juan Dela Cruz requested by Dr. Maria Clara Santos. The task is to collect a blood sample for a routine CBC test." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task>
        ]
      ] [
        fhir:extension ( [
