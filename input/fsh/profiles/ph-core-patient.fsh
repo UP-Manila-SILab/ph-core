@@ -30,7 +30,7 @@ Description: "Captures key demographic and administrative information about indi
 * identifier[PHCorePhilSysID] only PHCorePhilSysID
 
 * address 0..* MS
-* address only PHCoreAddress or Address
+* address only PHCoreAddress
 
 * birthDate 0..1 MS
 * gender 0..1 MS
@@ -43,4 +43,4 @@ Description: "Captures key demographic and administrative information about indi
 * contact.relationship from http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (required)
 
 * contact.address MS
-* contact.address only PHCoreAddress or Address
+* contact.address only PHCoreAddress
