@@ -14,5 +14,5 @@ Description: "This profile localizes the FHIR R4 RelatedPerson resource to the P
 * identifier[PHCorePhilSysID] only PHCorePhilSysID
 
 * address MS
-* address only PHCoreAddress or Address
+* address only PHCoreAddress
 // TODO: Explicitly cite system url when RelatedPerson is being reviewed
