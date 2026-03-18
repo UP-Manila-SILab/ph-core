@@ -33,7 +33,7 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 * reasonCode only CodeableConcept
 
 * reasonReference 0..* MS
-* reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure) //Add PHCoreCondition once available.
+* reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure or ImmunizationRecommendation) //Add PHCoreCondition and PHCoreImmunizationRecommendation once available.
 
 * serviceProvider 0..1 MS
 * serviceProvider only Reference(PHCoreOrganization)
@@ -41,6 +41,6 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 * status 1..1 MS
 
 * subject 1..1 MS
-* subject only Reference(PHCorePatient)
+* subject only Reference(PHCorePatient or Group)
 
 * type 0..* MS
