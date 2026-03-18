@@ -1,0 +1,264 @@
+PHCoreImplementationGuide : Validation Results
+=========================================
+
+err = 49, warn = 18, info = 60
+IG Publisher Version: 2.2.0
+Generated Wed Mar 18 03:14:24 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.0 (canonical = http://doh.gov.ph/fhir/ph-core)
+ Build Errors : 0 / 0 / 0
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-allergy-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-example-allergy : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example : 3 / 1 / 34
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSCED : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSGC : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSOC : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-drugs : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-indigenous-groups-cs : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Condition-condition-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Condition-example-condition : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Encounter-encounter-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Encounter-example-encounter : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Immunization-example-immunization : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Immunization-immunization-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ImplementationGuide-fhir.ph.core : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Medication-example-medication : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Medication-medication-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-doh-nhfr-code-ns : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-pdd-registration-ns : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-philhealth-id-ns : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-philsys-id-ns : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-blood-pressure : 0 / 0 / 7
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-single-example : 0 / 0 / 7
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Organization-organization-single-example : 0 / 2 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-MiddleNameExample : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-example-patient : 1 / 0 / 11
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-patient-single-example : 1 / 0 / 12
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Practitioner-example-practitioner : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Practitioner-practitioner-single-example : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/RelatedPerson-relatedperson-single-example : 0 / 1 / 6
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-barangay : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-city-municipality : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-educational-attainment : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-indigenous-group : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-indigenous-people : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-middle-name : 1 / 2 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-occupation : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-address : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter : 1 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-immunization : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-location : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medication : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-name : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-observation : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-organization : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-patient : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-philhealth-id : 1 / 1 / 4
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-philsys-id : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitioner : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitionerrole : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-procedure : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-relatedperson : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-province : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-race : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-region : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-barangays : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-cities : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-drugs-vs : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-educational-attainments : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-indigenous-groups-vs : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-occupational-classifications : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-provinces : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-regions : 1 / 0 / 2
+</table>
+== n/a ==
+== fsh-generated/resources/AllergyIntolerance-allergy-single-example.json ==
+== fsh-generated/resources/AllergyIntolerance-example-allergy.json ==
+== fsh-generated/resources/Bundle-transaction-example.json ==
+INFORMATION: Bundle/transaction-example: Bundle.entry[0].resource/*Patient/example-patient*/.extension[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: Bundle/transaction-example: Bundle.entry[0].resource/*Patient/example-patient*/.extension[0].extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+INFORMATION: Bundle/transaction-example: Bundle.entry[0].resource/*Patient/example-patient*/.identifier[0]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/transaction-example: Bundle.entry[1].resource/*Encounter/example-encounter*/.subject: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+ERROR: Bundle/transaction-example: Bundle.entry[1].resource/*Encounter/example-encounter*/.subject: Unable to find a profile match for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient
+INFORMATION: Bundle/transaction-example: Bundle.entry[1].resource/*Encounter/example-encounter*/.subject: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0
+INFORMATION: Bundle/transaction-example: Bundle.entry[2].resource/*Condition/example-condition*/.subject: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+INFORMATION: Bundle/transaction-example: Bundle.entry[2].resource/*Condition/example-condition*/.encounter: Details for urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.subject: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+ERROR: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.subject: Unable to find a profile match for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient
+INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.subject: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0
+INFORMATION: Bundle/transaction-example: Bundle.entry[5].resource/*AllergyIntolerance/example-allergy*/.patient: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+WARNING: Bundle/transaction-example: Bundle.entry[6].resource/*Practitioner/example-practitioner*/.address[0]: Found multiple matching profiles among 2 choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address, http://hl7.org/fhir/StructureDefinition/Address
+== fsh-generated/resources/CodeSystem-PSCED.json ==
+INFORMATION: CodeSystem/PSCED: CodeSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: CodeSystem/PSCED: CodeSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/CodeSystem-PSGC.json ==
+INFORMATION: CodeSystem/PSGC: CodeSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: CodeSystem/PSGC: CodeSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/CodeSystem-PSOC.json ==
+INFORMATION: CodeSystem/PSOC: CodeSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: CodeSystem/PSOC: CodeSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/CodeSystem-drugs.json ==
+INFORMATION: CodeSystem/drugs: CodeSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: CodeSystem/drugs: CodeSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/CodeSystem-indigenous-groups-cs.json ==
+INFORMATION: CodeSystem/indigenous-groups-cs: CodeSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: CodeSystem/indigenous-groups-cs: CodeSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/Condition-condition-single-example.json ==
+== fsh-generated/resources/Condition-example-condition.json ==
+== fsh-generated/resources/Encounter-encounter-single-example.json ==
+== fsh-generated/resources/Encounter-example-encounter.json ==
+== fsh-generated/resources/Immunization-example-immunization.json ==
+== fsh-generated/resources/Immunization-immunization-single-example.json ==
+== fsh-generated/resources/ImplementationGuide-fhir.ph.core.json ==
+INFORMATION: ImplementationGuide/fhir.ph.core: ImplementationGuide.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ImplementationGuide/fhir.ph.core: ImplementationGuide.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/Medication-example-medication.json ==
+== fsh-generated/resources/Medication-medication-single-example.json ==
+== fsh-generated/resources/NamingSystem-doh-nhfr-code-ns.json ==
+INFORMATION: NamingSystem/doh-nhfr-code-ns: NamingSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: NamingSystem/doh-nhfr-code-ns: NamingSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/NamingSystem-pdd-registration-ns.json ==
+INFORMATION: NamingSystem/pdd-registration-ns: NamingSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: NamingSystem/pdd-registration-ns: NamingSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/NamingSystem-philhealth-id-ns.json ==
+INFORMATION: NamingSystem/philhealth-id-ns: NamingSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: NamingSystem/philhealth-id-ns: NamingSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/NamingSystem-philsys-id-ns.json ==
+INFORMATION: NamingSystem/philsys-id-ns: NamingSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: NamingSystem/philsys-id-ns: NamingSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/Observation-blood-pressure.json ==
+== fsh-generated/resources/Observation-observation-single-example.json ==
+== fsh-generated/resources/Organization-organization-single-example.json ==
+WARNING: Organization/organization-single-example: Organization.address[0]: Found multiple matching profiles among 2 choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Organization/organization-single-example: Organization.contact[0].address: Found multiple matching profiles among 2 choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address, http://hl7.org/fhir/StructureDefinition/Address
+== fsh-generated/resources/Patient-MiddleNameExample.json ==
+== fsh-generated/resources/Patient-example-patient.json ==
+INFORMATION: Patient/example-patient: Patient.identifier[0]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Patient/example-patient: Patient.extension[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: Patient/example-patient: Patient.extension[0].extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/Patient-patient-single-example.json ==
+INFORMATION: Patient/patient-single-example: Patient.identifier[0]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Patient/patient-single-example: Patient.extension[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: Patient/patient-single-example: Patient.extension[0].extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/Practitioner-example-practitioner.json ==
+WARNING: Practitioner/example-practitioner: Practitioner.address[0]: Found multiple matching profiles among 2 choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address, http://hl7.org/fhir/StructureDefinition/Address
+== fsh-generated/resources/Practitioner-practitioner-single-example.json ==
+WARNING: Practitioner/practitioner-single-example: Practitioner.address[0]: Found multiple matching profiles among 2 choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address, http://hl7.org/fhir/StructureDefinition/Address
+== fsh-generated/resources/RelatedPerson-relatedperson-single-example.json ==
+INFORMATION: RelatedPerson/relatedperson-single-example: RelatedPerson.identifier[0]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: RelatedPerson/relatedperson-single-example: RelatedPerson.address[0]: Found multiple matching profiles among 2 choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address, http://hl7.org/fhir/StructureDefinition/Address
+== fsh-generated/resources/StructureDefinition-barangay.json ==
+INFORMATION: StructureDefinition/barangay: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/barangay: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-city-municipality.json ==
+INFORMATION: StructureDefinition/city-municipality: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/city-municipality: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-educational-attainment.json ==
+INFORMATION: StructureDefinition/educational-attainment: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/educational-attainment: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/educational-attainment'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-indigenous-group.json ==
+INFORMATION: StructureDefinition/indigenous-group: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/indigenous-group: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-indigenous-people.json ==
+INFORMATION: StructureDefinition/indigenous-people: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/indigenous-people: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-middle-name.json ==
+INFORMATION: StructureDefinition/middle-name: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/middle-name: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition/middle-name: StructureDefinition.context[0]: Review the extension type for middle-name: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-occupation.json ==
+INFORMATION: StructureDefinition/occupation: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/occupation: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/occupation'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-ph-core-address.json ==
+INFORMATION: StructureDefinition/ph-core-address: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-address: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address'): The Implementation Guide contains no examples for this data type profile
+== fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code.json ==
+INFORMATION: StructureDefinition/ph-core-doh-nhfr-code: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-doh-nhfr-code: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-doh-nhfr-code'): The Implementation Guide contains no examples for this data type profile
+== fsh-generated/resources/StructureDefinition-ph-core-encounter.json ==
+INFORMATION: StructureDefinition/ph-core-encounter: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-encounter: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-immunization.json ==
+INFORMATION: StructureDefinition/ph-core-immunization: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-immunization: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-location.json ==
+INFORMATION: StructureDefinition/ph-core-location: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-location: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ph-core-medication.json ==
+INFORMATION: StructureDefinition/ph-core-medication: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-medication: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-name.json ==
+INFORMATION: StructureDefinition/ph-core-name: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-name: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-observation.json ==
+INFORMATION: StructureDefinition/ph-core-observation: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-observation: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-organization.json ==
+INFORMATION: StructureDefinition/ph-core-organization: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-organization: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-patient.json ==
+INFORMATION: StructureDefinition/ph-core-patient: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-patient: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-philhealth-id.json ==
+INFORMATION: StructureDefinition/ph-core-philhealth-id: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-philhealth-id: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+INFORMATION: StructureDefinition/ph-core-philhealth-id: StructureDefinition.snapshot.element[16].fixed.ofType(uri): A definition could not be found for Canonical URL 'https://philhealth.gov.ph/fhir/Identifier/philhealth-id' but a definition can be found for 'http://philhealth.gov.ph/fhir/Identifier/philhealth-id' - change from https: to http:
+INFORMATION: StructureDefinition/ph-core-philhealth-id: StructureDefinition.differential.element[2].fixed.ofType(uri): A definition could not be found for Canonical URL 'https://philhealth.gov.ph/fhir/Identifier/philhealth-id' but a definition can be found for 'http://philhealth.gov.ph/fhir/Identifier/philhealth-id' - change from https: to http:
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-id'): The Implementation Guide contains no examples for this data type profile
+== fsh-generated/resources/StructureDefinition-ph-core-philsys-id.json ==
+INFORMATION: StructureDefinition/ph-core-philsys-id: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-philsys-id: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philsys-id'): The Implementation Guide contains no examples for this data type profile
+== fsh-generated/resources/StructureDefinition-ph-core-practitioner.json ==
+INFORMATION: StructureDefinition/ph-core-practitioner: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-practitioner: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-practitionerrole.json ==
+INFORMATION: StructureDefinition/ph-core-practitionerrole: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-practitionerrole: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ph-core-procedure.json ==
+INFORMATION: StructureDefinition/ph-core-procedure: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-procedure: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ph-core-relatedperson.json ==
+INFORMATION: StructureDefinition/ph-core-relatedperson: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-relatedperson: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-province.json ==
+INFORMATION: StructureDefinition/province: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/province: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-race.json ==
+INFORMATION: StructureDefinition/race: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/race: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-region.json ==
+INFORMATION: StructureDefinition/region: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/region: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/ValueSet-barangays.json ==
+INFORMATION: ValueSet/barangays: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ValueSet/barangays: ValueSet.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/ValueSet-cities.json ==
+INFORMATION: ValueSet/cities: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ValueSet/cities: ValueSet.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/ValueSet-drugs-vs.json ==
+INFORMATION: ValueSet/drugs-vs: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ValueSet/drugs-vs: ValueSet.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/ValueSet-educational-attainments.json ==
+INFORMATION: ValueSet/educational-attainments: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ValueSet/educational-attainments: ValueSet.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/ValueSet-indigenous-groups-vs.json ==
+INFORMATION: ValueSet/indigenous-groups-vs: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ValueSet/indigenous-groups-vs: ValueSet.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/ValueSet-occupational-classifications.json ==
+INFORMATION: ValueSet/occupational-classifications: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ValueSet/occupational-classifications: ValueSet.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/ValueSet-provinces.json ==
+INFORMATION: ValueSet/provinces: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ValueSet/provinces: ValueSet.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/ValueSet-regions.json ==
+INFORMATION: ValueSet/regions: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ValueSet/regions: ValueSet.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')

@@ -1,0 +1,308 @@
+{
+  "package": "fhir.ph.core",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "PH",
+  "extensions": [
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
+      "title": "Barangay",
+      "types": [
+        "Coding"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
+      "title": "City/Municipality",
+      "types": [
+        "Coding"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/educational-attainment",
+      "title": "Educational Attainment",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-group",
+      "title": "Indigenous Group",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people",
+      "title": "Indigenous People",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name",
+      "title": "Middle Name",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/occupation",
+      "title": "Occupation",
+      "types": [
+        "CodeableConcept",
+        "integer",
+        "Period",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
+      "title": "Province",
+      "types": [
+        "Coding"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/race",
+      "title": "Race",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region",
+      "title": "Region",
+      "types": [
+        "Coding"
+      ]
+    }
+  ],
+  "profiles": {
+    "Encounter": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter",
+        "title": "PH Core Encounter"
+      }
+    ],
+    "Immunization": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-immunization",
+        "title": "PH Core Immunization"
+      }
+    ],
+    "Location": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location",
+        "title": "PH Core Location"
+      }
+    ],
+    "Medication": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication",
+        "title": "PH Core Medication"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation",
+        "title": "PH Core Observation"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization",
+        "title": "PH Core Organization"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient",
+        "title": "PH Core Patient"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner",
+        "title": "PH Core Practitioner"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole",
+        "title": "PH Core PractitionerRole"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure",
+        "title": "PH Core Procedure"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson",
+        "title": "PH Core RelatedPerson"
+      }
+    ]
+  },
+  "usage": {
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay": [
+      "Address"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality": [
+      "Address",
+      "Bundle.entry.resource.address",
+      "Patient.address"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/educational-attainment": [
+      "Patient"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-group": [
+      "Patient"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people": [
+      "Patient"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name": [
+      "HumanName"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/occupation": [
+      "Patient"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province": [
+      "Address",
+      "Bundle.entry.resource.address",
+      "Patient.address",
+      "RelatedPerson.address"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/race": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region": [
+      "Address",
+      "Organization.address",
+      "RelatedPerson.address"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url": [
+      "NamingSystem"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version": [
+      "NamingSystem"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity|5.2.0": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.2.0": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-nationality": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-nationality|5.2.0": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-religion": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-religion|5.2.0": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ]
+  }
+}

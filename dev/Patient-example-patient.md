@@ -1,0 +1,146 @@
+# example-patient - Draft PH Core Implementation Guide v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **example-patient**
+
+## Example Patient: example-patient
+
+Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Patient",
+  "id" : "example-patient",
+  "meta" : {
+    "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"]
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "code",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }
+    },
+    {
+      "url" : "period",
+      "valuePeriod" : {
+        "start" : "2020-01-01",
+        "end" : "2023-01-01"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/patient-nationality"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/patient-religion",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation",
+        "code" : "1007",
+        "display" : "Atheism"
+      }]
+    }
+  },
+  {
+    "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/race",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-Race",
+        "code" : "2036-2",
+        "display" : "Filipino"
+      }]
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns",
+    "value" : "63-584789845-5"
+  }],
+  "active" : true,
+  "name" : [{
+    "family" : "Dela Cruz",
+    "given" : ["Juan Jane", "Dela Fuente"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1985-06-15",
+  "address" : [{
+    "extension" : [{
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "1380200000",
+        "display" : "City of Las Piñas"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "1380100000",
+        "display" : "City of Caloocan"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "0402100000",
+        "display" : "Cavite"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "0403400000",
+        "display" : "Laguna"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "0405800000",
+        "display" : "Rizal"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "1704000000",
+        "display" : "Marinduque"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "0402100000",
+        "display" : "Cavite"
+      }
+    },
+    {
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "1705100000",
+        "display" : "Occidental Mindoro"
+      }
+    }],
+    "line" : ["123 Mabini Street", "Barangay Malinis"],
+    "city" : "Quezon City",
+    "district" : "NCR",
+    "postalCode" : "1100",
+    "country" : "PH"
+  }]
+}
+
+```

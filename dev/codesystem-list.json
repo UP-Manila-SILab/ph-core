@@ -1,0 +1,42 @@
+{
+  "codeSystems" : [{
+    "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PSCED",
+    "title" : "Mock PSCED",
+    "description" : "Mock of the Philippine Standard Classification of Education."
+  },
+  {
+    "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PSGC",
+    "title" : "Mock PSGC",
+    "description" : "Mock of the Philippine Standard Geographic Code."
+  },
+  {
+    "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSOC",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PSOC",
+    "title" : "Mock PSOC",
+    "description" : "Mock of the Philippine Standard Occupational Classification."
+  },
+  {
+    "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/drugs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "Drugs",
+    "title" : "Drugs",
+    "description" : "Partial Establishments and Health Products to be published by the [PH FDA](https://verification.fda.gov.ph)."
+  },
+  {
+    "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "IndigenousGroupsCS",
+    "title" : "Indigenous Groups",
+    "description" : "A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."
+  }]
+}

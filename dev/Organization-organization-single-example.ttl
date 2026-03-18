@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://doh.gov.ph/fhir/ph-core/Organization/organization-single-example> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "organization-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"^^xsd:anyURI ;
+       fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Department of Health - Central Office is a PH Core Organization located at San Lazaro Compound, Rizal Avenue, Manila, NCR, 1003, Philippines. The organization can be contacted through its health facility contact at +63-2-8651-7800. The regional designation is Ilocos Norte.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"^^xsd:anyURI ;
+       fhir:l <http://doh.gov.ph/fhir/Identifier/doh-nhfr-code>
+     ] ;
+     fhir:value [ fhir:v "1234567890" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Department of Health - Central Office"] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/region>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
+           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
+         ] ;
+         fhir:code [ fhir:v "0102800000" ] ;
+         fhir:display [ fhir:v "Ilocos Norte" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:line ( [ fhir:v "San Lazaro Compound" ] [ fhir:v "Rizal Avenue" ] [ fhir:v "Rizal Avenue" ] ) ;
+     fhir:city [ fhir:v "Manila" ] ;
+     fhir:state [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1003" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:name [
+       fhir:text [ fhir:v "Health Facility Contact" ]
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "+63-2-8651-7800" ]
+     ] ) ;
+     fhir:address [
+       fhir:use [ fhir:v "work" ] ;
+       fhir:city [ fhir:v "Manila" ] ;
+       fhir:state [ fhir:v "NCR" ] ;
+       fhir:postalCode [ fhir:v "1003" ] ;
+       fhir:country [ fhir:v "PH" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

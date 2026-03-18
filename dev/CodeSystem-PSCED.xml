@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PSCED"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem PSCED</b></p><a name="PSCED"> </a><a name="hcPSCED"> </a><p>This case-sensitive code system <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED</code> defines codes, but no codes are represented here</p></div>
+  </text>
+  <url value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED"/>
+  <version value="0.1.0"/>
+  <name value="PSCED"/>
+  <title value="Mock PSCED"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-03-18T03:12:48+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="Mock of the Philippine Standard Classification of Education."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="not-present"/>
+</CodeSystem>

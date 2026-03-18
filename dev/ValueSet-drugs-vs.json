@@ -1,0 +1,31 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "drugs-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet drugs-vs</b></p><a name=\"drugs-vs\"> </a><a name=\"hcdrugs-vs\"> </a><p>This value set includes codes based on the following rules:</p><ul/></div>"
+  },
+  "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs",
+  "version" : "0.1.0",
+  "name" : "DrugsVS",
+  "title" : "Drugs",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-03-18T03:12:48+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }]
+}

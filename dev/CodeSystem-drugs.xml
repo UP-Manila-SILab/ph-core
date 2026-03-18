@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="drugs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem drugs</b></p><a name="drugs"> </a><a name="hcdrugs"> </a><p>This case-sensitive code system <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/drugs</code> defines codes, but no codes are represented here</p></div>
+  </text>
+  <url value="http://doh.gov.ph/fhir/ph-core/CodeSystem/drugs"/>
+  <version value="0.1.0"/>
+  <name value="Drugs"/>
+  <title value="Drugs"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-03-18T03:12:48+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="Partial Establishments and Health Products to be published by the [PH FDA](https://verification.fda.gov.ph)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="not-present"/>
+</CodeSystem>

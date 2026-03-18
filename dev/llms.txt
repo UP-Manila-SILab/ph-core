@@ -1,0 +1,97 @@
+# fhir.ph.core#0.1.0: Draft PH Core Implementation Guide
+
+## Pages
+
+* [Home](index.md)
+* [Artifacts Summary](artifacts.md)
+* [Other Ids](otherIds.md)
+
+## Resources
+
+### CodeSystems
+
+* [Mock PSCED](CodeSystem-PSCED.md)
+* [Mock PSGC](CodeSystem-PSGC.md)
+* [Mock PSOC](CodeSystem-PSOC.md)
+* [Drugs](CodeSystem-drugs.md)
+* [Indigenous Groups](CodeSystem-indigenous-groups-cs.md)
+
+### ValueSets
+
+* [Barangays](ValueSet-barangays.md)
+* [Cities](ValueSet-cities.md)
+* [Drugs](ValueSet-drugs-vs.md)
+* [Educational Attainments](ValueSet-educational-attainments.md)
+* [Indigenous Groups](ValueSet-indigenous-groups-vs.md)
+* [Occupation Classifications](ValueSet-occupational-classifications.md)
+* [Provinces](ValueSet-provinces.md)
+* [Regions](ValueSet-regions.md)
+
+### Complex-type Profiles
+
+* [PH Core Address](StructureDefinition-ph-core-address.md)
+* [DOH NHFR Code](StructureDefinition-ph-core-doh-nhfr-code.md)
+* [PH Core Name](StructureDefinition-ph-core-name.md)
+* [PIN - PhilHealth Identification Number](StructureDefinition-ph-core-philhealth-id.md)
+* [PhilSys Identification Number (PhilSys ID)](StructureDefinition-ph-core-philsys-id.md)
+
+### Resource Profiles
+
+* [PH Core Encounter](StructureDefinition-ph-core-encounter.md)
+* [PH Core Immunization](StructureDefinition-ph-core-immunization.md)
+* [PH Core Location](StructureDefinition-ph-core-location.md)
+* [PH Core Medication](StructureDefinition-ph-core-medication.md)
+* [PH Core Observation](StructureDefinition-ph-core-observation.md)
+* [PH Core Organization](StructureDefinition-ph-core-organization.md)
+* [PH Core Patient](StructureDefinition-ph-core-patient.md)
+* [PH Core Practitioner](StructureDefinition-ph-core-practitioner.md)
+* [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md)
+* [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
+* [PH Core RelatedPerson](StructureDefinition-ph-core-relatedperson.md)
+
+### Extensions
+
+* [Barangay](StructureDefinition-barangay.md)
+* [City/Municipality](StructureDefinition-city-municipality.md)
+* [Educational Attainment](StructureDefinition-educational-attainment.md)
+* [Indigenous Group](StructureDefinition-indigenous-group.md)
+* [Indigenous People](StructureDefinition-indigenous-people.md)
+* [Middle Name](StructureDefinition-middle-name.md)
+* [Occupation](StructureDefinition-occupation.md)
+* [Province](StructureDefinition-province.md)
+* [Race](StructureDefinition-race.md)
+* [Region](StructureDefinition-region.md)
+
+### ImplementationGuides
+
+* [Draft PH Core Implementation Guide](index.md)
+
+### NamingSystems
+
+* [DohNhfrCode](NamingSystem-doh-nhfr-code-ns.md)
+* [PddRegistration](NamingSystem-pdd-registration-ns.md)
+* [PhilHealthID](NamingSystem-philhealth-id-ns.md)
+* [PhilSysID](NamingSystem-philsys-id-ns.md)
+
+### Examples
+
+* [allergy-single-example (AllergyIntolerance)](AllergyIntolerance-allergy-single-example.md)
+* [example-allergy (AllergyIntolerance)](AllergyIntolerance-example-allergy.md)
+* [transaction-example (Bundle)](Bundle-transaction-example.md)
+* [condition-single-example (Condition)](Condition-condition-single-example.md)
+* [example-condition (Condition)](Condition-example-condition.md)
+* [encounter-single-example (Encounter)](Encounter-encounter-single-example.md)
+* [example-encounter (Encounter)](Encounter-example-encounter.md)
+* [example-immunization (Immunization)](Immunization-example-immunization.md)
+* [immunization-single-example (Immunization)](Immunization-immunization-single-example.md)
+* [example-medication (Medication)](Medication-example-medication.md)
+* [medication-single-example (Medication)](Medication-medication-single-example.md)
+* [blood-pressure (Observation)](Observation-blood-pressure.md)
+* [observation-single-example (Observation)](Observation-observation-single-example.md)
+* [Department of Health - Central Office (Organization)](Organization-organization-single-example.md)
+* [MiddleNameExample (Patient)](Patient-MiddleNameExample.md)
+* [example-patient (Patient)](Patient-example-patient.md)
+* [patient-single-example (Patient)](Patient-patient-single-example.md)
+* [example-practitioner (Practitioner)](Practitioner-example-practitioner.md)
+* [practitioner-single-example (Practitioner)](Practitioner-practitioner-single-example.md)
+* [relatedperson-single-example (RelatedPerson)](RelatedPerson-relatedperson-single-example.md)

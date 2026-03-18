@@ -1,0 +1,48 @@
+# practitioner-single-example - Draft PH Core Implementation Guide v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **practitioner-single-example**
+
+## Example Practitioner: practitioner-single-example
+
+Dr. Maria Clara Santos is a female practitioner born on May 15, 1985. She resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Practitioner",
+  "id" : "practitioner-single-example",
+  "meta" : {
+    "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner"]
+  },
+  "name" : [{
+    "family" : "Santos",
+    "given" : ["Maria", "Clara"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-912-345-6789",
+    "use" : "mobile"
+  },
+  {
+    "system" : "email",
+    "value" : "maria.santos@example.ph",
+    "use" : "work"
+  }],
+  "address" : [{
+    "use" : "home",
+    "line" : ["1234 Mabini Street"],
+    "city" : "Manila",
+    "state" : "NCR",
+    "postalCode" : "1000",
+    "country" : "PH"
+  }],
+  "gender" : "female",
+  "birthDate" : "1985-05-15"
+}
+
+```

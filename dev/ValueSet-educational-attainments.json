@@ -1,0 +1,31 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "educational-attainments",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet educational-attainments</b></p><a name=\"educational-attainments\"> </a><a name=\"hceducational-attainments\"> </a><p>This value set includes codes based on the following rules:</p><ul/></div>"
+  },
+  "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",
+  "version" : "0.1.0",
+  "name" : "EducationalAttainments",
+  "title" : "Educational Attainments",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-03-18T03:12:48+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }]
+}

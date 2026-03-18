@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="example-patient"/>
+  <meta>
+    <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+    <extension url="code">
+      <valueCodeableConcept>
+        <coding>
+          <system value="urn:iso:std:iso:3166"/>
+          <code value="PH"/>
+          <display value="Philippines"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="period">
+      <valuePeriod>
+        <start value="2020-01-01"/>
+        <end value="2023-01-01"/>
+      </valuePeriod>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+        <code value="1007"/>
+        <display value="Atheism"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/race">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-Race"/>
+        <code value="2036-2"/>
+        <display value="Filipino"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <system value="http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"/>
+    <value value="63-584789845-5"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="Dela Cruz"/>
+    <given value="Juan Jane"/>
+    <given value="Dela Fuente"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1985-06-15"/>
+  <address>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="1380200000"/>
+        <display value="City of Las Piñas"/>
+      </valueCoding>
+    </extension>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="1380100000"/>
+        <display value="City of Caloocan"/>
+      </valueCoding>
+    </extension>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="0402100000"/>
+        <display value="Cavite"/>
+      </valueCoding>
+    </extension>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="0403400000"/>
+        <display value="Laguna"/>
+      </valueCoding>
+    </extension>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="0405800000"/>
+        <display value="Rizal"/>
+      </valueCoding>
+    </extension>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="1704000000"/>
+        <display value="Marinduque"/>
+      </valueCoding>
+    </extension>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="0402100000"/>
+        <display value="Cavite"/>
+      </valueCoding>
+    </extension>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="1705100000"/>
+        <display value="Occidental Mindoro"/>
+      </valueCoding>
+    </extension>
+    <line value="123 Mabini Street"/>
+    <line value="Barangay Malinis"/>
+    <city value="Quezon City"/>
+    <district value="NCR"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+</Patient>
