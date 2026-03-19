@@ -16,10 +16,9 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
     PAN 0..* MS and
     PEN 0..* MS
 
-* identifier[NhfrCode] ^short = "DOH NHFR Code"
-* identifier[NhfrCode] ^definition = "Philippines Department of Health National Health Facilities Registry Code"
-* identifier[PAN] ^short = "PhilHealth Accreditation Number"
-* identifier[PEN] ^short = "PhilHealth Employer Number"
+* identifier[NhfrCode] only PHCoreDOHNHFRCode
+* identifier[PAN] only PHCorePhilHealthPAN
+* identifier[PEN] only PHCorePhilHealthPEN
 
 
 * active 0..1 MS

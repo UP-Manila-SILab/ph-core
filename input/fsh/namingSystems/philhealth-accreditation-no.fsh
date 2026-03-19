@@ -1,9 +1,9 @@
-Instance: philhealth-accreditation-no
+Instance: PhilHealthPANNS
 InstanceOf: NamingSystem
 Usage: #definition
 Title: "PAN - PhilHealth Accreditation Number"
 Description: "The unique number issued by PhilHealth to accredited institutions."
-* name = "PhilHealth Accreditation Number"
+* name = "PhilHealthPAN"
 * kind = #identifier
 * status = #draft
 * date = "2025-06-01"

@@ -8,9 +8,17 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 
 
 * active = true
+* identifier[NhfrCode].system = "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"
 * identifier[NhfrCode].value = "1234567890"
+* identifier[PAN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
 * identifier[PAN].value = "PAN-2024-56789"
+* identifier[PEN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
 * identifier[PEN].value = "PEN-987654321"
+
+// A custom identifier not defined in PH Core profile
+* identifier[+].system = "http://my-hospital.org/internal-id"
+* identifier[=].value = "HOSP-INT-12345"
+
 * name = "Department of Health - Sattelite Office"
 
 * telecom.system = #phone
