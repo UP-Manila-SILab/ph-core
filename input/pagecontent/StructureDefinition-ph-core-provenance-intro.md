@@ -48,18 +48,25 @@ This ensures that when an individual practitioner or device is the agent, the re
 
 ## Supported Resource Types
 
-This Provenance profile can be used with the following PH Core resource types:
+This Provenance profile can be used with the following resource types:
 
-| PH Core Profile | Base FHIR Resource |
-|----------------|-------------------|
-| PHCoreCondition | Condition |
-| PHCoreDiagnosticReport | DiagnosticReport |
-| PHCoreDocumentReference | DocumentReference |
-| PHCoreEncounter | Encounter |
-| PHCoreImmunization | Immunization |
-| PHCoreMedicationRequest | MedicationRequest |
-| PHCoreObservation | Observation |
-| PHCorePatient | Patient |
-| PHCoreProcedure | Procedure |
-| PHCoreRelatedPerson | RelatedPerson |
-| PHCoreServiceRequest | ServiceRequest |
+### PH Core Profiles
+
+| Profile |
+|---------|
+| [PHCoreEncounter](StructureDefinition-ph-core-encounter.html) |
+| [PHCoreImmunization](StructureDefinition-ph-core-immunization.html) |
+| [PHCoreObservation](StructureDefinition-ph-core-observation.html) |
+| [PHCorePatient](StructureDefinition-ph-core-patient.html) |
+| [PHCoreProcedure](StructureDefinition-ph-core-procedure.html) |
+| [PHCoreRelatedPerson](StructureDefinition-ph-core-relatedperson.html) |
+
+### Base FHIR Resources
+
+The following resources do not have PH Core profiles yet and use base FHIR R4:
+
+- Condition
+- DiagnosticReport
+- DocumentReference
+- MedicationRequest
+- ServiceRequest
