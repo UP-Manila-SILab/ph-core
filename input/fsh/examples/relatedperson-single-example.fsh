@@ -2,7 +2,7 @@ Instance: relatedperson-single-example
 InstanceOf: PHCoreRelatedPerson
 Usage: #example
 Description: "Maria Cruz Santos is a female born on 1 January 1955."
-* identifier.system = "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns"
+* identifier.system = "http://philsys.gov.ph/fhir/Identifier/philsys-id"
 * identifier.value = "1234-1234567-1"
 * patient = Reference(patient-single-example)
 * relationship = $v3-roleCode#MTH
