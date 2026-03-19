@@ -10,15 +10,15 @@ Description: "Provenance record documenting that Dr. Maria Clara Santos created 
 * reason = http://terminology.hl7.org/CodeSystem/v3-ActReason#TREAT "treatment"
 * activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#CREATE "create"
 
-* agent[0].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author "Author"
-* agent[=].who = Reference(Practitioner/practitioner-single-example)
-* agent[=].onBehalfOf = Reference(Organization/organization-single-example)
+* agent[ProvenanceAuthor].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author "Author"
+* agent[ProvenanceAuthor].who = Reference(Practitioner/practitioner-single-example)
+* agent[ProvenanceAuthor].onBehalfOf = Reference(Organization/organization-single-example)
 
 * signature[0].type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1 "Author's Signature"
 * signature[=].when = "2012-09-17T08:30:15+08:00"
 * signature[=].who = Reference(Practitioner/practitioner-single-example)
-* signature[=].targetFormat = #application/fhir+xml
-* signature[=].sigFormat = #application/signature+xml
+* signature[=].targetFormat = #xml
+* signature[=].sigFormat = #xml
 * signature[=].data = "dGhpcyBibG9iIGlzIHNuZWFrZWQ="
 
 * text.status = #generated
