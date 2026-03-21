@@ -1,7 +1,7 @@
 Instance: medicationrequest-single-example
 InstanceOf: PHCoreMedicationRequest
 Usage: #example
-Description: "Dr. Maria Clara Santos prescribes Amoxicillin 500mg capsules for Juan Dela Cruz to treat bacterial pneumonia."
+Description: "Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension."
 * status = #active
 * intent = #order
 * priority = $request-priority#routine
@@ -9,18 +9,18 @@ Description: "Dr. Maria Clara Santos prescribes Amoxicillin 500mg capsules for J
 * encounter = Reference(Encounter/encounter-single-example)
 * authoredOn = "2025-03-15T09:00:00+08:00"
 * requester = Reference(Practitioner/practitioner-single-example)
-* medicationCodeableConcept = $sct#27658006 "Amoxicillin"
-* medicationCodeableConcept.text = "Amoxicillin 500mg capsule"
-* reasonCode = $sct#233604007 "Pneumonia"
+* medicationCodeableConcept = PHFDACPRCS#DRP-10144 "Twinact"
+* medicationCodeableConcept.text = "Twinact 40mg/5mg tablet"
+* reasonCode = $sct#38341003 "Hypertensive disorder"
 * note.text = "Take complete course of antibiotics as prescribed"
 * dosageInstruction.sequence = 1
-* dosageInstruction.text = "Take 1 capsule three times daily for 7 days"
-* dosageInstruction.timing.repeat.frequency = 3
+* dosageInstruction.text = "Take 1 tablet once daily"
+* dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.route = $v3-RouteOfAdministration#PO "Oral"
-* dosageInstruction.doseAndRate.doseQuantity = 500 'mg'
+* dosageInstruction.doseAndRate.doseQuantity = 1 '1' "tablet"
 * dispenseRequest.numberOfRepeatsAllowed = 0
-* dispenseRequest.quantity = 21 $sct#331691000 "Capsule"
+* dispenseRequest.quantity = 30 $sct#331691000 "Tablet"
 * text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos prescribed Amoxicillin 500mg capsule, 1 capsule three times daily for 7 days to treat pneumonia for Juan Dela Cruz.</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodipine), 1 tablet once daily to treat hypertension for Juan Dela Cruz.</div>"
