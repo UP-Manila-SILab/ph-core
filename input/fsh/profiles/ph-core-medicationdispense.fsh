@@ -17,4 +17,4 @@ Description: "Captures key FHIR Medication Dispense data for the Philippine cont
 * substitution.responsibleParty only Reference(PHCorePractitioner or PHCorePractitionerRole)
 
 // Philippine-specific binding for medication codes
-* medicationCodeableConcept from DrugsVS (extensible)
+* medicationCodeableConcept from DrugsVS (preferred)

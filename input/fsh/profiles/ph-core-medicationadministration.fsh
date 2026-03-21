@@ -15,4 +15,4 @@ Description: "Captures key FHIR Medication Administration data for the Philippin
 * partOf only Reference(PHCoreMedicationAdministration or PHCoreProcedure)
 
 // Philippine-specific binding for medication codes
-* medicationCodeableConcept from DrugsVS (extensible)
+* medicationCodeableConcept from DrugsVS (preferred)

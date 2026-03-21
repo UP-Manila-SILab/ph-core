@@ -17,4 +17,4 @@ Description: "Captures key FHIR Medication Request data for the Philippine conte
 * priorPrescription only Reference(PHCoreMedicationRequest)
 
 // Philippine-specific binding for medication codes
-* medicationCodeableConcept from DrugsVS (extensible)
+* medicationCodeableConcept from DrugsVS (preferred)
