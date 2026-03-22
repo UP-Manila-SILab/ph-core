@@ -2,6 +2,9 @@ RuleSet: ObligationActorAndCode(actor, code)
 * ^extension[$obligation][+].extension[code].valueCode = {code}
 * ^extension[$obligation][=].extension[actor].valueCanonical = {actor}
 
+RuleSet: ObligationElement(element)
+* ^extension[$obligation][=].extension[elementId].valueString = {element}
+
 RuleSet: ObligationSet1
 * insert ObligationActorAndCode($server, #SHALL:handle)
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
