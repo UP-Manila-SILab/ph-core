@@ -14,3 +14,10 @@ Alias: $v3-roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
 // Obligation extension
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+
+// PH Core ActorDefinitions for obligations
+// Using lowercase aliases with $ prefix (like EU EPS) for concise RuleSet usage
+// These resolve to full canonical URLs required by the obligation extension
+Alias: $server = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Server
+Alias: $consumer = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Consumer
+Alias: $creator = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Creator
