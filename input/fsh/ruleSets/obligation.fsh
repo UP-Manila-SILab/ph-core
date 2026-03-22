@@ -5,33 +5,33 @@ RuleSet: ObligationActorAndCode(actor, code)
 RuleSet: ObligationElement(element)
 * ^extension[$obligation][=].extension[elementId].valueString = {element}
 
-// ObligationSet1-3 are generic obligation sets based on EU EPS patterns.
+// Generic obligation sets based on EU EPS patterns.
 // They vary by creator obligation level while maintaining consistent server/consumer obligations.
 // Use these when you need standardized obligation patterns across elements.
 
-// ObligationSet1: Use for REQUIRED elements where creators MUST be able to populate
+// ObligationRequired: Use for REQUIRED elements where creators MUST be able to populate
 // - Server SHALL handle
 // - Consumer SHALL handle
 // - Creator SHALL be able-to-populate (mandatory capability)
-RuleSet: ObligationSet1
+RuleSet: ObligationRequired
 * insert ObligationActorAndCode($server, #SHALL:handle)
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
 * insert ObligationActorAndCode($creator, #SHALL:able-to-populate)
 
-// ObligationSet2: Use for RECOMMENDED elements where creators SHOULD be able to populate
+// ObligationRecommended: Use for RECOMMENDED elements where creators SHOULD be able to populate
 // - Server SHALL handle
 // - Consumer SHALL handle
 // - Creator SHOULD be able-to-populate (recommended capability)
-RuleSet: ObligationSet2
+RuleSet: ObligationRecommended
 * insert ObligationActorAndCode($server, #SHALL:handle)
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
 * insert ObligationActorAndCode($creator, #SHOULD:able-to-populate)
 
-// ObligationSet3: Use for OPTIONAL elements where creators MAY populate
+// ObligationOptional: Use for OPTIONAL elements where creators MAY populate
 // - Server SHALL handle
 // - Consumer SHALL handle
 // - Creator MAY be able-to-populate (optional capability)
-RuleSet: ObligationSet3
+RuleSet: ObligationOptional
 * insert ObligationActorAndCode($server, #SHALL:handle)
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
 * insert ObligationActorAndCode($creator, #MAY:able-to-populate)
