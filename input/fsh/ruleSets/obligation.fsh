@@ -14,47 +14,47 @@ RuleSet: ObligationElement(element)
 // - Consumer SHALL handle
 // - Creator SHALL be able-to-populate (mandatory capability)
 RuleSet: ObligationRequired
-* insert ObligationActorAndCode($server, #SHALL:handle)
-* insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($creator, #SHALL:able-to-populate)
+* insert ObligationActorAndCode(Server, #SHALL:handle)
+* insert ObligationActorAndCode(Consumer, #SHALL:handle)
+* insert ObligationActorAndCode(Creator, #SHALL:able-to-populate)
 
 // ObligationRecommended: Use for RECOMMENDED elements where creators SHOULD be able to populate
 // - Server SHALL handle
 // - Consumer SHALL handle
 // - Creator SHOULD be able-to-populate (recommended capability)
 RuleSet: ObligationRecommended
-* insert ObligationActorAndCode($server, #SHALL:handle)
-* insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($creator, #SHOULD:able-to-populate)
+* insert ObligationActorAndCode(Server, #SHALL:handle)
+* insert ObligationActorAndCode(Consumer, #SHALL:handle)
+* insert ObligationActorAndCode(Creator, #SHOULD:able-to-populate)
 
 // ObligationOptional: Use for OPTIONAL elements where creators MAY populate
 // - Server SHALL handle
 // - Consumer SHALL handle
 // - Creator MAY be able-to-populate (optional capability)
 RuleSet: ObligationOptional
-* insert ObligationActorAndCode($server, #SHALL:handle)
-* insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($creator, #MAY:able-to-populate)
+* insert ObligationActorAndCode(Server, #SHALL:handle)
+* insert ObligationActorAndCode(Consumer, #SHALL:handle)
+* insert ObligationActorAndCode(Creator, #MAY:able-to-populate)
 
 RuleSet: ObligationPopulateIfKnownDisplay
-* insert ObligationActorAndCode($creator, #SHALL:populate-if-known)
-* insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($consumer, #SHOULD:display)
+* insert ObligationActorAndCode(Creator, #SHALL:populate-if-known)
+* insert ObligationActorAndCode(Consumer, #SHALL:handle)
+* insert ObligationActorAndCode(Consumer, #SHOULD:display)
 
 RuleSet: ObligationAbleToPopulateDisplay
-* insert ObligationActorAndCode($creator, #SHOULD:able-to-populate)
-* insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($consumer, #SHOULD:display)
+* insert ObligationActorAndCode(Creator, #SHOULD:able-to-populate)
+* insert ObligationActorAndCode(Consumer, #SHALL:handle)
+* insert ObligationActorAndCode(Consumer, #SHOULD:display)
 
 RuleSet: ObligationPopulateDisplay
-* insert ObligationActorAndCode($creator, #SHALL:populate)
-* insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($consumer, #SHOULD:display)
+* insert ObligationActorAndCode(Creator, #SHALL:populate)
+* insert ObligationActorAndCode(Consumer, #SHALL:handle)
+* insert ObligationActorAndCode(Consumer, #SHOULD:display)
 
 RuleSet: ObligationPopulateHandle
-* insert ObligationActorAndCode($creator, #SHALL:populate)
-* insert ObligationActorAndCode($consumer, #SHALL:handle)
+* insert ObligationActorAndCode(Creator, #SHALL:populate)
+* insert ObligationActorAndCode(Consumer, #SHALL:handle)
 
 RuleSet: ObligationPopulateIfKnownHandle
-* insert ObligationActorAndCode($creator, #SHALL:populate-if-known)
-* insert ObligationActorAndCode($consumer, #SHALL:handle)
+* insert ObligationActorAndCode(Creator, #SHALL:populate-if-known)
+* insert ObligationActorAndCode(Consumer, #SHALL:handle)

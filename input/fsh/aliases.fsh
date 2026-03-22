@@ -12,8 +12,5 @@ Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $v3-roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
-// Obligation extension and actors
+// Obligation extension
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
-Alias: $server = http://hl7.org/fhir/uv/ips/ActorDefinition/Server
-Alias: $consumer = http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer
-Alias: $creator = http://hl7.org/fhir/uv/ips/ActorDefinition/Creator
