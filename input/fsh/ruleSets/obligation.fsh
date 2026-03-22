@@ -36,25 +36,25 @@ RuleSet: ObligationOptional
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
 * insert ObligationActorAndCode($creator, #MAY:able-to-populate)
 
-RuleSet: ObligationIpsPopulateIfKnownDisplay
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+RuleSet: ObligationPopulateIfKnownDisplay
+* insert ObligationActorAndCode($creator, #SHALL:populate-if-known)
+* insert ObligationActorAndCode($consumer, #SHALL:handle)
+* insert ObligationActorAndCode($consumer, #SHOULD:display)
 
-RuleSet: ObligationIpsAbleToPopulateDisplay
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:able-to-populate)
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+RuleSet: ObligationAbleToPopulateDisplay
+* insert ObligationActorAndCode($creator, #SHOULD:able-to-populate)
+* insert ObligationActorAndCode($consumer, #SHALL:handle)
+* insert ObligationActorAndCode($consumer, #SHOULD:display)
 
-RuleSet: ObligationIpsPopulateDisplay
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+RuleSet: ObligationPopulateDisplay
+* insert ObligationActorAndCode($creator, #SHALL:populate)
+* insert ObligationActorAndCode($consumer, #SHALL:handle)
+* insert ObligationActorAndCode($consumer, #SHOULD:display)
 
-RuleSet: ObligationIpsPopulateHandle
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
+RuleSet: ObligationPopulateHandle
+* insert ObligationActorAndCode($creator, #SHALL:populate)
+* insert ObligationActorAndCode($consumer, #SHALL:handle)
 
-RuleSet: ObligationIpsPopulateIfKnownHandle
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
+RuleSet: ObligationPopulateIfKnownHandle
+* insert ObligationActorAndCode($creator, #SHALL:populate-if-known)
+* insert ObligationActorAndCode($consumer, #SHALL:handle)
