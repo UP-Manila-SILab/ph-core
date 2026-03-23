@@ -1,4 +1,4 @@
-RuleSet: MustSupportCodeableConcept(path)
+RuleSet: CodeableConceptSO(path)
 * {path} MS
 * {path} insert ObligationOptional
 * {path}.text MS
