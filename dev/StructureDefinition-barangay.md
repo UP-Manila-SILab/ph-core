@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay | *Version*:0.1.0 |
-| Draft as of 2026-03-18 | *Computable Name*:Barangay |
+| Draft as of 2026-03-23 | *Computable Name*:Barangay |
 
 Barangay from the standard geographic code.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-barangay.csv), [Exce
   "name" : "Barangay",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-18T09:54:13+00:00",
+  "date" : "2026-03-23T13:24:52+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

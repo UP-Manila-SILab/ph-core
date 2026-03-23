@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter | *Version*:0.1.0 |
-| Draft as of 2026-03-18 | *Computable Name*:PHCoreEncounter |
+| Draft as of 2026-03-23 | *Computable Name*:PHCoreEncounter |
 
  
 This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [FHIR R4 Encounter](https://www.hl7.org/fhir/R4/encounter.html) resource and identifies the **additional** mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
   "name" : "PHCoreEncounter",
   "title" : "PH Core Encounter",
   "status" : "draft",
-  "date" : "2026-03-18T09:54:13+00:00",
+  "date" : "2026-03-23T13:24:52+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

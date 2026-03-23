@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation | *Version*:0.1.0 |
-| Draft as of 2026-03-18 | *Computable Name*:PHCoreObservation |
+| Draft as of 2026-03-23 | *Computable Name*:PHCoreObservation |
 
  
 Measurements and simple assertions made about a patient, device or other subject. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-observation.
   "name" : "PHCoreObservation",
   "title" : "PH Core Observation",
   "status" : "draft",
-  "date" : "2026-03-18T09:54:13+00:00",
+  "date" : "2026-03-23T13:24:52+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

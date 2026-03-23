@@ -132,8 +132,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
     "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
@@ -647,18 +647,18 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
-    "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
-    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
     "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
-    "StructureDefinition-ph-core-task.html" : "PH Core Task",
     "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
     "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
+    "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
     "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
+    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
+    "StructureDefinition-ph-core-patient.html" : "PH Core Patient",
     "StructureDefinition-ph-core-location.html" : "PH Core Location",
-    "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
+    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
+    "StructureDefinition-ph-core-organization.html" : "PH Core Organization"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",

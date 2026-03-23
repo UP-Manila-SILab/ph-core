@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson | *Version*:0.1.0 |
-| Draft as of 2026-03-18 | *Computable Name*:PHCoreRelatedPerson |
+| Draft as of 2026-03-23 | *Computable Name*:PHCoreRelatedPerson |
 
  
 This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-relatedperso
   "name" : "PHCoreRelatedPerson",
   "title" : "PH Core RelatedPerson",
   "status" : "draft",
-  "date" : "2026-03-18T09:54:13+00:00",
+  "date" : "2026-03-23T13:24:52+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

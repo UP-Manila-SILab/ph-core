@@ -2,8 +2,8 @@ PHCoreImplementationGuide : Validation Results
 =========================================
 
 err = 67, warn = 12, info = 62
-IG Publisher Version: 2.2.0
-Generated Wed Mar 18 09:55:27 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.0 (canonical = http://doh.gov.ph/fhir/ph-core)
+IG Publisher Version: 2.2.1
+Generated Mon Mar 23 13:26:07 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.0 (canonical = http://doh.gov.ph/fhir/ph-core)
  Build Errors : 0 / 0 / 0
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-allergy-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-example-allergy : 0 / 0 / 1

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure | *Version*:0.1.0 |
-| Draft as of 2026-03-18 | *Computable Name*:PHCoreProcedure |
+| Draft as of 2026-03-23 | *Computable Name*:PHCoreProcedure |
 
  
 An action that is or was performed on or for a patient, practitioner, device, organization, or location. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-procedure.cs
   "name" : "PHCoreProcedure",
   "title" : "PH Core Procedure",
   "status" : "draft",
-  "date" : "2026-03-18T09:54:13+00:00",
+  "date" : "2026-03-23T13:24:52+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

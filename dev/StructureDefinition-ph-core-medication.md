@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication | *Version*:0.1.0 |
-| Draft as of 2026-03-18 | *Computable Name*:PHCoreMedication |
+| Draft as of 2026-03-23 | *Computable Name*:PHCoreMedication |
 
  
 This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medication.c
   "title" : "PH Core Medication",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-18T09:54:13+00:00",
+  "date" : "2026-03-23T13:24:52+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
