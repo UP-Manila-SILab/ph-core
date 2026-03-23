@@ -3,12 +3,17 @@ Id: ph-core-name
 Parent: HumanName
 Title: "PH Core Name"
 Description: "A name of a person in the philippine context."
-* use 0..1
-* given 0..*
+* use 0..1 MS
+* use insert ObligationOptional
+* given 0..* MS
 * given ^short = "First Name"
+* given insert ObligationOptional
 
-* extension contains MiddleName named middleName 0..1
+* extension contains MiddleName named middleName 0..1 MS
 * extension[middleName] ^short = "Middle Name"
+* extension[middleName] insert ObligationOptional
 
-* family 0..1
-* suffix 0..*
+* family 0..1 MS
+* family insert ObligationOptional
+* suffix 0..* MS
+* suffix insert ObligationOptional

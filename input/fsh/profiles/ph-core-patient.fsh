@@ -12,9 +12,21 @@ Description: "Captures key demographic and administrative information about indi
     Occupation named occupation 0..* and
     Race named race 0..1 and
     EducationalAttainment named educationalAttainment 0..1 and
-    http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.2.0 named sex 0..*
+    http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.2.0 named sex 0..* and
+    http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName|5.2.0 named mothersMaidenName 0..1
+* extension[nationality] insert ObligationOptional
+* extension[religion] insert ObligationOptional
 * extension[genderIdentity] ^short = "Gender Identity - in compliance with SOGIE Bill"
+* extension[genderIdentity] insert ObligationOptional
+* extension[indigenousGroup] insert ObligationOptional
+* extension[indigenousPeople] insert ObligationOptional
+* extension[occupation] insert ObligationOptional
+* extension[race] insert ObligationOptional
+* extension[educationalAttainment] insert ObligationOptional
 * extension[sex] ^short = "Sex assigned at birth - in compliance with SOGIE Bill"
+* extension[sex] insert ObligationOptional
+* extension[mothersMaidenName] ^short = "Mother's Maiden Name"
+* extension[mothersMaidenName] insert ObligationOptional
     
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
