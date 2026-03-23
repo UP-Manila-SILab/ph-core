@@ -1,4 +1,4 @@
-RuleSet: CodeableConceptMS
-* code MS
-* code.coding MS
-* code.text MS
+RuleSet: CodeableConceptMS(path)
+* {path} MS
+* {path}.coding MS
+* {path}.coding.code MS
