@@ -9,10 +9,6 @@ Description: "A name of a person in the philippine context."
 * given ^short = "First Name"
 * given insert ObligationOptional
 
-* extension contains MiddleName named middleName 0..1 MS
-* extension[middleName] ^short = "Middle Name"
-* extension[middleName] insert ObligationOptional
-
 * family 0..1 MS
 * family insert ObligationOptional
 * suffix 0..* MS
