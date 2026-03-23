@@ -1,0 +1,31 @@
+name: Validate Branch Name
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  validate-branch-name:
+    name: Check Branch Naming Convention
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check for invalid characters in branch name
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          echo "Checking branch name: $BRANCH_NAME"
+
+          # Check for forward slash
+          if echo "$BRANCH_NAME" | grep -q "/"; then
+            echo "::error::Branch name contains invalid character '/'. Use hyphens instead of slashes."
+            echo "::error::Example: 'feat-my-feature' instead of 'feat/my-feature'"
+            exit 1
+          fi
+
+          # Check for other problematic characters
+          if echo "$BRANCH_NAME" | grep -qE '[\\~^:\[ ]'; then
+            echo "::error::Branch name contains invalid special characters. Avoid: \\ ~ ^ : [ ] spaces"
+            exit 1
+          fi
+
+          echo "Branch name validation passed!"
