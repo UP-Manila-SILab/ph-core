@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-practitioner
   "name" : "PHCorePractitionerRole",
   "title" : "PH Core PractitionerRole",
   "status" : "draft",
-  "date" : "2026-03-25T03:48:45+00:00",
+  "date" : "2026-03-25T03:54:03+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -115,6 +115,16 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-practitioner
     {
       "id" : "PractitionerRole.code",
       "path" : "PractitionerRole.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.code.coding",
+      "path" : "PractitionerRole.code.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.code.coding.code",
+      "path" : "PractitionerRole.code.coding.code",
       "mustSupport" : true
     },
     {
