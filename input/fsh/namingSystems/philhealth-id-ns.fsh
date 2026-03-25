@@ -1,4 +1,4 @@
-Instance: philhealth-id-ns
+Instance: PhilHealthIDNS
 InstanceOf: NamingSystem
 Usage: #definition
 Title: "PIN - PhilHealth Identification Number"

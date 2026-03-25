@@ -1,10 +1,10 @@
-Profile: PHCoreDohNhfrCode
+Profile: PHCoreDOHNHFRCode
 Parent: Identifier
 Id: ph-core-doh-nhfr-code
 Title: "DOH NHFR Code"
 Description: "Health Facility Code (HFC) from the National Health Facility Registry"
 * system 1..
-* system = "http://doh.gov.ph/fhir/ph-core/NamingSystem/doh-nhfr-code-ns" (exactly)
+* system = "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code" (exactly)
 * value ^short = "DOH NHFR Code"
 * value ^example.label = "DOH NHFR Code"
 * value ^example.valueString = "4XYZ123"
