@@ -11,7 +11,7 @@
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-23T13:24:52+00:00",
+  "date" : "2026-03-25T02:48:03+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -329,7 +329,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
     },
     {
       "extension" : [{
@@ -771,7 +771,7 @@
         "reference" : "Encounter/encounter-single-example"
       },
       "name" : "encounter-single-example",
-      "description" : "An ambulatory encounter for Juan Dela Cruz that has been completed.",
+      "description" : "An ambulatory visit for Juan Dela Cruz that has been completed.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"
     },
     {

@@ -7,7 +7,7 @@ PHCoreImplementationGuide
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example.json: line 85, col 12, Error - Address.extension:province: max allowed = 1, but found 6 (from http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address|0.1.0) (STRUCTURE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example.json: line 85, col 12, Error - Address.extension:cityMunicipality: max allowed = 1, but found 2 (from http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address|0.1.0) (STRUCTURE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example.json: line 195, col 10, Info - Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1 (STRUCTURE)
-/home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example.json: line 195, col 10, Error - Unable to find a profile match for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient (STRUCTURE)
+/home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example.json: line 195, col 10, Error - Unable to find a profile match for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient, http://hl7.org/fhir/StructureDefinition/Group (STRUCTURE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example.json: line 195, col 10, Info - Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0 (STRUCTURE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example.json: line 231, col 10, Info - Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1 (STRUCTURE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example.json: line 234, col 10, Info - Details for urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1 (STRUCTURE)
@@ -82,8 +82,8 @@ PHCoreImplementationGuide
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code.json: line 1, col 10734, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code.json: line 1, col 10734, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this data type profile (BUSINESSRULE)
-/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter.json: line 1, col 12955, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
-/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter.json: line 1, col 12955, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
+/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter.json: line 1, col 47308, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
+/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter.json: line 1, col 47308, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-immunization.json: line 1, col 10791, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-immunization.json: line 1, col 10791, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-location.json: line 1, col 12498, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
@@ -144,4 +144,4 @@ PHCoreImplementationGuide
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-regions.json: line 1, col 1601, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
 
 err = 67, warn = 12, info = 62
-IG Publisher Version: 2.2.1
+IG Publisher Version: 2.2.3

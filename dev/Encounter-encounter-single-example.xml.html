@@ -181,17 +181,53 @@
   &lt;/<a href="http://hl7.org/fhir/R4/resource.html#Encounter.meta">meta</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#Encounter.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;An ambulatory encounter for Juan Dela Cruz that has been completed.&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;An ambulatory visit for Juan Dela Cruz that has been completed.&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Encounter.text">text</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/encounter-id&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ENC-12345&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.identifier">identifier</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;finished&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.class">class</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;AMB&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ambulatory&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.class">class</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.type">type</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;AMB&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ambulatory&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.type">type</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.subject">subject</a>&gt;<a href="Patient-patient-single-example.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/patient-single-example&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.subject">subject</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.participant">participant</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.participant.type">type</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-ParticipationType&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ATND&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;attender&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.participant.type">type</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.participant.individual">individual</a>&gt;<a href="Practitioner-practitioner-single-example.html" style="color: Maroon">&#x1F517;</a> 
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/practitioner-single-example&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.participant.individual">individual</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.participant">participant</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.period">period</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2023-01-01T10:00:00Z&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2023-01-01T11:00:00Z&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.period">period</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.reasonReference">reasonReference</a>&gt;<a href="Condition-condition-single-example.html" style="color: Maroon">&#x1F517;</a> 
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Condition/condition-single-example&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.reasonReference">reasonReference</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.diagnosis">diagnosis</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.diagnosis.condition">condition</a>&gt;<a href="Condition-condition-single-example.html" style="color: Maroon">&#x1F517;</a> 
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Condition/condition-single-example&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.diagnosis.condition">condition</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.diagnosis">diagnosis</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.serviceProvider">serviceProvider</a>&gt;<a href="Organization-organization-single-example.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/organization-single-example&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.serviceProvider">serviceProvider</a>&gt;
@@ -219,7 +255,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 23, 2026 13:24+0000">2026-03-23</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 02:48+0000">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

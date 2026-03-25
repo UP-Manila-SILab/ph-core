@@ -105,7 +105,7 @@ These are example instances that show what data produced and consumed by systems
 | [allergy-single-example](AllergyIntolerance-allergy-single-example.md) | Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin. |
 | [blood-pressure](Observation-blood-pressure.md) | Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal). |
 | [condition-single-example](Condition-condition-single-example.md) | Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus. |
-| [encounter-single-example](Encounter-encounter-single-example.md) | An ambulatory encounter for Juan Dela Cruz that has been completed. |
+| [encounter-single-example](Encounter-encounter-single-example.md) | An ambulatory visit for Juan Dela Cruz that has been completed. |
 | [example-allergy](AllergyIntolerance-example-allergy.md) | Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin. |
 | [example-condition](Condition-example-condition.md) | Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus. |
 | [example-encounter](Encounter-example-encounter.md) | An ambulatory encounter for Juan Dela Cruz that has been completed. |

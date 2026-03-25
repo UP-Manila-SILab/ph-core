@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter | *Version*:0.1.0 |
-| Draft as of 2026-03-23 | *Computable Name*:PHCoreEncounter |
+| Draft as of 2026-03-25 | *Computable Name*:PHCoreEncounter |
 
  
 This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [FHIR R4 Encounter](https://www.hl7.org/fhir/R4/encounter.html) resource and identifies the **additional** mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
   "name" : "PHCoreEncounter",
   "title" : "PH Core Encounter",
   "status" : "draft",
-  "date" : "2026-03-23T13:24:52+00:00",
+  "date" : "2026-03-25T02:48:03+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -91,12 +91,45 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
       "path" : "Encounter"
     },
     {
+      "id" : "Encounter.identifier",
+      "path" : "Encounter.identifier",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.status",
+      "path" : "Encounter.status",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.class",
+      "path" : "Encounter.class",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.type",
+      "path" : "Encounter.type",
+      "mustSupport" : true
+    },
+    {
       "id" : "Encounter.subject",
       "path" : "Encounter.subject",
+      "min" : 1,
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"]
-      }]
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient",
+        "http://hl7.org/fhir/StructureDefinition/Group"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.participant",
+      "path" : "Encounter.participant",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.participant.type",
+      "path" : "Encounter.participant.type",
+      "mustSupport" : true
     },
     {
       "id" : "Encounter.participant.individual",
@@ -104,9 +137,88 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner",
-        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"]
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole"]
       }]
+    },
+    {
+      "id" : "Encounter.period",
+      "path" : "Encounter.period",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.period.start",
+      "path" : "Encounter.period.start",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.reasonCode",
+      "path" : "Encounter.reasonCode",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.reasonReference",
+      "path" : "Encounter.reasonReference",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure",
+        "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.diagnosis.condition",
+      "path" : "Encounter.diagnosis.condition",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure"]
+      }]
+    },
+    {
+      "id" : "Encounter.hospitalization",
+      "path" : "Encounter.hospitalization",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.origin",
+      "path" : "Encounter.hospitalization.origin",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.dischargeDisposition",
+      "path" : "Encounter.hospitalization.dischargeDisposition",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.location",
+      "path" : "Encounter.location",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.location.location",
+      "path" : "Encounter.location.location",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.serviceProvider",
+      "path" : "Encounter.serviceProvider",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"]
+      }],
+      "mustSupport" : true
     }]
   }
 }

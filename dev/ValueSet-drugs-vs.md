@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs | *Version*:0.1.0 |
-| Draft as of 2026-03-23 | *Computable Name*:DrugsVS |
+| Draft as of 2026-03-25 | *Computable Name*:DrugsVS |
 
  
 This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA. 
@@ -54,7 +54,7 @@ No formal definition provided for this value set
   "title" : "Drugs",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-23T13:24:52+00:00",
+  "date" : "2026-03-25T02:48:03+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

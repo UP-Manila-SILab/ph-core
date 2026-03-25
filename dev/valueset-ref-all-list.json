@@ -132,8 +132,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
     "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
+    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
@@ -247,8 +247,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.512"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
-    "StructureDefinition-ph-core-location.html" : "PH Core Location"
+    "StructureDefinition-ph-core-location.html" : "PH Core Location",
+    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/device-action",
@@ -460,9 +460,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
     "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code"
+    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -476,9 +476,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
     "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code"
+    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/immunization-function",
@@ -647,18 +647,18 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
     "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
-    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
-    "StructureDefinition-ph-core-task.html" : "PH Core Task",
-    "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
-    "StructureDefinition-ph-core-patient.html" : "PH Core Patient",
     "StructureDefinition-ph-core-location.html" : "PH Core Location",
+    "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
+    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
     "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-organization.html" : "PH Core Organization"
+    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
+    "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
+    "StructureDefinition-ph-core-patient.html" : "PH Core Patient",
+    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -700,8 +700,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.328"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
-    "StructureDefinition-ph-core-location.html" : "PH Core Location"
+    "StructureDefinition-ph-core-location.html" : "PH Core Location",
+    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/location-status",

@@ -9,4 +9,18 @@
     you may need to use this schematron fragment to build a, 
     single schematron that validates contained resources (if you have any) 
   -->
+  <sch:pattern>
+    <sch:title>f:Encounter</sch:title>
+    <sch:rule context="f:Encounter">
+      <sch:assert test="count(f:subject) &gt;= 1">subject: minimum cardinality of 'subject' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Encounter/f:period</sch:title>
+    <sch:rule context="f:Encounter/f:period">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:start) &lt;= 1">start: maximum cardinality of 'start' is 1</sch:assert>
+      <sch:assert test="count(f:end) &lt;= 1">end: maximum cardinality of 'end' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>

@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/ImplementationGuide/fhir.ph.core | *Version*:0.1.0 |
-| Draft as of 2026-03-23 | *Computable Name*:PHCoreImplementationGuide |
+| Draft as of 2026-03-25 | *Computable Name*:PHCoreImplementationGuide |
 
 # Draft Philippine Core FHIR Implementation Guide (PH Core IG)
 
@@ -98,6 +98,7 @@ This publication includes IP covered under the following statements.
 * [MaritalStatus](http://terminology.hl7.org/7.1.0/CodeSystem-v3-MaritalStatus.html): [PHCorePatient](StructureDefinition-ph-core-patient.md)
 * [NullFlavor](http://terminology.hl7.org/7.1.0/CodeSystem-v3-NullFlavor.html): [PHCorePatient](StructureDefinition-ph-core-patient.md)
 * [ObservationInterpretation](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ObservationInterpretation.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Observation/blood-pressure](Observation-blood-pressure.md) and [Observation/observation-single-example](Observation-observation-single-example.md)
+* [ParticipationType](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ParticipationType.html): [Encounter/encounter-single-example](Encounter-encounter-single-example.md)
 * [Race](http://terminology.hl7.org/7.1.0/CodeSystem-v3-Race.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Patient/example-patient](Patient-example-patient.md), [Patient/patient-single-example](Patient-patient-single-example.md) and [Race](StructureDefinition-race.md)
 * [Religious Affiliation](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ReligiousAffiliation.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Patient/example-patient](Patient-example-patient.md) and [Patient/patient-single-example](Patient-patient-single-example.md)
 * [RoleCode](http://terminology.hl7.org/7.1.0/CodeSystem-v3-RoleCode.html): [PHCorePatient](StructureDefinition-ph-core-patient.md) and [RelatedPerson/relatedperson-single-example](RelatedPerson-relatedperson-single-example.md)
@@ -130,7 +131,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-23T13:24:52+00:00",
+  "date" : "2026-03-25T02:48:03+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -448,7 +449,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
     },
     {
       "extension" : [{
@@ -890,7 +891,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "reference" : "Encounter/encounter-single-example"
       },
       "name" : "encounter-single-example",
-      "description" : "An ambulatory encounter for Juan Dela Cruz that has been completed.",
+      "description" : "An ambulatory visit for Juan Dela Cruz that has been completed.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"
     },
     {

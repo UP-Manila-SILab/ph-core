@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/provinces | *Version*:0.1.0 |
-| Draft as of 2026-03-23 | *Computable Name*:Provinces |
+| Draft as of 2026-03-25 | *Computable Name*:Provinces |
 
  
 All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA). 
@@ -52,7 +52,7 @@ All province values from the Philippine Standard Geographic Codes (PSGC) publish
   "title" : "Provinces",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-23T13:24:52+00:00",
+  "date" : "2026-03-25T02:48:03+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

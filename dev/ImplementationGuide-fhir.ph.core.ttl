@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-23T13:24:52+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-25T02:48:03+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -690,7 +690,7 @@
        ] ;
        fhir:value [
          a fhir:Code ;
-         fhir:v "hl7.fhir.uv.tools.r4#1.1.0"
+         fhir:v "hl7.fhir.uv.tools.r4#1.1.2"
        ]
      ] [
        fhir:extension ( [
@@ -1583,7 +1583,7 @@
          fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
        ] ;
        fhir:name [ fhir:v "encounter-single-example" ] ;
-       fhir:description [ fhir:v "An ambulatory encounter for Juan Dela Cruz that has been completed." ] ;
+       fhir:description [ fhir:v "An ambulatory visit for Juan Dela Cruz that has been completed." ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"^^xsd:anyURI ;
