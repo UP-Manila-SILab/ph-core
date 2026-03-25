@@ -8,10 +8,10 @@
     "description" : "Mock of the Philippine Standard Geographic Code.",
     "uses" : {
     },
+    "ValueSet-regions.html" : "Regions",
     "ValueSet-barangays.html" : "Barangays",
     "ValueSet-cities.html" : "Cities",
-    "ValueSet-provinces.html" : "Provinces",
-    "ValueSet-regions.html" : "Regions"
+    "ValueSet-provinces.html" : "Provinces"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
@@ -23,6 +23,18 @@
     "uses" : {
     },
     "ValueSet-indigenous-groups-vs.html" : "Indigenous Groups"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ProvenanceParticipantType",
+    "title" : "Provenance participant type",
+    "description" : "These codes define the type of participation by an agent in a provenance activity. An agent is something that bears the responsibility identified by the type of participation in the activity taking place, for the existence of an entity, or for another agent's activity. An Agent may be An agent, device, system, organization, group, care-team, or other identifiable thing.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1131"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-provenance-agent-type.html" : "Provenance participant type"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",

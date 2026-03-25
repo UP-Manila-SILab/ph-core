@@ -194,6 +194,12 @@
         "title": "PH Core Procedure"
       }
     ],
+    "Provenance": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-provenance",
+        "title": "PH Core Provenance"
+      }
+    ],
     "RelatedPerson": [
       {
         "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson",
@@ -270,6 +276,7 @@
       "StructureDefinition.snapshot.element.constraint"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.differential.element.binding",
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [

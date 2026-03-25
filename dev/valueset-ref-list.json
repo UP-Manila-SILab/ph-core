@@ -108,6 +108,20 @@
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/provenance-agent-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProvenanceParticipantType",
+    "title" : "Provenance participant type",
+    "description" : "The type of participation a provenance participant.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/provenance-participant-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1003"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1003"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-provenance.html" : "PH Core Provenance"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype",
     "version" : "4.0.1",
     "status" : "draft",

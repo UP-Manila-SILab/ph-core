@@ -237,6 +237,13 @@
   "name" : "PHCoreProcedure"
 },
 {
+  "id" : "ph-core-provenance",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-provenance",
+  "version" : "0.1.0",
+  "name" : "PHCoreProvenance"
+},
+{
   "id" : "ph-core-relatedperson",
   "type" : "StructureDefinition",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson",
