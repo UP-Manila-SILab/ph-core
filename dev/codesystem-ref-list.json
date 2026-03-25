@@ -9,9 +9,9 @@
     "uses" : {
     },
     "ValueSet-barangays.html" : "Barangays",
-    "ValueSet-regions.html" : "Regions",
+    "ValueSet-cities.html" : "Cities",
     "ValueSet-provinces.html" : "Provinces",
-    "ValueSet-cities.html" : "Cities"
+    "ValueSet-regions.html" : "Regions"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",

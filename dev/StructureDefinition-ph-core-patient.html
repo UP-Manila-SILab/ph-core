@@ -251,6 +251,112 @@
 
 
 
+<div style="display:inline-block" markdown="1">
+
+<p>The <strong>PH Core Patient</strong> profile captures key demographic and administrative information about individuals receiving care or other health-related services in the Philippines.</p>
+
+<h2 id="birth-date-and-age-derivation">Birth Date and Age Derivation</h2>
+
+<h3 id="deriving-birthdate-from-age-information">Deriving <code class="language-plaintext highlighter-rouge">birthDate</code> from Age Information</h3>
+
+<p>Implementers should derive <code class="language-plaintext highlighter-rouge">birthDate</code> from age information rather than capturing age in extensions or other elements. This ensures consistency and interoperability across implementations.</p>
+
+<h4 id="rules-for-setting-birthdate-with-partial-age-information">Rules for Setting <code class="language-plaintext highlighter-rouge">birthDate</code> with Partial Age Information</h4>
+
+<p>When only partial age information is known, set <code class="language-plaintext highlighter-rouge">birthDate</code> according to the following rules:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Known Information</th>
+      <th><code class="language-plaintext highlighter-rouge">birthDate</code> Format</th>
+      <th>Example (Current Date: 2026-03-19)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Only year known</td>
+      <td><code class="language-plaintext highlighter-rouge">YYYY</code></td>
+      <td>Age = 2 years old → <code class="language-plaintext highlighter-rouge">2024</code></td>
+    </tr>
+    <tr>
+      <td>Month and year known</td>
+      <td><code class="language-plaintext highlighter-rouge">YYYY-MM</code></td>
+      <td>Age = 6 months old → <code class="language-plaintext highlighter-rouge">2025-09</code></td>
+    </tr>
+    <tr>
+      <td>Full date known</td>
+      <td><code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code></td>
+      <td>Age = 10 days old → <code class="language-plaintext highlighter-rouge">2026-03-09</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="back-calculation-for-display">Back-Calculation for Display</h4>
+
+<p>When deriving <code class="language-plaintext highlighter-rouge">birthDate</code> from age, systems should assume the earliest possible date within the known granularity for display purposes:</p>
+
+<ul>
+  <li>If only the <strong>year</strong> is known → default to <strong>January 1st</strong> of that year</li>
+  <li>If only the <strong>month and year</strong> are known → default to the <strong>first day</strong> of that month</li>
+</ul>
+
+<h4 id="important-considerations">Important Considerations</h4>
+
+<ol>
+  <li>
+    <p><strong>Indicate Approximation</strong>: Display logic should clearly indicate that the <code class="language-plaintext highlighter-rouge">birthDate</code> is approximate when derived from incomplete age information.</p>
+  </li>
+  <li>
+    <p><strong>Prompt for Updates</strong>: Systems should prompt for more precise birth date information when it becomes available.</p>
+  </li>
+  <li>
+    <p><strong>Avoid Dynamic Age Elements</strong>: Do not capture dynamic data (e.g., calculated <code class="language-plaintext highlighter-rouge">Age</code>) in static elements or extensions, as these would require server updates to remain current.</p>
+  </li>
+  <li>
+    <p><strong>Use FHIR Search</strong>: The standard FHIR <code class="language-plaintext highlighter-rouge">birthDate</code> search parameter is sufficient for filtering patients by age ranges for clinical studies and reporting.</p>
+  </li>
+</ol>
+
+<h3 id="examples">Examples</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Age Input</th>
+      <th>Derived <code class="language-plaintext highlighter-rouge">birthDate</code></th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2-year-old child</td>
+      <td>"2 years old"</td>
+      <td><code class="language-plaintext highlighter-rouge">2024</code></td>
+      <td>Year only; display as "2024 (approximate)"</td>
+    </tr>
+    <tr>
+      <td>6-month-old infant</td>
+      <td>"6 months old"</td>
+      <td><code class="language-plaintext highlighter-rouge">2025-09</code></td>
+      <td>Month and year; display as "September 2025 (approximate)"</td>
+    </tr>
+    <tr>
+      <td>10-day-old newborn</td>
+      <td>"10 days old"</td>
+      <td><code class="language-plaintext highlighter-rouge">2026-03-09</code></td>
+      <td>Full date known</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+
+
 <p><b>Usages:</b></p>
 <ul>
  <li>Refer to this Profile: <a href="StructureDefinition-ph-core-condition.html">PH Core Condition</a>, <a href="StructureDefinition-ph-core-encounter.html">PH Core Encounter</a>, <a href="StructureDefinition-ph-core-immunization.html">PH Core Immunization</a>, <a href="StructureDefinition-ph-core-medicationadministration.html">PH Core Medication Administration</a><span id="rr_tref" onClick="document.getElementById('rr_tref').innerHTML = document.getElementById('rr2_tref').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 8 more</span></span><span id="rr2_tref" style="display: none">, <a href="StructureDefinition-ph-core-medicationdispense.html">PH Core Medication Dispense</a>, <a href="StructureDefinition-ph-core-medicationrequest.html">PH Core Medication Request</a>, <a href="StructureDefinition-ph-core-medicationstatement.html">PH Core Medication Statement</a>, <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a>, <a href="StructureDefinition-ph-core-procedure.html">PH Core Procedure</a>, <a href="StructureDefinition-ph-core-provenance.html">PH Core Provenance</a>, <a href="StructureDefinition-ph-core-serviceRequest.html">PH Core ServiceRequest</a> and <a href="StructureDefinition-ph-core-task.html">PH Core Task</a></span></li>
@@ -488,7 +594,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type" class="binding">LinkType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The type of link between this patient resource and another patient resource.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a803ca8b-7a8a-40a3-9053-1fe04b636410
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 45c8b42d-d2de-4380-81fe-2edc845a9994
 document.getElementById('cbph-core-patientK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('ph-core-patientK'), 'binding', document.getElementById('cbph-core-patientK-binding').checked, document.getElementById('ppph-core-patientK'));
 document.getElementById('cbph-core-patientK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -815,7 +921,7 @@ filterDesc(document.getElementById('ph-core-patientK'), 'obligation', document.g
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-ph-core-address.html" title="Address">PHCoreAddress</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Address for the contact person</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a803ca8b-7a8a-40a3-9053-1fe04b636410
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 45c8b42d-d2de-4380-81fe-2edc845a9994
 document.getElementById('cbph-core-patientD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('ph-core-patientD'), 'binding', document.getElementById('cbph-core-patientD-binding').checked, document.getElementById('ppph-core-patientD'));
 document.getElementById('cbph-core-patientD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1210,7 +1316,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type" class="binding">LinkType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The type of link between this patient resource and another patient resource.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a803ca8b-7a8a-40a3-9053-1fe04b636410
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 45c8b42d-d2de-4380-81fe-2edc845a9994
 document.getElementById('cbph-core-patientS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('ph-core-patientS'), 'binding', document.getElementById('cbph-core-patientS-binding').checked, document.getElementById('ppph-core-patientS'));
 document.getElementById('cbph-core-patientS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1828,7 +1934,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type" class="binding">LinkType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The type of link between this patient resource and another patient resource.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a803ca8b-7a8a-40a3-9053-1fe04b636410
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 45c8b42d-d2de-4380-81fe-2edc845a9994
 document.getElementById('cbph-core-patientKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('ph-core-patientKA'), 'binding', document.getElementById('cbph-core-patientKA-binding').checked, document.getElementById('ppph-core-patientKA'));
 document.getElementById('cbph-core-patientKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2155,7 +2261,7 @@ filterDesc(document.getElementById('ph-core-patientKA'), 'obligation', document.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-ph-core-address.html" title="Address">PHCoreAddress</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Address for the contact person</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a803ca8b-7a8a-40a3-9053-1fe04b636410
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 45c8b42d-d2de-4380-81fe-2edc845a9994
 document.getElementById('cbph-core-patientDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('ph-core-patientDA'), 'binding', document.getElementById('cbph-core-patientDA-binding').checked, document.getElementById('ppph-core-patientDA'));
 document.getElementById('cbph-core-patientDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2549,7 +2655,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type" class="binding">LinkType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The type of link between this patient resource and another patient resource.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a803ca8b-7a8a-40a3-9053-1fe04b636410
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 45c8b42d-d2de-4380-81fe-2edc845a9994
 document.getElementById('cbph-core-patientSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('ph-core-patientSA'), 'binding', document.getElementById('cbph-core-patientSA-binding').checked, document.getElementById('ppph-core-patientSA'));
 document.getElementById('cbph-core-patientSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3001,7 +3107,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 03:34+0000">2026-03-25</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 03:48+0000">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
