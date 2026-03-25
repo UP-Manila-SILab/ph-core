@@ -16,7 +16,7 @@ This resource is primarily used for the identification and definition of a medic
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
+* Refer to this Profile: [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md), [PH Core Medication Dispense](StructureDefinition-ph-core-medicationdispense.md), [PH Core Medication Request](StructureDefinition-ph-core-medicationrequest.md), [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md) and [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
 * Examples for this Profile: [Medication/example-medication](Medication-example-medication.md) and [Medication/medication-single-example](Medication-medication-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-medication)
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medication.c
   "title" : "PH Core Medication",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:26:10+00:00",
+  "date" : "2026-03-25T03:31:02+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -95,7 +95,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medication.c
       "id" : "Medication.code",
       "path" : "Medication.code",
       "binding" : {
-        "strength" : "extensible",
+        "strength" : "preferred",
         "valueSet" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs"
       }
     }]

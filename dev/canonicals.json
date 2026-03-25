@@ -20,13 +20,6 @@
   "name" : "PSOC"
 },
 {
-  "id" : "drugs",
-  "type" : "CodeSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/drugs",
-  "version" : "0.1.0",
-  "name" : "Drugs"
-},
-{
   "id" : "indigenous-groups-cs",
   "type" : "CodeSystem",
   "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
@@ -172,6 +165,34 @@
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication",
   "version" : "0.1.0",
   "name" : "PHCoreMedication"
+},
+{
+  "id" : "ph-core-medicationadministration",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration",
+  "version" : "0.1.0",
+  "name" : "PHCoreMedicationAdministration"
+},
+{
+  "id" : "ph-core-medicationdispense",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense",
+  "version" : "0.1.0",
+  "name" : "PHCoreMedicationDispense"
+},
+{
+  "id" : "ph-core-medicationrequest",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest",
+  "version" : "0.1.0",
+  "name" : "PHCoreMedicationRequest"
+},
+{
+  "id" : "ph-core-medicationstatement",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement",
+  "version" : "0.1.0",
+  "name" : "PHCoreMedicationStatement"
 },
 {
   "id" : "ph-core-name",
@@ -340,4 +361,11 @@
   "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/regions",
   "version" : "0.1.0",
   "name" : "Regions"
+},
+{
+  "id" : "PHFDACPRCS",
+  "type" : "CodeSystem",
+  "url" : "https://verification.fda.gov.ph/",
+  "version" : "0.1.0",
+  "name" : "PHFDACPRCS"
 }]

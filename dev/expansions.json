@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "3dc48ef8-df36-4419-bfd5-d565da83ebd7",
+  "id" : "93452c24-e347-44a2-b9a1-b76d7a083d08",
   "meta" : {
-    "lastUpdated" : "2026-03-25T03:26:10.663+00:00"
+    "lastUpdated" : "2026-03-25T03:31:02.078+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "title" : "Barangays",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-03-25T03:26:10+00:00",
+      "date" : "2026-03-25T03:31:02+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -28,8 +28,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:a93124b2-910a-4cc0-8782-3a042b2478f9",
-        "timestamp" : "2026-03-25T03:27:01+00:00",
+        "identifier" : "urn:uuid:c4602029-4f6a-4f23-bdc3-8ff80977ce3a",
+        "timestamp" : "2026-03-25T03:32:03+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -74,7 +74,7 @@
       "title" : "Cities",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-03-25T03:26:10+00:00",
+      "date" : "2026-03-25T03:31:02+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -83,8 +83,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:5982ae5c-5384-487f-8d33-5dcf869674c2",
-        "timestamp" : "2026-03-25T03:27:02+00:00",
+        "identifier" : "urn:uuid:21b933ea-b047-4321-a90d-98b216ed12fc",
+        "timestamp" : "2026-03-25T03:32:04+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -126,7 +126,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p>This value set contains 0 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #ffcccc; padding: 8px; margin-bottom: 8px\">Expansion based on code system fragment <a href=\"CodeSystem-PHFDACPRCS.html\">https://verification.fda.gov.ph/ PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph/|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PHFDACPRCS.html\">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph/|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains at least 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>Level</b></td><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph/-PH-FDA-DRUGS\"> </a>1</td><td><code>https://verification.fda.gov.ph/</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-PH-FDA-DRUGS\">PH-FDA-DRUGS</a></td><td>Philippine FDA Registered Drug Products</td><td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph/-DRP-10144\"> </a>2</td><td><code>https://verification.fda.gov.ph/</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-DRP-10144\">DRP-10144</a></td><td>Twinact</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph/-1193768\"> </a>2</td><td><code>https://verification.fda.gov.ph/</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-1193768\">1193768</a></td><td>Ascorfed-Z Cap</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs",
       "version" : "0.1.0",
@@ -134,7 +134,7 @@
       "title" : "Drugs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-03-25T03:26:10+00:00",
+      "date" : "2026-03-25T03:31:02+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -143,9 +143,9 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:5f628d76-bab0-4a95-850d-7cdb1bbceb7c",
-        "timestamp" : "2026-03-25T03:27:02+00:00",
-        "total" : 0,
+        "identifier" : "urn:uuid:3625ea80-74cc-408b-9369-1bc0957d6c19",
+        "timestamp" : "2026-03-25T03:32:04+00:00",
+        "total" : 3,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
@@ -162,6 +162,29 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://verification.fda.gov.ph/|0.1.0"
+        },
+        {
+          "name" : "fragment",
+          "valueCanonical" : "https://verification.fda.gov.ph/|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "https://verification.fda.gov.ph/",
+          "code" : "PH-FDA-DRUGS",
+          "display" : "Philippine FDA Registered Drug Products",
+          "contains" : [{
+            "system" : "https://verification.fda.gov.ph/",
+            "code" : "DRP-10144",
+            "display" : "Twinact"
+          },
+          {
+            "system" : "https://verification.fda.gov.ph/",
+            "code" : "1193768",
+            "display" : "Ascorfed-Z Cap"
+          }]
         }]
       }
     }
@@ -180,7 +203,7 @@
       "title" : "Educational Attainments",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-03-25T03:26:10+00:00",
+      "date" : "2026-03-25T03:31:02+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -189,8 +212,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:cd147d8f-4594-4514-937a-2cbf3f33617a",
-        "timestamp" : "2026-03-25T03:27:02+00:00",
+        "identifier" : "urn:uuid:9c27394f-91da-4dc1-82ab-f9f0d6f3fb44",
+        "timestamp" : "2026-03-25T03:32:04+00:00",
         "total" : 0,
         "offset" : 0,
         "parameter" : [{
@@ -226,7 +249,7 @@
       "title" : "Indigenous Groups",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-03-25T03:26:10+00:00",
+      "date" : "2026-03-25T03:31:02+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -235,8 +258,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:ac294e77-3444-4863-8a56-10e7460227e0",
-        "timestamp" : "2026-03-25T03:27:02+00:00",
+        "identifier" : "urn:uuid:732028d0-5766-4745-8ce5-bde999d8beae",
+        "timestamp" : "2026-03-25T03:32:04+00:00",
         "total" : 33,
         "offset" : 0,
         "parameter" : [{
@@ -441,7 +464,7 @@
       "title" : "Occupation Classifications",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-03-25T03:26:10+00:00",
+      "date" : "2026-03-25T03:31:02+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -450,8 +473,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:df62225b-5437-495c-8a06-e929a39ce216",
-        "timestamp" : "2026-03-25T03:27:02+00:00",
+        "identifier" : "urn:uuid:0ab14fcd-02b5-47a3-b16b-5252666bc749",
+        "timestamp" : "2026-03-25T03:32:04+00:00",
         "total" : 0,
         "offset" : 0,
         "parameter" : [{
@@ -487,7 +510,7 @@
       "title" : "Provinces",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-03-25T03:26:10+00:00",
+      "date" : "2026-03-25T03:31:02+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -496,8 +519,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:caa0a441-5113-4012-96a6-f761a9706d3e",
-        "timestamp" : "2026-03-25T03:27:02+00:00",
+        "identifier" : "urn:uuid:f4ceaa95-1511-4c3d-8c4e-2809c5497cac",
+        "timestamp" : "2026-03-25T03:32:04+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -567,7 +590,7 @@
       "title" : "Regions",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-03-25T03:26:10+00:00",
+      "date" : "2026-03-25T03:31:02+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -576,8 +599,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:b30989b1-b00d-4873-9ffa-245eb2f66140",
-        "timestamp" : "2026-03-25T03:27:02+00:00",
+        "identifier" : "urn:uuid:eda61df0-2e40-4418-8855-17b55714484f",
+        "timestamp" : "2026-03-25T03:32:04+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{

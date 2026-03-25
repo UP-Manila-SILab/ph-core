@@ -30,9 +30,14 @@
     "name" : "DrugsVS",
     "title" : "Drugs",
     "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA.",
+    "systems" : ["https://verification.fda.gov.ph/"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-medication.html" : "PH Core Medication"
+    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",

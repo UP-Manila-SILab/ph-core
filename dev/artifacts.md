@@ -18,6 +18,10 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [PH Core Immunization](StructureDefinition-ph-core-immunization.md) | Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party. |
 | [PH Core Location](StructureDefinition-ph-core-location.md) | This profile localizes the FHIR R4 Location resource to the Philippine context. |
 | [PH Core Medication](StructureDefinition-ph-core-medication.md) | This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use. |
+| [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md) | Captures key FHIR Medication Administration data for the Philippine context. |
+| [PH Core Medication Dispense](StructureDefinition-ph-core-medicationdispense.md) | Captures key FHIR Medication Dispense data for the Philippine context. |
+| [PH Core Medication Request](StructureDefinition-ph-core-medicationrequest.md) | Captures key FHIR Medication Request data for the Philippine context. |
+| [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md) | Captures key FHIR Medication Statement data for the Philippine context. |
 | [PH Core Observation](StructureDefinition-ph-core-observation.md) | Measurements and simple assertions made about a patient, device or other subject. |
 | [PH Core Organization](StructureDefinition-ph-core-organization.md) | This profile localizes the FHIR R4 Organization resource to the Philippine context. |
 | [PH Core Patient](StructureDefinition-ph-core-patient.md) | Captures key demographic and administrative information about individuals receiving care or other health-related services. |
@@ -79,11 +83,11 @@ These define new code systems used by systems conforming to this implementation 
 
 | | |
 | :--- | :--- |
-| [Drugs](CodeSystem-drugs.md) | Partial Establishments and Health Products to be published by the [PH FDA](https://verification.fda.gov.ph). |
 | [Indigenous Groups](CodeSystem-indigenous-groups-cs.md) | A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong. |
 | [Mock PSCED](CodeSystem-PSCED.md) | Mock of the Philippine Standard Classification of Education. |
 | [Mock PSGC](CodeSystem-PSGC.md) | Mock of the Philippine Standard Geographic Code. |
 | [Mock PSOC](CodeSystem-PSOC.md) | Mock of the Philippine Standard Occupational Classification. |
+| [PH FDA Certificate of Product Registration (CPR) CodeSystem](CodeSystem-PHFDACPRCS.md) | Registered drug products from the Philippine Food and Drug Administration (FDA) |
 
 ### Terminology: Naming Systems 
 
@@ -117,7 +121,11 @@ These are example instances that show what data produced and consumed by systems
 | [example-patient](Patient-example-patient.md) | Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines. |
 | [example-practitioner](Practitioner-example-practitioner.md) | Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. |
 | [immunization-single-example](Immunization-immunization-single-example.md) | Flu shot for H5N1-1203. |
-| [medication-single-example](Medication-medication-single-example.md) | A medication resource with no specific details provided. |
+| [medication-single-example](Medication-medication-single-example.md) | Twinact (Telmisartan + Amlodipine) from PH FDA CPR. |
+| [medicationadministration-single-example](MedicationAdministration-medicationadministration-single-example.md) | Juan Dela Cruz takes Twinact (Telmisartan + Amlodipine) tablet as prescribed. |
+| [medicationdispense-single-example](MedicationDispense-medicationdispense-single-example.md) | Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela Cruz based on Dr. Santos prescription. |
+| [medicationrequest-single-example](MedicationRequest-medicationrequest-single-example.md) | Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension. |
+| [medicationstatement-single-example](MedicationStatement-medicationstatement-single-example.md) | Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlodipine) for hypertension. |
 | [observation-single-example](Observation-observation-single-example.md) | Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal). |
 | [patient-single-example](Patient-patient-single-example.md) | Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines. |
 | [practitioner-single-example](Practitioner-practitioner-single-example.md) | Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. |

@@ -11,7 +11,7 @@
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-25T03:26:10+00:00",
+  "date" : "2026-03-25T03:31:02+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -729,18 +729,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/drugs"
-      },
-      "name" : "Drugs",
-      "description" : "Partial Establishments and Health Products to be published by the [PH FDA](https://verification.fda.gov.ph).",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -939,8 +927,56 @@
         "reference" : "Medication/medication-single-example"
       },
       "name" : "medication-single-example",
-      "description" : "A medication resource with no specific details provided.",
+      "description" : "Twinact (Telmisartan + Amlodipine) from PH FDA CPR.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/medicationadministration-single-example"
+      },
+      "name" : "medicationadministration-single-example",
+      "description" : "Juan Dela Cruz takes Twinact (Telmisartan + Amlodipine) tablet as prescribed.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationDispense"
+      }],
+      "reference" : {
+        "reference" : "MedicationDispense/medicationdispense-single-example"
+      },
+      "name" : "medicationdispense-single-example",
+      "description" : "Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela Cruz based on Dr. Santos prescription.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/medicationrequest-single-example"
+      },
+      "name" : "medicationrequest-single-example",
+      "description" : "Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationStatement"
+      }],
+      "reference" : {
+        "reference" : "MedicationStatement/medicationstatement-single-example"
+      },
+      "name" : "medicationstatement-single-example",
+      "description" : "Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlodipine) for hypertension.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement"
     },
     {
       "extension" : [{
@@ -1149,6 +1185,54 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medicationadministration"
+      },
+      "name" : "PH Core Medication Administration",
+      "description" : "Captures key FHIR Medication Administration data for the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medicationdispense"
+      },
+      "name" : "PH Core Medication Dispense",
+      "description" : "Captures key FHIR Medication Dispense data for the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medicationrequest"
+      },
+      "name" : "PH Core Medication Request",
+      "description" : "Captures key FHIR Medication Request data for the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medicationstatement"
+      },
+      "name" : "PH Core Medication Statement",
+      "description" : "Captures key FHIR Medication Statement data for the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
@@ -1276,6 +1360,18 @@
       },
       "name" : "PH Core Task",
       "description" : "This profile localizes the FHIR R4 Task resource to the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/PHFDACPRCS"
+      },
+      "name" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",
+      "description" : "Registered drug products from the Philippine Food and Drug Administration (FDA)",
       "exampleBoolean" : false
     },
     {

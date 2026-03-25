@@ -8,10 +8,10 @@
     "description" : "Mock of the Philippine Standard Geographic Code.",
     "uses" : {
     },
+    "ValueSet-provinces.html" : "Provinces",
     "ValueSet-regions.html" : "Regions",
-    "ValueSet-barangays.html" : "Barangays",
     "ValueSet-cities.html" : "Cities",
-    "ValueSet-provinces.html" : "Provinces"
+    "ValueSet-barangays.html" : "Barangays"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
@@ -95,5 +95,16 @@
     "uses" : {
     },
     "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type"
+  },
+  {
+    "url" : "https://verification.fda.gov.ph/",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "PHFDACPRCS",
+    "title" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",
+    "description" : "Registered drug products from the Philippine Food and Drug Administration (FDA)",
+    "uses" : {
+    },
+    "ValueSet-drugs-vs.html" : "Drugs"
   }]
 }

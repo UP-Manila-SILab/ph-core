@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-25T03:26:10+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-25T03:31:02+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -1513,27 +1513,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "CodeSystem"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/drugs> ;
-         fhir:reference [ fhir:v "CodeSystem/drugs" ]
-       ] ;
-       fhir:name [ fhir:v "Drugs" ] ;
-       fhir:description [ fhir:v "Partial Establishments and Health Products to be published by the [PH FDA](https://verification.fda.gov.ph)." ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
@@ -1886,11 +1865,99 @@
          fhir:reference [ fhir:v "Medication/medication-single-example" ]
        ] ;
        fhir:name [ fhir:v "medication-single-example" ] ;
-       fhir:description [ fhir:v "A medication resource with no specific details provided." ] ;
+       fhir:description [ fhir:v "Twinact (Telmisartan + Amlodipine) from PH FDA CPR." ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication"^^xsd:anyURI ;
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/MedicationAdministration/medicationadministration-single-example> ;
+         fhir:reference [ fhir:v "MedicationAdministration/medicationadministration-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "medicationadministration-single-example" ] ;
+       fhir:description [ fhir:v "Juan Dela Cruz takes Twinact (Telmisartan + Amlodipine) tablet as prescribed." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationDispense"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/MedicationDispense/medicationdispense-single-example> ;
+         fhir:reference [ fhir:v "MedicationDispense/medicationdispense-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "medicationdispense-single-example" ] ;
+       fhir:description [ fhir:v "Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela Cruz based on Dr. Santos prescription." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/MedicationRequest/medicationrequest-single-example> ;
+         fhir:reference [ fhir:v "MedicationRequest/medicationrequest-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "medicationrequest-single-example" ] ;
+       fhir:description [ fhir:v "Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/MedicationStatement/medicationstatement-single-example> ;
+         fhir:reference [ fhir:v "MedicationStatement/medicationstatement-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "medicationstatement-single-example" ] ;
+       fhir:description [ fhir:v "Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlodipine) for hypertension." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement>
        ]
      ] [
        fhir:extension ( [
@@ -2260,6 +2327,90 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-medicationadministration" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Medication Administration" ] ;
+       fhir:description [ fhir:v "Captures key FHIR Medication Administration data for the Philippine context." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-medicationdispense" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Medication Dispense" ] ;
+       fhir:description [ fhir:v "Captures key FHIR Medication Dispense data for the Philippine context." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-medicationrequest" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Medication Request" ] ;
+       fhir:description [ fhir:v "Captures key FHIR Medication Request data for the Philippine context." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-medicationstatement" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Medication Statement" ] ;
+       fhir:description [ fhir:v "Captures key FHIR Medication Statement data for the Philippine context." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:complex-type"
          ]
        ] ) ;
@@ -2479,6 +2630,27 @@
        ] ;
        fhir:name [ fhir:v "PH Core Task" ] ;
        fhir:description [ fhir:v "This profile localizes the FHIR R4 Task resource to the Philippine context." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PHFDACPRCS> ;
+         fhir:reference [ fhir:v "CodeSystem/PHFDACPRCS" ]
+       ] ;
+       fhir:name [ fhir:v "PH FDA Certificate of Product Registration (CPR) CodeSystem" ] ;
+       fhir:description [ fhir:v "Registered drug products from the Philippine Food and Drug Administration (FDA)" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false

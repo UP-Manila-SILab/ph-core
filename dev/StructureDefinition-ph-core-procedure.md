@@ -16,7 +16,7 @@ An action that is or was performed on or for a patient, practitioner, device, or
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md) and [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
+* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md), [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md), [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md) and [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
 * Examples for this Profile: [Procedure/procedure-single-example](Procedure-procedure-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-procedure)
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-procedure.cs
   "name" : "PHCoreProcedure",
   "title" : "PH Core Procedure",
   "status" : "draft",
-  "date" : "2026-03-25T03:26:10+00:00",
+  "date" : "2026-03-25T03:31:02+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

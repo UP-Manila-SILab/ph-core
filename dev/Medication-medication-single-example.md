@@ -6,7 +6,7 @@
 
 ## Example Medication: medication-single-example
 
-A medication resource has been created, but no specific details are provided.
+Twinact (Telmisartan + Amlodipine) 40mg/5mg tablet from PH FDA CPR.
 
 
 
@@ -18,6 +18,21 @@ A medication resource has been created, but no specific details are provided.
   "id" : "medication-single-example",
   "meta" : {
     "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication"]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "https://verification.fda.gov.ph/",
+      "code" : "DRP-10144",
+      "display" : "Twinact"
+    }],
+    "text" : "Twinact 40mg/5mg tablet"
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "385055001",
+      "display" : "Tablet"
+    }]
   }
 }
 

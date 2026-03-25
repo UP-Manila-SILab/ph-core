@@ -18,10 +18,16 @@ This value set includes all drug or medicament substance codes and all pharmaceu
 
 * [PH Core Medication](StructureDefinition-ph-core-medication.md)
 * [PH Core Medication](StructureDefinition-ph-core-medication.md)
+* [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md)
+* [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md)
+* [PH Core Medication Dispense](StructureDefinition-ph-core-medicationdispense.md)
+* [PH Core Medication Dispense](StructureDefinition-ph-core-medicationdispense.md)
+* [PH Core Medication Request](StructureDefinition-ph-core-medicationrequest.md)
+* [PH Core Medication Request](StructureDefinition-ph-core-medicationrequest.md)
+* [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md)
+* [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md)
 
 ### Logical Definition (CLD)
-
-No formal definition provided for this value set
 
  
 
@@ -54,7 +60,7 @@ No formal definition provided for this value set
   "title" : "Drugs",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:26:10+00:00",
+  "date" : "2026-03-25T03:31:02+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -70,7 +76,12 @@ No formal definition provided for this value set
       "code" : "PH",
       "display" : "Philippines"
     }]
-  }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://verification.fda.gov.ph/"
+    }]
+  }
 }
 
 ```

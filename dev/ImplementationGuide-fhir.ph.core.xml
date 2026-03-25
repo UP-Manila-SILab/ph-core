@@ -12,7 +12,7 @@
   <name value="PHCoreImplementationGuide"/>
   <title value="Draft PH Core Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-03-25T03:26:10+00:00"/>
+  <date value="2026-03-25T03:31:02+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>
@@ -564,17 +564,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/drugs"/>
-      </reference>
-      <name value="Drugs"/>
-      <description value="Partial Establishments and Health Products to be published by the [PH FDA](https://verification.fda.gov.ph)."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -757,8 +746,52 @@
         <reference value="Medication/medication-single-example"/>
       </reference>
       <name value="medication-single-example"/>
-      <description value="A medication resource with no specific details provided."/>
+      <description value="Twinact (Telmisartan + Amlodipine) from PH FDA CPR."/>
       <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/medicationadministration-single-example"/>
+      </reference>
+      <name value="medicationadministration-single-example"/>
+      <description value="Juan Dela Cruz takes Twinact (Telmisartan + Amlodipine) tablet as prescribed."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/medicationdispense-single-example"/>
+      </reference>
+      <name value="medicationdispense-single-example"/>
+      <description value="Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela Cruz based on Dr. Santos prescription."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/medicationrequest-single-example"/>
+      </reference>
+      <name value="medicationrequest-single-example"/>
+      <description value="Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/medicationstatement-single-example"/>
+      </reference>
+      <name value="medicationstatement-single-example"/>
+      <description value="Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlodipine) for hypertension."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -949,6 +982,50 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ph-core-medicationadministration"/>
+      </reference>
+      <name value="PH Core Medication Administration"/>
+      <description value="Captures key FHIR Medication Administration data for the Philippine context."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ph-core-medicationdispense"/>
+      </reference>
+      <name value="PH Core Medication Dispense"/>
+      <description value="Captures key FHIR Medication Dispense data for the Philippine context."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ph-core-medicationrequest"/>
+      </reference>
+      <name value="PH Core Medication Request"/>
+      <description value="Captures key FHIR Medication Request data for the Philippine context."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ph-core-medicationstatement"/>
+      </reference>
+      <name value="PH Core Medication Statement"/>
+      <description value="Captures key FHIR Medication Statement data for the Philippine context."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:complex-type"/>
       </extension>
       <reference>
@@ -1066,6 +1143,17 @@
       </reference>
       <name value="PH Core Task"/>
       <description value="This profile localizes the FHIR R4 Task resource to the Philippine context."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/PHFDACPRCS"/>
+      </reference>
+      <name value="PH FDA Certificate of Product Registration (CPR) CodeSystem"/>
+      <description value="Registered drug products from the Philippine Food and Drug Administration (FDA)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

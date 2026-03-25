@@ -23,7 +23,8 @@
     "status" : "draft",
     "name" : "DrugsVS",
     "title" : "Drugs",
-    "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA."
+    "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA.",
+    "systems" : ["https://verification.fda.gov.ph/"]
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",

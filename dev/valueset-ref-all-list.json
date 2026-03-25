@@ -30,9 +30,14 @@
     "name" : "DrugsVS",
     "title" : "Drugs",
     "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA.",
+    "systems" : ["https://verification.fda.gov.ph/"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-medication.html" : "PH Core Medication"
+    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",
@@ -121,6 +126,20 @@
     "StructureDefinition-ph-core-address.html" : "PH Core Address"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTAdministrationMethodCodes",
+    "title" : "SNOMED CT Administration Method Codes",
+    "description" : "This value set includes some method codes from SNOMED CT - provided as an exemplar",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.97"],
+    "sources" : ["2.16.840.1.113883.4.642.3.97"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
     "version" : "4.0.1",
     "status" : "active",
@@ -137,6 +156,20 @@
     "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTAnatomicalStructureForAdministrationSiteCodes",
+    "title" : "SNOMED CT Anatomical Structure for Administration Site Codes",
+    "description" : "This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.346"],
+    "sources" : ["2.16.840.1.113883.4.642.3.346"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/body-site",
     "version" : "4.0.1",
     "status" : "draft",
@@ -148,10 +181,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
     "StructureDefinition-ph-core-condition.html" : "PH Core Condition",
-    "StructureDefinition-ph-core-observation.html" : "PH Core Observation"
+    "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
@@ -207,8 +240,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.161"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-condition.html" : "PH Core Condition",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
     "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-condition.html" : "PH Core Condition"
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -334,8 +369,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.512"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-location.html" : "PH Core Location",
-    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole"
+    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
+    "StructureDefinition-ph-core-location.html" : "PH Core Location"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/device-action",
@@ -548,8 +583,8 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
-    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)"
+    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -564,8 +599,8 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
-    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)"
+    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/immunization-function",
@@ -734,21 +769,25 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
     "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
-    "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
-    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-location.html" : "PH Core Location",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient",
-    "StructureDefinition-ph-core-condition.html" : "PH Core Condition",
+    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
     "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
     "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
-    "StructureDefinition-ph-core-provenance.html" : "PH Core Provenance",
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
-    "StructureDefinition-ph-core-task.html" : "PH Core Task",
     "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
-    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole"
+    "StructureDefinition-ph-core-location.html" : "PH Core Location",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement",
+    "StructureDefinition-ph-core-condition.html" : "PH Core Condition",
+    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
+    "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
+    "StructureDefinition-ph-core-provenance.html" : "PH Core Provenance",
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -790,8 +829,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.328"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-location.html" : "PH Core Location",
-    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter"
+    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
+    "StructureDefinition-ph-core-location.html" : "PH Core Location"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/location-status",
@@ -837,6 +876,48 @@
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/med-admin-perform-function",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MedicationAdministration Performer Function Codes",
+    "title" : "Medication administration  performer  function  codes",
+    "description" : "MedicationAdministration Performer Function Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/med-admin-perform-function"],
+    "oids" : ["2.16.840.1.113883.4.642.3.349"],
+    "sources" : ["2.16.840.1.113883.4.642.3.349"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-admin-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MedicationAdministration Category Codes",
+    "title" : "Medication administration  category  codes",
+    "description" : "MedicationAdministration Category Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medication-admin-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.347"],
+    "sources" : ["2.16.840.1.113883.4.642.3.347"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-admin-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MedicationAdministration Status Codes",
+    "title" : "Medication administration  status  codes",
+    "description" : "MedicationAdministration Status Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medication-admin-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.340"],
+    "sources" : ["2.16.840.1.113883.4.642.3.340"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
     "version" : "4.0.1",
     "status" : "draft",
@@ -849,6 +930,23 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTMedicationCodes",
+    "title" : "SNOMED CT Medication Codes",
+    "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.375"],
+    "sources" : ["2.16.840.1.113883.4.642.3.375"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
@@ -865,6 +963,34 @@
     "StructureDefinition-ph-core-medication.html" : "PH Core Medication"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-statement-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Medication usage category codes",
+    "title" : "Medication usage category codes",
+    "description" : "Medication Status Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medication-statement-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.370"],
+    "sources" : ["2.16.840.1.113883.4.642.3.370"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-statement-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Medication Status Codes",
+    "title" : "Medication  status  codes",
+    "description" : "Medication Status Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medication-statement-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.367"],
+    "sources" : ["2.16.840.1.113883.4.642.3.367"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/medication-status",
     "version" : "4.0.1",
     "status" : "draft",
@@ -877,6 +1003,132 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-medication.html" : "PH Core Medication"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationdispense-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MedicationDispense Category Codes",
+    "title" : "Medication dispense  category  codes",
+    "description" : "MedicationDispense Category Codes",
+    "systems" : ["http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1314"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1314"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationdispense-performer-function",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MedicationDispense Performer Function Codes",
+    "title" : "Medication dispense  performer  function  codes",
+    "description" : "MedicationDispense Performer Function Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1318"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1318"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationdispense-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MedicationDispense Status Codes",
+    "title" : "Medication dispense  status  codes",
+    "description" : "MedicationDispense Status Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationdispense-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1312"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1312"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationdispense-status-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MedicationDispense Status Reason Codes",
+    "title" : "Medication dispense  status  reason  codes",
+    "description" : "MedicationDispense Status Codes",
+    "systems" : ["http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1316"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1316"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Category Codes",
+    "title" : "Medication request  category  codes",
+    "description" : "MedicationRequest Category Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1322"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1322"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-course-of-therapy",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Course of Therapy Codes",
+    "title" : "Medication request  course of  therapy  codes",
+    "description" : "MedicationRequest Course of Therapy Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1326"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1326"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Intent",
+    "title" : "Medication request  intent",
+    "description" : "MedicationRequest Intent Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-intent"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1321"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1321"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationrequest Status",
+    "title" : "Medicationrequest  status",
+    "description" : "MedicationRequest Status Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1320"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1320"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Status Reason Codes",
+    "title" : "Medication request  status  reason  codes",
+    "description" : "MedicationRequest Status Reason Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1324"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1324"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/name-use",
@@ -1002,8 +1254,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.433"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-task.html" : "PH Core Task"
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/practitioner-role",
@@ -1046,8 +1299,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
@@ -1103,8 +1356,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.432"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/provenance-activity-type",
@@ -1150,6 +1403,48 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-provenance.html" : "PH Core Provenance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/reason-medication-given-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ReasonMedicationGivenCodes",
+    "title" : "Reason Medication Given Codes",
+    "description" : "This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/reason-medication-given"],
+    "oids" : ["2.16.840.1.113883.4.642.3.344"],
+    "sources" : ["2.16.840.1.113883.4.642.3.344"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTReasonMedicationNotGivenCodes",
+    "title" : "SNOMED CT Reason Medication Not Given Codes",
+    "description" : "This value set includes all medication refused, medication not administered, and non-administration of necessary drug or medicine codes from SNOMED CT - provided as an exemplar value set.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.342"],
+    "sources" : ["2.16.840.1.113883.4.642.3.342"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/reason-medication-status-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTDrugTherapyStatusCodes",
+    "title" : "SNOMED CT Drug Therapy Status codes ",
+    "description" : "This value set includes some taken and not taken reason codes from SNOMED CT - provided as an exemplar",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.369"],
+    "sources" : ["2.16.840.1.113883.4.642.3.369"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
@@ -1222,8 +1517,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
     "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
-    "StructureDefinition-ph-core-task.html" : "PH Core Task"
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/request-status",
@@ -1252,6 +1548,20 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-provenance.html" : "PH Core Provenance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/route-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTRouteCodes",
+    "title" : "SNOMED CT Route Codes",
+    "description" : "This value set includes all Route codes from SNOMED CT - provided as an exemplar.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.98"],
+    "sources" : ["2.16.840.1.113883.4.642.3.98"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
@@ -1427,6 +1737,20 @@
     "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter"
   },
   {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActPharmacySupplyType",
+    "title" : "ActPharmacySupplyType",
+    "description" : "Identifies types of dispensing events",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.16208"],
+    "sources" : ["2.16.840.1.113883.1.11.16208"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
+  },
+  {
     "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
     "version" : "3.0.0",
     "status" : "active",
@@ -1439,6 +1763,21 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActSubstanceAdminSubstitutionCode",
+    "title" : "ActSubstanceAdminSubstitutionCode",
+    "description" : "***No description***",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"],
+    "oids" : ["2.16.840.1.113883.1.11.16621"],
+    "sources" : ["2.16.840.1.113883.1.11.16621"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
@@ -1480,7 +1819,22 @@
     "sources" : ["2.16.840.1.113883.1.11.17660"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-location.html" : "PH Core Location",
-    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-location.html" : "PH Core Location"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "SubstanceAdminSubstitutionReason",
+    "title" : "SubstanceAdminSubstitutionReason",
+    "description" : "***No description***",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
+    "oids" : ["2.16.840.1.113883.1.11.19377"],
+    "sources" : ["2.16.840.1.113883.1.11.19377"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
   }]
 }

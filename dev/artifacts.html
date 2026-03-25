@@ -212,6 +212,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medicationadministration.html"
+                  title="StructureDefinition/ph-core-medicationadministration">PH Core Medication Administration</a>
+            </td>
+            <td>
+<p>Captures key FHIR Medication Administration data for the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medicationdispense.html"
+                  title="StructureDefinition/ph-core-medicationdispense">PH Core Medication Dispense</a>
+            </td>
+            <td>
+<p>Captures key FHIR Medication Dispense data for the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medicationrequest.html"
+                  title="StructureDefinition/ph-core-medicationrequest">PH Core Medication Request</a>
+            </td>
+            <td>
+<p>Captures key FHIR Medication Request data for the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medicationstatement.html"
+                  title="StructureDefinition/ph-core-medicationstatement">PH Core Medication Statement</a>
+            </td>
+            <td>
+<p>Captures key FHIR Medication Statement data for the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-ph-core-observation.html"
                   title="StructureDefinition/ph-core-observation">PH Core Observation</a>
             </td>
@@ -535,14 +571,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-drugs.html" title="CodeSystem/drugs">Drugs</a>
-            </td>
-            <td>
-<p>Partial Establishments and Health Products to be published by the <a href="https://verification.fda.gov.ph">PH FDA</a>.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="CodeSystem-indigenous-groups-cs.html"
                   title="CodeSystem/indigenous-groups-cs">Indigenous Groups</a>
             </td>
@@ -572,6 +600,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Mock of the Philippine Standard Occupational Classification.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-PHFDACPRCS.html" title="CodeSystem/PHFDACPRCS">PH FDA Certificate of Product Registration (CPR) CodeSystem</a>
+            </td>
+            <td>
+<p>Registered drug products from the Philippine Food and Drug Administration (FDA)</p>
 </td>
          </tr>
       </tbody>
@@ -765,7 +801,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="Medication/medication-single-example">medication-single-example</a>
             </td>
             <td>
-<p>A medication resource with no specific details provided.</p>
+<p>Twinact (Telmisartan + Amlodipine) from PH FDA CPR.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-medicationadministration-single-example.html"
+                  title="MedicationAdministration/medicationadministration-single-example">medicationadministration-single-example</a>
+            </td>
+            <td>
+<p>Juan Dela Cruz takes Twinact (Telmisartan + Amlodipine) tablet as prescribed.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-medicationdispense-single-example.html"
+                  title="MedicationDispense/medicationdispense-single-example">medicationdispense-single-example</a>
+            </td>
+            <td>
+<p>Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela Cruz based on Dr. Santos prescription.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-medicationrequest-single-example.html"
+                  title="MedicationRequest/medicationrequest-single-example">medicationrequest-single-example</a>
+            </td>
+            <td>
+<p>Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationStatement-medicationstatement-single-example.html"
+                  title="MedicationStatement/medicationstatement-single-example">medicationstatement-single-example</a>
+            </td>
+            <td>
+<p>Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlodipine) for hypertension.</p>
 </td>
          </tr>
          <tr>
@@ -868,7 +940,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 03:26+0000">2026-03-25</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 03:31+0000">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

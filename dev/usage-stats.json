@@ -158,6 +158,30 @@
         "title": "PH Core Medication"
       }
     ],
+    "MedicationAdministration": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration",
+        "title": "PH Core Medication Administration"
+      }
+    ],
+    "MedicationDispense": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense",
+        "title": "PH Core Medication Dispense"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest",
+        "title": "PH Core Medication Request"
+      }
+    ],
+    "MedicationStatement": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement",
+        "title": "PH Core Medication Statement"
+      }
+    ],
     "Observation": [
       {
         "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation",

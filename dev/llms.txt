@@ -10,10 +10,10 @@
 
 ### CodeSystems
 
+* [PH FDA Certificate of Product Registration (CPR) CodeSystem](CodeSystem-PHFDACPRCS.md)
 * [Mock PSCED](CodeSystem-PSCED.md)
 * [Mock PSGC](CodeSystem-PSGC.md)
 * [Mock PSOC](CodeSystem-PSOC.md)
-* [Drugs](CodeSystem-drugs.md)
 * [Indigenous Groups](CodeSystem-indigenous-groups-cs.md)
 
 ### ValueSets
@@ -42,6 +42,10 @@
 * [PH Core Immunization](StructureDefinition-ph-core-immunization.md)
 * [PH Core Location](StructureDefinition-ph-core-location.md)
 * [PH Core Medication](StructureDefinition-ph-core-medication.md)
+* [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md)
+* [PH Core Medication Dispense](StructureDefinition-ph-core-medicationdispense.md)
+* [PH Core Medication Request](StructureDefinition-ph-core-medicationrequest.md)
+* [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md)
 * [PH Core Observation](StructureDefinition-ph-core-observation.md)
 * [PH Core Organization](StructureDefinition-ph-core-organization.md)
 * [PH Core Patient](StructureDefinition-ph-core-patient.md)
@@ -91,6 +95,10 @@
 * [immunization-single-example (Immunization)](Immunization-immunization-single-example.md)
 * [example-medication (Medication)](Medication-example-medication.md)
 * [medication-single-example (Medication)](Medication-medication-single-example.md)
+* [medicationadministration-single-example (MedicationAdministration)](MedicationAdministration-medicationadministration-single-example.md)
+* [medicationdispense-single-example (MedicationDispense)](MedicationDispense-medicationdispense-single-example.md)
+* [medicationrequest-single-example (MedicationRequest)](MedicationRequest-medicationrequest-single-example.md)
+* [medicationstatement-single-example (MedicationStatement)](MedicationStatement-medicationstatement-single-example.md)
 * [blood-pressure (Observation)](Observation-blood-pressure.md)
 * [observation-single-example (Observation)](Observation-observation-single-example.md)
 * [Department of Health - Sattelite Office (Organization)](Organization-organization-single-example.md)

@@ -6,6 +6,21 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">A medication resource has been created, but no specific details are provided.</div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Twinact (Telmisartan + Amlodipine) 40mg/5mg tablet from PH FDA CPR.</div>"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "https://verification.fda.gov.ph/",
+      "code" : "DRP-10144",
+      "display" : "Twinact"
+    }],
+    "text" : "Twinact 40mg/5mg tablet"
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "385055001",
+      "display" : "Tablet"
+    }]
   }
 }
