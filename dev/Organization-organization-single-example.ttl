@@ -20,11 +20,29 @@
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789, PEN: PEN-987654321) is an active PH Core Organization located at 123, Barangay 1, City of Las Piñas, Benguet, 1740, Philippines. The organization can be contacted via phone at +63-2-8651-7800 or email at contact@doh.gov.ph.</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"^^xsd:anyURI ;
+       fhir:l <http://doh.gov.ph/fhir/Identifier/doh-nhfr-code>
+     ] ;
      fhir:value [ fhir:v "1234567890" ]
   ] [
+     fhir:system [
+       fhir:v "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"^^xsd:anyURI ;
+       fhir:l <http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber>
+     ] ;
      fhir:value [ fhir:v "PAN-2024-56789" ]
   ] [
+     fhir:system [
+       fhir:v "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"^^xsd:anyURI ;
+       fhir:l <http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber>
+     ] ;
      fhir:value [ fhir:v "PEN-987654321" ]
+  ] [
+     fhir:system [
+       fhir:v "http://my-hospital.org/internal-id"^^xsd:anyURI ;
+       fhir:l <http://my-hospital.org/internal-id>
+     ] ;
+     fhir:value [ fhir:v "HOSP-INT-12345" ]
   ] ) ; # 
   fhir:active [ fhir:v true] ; # 
   fhir:name [ fhir:v "Department of Health - Sattelite Office"] ; # 

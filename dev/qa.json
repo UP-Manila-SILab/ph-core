@@ -6,14 +6,14 @@
   "status" : "draft",
   "package-id" : "fhir.ph.core",
   "ig-ver" : "0.1.0",
-  "date" : "Wed, 25 Mar, 2026 03:31:02 +0000",
-  "dateISO8601" : "2026-03-25T03:31:02+00:00",
-  "errs" : 89,
-  "warnings" : 13,
-  "hints" : 86,
-  "suppressed-hints" : 34,
+  "date" : "Wed, 25 Mar, 2026 03:34:45 +0000",
+  "dateISO8601" : "2026-03-25T03:34:45+00:00",
+  "errs" : 76,
+  "warnings" : 9,
+  "hints" : 83,
+  "suppressed-hints" : 19,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1378986408
+  "maxMemory" : 1152120728
 }

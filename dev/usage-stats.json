@@ -246,8 +246,10 @@
   "usage": {
     "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay": [
       "Address",
+      "Bundle.entry.resource.address",
       "Organization.address",
-      "Organization.contact.address"
+      "Organization.contact.address",
+      "Patient.address"
     ],
     "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality": [
       "Address",

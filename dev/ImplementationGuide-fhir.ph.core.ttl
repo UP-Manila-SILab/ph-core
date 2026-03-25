@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-25T03:31:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-25T03:34:45+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -1454,10 +1454,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/doh-nhfr-code-ns> ;
-         fhir:reference [ fhir:v "NamingSystem/doh-nhfr-code-ns" ]
+         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/DOHNHFRCodeNS> ;
+         fhir:reference [ fhir:v "NamingSystem/DOHNHFRCodeNS" ]
        ] ;
-       fhir:name [ fhir:v "DOH National Health Faciities Registry Code" ] ;
+       fhir:name [ fhir:v "DOH National Health Facility Registry Code" ] ;
        fhir:description [ fhir:v "Health Facility Code (HFC) from the National Health Facility Registry." ] ;
        fhir:example [
          a fhir:Boolean ;
@@ -2141,8 +2141,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-accreditation-no> ;
-         fhir:reference [ fhir:v "NamingSystem/philhealth-accreditation-no" ]
+         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPANNS> ;
+         fhir:reference [ fhir:v "NamingSystem/PhilHealthPANNS" ]
        ] ;
        fhir:name [ fhir:v "PAN - PhilHealth Accreditation Number" ] ;
        fhir:description [ fhir:v "The unique number issued by PhilHealth to accredited institutions." ] ;
@@ -2184,8 +2184,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-employer-no> ;
-         fhir:reference [ fhir:v "NamingSystem/philhealth-employer-no" ]
+         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPENNS> ;
+         fhir:reference [ fhir:v "NamingSystem/PhilHealthPENNS" ]
        ] ;
        fhir:name [ fhir:v "PEN - PhilHealth Employer Number" ] ;
        fhir:description [ fhir:v "The unique number issued by PhilHealth to employers." ] ;
@@ -2667,6 +2667,48 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pan> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-philhealth-pan" ]
+       ] ;
+       fhir:name [ fhir:v "PhilHealth Accreditation Number" ] ;
+       fhir:description [ fhir:v "The unique number issued by PhilHealth to accredited institutions." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:complex-type"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pen> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-philhealth-pen" ]
+       ] ;
+       fhir:name [ fhir:v "PhilHealth Employer Number" ] ;
+       fhir:description [ fhir:v "The unique number issued by PhilHealth to employers." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:complex-type"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philsys-id> ;
          fhir:reference [ fhir:v "StructureDefinition/ph-core-philsys-id" ]
        ] ;
@@ -2688,11 +2730,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns> ;
-         fhir:reference [ fhir:v "NamingSystem/philsys-id-ns" ]
+         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilSysIDNS> ;
+         fhir:reference [ fhir:v "NamingSystem/PhilSysIDNS" ]
        ] ;
        fhir:name [ fhir:v "PhilSys Identification Number (PhilSys ID)" ] ;
-       fhir:description [ fhir:v "The National ID Number is a unique and randomly-generated 12-digit permanent identification number that is assigned to every citizen or resident alien upon successful registration to National ID system." ] ;
+       fhir:description [ fhir:v "The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2730,8 +2772,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns> ;
-         fhir:reference [ fhir:v "NamingSystem/philhealth-id-ns" ]
+         fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthIDNS> ;
+         fhir:reference [ fhir:v "NamingSystem/PhilHealthIDNS" ]
        ] ;
        fhir:name [ fhir:v "PIN - PhilHealth Identification Number" ] ;
        fhir:description [ fhir:v "The permanent and unique number issued by PhilHealth to individual members and to each and every dependent." ] ;

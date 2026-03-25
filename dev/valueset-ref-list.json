@@ -33,9 +33,9 @@
     "systems" : ["https://verification.fda.gov.ph/"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
     "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
+    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
     "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
     "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
   },

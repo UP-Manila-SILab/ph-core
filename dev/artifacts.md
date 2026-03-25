@@ -43,6 +43,8 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [PH Core Address](StructureDefinition-ph-core-address.md) | An address for the individual. |
 | [PH Core Name](StructureDefinition-ph-core-name.md) | A name of a person in the philippine context. |
 | [PIN - PhilHealth Identification Number](StructureDefinition-ph-core-philhealth-id.md) | The permanent and unique number issued by PhilHealth to individual members and to each and every dependent. |
+| [PhilHealth Accreditation Number](StructureDefinition-ph-core-philhealth-pan.md) | The unique number issued by PhilHealth to accredited institutions. |
+| [PhilHealth Employer Number](StructureDefinition-ph-core-philhealth-pen.md) | The unique number issued by PhilHealth to employers. |
 | [PhilSys Identification Number (PhilSys ID)](StructureDefinition-ph-core-philsys-id.md) | The National ID Number PSA issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program. |
 
 ### Structures: Extension Definitions 
@@ -95,11 +97,11 @@ These define identifier and/or code system identities used by systems conforming
 
 | | |
 | :--- | :--- |
-| [DOH National Health Faciities Registry Code](NamingSystem-doh-nhfr-code-ns.md) | Health Facility Code (HFC) from the National Health Facility Registry. |
-| [PAN - PhilHealth Accreditation Number](NamingSystem-philhealth-accreditation-no.md) | The unique number issued by PhilHealth to accredited institutions. |
-| [PEN - PhilHealth Employer Number](NamingSystem-philhealth-employer-no.md) | The unique number issued by PhilHealth to employers. |
-| [PIN - PhilHealth Identification Number](NamingSystem-philhealth-id-ns.md) | The permanent and unique number issued by PhilHealth to individual members and to each and every dependent. |
-| [PhilSys Identification Number (PhilSys ID)](NamingSystem-philsys-id-ns.md) | The National ID Number is a unique and randomly-generated 12-digit permanent identification number that is assigned to every citizen or resident alien upon successful registration to National ID system. |
+| [DOH National Health Facility Registry Code](NamingSystem-DOHNHFRCodeNS.md) | Health Facility Code (HFC) from the National Health Facility Registry. |
+| [PAN - PhilHealth Accreditation Number](NamingSystem-PhilHealthPANNS.md) | The unique number issued by PhilHealth to accredited institutions. |
+| [PEN - PhilHealth Employer Number](NamingSystem-PhilHealthPENNS.md) | The unique number issued by PhilHealth to employers. |
+| [PIN - PhilHealth Identification Number](NamingSystem-PhilHealthIDNS.md) | The permanent and unique number issued by PhilHealth to individual members and to each and every dependent. |
+| [PhilSys Identification Number (PhilSys ID)](NamingSystem-PhilSysIDNS.md) | The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program. |
 
 ### Example: Example Instances 
 

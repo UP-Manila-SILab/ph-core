@@ -20,7 +20,7 @@ Maria Cruz Santos, born on January 1, 1955, is the mother of the patient. She re
     "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"]
   },
   "identifier" : [{
-    "system" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns",
+    "system" : "http://philsys.gov.ph/fhir/Identifier/philsys-id",
     "value" : "1234-1234567-1"
   }],
   "patient" : {

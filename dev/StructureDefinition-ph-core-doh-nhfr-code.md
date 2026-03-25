@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-doh-nhfr-code | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreDohNhfrCode |
+| Draft as of 2026-03-25 | *Computable Name*:PHCoreDOHNHFRCode |
 
  
 Health Facility Code (HFC) from the National Health Facility Registry 
 
 **Usages:**
 
-* This DataType Profile is not used by any profiles in this Implementation Guide
+* Use this DataType Profile: [PH Core Organization](StructureDefinition-ph-core-organization.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-doh-nhfr-code)
 
@@ -38,10 +38,10 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-doh-nhfr-cod
   "id" : "ph-core-doh-nhfr-code",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-doh-nhfr-code",
   "version" : "0.1.0",
-  "name" : "PHCoreDohNhfrCode",
+  "name" : "PHCoreDOHNHFRCode",
   "title" : "DOH NHFR Code",
   "status" : "draft",
-  "date" : "2026-03-25T03:31:02+00:00",
+  "date" : "2026-03-25T03:34:45+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -88,7 +88,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-doh-nhfr-cod
       "id" : "Identifier.system",
       "path" : "Identifier.system",
       "min" : 1,
-      "fixedUri" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/doh-nhfr-code-ns"
+      "fixedUri" : "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"
     },
     {
       "id" : "Identifier.value",

@@ -21,8 +21,8 @@
   ] ; # 
   fhir:identifier ( [
      fhir:system [
-       fhir:v "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns>
+       fhir:v "http://philsys.gov.ph/fhir/Identifier/philsys-id"^^xsd:anyURI ;
+       fhir:l <http://philsys.gov.ph/fhir/Identifier/philsys-id>
      ] ;
      fhir:value [ fhir:v "1234-1234567-1" ]
   ] ) ; # 

@@ -34,37 +34,37 @@
   "name" : "PHCoreImplementationGuide"
 },
 {
-  "id" : "doh-nhfr-code-ns",
+  "id" : "DOHNHFRCodeNS",
   "type" : "NamingSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/doh-nhfr-code-ns",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/DOHNHFRCodeNS",
   "version" : "0.1.0",
-  "name" : "DohNhfrCode"
+  "name" : "DOHNHFRCode"
 },
 {
-  "id" : "philhealth-accreditation-no",
+  "id" : "PhilHealthIDNS",
   "type" : "NamingSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-accreditation-no",
-  "version" : "0.1.0",
-  "name" : "PhilHealth Accreditation Number"
-},
-{
-  "id" : "philhealth-employer-no",
-  "type" : "NamingSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-employer-no",
-  "version" : "0.1.0",
-  "name" : "PhilHealth Employer Number"
-},
-{
-  "id" : "philhealth-id-ns",
-  "type" : "NamingSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthIDNS",
   "version" : "0.1.0",
   "name" : "PhilHealthID"
 },
 {
-  "id" : "philsys-id-ns",
+  "id" : "PhilHealthPANNS",
   "type" : "NamingSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPANNS",
+  "version" : "0.1.0",
+  "name" : "PhilHealthPAN"
+},
+{
+  "id" : "PhilHealthPENNS",
+  "type" : "NamingSystem",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPENNS",
+  "version" : "0.1.0",
+  "name" : "PhilHealthPEN"
+},
+{
+  "id" : "PhilSysIDNS",
+  "type" : "NamingSystem",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilSysIDNS",
   "version" : "0.1.0",
   "name" : "PhilSysID"
 },
@@ -136,7 +136,7 @@
   "type" : "StructureDefinition",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-doh-nhfr-code",
   "version" : "0.1.0",
-  "name" : "PHCoreDohNhfrCode"
+  "name" : "PHCoreDOHNHFRCode"
 },
 {
   "id" : "ph-core-encounter",
@@ -228,6 +228,20 @@
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-id",
   "version" : "0.1.0",
   "name" : "PHCorePhilHealthID"
+},
+{
+  "id" : "ph-core-philhealth-pan",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pan",
+  "version" : "0.1.0",
+  "name" : "PHCorePhilHealthPAN"
+},
+{
+  "id" : "ph-core-philhealth-pen",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pen",
+  "version" : "0.1.0",
+  "name" : "PHCorePhilHealthPEN"
 },
 {
   "id" : "ph-core-philsys-id",

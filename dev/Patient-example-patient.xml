@@ -44,7 +44,7 @@
     </valueCodeableConcept>
   </extension>
   <identifier>
-    <system value="http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"/>
+    <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
     <value value="63-584789845-5"/>
   </identifier>
   <active value="true"/>
@@ -56,6 +56,13 @@
   <gender value="male"/>
   <birthDate value="1985-06-15"/>
   <address>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay">
+      <valueCoding>
+        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <code value="1380100001"/>
+        <display value="Barangay 1"/>
+      </valueCoding>
+    </extension>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality">
       <valueCoding>
         <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
@@ -63,53 +70,11 @@
         <display value="City of Las Piñas"/>
       </valueCoding>
     </extension>
-    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality">
-      <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
-        <code value="1380100000"/>
-        <display value="City of Caloocan"/>
-      </valueCoding>
-    </extension>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
       <valueCoding>
         <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
         <code value="0402100000"/>
         <display value="Cavite"/>
-      </valueCoding>
-    </extension>
-    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
-      <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
-        <code value="0403400000"/>
-        <display value="Laguna"/>
-      </valueCoding>
-    </extension>
-    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
-      <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
-        <code value="0405800000"/>
-        <display value="Rizal"/>
-      </valueCoding>
-    </extension>
-    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
-      <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
-        <code value="1704000000"/>
-        <display value="Marinduque"/>
-      </valueCoding>
-    </extension>
-    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
-      <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
-        <code value="0402100000"/>
-        <display value="Cavite"/>
-      </valueCoding>
-    </extension>
-    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
-      <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
-        <code value="1705100000"/>
-        <display value="Occidental Mindoro"/>
       </valueCoding>
     </extension>
     <line value="123 Mabini Street"/>

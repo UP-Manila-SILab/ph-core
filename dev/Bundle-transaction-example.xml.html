@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3.80"}
-    h3,h4,h5,h6{--heading-prefix:"3.80"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.82"}
+    h3,h4,h5,h6{--heading-prefix:"3.82"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -230,7 +230,7 @@
         &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.extension">extension</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>
-                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns&quot;/&gt;
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://philhealth.gov.ph/fhir/Identifier/philhealth-id&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;63-584789845-5&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.active">active</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
@@ -243,6 +243,14 @@
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#date">value</a>=&quot;1985-06-15&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;1380100001&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Barangay 1&quot;/&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
                      <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality&quot;&gt;
             &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
@@ -251,59 +259,11 @@
             &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
           &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
-                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality&quot;&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;1380100000&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;City of Caloocan&quot;/&gt;
-            &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
                      <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/province&quot;&gt;
             &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;0402100000&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Cavite&quot;/&gt;
-            &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
-                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/province&quot;&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;0403400000&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Laguna&quot;/&gt;
-            &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
-                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/province&quot;&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;0405800000&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Rizal&quot;/&gt;
-            &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
-                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/province&quot;&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;1704000000&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Marinduque&quot;/&gt;
-            &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
-                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/province&quot;&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;0402100000&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Cavite&quot;/&gt;
-            &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>
-                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/province&quot;&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;1705100000&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Occidental Mindoro&quot;/&gt;
             &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
           &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Address.extension">extension</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;123 Mabini Street&quot;/&gt;
@@ -631,7 +591,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 03:31+0000">2026-03-25</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 03:34+0000">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

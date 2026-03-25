@@ -8,10 +8,10 @@
     "description" : "Mock of the Philippine Standard Geographic Code.",
     "uses" : {
     },
-    "ValueSet-provinces.html" : "Provinces",
+    "ValueSet-barangays.html" : "Barangays",
     "ValueSet-regions.html" : "Regions",
-    "ValueSet-cities.html" : "Cities",
-    "ValueSet-barangays.html" : "Barangays"
+    "ValueSet-provinces.html" : "Provinces",
+    "ValueSet-cities.html" : "Cities"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",

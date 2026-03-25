@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3.57"}
-    h3,h4,h5,h6{--heading-prefix:"3.57"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.59"}
+    h3,h4,h5,h6{--heading-prefix:"3.59"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -184,13 +184,22 @@
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789, PEN: PEN-987654321) is an active PH Core Organization located at 123, Barangay 1, City of Las Piñas, Benguet, 1740, Philippines. The organization can be contacted via phone at +63-2-8651-7800 or email at contact@doh.gov.ph.&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Organization.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://doh.gov.ph/fhir/Identifier/doh-nhfr-code&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1234567890&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PAN-2024-56789&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PEN-987654321&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://my-hospital.org/internal-id&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HOSP-INT-12345&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.active">active</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Department of Health - Sattelite Office&quot;/&gt;
@@ -297,7 +306,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 03:31+0000">2026-03-25</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  Package fhir.ph.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 03:34+0000">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -35,16 +35,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Slicing based on identifier system",,"open","Organization.identifier",0,*,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XON.10 / XON.3",".scopes[Role](classCode=IDENT)","./Identifiers","FiveWs.identifier"
-"Organization.identifier:NhfrCode","Organization.identifier","NhfrCode","","",0,*,"Y","","Y","Identifier {[]} {[]}
-","DOH NHFR Code","Philippines Department of Health National Health Facilities Registry Code","","Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
+"Organization.identifier:NhfrCode","Organization.identifier","NhfrCode","","",0,*,"Y","","Y","Identifier {[CanonicalType[http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-doh-nhfr-code]]} {[]}
+","Identifies this organization  across multiple systems","Identifier for the organization that is used to identify the organization across multiple disparate systems.","","Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XON.10 / XON.3",".scopes[Role](classCode=IDENT)","./Identifiers","FiveWs.identifier"
-"Organization.identifier:PAN","Organization.identifier","PAN","","",0,*,"Y","","Y","Identifier {[]} {[]}
-","PhilHealth Accreditation Number","Identifier for the organization that is used to identify the organization across multiple disparate systems.","","Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
+"Organization.identifier:PAN","Organization.identifier","PAN","","",0,*,"Y","","Y","Identifier {[CanonicalType[http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pan]]} {[]}
+","Identifies this organization  across multiple systems","Identifier for the organization that is used to identify the organization across multiple disparate systems.","","Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XON.10 / XON.3",".scopes[Role](classCode=IDENT)","./Identifiers","FiveWs.identifier"
-"Organization.identifier:PEN","Organization.identifier","PEN","","",0,*,"Y","","Y","Identifier {[]} {[]}
-","PhilHealth Employer Number","Identifier for the organization that is used to identify the organization across multiple disparate systems.","","Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
+"Organization.identifier:PEN","Organization.identifier","PEN","","",0,*,"Y","","Y","Identifier {[CanonicalType[http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pen]]} {[]}
+","Identifies this organization  across multiple systems","Identifier for the organization that is used to identify the organization across multiple disparate systems.","","Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XON.10 / XON.3",".scopes[Role](classCode=IDENT)","./Identifiers","FiveWs.identifier"
 "Organization.active","Organization.active","","","",0,1,"Y","Y","Y","boolean {[]} {[]}

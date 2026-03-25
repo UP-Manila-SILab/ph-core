@@ -20,13 +20,20 @@ The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789
     "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"]
   },
   "identifier" : [{
+    "system" : "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code",
     "value" : "1234567890"
   },
   {
+    "system" : "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber",
     "value" : "PAN-2024-56789"
   },
   {
+    "system" : "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber",
     "value" : "PEN-987654321"
+  },
+  {
+    "system" : "http://my-hospital.org/internal-id",
+    "value" : "HOSP-INT-12345"
   }],
   "active" : true,
   "name" : "Department of Health - Sattelite Office",

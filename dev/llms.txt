@@ -33,6 +33,8 @@
 * [DOH NHFR Code](StructureDefinition-ph-core-doh-nhfr-code.md)
 * [PH Core Name](StructureDefinition-ph-core-name.md)
 * [PIN - PhilHealth Identification Number](StructureDefinition-ph-core-philhealth-id.md)
+* [PhilHealth Accreditation Number](StructureDefinition-ph-core-philhealth-pan.md)
+* [PhilHealth Employer Number](StructureDefinition-ph-core-philhealth-pen.md)
 * [PhilSys Identification Number (PhilSys ID)](StructureDefinition-ph-core-philsys-id.md)
 
 ### Resource Profiles
@@ -76,11 +78,11 @@
 
 ### NamingSystems
 
-* [DohNhfrCode](NamingSystem-doh-nhfr-code-ns.md)
-* [PhilHealth Accreditation Number](NamingSystem-philhealth-accreditation-no.md)
-* [PhilHealth Employer Number](NamingSystem-philhealth-employer-no.md)
-* [PhilHealthID](NamingSystem-philhealth-id-ns.md)
-* [PhilSysID](NamingSystem-philsys-id-ns.md)
+* [DOHNHFRCode](NamingSystem-DOHNHFRCodeNS.md)
+* [PhilHealthID](NamingSystem-PhilHealthIDNS.md)
+* [PhilHealthPAN](NamingSystem-PhilHealthPANNS.md)
+* [PhilHealthPEN](NamingSystem-PhilHealthPENNS.md)
+* [PhilSysID](NamingSystem-PhilSysIDNS.md)
 
 ### Examples
 

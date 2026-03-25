@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-philhealth-i
   "name" : "PHCorePhilHealthID",
   "title" : "PIN - PhilHealth Identification Number",
   "status" : "draft",
-  "date" : "2026-03-25T03:31:02+00:00",
+  "date" : "2026-03-25T03:34:45+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -94,7 +94,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-philhealth-i
       "id" : "Identifier.system",
       "path" : "Identifier.system",
       "min" : 1,
-      "fixedUri" : "https://philhealth.gov.ph/fhir/Identifier/philhealth-id"
+      "fixedUri" : "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"
     },
     {
       "id" : "Identifier.value",

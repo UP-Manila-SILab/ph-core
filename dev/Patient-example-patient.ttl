@@ -86,8 +86,8 @@
   ] ) ; # 
   fhir:identifier ( [
      fhir:system [
-       fhir:v "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns>
+       fhir:v "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"^^xsd:anyURI ;
+       fhir:l <http://philhealth.gov.ph/fhir/Identifier/philhealth-id>
      ] ;
      fhir:value [ fhir:v "63-584789845-5" ]
   ] ) ; # 
@@ -100,6 +100,20 @@
   fhir:birthDate [ fhir:v "1985-06-15"^^xsd:date] ; # 
   fhir:address ( [
      fhir:extension ( [
+       fhir:url [
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
+           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
+         ] ;
+         fhir:code [ fhir:v "1380100001" ] ;
+         fhir:display [ fhir:v "Barangay 1" ]
+       ]
+     ] [
        fhir:url [
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality"^^xsd:anyURI ;
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality>
@@ -115,20 +129,6 @@
        ]
      ] [
        fhir:url [
-         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality"^^xsd:anyURI ;
-         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality>
-       ] ;
-       fhir:value [
-         a fhir:Coding ;
-         fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
-         ] ;
-         fhir:code [ fhir:v "1380100000" ] ;
-         fhir:display [ fhir:v "City of Caloocan" ]
-       ]
-     ] [
-       fhir:url [
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"^^xsd:anyURI ;
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/province>
        ] ;
@@ -140,76 +140,6 @@
          ] ;
          fhir:code [ fhir:v "0402100000" ] ;
          fhir:display [ fhir:v "Cavite" ]
-       ]
-     ] [
-       fhir:url [
-         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"^^xsd:anyURI ;
-         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/province>
-       ] ;
-       fhir:value [
-         a fhir:Coding ;
-         fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
-         ] ;
-         fhir:code [ fhir:v "0403400000" ] ;
-         fhir:display [ fhir:v "Laguna" ]
-       ]
-     ] [
-       fhir:url [
-         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"^^xsd:anyURI ;
-         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/province>
-       ] ;
-       fhir:value [
-         a fhir:Coding ;
-         fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
-         ] ;
-         fhir:code [ fhir:v "0405800000" ] ;
-         fhir:display [ fhir:v "Rizal" ]
-       ]
-     ] [
-       fhir:url [
-         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"^^xsd:anyURI ;
-         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/province>
-       ] ;
-       fhir:value [
-         a fhir:Coding ;
-         fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
-         ] ;
-         fhir:code [ fhir:v "1704000000" ] ;
-         fhir:display [ fhir:v "Marinduque" ]
-       ]
-     ] [
-       fhir:url [
-         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"^^xsd:anyURI ;
-         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/province>
-       ] ;
-       fhir:value [
-         a fhir:Coding ;
-         fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
-         ] ;
-         fhir:code [ fhir:v "0402100000" ] ;
-         fhir:display [ fhir:v "Cavite" ]
-       ]
-     ] [
-       fhir:url [
-         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"^^xsd:anyURI ;
-         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/province>
-       ] ;
-       fhir:value [
-         a fhir:Coding ;
-         fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
-         ] ;
-         fhir:code [ fhir:v "1705100000" ] ;
-         fhir:display [ fhir:v "Occidental Mindoro" ]
        ]
      ] ) ;
      fhir:line ( [ fhir:v "123 Mabini Street" ] [ fhir:v "Barangay Malinis" ] ) ;

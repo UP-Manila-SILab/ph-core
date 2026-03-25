@@ -141,7 +141,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-25T03:31:02+00:00",
+  "date" : "2026-03-25T03:34:45+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -826,9 +826,9 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "valueString" : "NamingSystem"
       }],
       "reference" : {
-        "reference" : "NamingSystem/doh-nhfr-code-ns"
+        "reference" : "NamingSystem/DOHNHFRCodeNS"
       },
-      "name" : "DOH National Health Faciities Registry Code",
+      "name" : "DOH National Health Facility Registry Code",
       "description" : "Health Facility Code (HFC) from the National Health Facility Registry.",
       "exampleBoolean" : false
     },
@@ -1210,7 +1210,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "valueString" : "NamingSystem"
       }],
       "reference" : {
-        "reference" : "NamingSystem/philhealth-accreditation-no"
+        "reference" : "NamingSystem/PhilHealthPANNS"
       },
       "name" : "PAN - PhilHealth Accreditation Number",
       "description" : "The unique number issued by PhilHealth to accredited institutions.",
@@ -1234,7 +1234,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "valueString" : "NamingSystem"
       }],
       "reference" : {
-        "reference" : "NamingSystem/philhealth-employer-no"
+        "reference" : "NamingSystem/PhilHealthPENNS"
       },
       "name" : "PEN - PhilHealth Employer Number",
       "description" : "The unique number issued by PhilHealth to employers.",
@@ -1510,6 +1510,30 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/ph-core-philhealth-pan"
+      },
+      "name" : "PhilHealth Accreditation Number",
+      "description" : "The unique number issued by PhilHealth to accredited institutions.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-philhealth-pen"
+      },
+      "name" : "PhilHealth Employer Number",
+      "description" : "The unique number issued by PhilHealth to employers.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/ph-core-philsys-id"
       },
       "name" : "PhilSys Identification Number (PhilSys ID)",
@@ -1522,10 +1546,10 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "valueString" : "NamingSystem"
       }],
       "reference" : {
-        "reference" : "NamingSystem/philsys-id-ns"
+        "reference" : "NamingSystem/PhilSysIDNS"
       },
       "name" : "PhilSys Identification Number (PhilSys ID)",
-      "description" : "The National ID Number is a unique and randomly-generated 12-digit permanent identification number that is assigned to every citizen or resident alien upon successful registration to National ID system.",
+      "description" : "The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program.",
       "exampleBoolean" : false
     },
     {
@@ -1546,7 +1570,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "valueString" : "NamingSystem"
       }],
       "reference" : {
-        "reference" : "NamingSystem/philhealth-id-ns"
+        "reference" : "NamingSystem/PhilHealthIDNS"
       },
       "name" : "PIN - PhilHealth Identification Number",
       "description" : "The permanent and unique number issued by PhilHealth to individual members and to each and every dependent.",

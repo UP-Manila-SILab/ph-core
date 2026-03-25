@@ -74,7 +74,7 @@ Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR
     }
   }],
   "identifier" : [{
-    "system" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns",
+    "system" : "http://philhealth.gov.ph/fhir/Identifier/philhealth-id",
     "value" : "63-584789845-5"
   }],
   "active" : true,
@@ -86,6 +86,14 @@ Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR
   "birthDate" : "1985-06-15",
   "address" : [{
     "extension" : [{
+      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
+      "valueCoding" : {
+        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "code" : "1380100001",
+        "display" : "Barangay 1"
+      }
+    },
+    {
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
       "valueCoding" : {
         "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
@@ -94,59 +102,11 @@ Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR
       }
     },
     {
-      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
-      "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-        "code" : "1380100000",
-        "display" : "City of Caloocan"
-      }
-    },
-    {
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
       "valueCoding" : {
         "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
         "code" : "0402100000",
         "display" : "Cavite"
-      }
-    },
-    {
-      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
-      "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-        "code" : "0403400000",
-        "display" : "Laguna"
-      }
-    },
-    {
-      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
-      "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-        "code" : "0405800000",
-        "display" : "Rizal"
-      }
-    },
-    {
-      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
-      "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-        "code" : "1704000000",
-        "display" : "Marinduque"
-      }
-    },
-    {
-      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
-      "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-        "code" : "0402100000",
-        "display" : "Cavite"
-      }
-    },
-    {
-      "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
-      "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-        "code" : "1705100000",
-        "display" : "Occidental Mindoro"
       }
     }],
     "line" : ["123 Mabini Street", "Barangay Malinis"],

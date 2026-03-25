@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-organization
   "name" : "PHCoreOrganization",
   "title" : "PH Core Organization",
   "status" : "draft",
-  "date" : "2026-03-25T03:31:02+00:00",
+  "date" : "2026-03-25T03:34:45+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -107,28 +107,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-organization
       "id" : "Organization.identifier:NhfrCode",
       "path" : "Organization.identifier",
       "sliceName" : "NhfrCode",
-      "short" : "DOH NHFR Code",
-      "definition" : "Philippines Department of Health National Health Facilities Registry Code",
       "min" : 0,
       "max" : "*",
+      "type" : [{
+        "code" : "Identifier",
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-doh-nhfr-code"]
+      }],
       "mustSupport" : true
     },
     {
       "id" : "Organization.identifier:PAN",
       "path" : "Organization.identifier",
       "sliceName" : "PAN",
-      "short" : "PhilHealth Accreditation Number",
       "min" : 0,
       "max" : "*",
+      "type" : [{
+        "code" : "Identifier",
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pan"]
+      }],
       "mustSupport" : true
     },
     {
       "id" : "Organization.identifier:PEN",
       "path" : "Organization.identifier",
       "sliceName" : "PEN",
-      "short" : "PhilHealth Employer Number",
       "min" : 0,
       "max" : "*",
+      "type" : [{
+        "code" : "Identifier",
+        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pen"]
+      }],
       "mustSupport" : true
     },
     {
