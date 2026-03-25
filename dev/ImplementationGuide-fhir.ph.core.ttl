@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-25T02:48:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-25T03:05:28+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -2524,6 +2524,28 @@
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner"^^xsd:anyURI ;
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Procedure"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Procedure/procedure-single-example> ;
+         fhir:reference [ fhir:v "Procedure/procedure-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "procedure-single-example" ] ;
+       fhir:description [ fhir:v "A comprehensive example of an appendectomy procedure performed on Juan Dela Cruz, demonstrating extensive use of Procedure resource elements including identifiers, status history, multiple performers, body site, complications, and follow-up care." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure>
        ]
      ] [
        fhir:extension ( [

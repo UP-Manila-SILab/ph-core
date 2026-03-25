@@ -118,6 +118,7 @@ These are example instances that show what data produced and consumed by systems
 | [observation-single-example](Observation-observation-single-example.md) | Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal). |
 | [patient-single-example](Patient-patient-single-example.md) | Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines. |
 | [practitioner-single-example](Practitioner-practitioner-single-example.md) | Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. |
+| [procedure-single-example](Procedure-procedure-single-example.md) | A comprehensive example of an appendectomy procedure performed on Juan Dela Cruz, demonstrating extensive use of Procedure resource elements including identifiers, status history, multiple performers, body site, complications, and follow-up care. |
 | [relatedperson-single-example](RelatedPerson-relatedperson-single-example.md) | Maria Cruz Santos is a female born on 1 January 1955. |
 | [task-single-example](Task-task-single-example.md) | A laboratory task for Juan Dela Cruz requested by Dr. Maria Clara Santos. The task is to collect a blood sample for a routine CBC test. |
 | [transaction-example](Bundle-transaction-example.md) | Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos. |

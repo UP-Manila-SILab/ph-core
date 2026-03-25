@@ -1,9 +1,9 @@
 PHCoreImplementationGuide : Validation Results
 =========================================
 
-err = 67, warn = 12, info = 62
+err = 72, warn = 13, info = 62
 IG Publisher Version: 2.2.3
-Generated Wed Mar 25 02:49:11 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.0 (canonical = http://doh.gov.ph/fhir/ph-core)
+Generated Wed Mar 25 03:06:58 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.0 (canonical = http://doh.gov.ph/fhir/ph-core)
  Build Errors : 0 / 0 / 0
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-allergy-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-example-allergy : 0 / 0 / 1
@@ -35,6 +35,7 @@ Generated Wed Mar 25 02:49:11 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-patient-single-example : 3 / 0 / 12
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Practitioner-example-practitioner : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Practitioner-practitioner-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Procedure-procedure-single-example : 5 / 2 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/RelatedPerson-relatedperson-single-example : 0 / 0 / 4
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-barangay : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-city-municipality : 1 / 0 / 2
@@ -57,7 +58,7 @@ Generated Wed Mar 25 02:49:11 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-philsys-id : 1 / 1 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitioner : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitionerrole : 1 / 1 / 2
- /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-procedure : 1 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-procedure : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-relatedperson : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-task : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-province : 1 / 0 / 2
@@ -161,6 +162,14 @@ ERROR: Patient/patient-single-example: Patient.address[0]: Address.extension:pro
 ERROR: Patient/patient-single-example: Patient.address[0]: Address.extension:cityMunicipality: max allowed = 1, but found 2 (from http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address|0.1.0)
 == fsh-generated/resources/Practitioner-example-practitioner.json ==
 == fsh-generated/resources/Practitioner-practitioner-single-example.json ==
+== fsh-generated/resources/Procedure-procedure-single-example.json ==
+WARNING: Procedure/procedure-single-example: Procedure.identifier[0].system: No definition could be found for URL value 'http://doh.gov.ph/fhir/ph-core/NamingSystem/procedure-id'
+WARNING: Procedure/procedure-single-example: Procedure.identifier[1].system: No definition could be found for URL value 'http://philhealth.gov.ph/procedure'
+ERROR: Procedure/procedure-single-example: Procedure.statusReason.coding[0].display: Wrong Display Name 'Procedure carried out successfully' for http://snomed.info/sct#281501002. Valid display is one of 2 choices: 'Intra-abdominal digestive structure' (en) or 'Intra-abdominal digestive structure (body structure)' (en) (for the language(s) 'en')
+ERROR: Procedure/procedure-single-example: Procedure.bodySite[0].coding[0].code: Unknown code '181250006' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)
+ERROR: Procedure/procedure-single-example: Procedure.complication[0].coding[0].code: Unknown code '109721000' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)
+ERROR: Procedure/procedure-single-example: Procedure.followUp[0].coding[0].display: Wrong Display Name 'Postsurgical wound care' for http://snomed.info/sct#18949003. Valid display is one of 8 choices: 'Change of dressing' (en), 'Change of dressing, NOS' (en), 'Reapplying a fresh dressing' (en), 'Renewing dressing' (en), 'Redressing wound' (en), 'Repeating dressing' (en), 'Change of dressing (procedure)' (en) or 'Dressing change' (en) (for the language(s) 'en')
+ERROR: Procedure/procedure-single-example: Procedure.usedCode[0].coding[0].display: Wrong Display Name 'Surgical instrument' for http://snomed.info/sct#363708005. Valid display is one of 2 choices: 'Temporally follows' (en) or 'Temporally follows (attribute)' (en) (for the language(s) 'en')
 == fsh-generated/resources/RelatedPerson-relatedperson-single-example.json ==
 INFORMATION: RelatedPerson/relatedperson-single-example: RelatedPerson.identifier[0]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/StructureDefinition-barangay.json ==
@@ -240,7 +249,6 @@ WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/Structu
 == fsh-generated/resources/StructureDefinition-ph-core-procedure.json ==
 INFORMATION: StructureDefinition/ph-core-procedure: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/ph-core-procedure: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
-WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-ph-core-relatedperson.json ==
 INFORMATION: StructureDefinition/ph-core-relatedperson: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/ph-core-relatedperson: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')

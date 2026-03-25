@@ -16,6 +16,7 @@ This resource is primarily used for the identification and definition of a medic
 
 **Usages:**
 
+* Refer to this Profile: [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
 * Examples for this Profile: [Medication/example-medication](Medication-example-medication.md) and [Medication/medication-single-example](Medication-medication-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-medication)
@@ -42,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medication.c
   "title" : "PH Core Medication",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T02:48:03+00:00",
+  "date" : "2026-03-25T03:05:28+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

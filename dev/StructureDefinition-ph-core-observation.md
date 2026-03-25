@@ -16,7 +16,7 @@ Measurements and simple assertions made about a patient, device or other subject
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md)
+* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md) and [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
 * Examples for this Profile: [Observation/blood-pressure](Observation-blood-pressure.md) and [Observation/observation-single-example](Observation-observation-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-observation)
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-observation.
   "name" : "PHCoreObservation",
   "title" : "PH Core Observation",
   "status" : "draft",
-  "date" : "2026-03-25T02:48:03+00:00",
+  "date" : "2026-03-25T03:05:28+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

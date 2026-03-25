@@ -82,7 +82,7 @@ This publication includes IP covered under the following statements.
 
 * This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
 
-* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://hl7.org/fhir/R4/codesystem-snomedct.html): [AllergyIntolerance/allergy-single-example](AllergyIntolerance-allergy-single-example.md), [AllergyIntolerance/example-allergy](AllergyIntolerance-example-allergy.md)... Show 6 more, [Bundle/transaction-example](Bundle-transaction-example.md), [Condition/condition-single-example](Condition-condition-single-example.md), [Condition/example-condition](Condition-example-condition.md), [Observation/blood-pressure](Observation-blood-pressure.md), [Observation/observation-single-example](Observation-observation-single-example.md) and [Task/task-single-example](Task-task-single-example.md)
+* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://hl7.org/fhir/R4/codesystem-snomedct.html): [AllergyIntolerance/allergy-single-example](AllergyIntolerance-allergy-single-example.md), [AllergyIntolerance/example-allergy](AllergyIntolerance-example-allergy.md)... Show 7 more, [Bundle/transaction-example](Bundle-transaction-example.md), [Condition/condition-single-example](Condition-condition-single-example.md), [Condition/example-condition](Condition-example-condition.md), [Observation/blood-pressure](Observation-blood-pressure.md), [Observation/observation-single-example](Observation-observation-single-example.md), [Procedure/procedure-single-example](Procedure-procedure-single-example.md) and [Task/task-single-example](Task-task-single-example.md)
 
 
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
@@ -131,7 +131,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-25T02:48:03+00:00",
+  "date" : "2026-03-25T03:05:28+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -1421,6 +1421,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       "name" : "practitioner-single-example",
       "description" : "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Procedure"
+      }],
+      "reference" : {
+        "reference" : "Procedure/procedure-single-example"
+      },
+      "name" : "procedure-single-example",
+      "description" : "A comprehensive example of an appendectomy procedure performed on Juan Dela Cruz, demonstrating extensive use of Procedure resource elements including identifiers, status history, multiple performers, body site, complications, and follow-up care.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure"
     },
     {
       "extension" : [{

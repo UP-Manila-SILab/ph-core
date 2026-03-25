@@ -96,5 +96,6 @@
 * [patient-single-example (Patient)](Patient-patient-single-example.md)
 * [example-practitioner (Practitioner)](Practitioner-example-practitioner.md)
 * [practitioner-single-example (Practitioner)](Practitioner-practitioner-single-example.md)
+* [procedure-single-example (Procedure)](Procedure-procedure-single-example.md)
 * [relatedperson-single-example (RelatedPerson)](RelatedPerson-relatedperson-single-example.md)
 * [task-single-example (Task)](Task-task-single-example.md)

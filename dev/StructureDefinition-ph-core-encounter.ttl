@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PHCoreEncounter"] ; # 
   fhir:title [ fhir:v "PH Core Encounter"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-25T02:48:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-25T03:05:28+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;

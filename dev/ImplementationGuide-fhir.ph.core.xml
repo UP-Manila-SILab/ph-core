@@ -12,7 +12,7 @@
   <name value="PHCoreImplementationGuide"/>
   <title value="Draft PH Core Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-03-25T02:48:03+00:00"/>
+  <date value="2026-03-25T03:05:28+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>
@@ -1089,6 +1089,17 @@
       <name value="practitioner-single-example"/>
       <description value="Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph."/>
       <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/procedure-single-example"/>
+      </reference>
+      <name value="procedure-single-example"/>
+      <description value="A comprehensive example of an appendectomy procedure performed on Juan Dela Cruz, demonstrating extensive use of Procedure resource elements including identifiers, status history, multiple performers, body site, complications, and follow-up care."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

@@ -32,7 +32,7 @@ Partial Establishments and Health Products to be published by the [PH FDA](https
   "title" : "Drugs",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T02:48:03+00:00",
+  "date" : "2026-03-25T03:05:28+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
