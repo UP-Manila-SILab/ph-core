@@ -12,7 +12,7 @@
   <name value="PHCoreImplementationGuide"/>
   <title value="Draft PH Core Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-03-25T03:10:05+00:00"/>
+  <date value="2026-03-25T03:15:34+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>
@@ -527,7 +527,7 @@
       </reference>
       <name value="condition-single-example"/>
       <description value="Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus."/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -890,6 +890,17 @@
       </reference>
       <name value="PH Core Address"/>
       <description value="An address for the individual."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ph-core-condition"/>
+      </reference>
+      <name value="PH Core Condition"/>
+      <description value="Captures Condition."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

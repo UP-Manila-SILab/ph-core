@@ -13,6 +13,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 
 | | |
 | :--- | :--- |
+| [PH Core Condition](StructureDefinition-ph-core-condition.md) | Captures Condition. |
 | [PH Core Encounter](StructureDefinition-ph-core-encounter.md) | This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [FHIR R4 Encounter](https://www.hl7.org/fhir/R4/encounter.html) resource and identifies the **additional** mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context. |
 | [PH Core Immunization](StructureDefinition-ph-core-immunization.md) | Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party. |
 | [PH Core Location](StructureDefinition-ph-core-location.md) | This profile localizes the FHIR R4 Location resource to the Philippine context. |

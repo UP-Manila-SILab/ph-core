@@ -132,6 +132,13 @@
   "name" : "PHCoreAddress"
 },
 {
+  "id" : "ph-core-condition",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition",
+  "version" : "0.1.0",
+  "name" : "PHCoreCondition"
+},
+{
   "id" : "ph-core-doh-nhfr-code",
   "type" : "StructureDefinition",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-doh-nhfr-code",

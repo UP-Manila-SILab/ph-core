@@ -88,7 +88,9 @@ This publication includes IP covered under the following statements.
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
 
 * [AllergyIntolerance Clinical Status Codes](http://terminology.hl7.org/7.1.0/CodeSystem-allergyintolerance-clinical.html): [AllergyIntolerance/allergy-single-example](AllergyIntolerance-allergy-single-example.md), [AllergyIntolerance/example-allergy](AllergyIntolerance-example-allergy.md) and [Bundle/transaction-example](Bundle-transaction-example.md)
+* [Condition Category Codes](http://terminology.hl7.org/7.1.0/CodeSystem-condition-category.html): [Condition/condition-single-example](Condition-condition-single-example.md)
 * [Condition Clinical Status Codes](http://terminology.hl7.org/7.1.0/CodeSystem-condition-clinical.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Condition/condition-single-example](Condition-condition-single-example.md) and [Condition/example-condition](Condition-example-condition.md)
+* [ConditionVerificationStatus](http://terminology.hl7.org/7.1.0/CodeSystem-condition-ver-status.html): [Condition/condition-single-example](Condition-condition-single-example.md)
 * [Immunization Funding Source](http://terminology.hl7.org/7.1.0/CodeSystem-immunization-funding-source.html): [Immunization/example-immunization](Immunization-example-immunization.md) and [Immunization/immunization-single-example](Immunization-immunization-single-example.md)
 * [Observation Category Codes](http://terminology.hl7.org/7.1.0/CodeSystem-observation-category.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Observation/blood-pressure](Observation-blood-pressure.md) and [Observation/observation-single-example](Observation-observation-single-example.md)
 * [contactRole2](http://terminology.hl7.org/7.1.0/CodeSystem-v2-0131.html): [PHCorePatient](StructureDefinition-ph-core-patient.md)
@@ -131,7 +133,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-25T03:10:05+00:00",
+  "date" : "2026-03-25T03:15:34+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -808,7 +810,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       },
       "name" : "condition-single-example",
       "description" : "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.",
-      "exampleBoolean" : true
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition"
     },
     {
       "extension" : [{
@@ -1204,6 +1206,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       },
       "name" : "PH Core Address",
       "description" : "An address for the individual.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-condition"
+      },
+      "name" : "PH Core Condition",
+      "description" : "Captures Condition.",
       "exampleBoolean" : false
     },
     {

@@ -128,6 +128,12 @@
     }
   ],
   "profiles": {
+    "Condition": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition",
+        "title": "PH Core Condition"
+      }
+    ],
     "Encounter": [
       {
         "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter",

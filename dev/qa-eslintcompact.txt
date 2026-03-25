@@ -87,6 +87,8 @@ PHCoreImplementationGuide
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-occupation.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this extension (BUSINESSRULE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-address.json: line 1, col 19365, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-address.json: line 1, col 19365, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
+/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-condition.json: line 1, col 26855, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
+/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-condition.json: line 1, col 26855, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code.json: line 1, col 10734, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code.json: line 1, col 10734, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this data type profile (BUSINESSRULE)
@@ -152,5 +154,5 @@ PHCoreImplementationGuide
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-regions.json: line 1, col 1601, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
 /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-regions.json: line 1, col 1601, Error - Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en') (INVALID)
 
-err = 74, warn = 13, info = 63
+err = 75, warn = 13, info = 64
 IG Publisher Version: 2.2.3

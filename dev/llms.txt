@@ -37,6 +37,7 @@
 
 ### Resource Profiles
 
+* [PH Core Condition](StructureDefinition-ph-core-condition.md)
 * [PH Core Encounter](StructureDefinition-ph-core-encounter.md)
 * [PH Core Immunization](StructureDefinition-ph-core-immunization.md)
 * [PH Core Location](StructureDefinition-ph-core-location.md)

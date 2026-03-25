@@ -1,7 +1,7 @@
 PHCoreImplementationGuide : Validation Results
 =========================================
 
-err = 74, warn = 13, info = 63
+err = 75, warn = 13, info = 64
 $--
 Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov.ph/fhir/ph-core)
  Build Errors : 0 / 0 / 0
@@ -46,8 +46,9 @@ Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-middle-name : 1 / 2 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-occupation : 1 / 1 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-address : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-condition : 1 / 0 / 3
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code : 1 / 1 / 2
- /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter : 1 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-immunization : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-location : 1 / 1 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medication : 1 / 0 / 2
@@ -204,6 +205,9 @@ WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/Structu
 == fsh-generated/resources/StructureDefinition-ph-core-address.json ==
 INFORMATION: StructureDefinition/ph-core-address: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/ph-core-address: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-condition.json ==
+INFORMATION: StructureDefinition/ph-core-condition: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-condition: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
 == fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code.json ==
 INFORMATION: StructureDefinition/ph-core-doh-nhfr-code: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/ph-core-doh-nhfr-code: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')

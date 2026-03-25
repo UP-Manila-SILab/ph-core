@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-25T03:10:05+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-25T03:15:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -1438,8 +1438,9 @@
        fhir:name [ fhir:v "condition-single-example" ] ;
        fhir:description [ fhir:v "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus." ] ;
        fhir:example [
-         a fhir:Boolean ;
-         fhir:v true
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition>
        ]
      ] [
        fhir:extension ( [
@@ -2142,6 +2143,27 @@
        ] ;
        fhir:name [ fhir:v "PH Core Address" ] ;
        fhir:description [ fhir:v "An address for the individual." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-condition" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Condition" ] ;
+       fhir:description [ fhir:v "Captures Condition." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false

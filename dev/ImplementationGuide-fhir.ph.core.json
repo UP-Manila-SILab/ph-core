@@ -11,7 +11,7 @@
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-03-25T03:10:05+00:00",
+  "date" : "2026-03-25T03:15:34+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -688,7 +688,7 @@
       },
       "name" : "condition-single-example",
       "description" : "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.",
-      "exampleBoolean" : true
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition"
     },
     {
       "extension" : [{
@@ -1084,6 +1084,18 @@
       },
       "name" : "PH Core Address",
       "description" : "An address for the individual.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-condition"
+      },
+      "name" : "PH Core Condition",
+      "description" : "Captures Condition.",
       "exampleBoolean" : false
     },
     {
