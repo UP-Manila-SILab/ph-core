@@ -48,6 +48,7 @@
 * [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md)
 * [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
 * [PH Core RelatedPerson](StructureDefinition-ph-core-relatedperson.md)
+* [PH Core ServiceRequest](StructureDefinition-ph-core-serviceRequest.md)
 * [PH Core Task](StructureDefinition-ph-core-task.md)
 
 ### Extensions
@@ -98,4 +99,5 @@
 * [practitioner-single-example (Practitioner)](Practitioner-practitioner-single-example.md)
 * [procedure-single-example (Procedure)](Procedure-procedure-single-example.md)
 * [relatedperson-single-example (RelatedPerson)](RelatedPerson-relatedperson-single-example.md)
+* [servicerequest-single-example (ServiceRequest)](ServiceRequest-servicerequest-single-example.md)
 * [task-single-example (Task)](Task-task-single-example.md)

@@ -35,7 +35,7 @@ Mock of the Philippine Standard Geographic Code.
   "title" : "Mock PSGC",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:05:28+00:00",
+  "date" : "2026-03-25T03:10:05+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

@@ -132,8 +132,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
     "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
@@ -148,8 +148,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-observation.html" : "PH Core Observation"
+    "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
@@ -460,9 +461,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
     "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code"
+    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -476,9 +477,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
     "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code"
+    "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/immunization-function",
@@ -647,17 +648,18 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
-    "StructureDefinition-ph-core-location.html" : "PH Core Location",
-    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
-    "StructureDefinition-ph-core-task.html" : "PH Core Task",
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
-    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
-    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
-    "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
     "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
+    "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
+    "StructureDefinition-ph-core-location.html" : "PH Core Location",
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
+    "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
+    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
+    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
+    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
@@ -731,6 +733,20 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTMedicationAsNeededReasonCodes",
+    "title" : "SNOMED CT Medication As Needed Reason Codes",
+    "description" : "This value set includes all clinical findings from SNOMED CT - provided as an exemplar value set.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.96"],
+    "sources" : ["2.16.840.1.113883.4.642.3.96"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
@@ -859,6 +875,20 @@
     "StructureDefinition-ph-core-organization.html" : "PH Core Organization"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/participant-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipantRoles",
+    "title" : "Participant Roles",
+    "description" : "Roles of participants that may be included in a care team.  Defined as: Is a Person, Healthcare professional (occupation) or Healthcare related organization (qualifier value).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.152"],
+    "sources" : ["2.16.840.1.113883.4.642.3.152"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/performer-role",
     "version" : "4.0.1",
     "status" : "draft",
@@ -870,8 +900,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.433"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-task.html" : "PH Core Task",
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
+    "StructureDefinition-ph-core-task.html" : "PH Core Task"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/practitioner-role",
@@ -914,6 +944,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
     "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
@@ -970,6 +1001,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.432"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
     "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
@@ -1018,6 +1050,20 @@
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/request-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestIntent",
+    "title" : "RequestIntent",
+    "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+    "systems" : ["http://hl7.org/fhir/request-intent"],
+    "oids" : ["2.16.840.1.113883.4.642.3.113"],
+    "sources" : ["2.16.840.1.113883.4.642.3.113"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/request-priority",
     "version" : "4.0.1",
     "status" : "draft",
@@ -1029,7 +1075,22 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
     "StructureDefinition-ph-core-task.html" : "PH Core Task"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestStatus",
+    "title" : "RequestStatus",
+    "description" : "Codes identifying the lifecycle stage of a request.",
+    "systems" : ["http://hl7.org/fhir/request-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.111"],
+    "sources" : ["2.16.840.1.113883.4.642.3.111"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/service-type",
@@ -1044,6 +1105,34 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/servicerequest-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ServiceRequestCategoryCodes",
+    "title" : "Service Request Category Codes",
+    "description" : "An example value set of SNOMED CT concepts that can classify a requested service",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.434"],
+    "sources" : ["2.16.840.1.113883.4.642.3.434"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ServiceRequestOrderDetailsCodes",
+    "title" : "Service Request Order Details Codes",
+    "description" : "An example value set of Codified order entry details concepts.  These concepts only make sense in the context of what is being ordered.  This example is for a patient ventilation order",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.435"],
+    "sources" : ["2.16.840.1.113883.4.642.3.435"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/task-code",
@@ -1196,6 +1285,7 @@
     "sources" : ["2.16.840.1.113883.1.11.17660"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
     "StructureDefinition-ph-core-location.html" : "PH Core Location"
   }]
 }

@@ -237,6 +237,13 @@
   "name" : "PHCoreRelatedPerson"
 },
 {
+  "id" : "ph-core-serviceRequest",
+  "type" : "StructureDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest",
+  "version" : "0.1.0",
+  "name" : "PHCoreServiceRequest"
+},
+{
   "id" : "ph-core-task",
   "type" : "StructureDefinition",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task",

@@ -194,6 +194,12 @@
         "title": "PH Core RelatedPerson"
       }
     ],
+    "ServiceRequest": [
+      {
+        "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest",
+        "title": "PH Core ServiceRequest"
+      }
+    ],
     "Task": [
       {
         "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task",

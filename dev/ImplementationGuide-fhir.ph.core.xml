@@ -12,7 +12,7 @@
   <name value="PHCoreImplementationGuide"/>
   <title value="Draft PH Core Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-03-25T03:05:28+00:00"/>
+  <date value="2026-03-25T03:10:05+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>
@@ -1029,6 +1029,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/ph-core-serviceRequest"/>
+      </reference>
+      <name value="PH Core ServiceRequest"/>
+      <description value="The PH Core ServiceRequest Profile is a Philippine-specific FHIR profile that represents a record of a request for services such as diagnostic investigations, treatments, or operations to be performed within the Philippine health system. It constrains the base FHIR ServiceRequest resource by defining minimum expectations on core elements, extensions, vocabularies, and value sets relevant to local clinical and administrative workflows. It serves as a nationally consistent baseline for recording, searching, and fetching service request information to support interoperable health information exchange across Philippine health facilities and programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/ph-core-task"/>
       </reference>
       <name value="PH Core Task"/>
@@ -1166,6 +1177,17 @@
       <name value="relatedperson-single-example"/>
       <description value="Maria Cruz Santos is a female born on 1 January 1955."/>
       <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/servicerequest-single-example"/>
+      </reference>
+      <name value="servicerequest-single-example"/>
+      <description value="A laboratory service request for fasting blood glucose test ordered by Dr. Maria Clara Santos for patient Juan Dela Cruz during an ambulatory encounter."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

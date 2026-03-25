@@ -1,7 +1,7 @@
 PHCoreImplementationGuide : Validation Results
 =========================================
 
-err = 72, warn = 13, info = 62
+err = 74, warn = 13, info = 63
 $--
 Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov.ph/fhir/ph-core)
  Build Errors : 0 / 0 / 0
@@ -37,6 +37,7 @@ Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Practitioner-practitioner-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Procedure-procedure-single-example : 5 / 2 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/RelatedPerson-relatedperson-single-example : 0 / 0 / 4
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ServiceRequest-servicerequest-single-example : 1 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-barangay : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-city-municipality : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-educational-attainment : 1 / 1 / 2
@@ -60,6 +61,7 @@ Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitionerrole : 1 / 1 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-procedure : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-relatedperson : 1 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-serviceRequest : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-task : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-province : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-race : 1 / 0 / 2
@@ -172,6 +174,8 @@ ERROR: Procedure/procedure-single-example: Procedure.followUp[0].coding[0].displ
 ERROR: Procedure/procedure-single-example: Procedure.usedCode[0].coding[0].display: Wrong Display Name 'Surgical instrument' for http://snomed.info/sct#363708005. Valid display is one of 2 choices: 'Temporally follows' (en) or 'Temporally follows (attribute)' (en) (for the language(s) 'en')
 == fsh-generated/resources/RelatedPerson-relatedperson-single-example.json ==
 INFORMATION: RelatedPerson/relatedperson-single-example: RelatedPerson.identifier[0]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/ServiceRequest-servicerequest-single-example.json ==
+ERROR: ServiceRequest/servicerequest-single-example: ServiceRequest.code.coding[0].display: Wrong Display Name 'Fasting blood glucose measurement' for http://snomed.info/sct#271061004. Valid display is one of 5 choices: 'Random blood glucose measurement' (en), 'Random blood glucose level' (en), 'Random blood glucose measurement (procedure)' (en), 'RBG - Random blood glucose' (en) or 'Random blood glucose' (en) (for the language(s) 'en')
 == fsh-generated/resources/StructureDefinition-barangay.json ==
 INFORMATION: StructureDefinition/barangay: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/barangay: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
@@ -252,6 +256,9 @@ ERROR: StructureDefinition/ph-core-procedure: StructureDefinition.jurisdiction[0
 == fsh-generated/resources/StructureDefinition-ph-core-relatedperson.json ==
 INFORMATION: StructureDefinition/ph-core-relatedperson: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/ph-core-relatedperson: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
+== fsh-generated/resources/StructureDefinition-ph-core-serviceRequest.json ==
+INFORMATION: StructureDefinition/ph-core-serviceRequest: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: StructureDefinition/ph-core-serviceRequest: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
 == fsh-generated/resources/StructureDefinition-ph-core-task.json ==
 INFORMATION: StructureDefinition/ph-core-task: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/ph-core-task: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')

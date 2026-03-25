@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-25T03:05:28+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-25T03:10:05+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -2410,6 +2410,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest> ;
+         fhir:reference [ fhir:v "StructureDefinition/ph-core-serviceRequest" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core ServiceRequest" ] ;
+       fhir:description [ fhir:v "The PH Core ServiceRequest Profile is a Philippine-specific FHIR profile that represents a record of a request for services such as diagnostic investigations, treatments, or operations to be performed within the Philippine health system. It constrains the base FHIR ServiceRequest resource by defining minimum expectations on core elements, extensions, vocabularies, and value sets relevant to local clinical and administrative workflows. It serves as a nationally consistent baseline for recording, searching, and fetching service request information to support interoperable health information exchange across Philippine health facilities and programs." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task> ;
          fhir:reference [ fhir:v "StructureDefinition/ph-core-task" ]
        ] ;
@@ -2673,6 +2694,28 @@
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"^^xsd:anyURI ;
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/ServiceRequest/servicerequest-single-example> ;
+         fhir:reference [ fhir:v "ServiceRequest/servicerequest-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "servicerequest-single-example" ] ;
+       fhir:description [ fhir:v "A laboratory service request for fasting blood glucose test ordered by Dr. Maria Clara Santos for patient Juan Dela Cruz during an ambulatory encounter." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest>
        ]
      ] [
        fhir:extension ( [
