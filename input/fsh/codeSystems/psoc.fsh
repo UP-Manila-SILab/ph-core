@@ -4,6 +4,7 @@ Title: "Mock PSOC"
 Description: "Mock of the Philippine Standard Occupational Classification."
 * insert ShareableCodeSystem
 * ^url = "https://psa.gov.ph/classification/psoc/unit"
+* ^version = "0.1.0"
 * ^content = #example
 * #111102 "Hospital Administrator" "Manages hospital operations"
 * #111103 "Medical Department Head" "Head of a medical department"
