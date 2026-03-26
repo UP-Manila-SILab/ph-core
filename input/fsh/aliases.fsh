@@ -16,3 +16,4 @@ Alias: $v3-roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 Alias: $v2-0443 = http://terminology.hl7.org/CodeSystem/v2-0443
 Alias: $request-priority = http://hl7.org/fhir/request-priority
+Alias: $medicationdispense-performer-function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function

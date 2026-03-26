@@ -18,7 +18,7 @@ Description: "Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipin
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
-* dosageInstruction.route = $v3-RouteOfAdministration#PO "Oral"
+* dosageInstruction.route = $v3-RouteOfAdministration#PO "Swallow, oral"
 * dosageInstruction.doseAndRate.doseQuantity = 1 '1' "tablet"
 * dispenseRequest.numberOfRepeatsAllowed = 0
 * dispenseRequest.quantity = 30 $sct#331691000 "Tablet"

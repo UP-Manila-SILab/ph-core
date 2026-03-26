@@ -7,7 +7,7 @@ Description: "Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela
 * context = Reference(Encounter/encounter-single-example)
 * medicationCodeableConcept = PHFDACPRCS#DRP-10144 "Twinact"
 * medicationCodeableConcept.text = "Twinact 40mg/5mg tablet"
-* performer.function = $v3-roleCode#DISP "Dispensary"
+* performer.function = $medicationdispense-performer-function#finalchecker "Final Checker"
 * performer.actor = Reference(Practitioner/practitioner-single-example)
 * authorizingPrescription = Reference(MedicationRequest/medicationrequest-single-example)
 * type = $sct#373784005 "Dispensing medication"
