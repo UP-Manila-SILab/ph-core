@@ -2,7 +2,7 @@ CodeSystem: PHFDACPRCS
 Id: PHFDACPRCS
 Title: "PH FDA Certificate of Product Registration (CPR) CodeSystem"
 Description: "Registered drug products from the Philippine Food and Drug Administration (FDA)"
-* ^url = "https://verification.fda.gov.ph/"
+* ^url = "https://verification.fda.gov.ph"
 * ^version = "2026.03.21.1115"
 * ^status = #active
 * ^experimental = false

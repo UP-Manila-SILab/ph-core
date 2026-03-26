@@ -4,7 +4,6 @@ Title: "Mock PSGC"
 Description: "Mock of the Philippine Standard Geographic Code."
 * insert ShareableCodeSystem
 * ^url = "https://psa.gov.ph/classification/psgc"
-* ^version = "0.1.0"
 * #1380100001 "Barangay 1"
 * #1380100000 "City of Caloocan"
 * #1380200000 "City of Las Piñas"
