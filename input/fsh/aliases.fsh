@@ -1,5 +1,6 @@
 Alias: $sct = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
+Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $PSA = https://psa.gov.ph/classification
 Alias: $PSCED = https://psa.gov.ph/classification/psced/level
 Alias: $PSGC = https://psa.gov.ph/classification/psgc

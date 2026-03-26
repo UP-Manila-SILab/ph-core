@@ -10,7 +10,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * active = true
 * gender = #male
 * birthDate = "1985-06-15"
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines"
+* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines (the)"
 * extension[nationality].extension[period].valuePeriod.start = "2020-01-01"
 * extension[nationality].extension[period].valuePeriod.end = "2023-01-01"
 * extension[religion].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
@@ -21,6 +21,10 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * extension[indigenousGroup].valueCodeableConcept = IndigenousGroupsCS#Aetas "Aetas" 
 * extension[race].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/race"
 * extension[race].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-Race#2036-2 "Filipino"
+* extension[educationalAttainment].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/educational-attainment"
+* extension[educationalAttainment].valueCodeableConcept = $PSCED#C201301 "Elementary Graduate"
+* extension[occupation].extension[occupationClassification].valueCodeableConcept = $PSOC#111102 "Barangay Chairman"
+* extension[occupation].extension[occupationLength].valuePeriod.start = "2020-01-01"
 * identifier.system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"
 * identifier.value = "63-584789845-5"
 * address.line = "123 Mabini Street"

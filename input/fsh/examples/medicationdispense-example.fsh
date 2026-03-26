@@ -11,7 +11,7 @@ Description: "Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela
 * performer.actor = Reference(Practitioner/practitioner-single-example)
 * authorizingPrescription = Reference(MedicationRequest/medicationrequest-single-example)
 * type = $sct#373784005 "Dispensing medication"
-* quantity = 30 $sct#331691000 "Tablet"
+* quantity = 30 $sct#732936001 "Tablet"
 * daysSupply = 7 'd' "days"
 * whenPrepared = "2025-03-15T10:30:00+08:00"
 * whenHandedOver = "2025-03-15T11:00:00+08:00"
