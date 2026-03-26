@@ -181,9 +181,7 @@ language: en
 parameters:
   special-url:
     - https://verification.fda.gov.ph/
-    - https://psa.gov.ph/classification/psced/level
-    - https://psa.gov.ph/classification/psgc
-    - https://psa.gov.ph/classification/psoc/unit
+    - http://my-hospital.org/internal-id
 
 # ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
 # │  The flags below configure aspects of how SUSHI processes FSH.                                 │
