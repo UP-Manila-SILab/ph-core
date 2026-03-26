@@ -6,3 +6,7 @@ Description: "This profile localizes the FHIR R4 Location resource to the Philip
 * address only PHCoreAddress
 * managingOrganization only Reference(ph-core-organization)
 * partOf only Reference(ph-core-location)
+
+* insert CodeableConceptMS(type)
+* insert CodeableConceptMS(physicalType)
+

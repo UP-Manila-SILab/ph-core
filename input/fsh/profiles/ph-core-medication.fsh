@@ -5,3 +5,7 @@ Title: "PH Core Medication"
 Description: "This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use."
 * insert ExperimentalStructureDefinition
 * code from DrugsVS (preferred)
+
+* insert CodeableConceptMS(code)
+* insert CodeableConceptMS(form)
+* insert CodeableConceptMS(ingredient.itemCodeableConcept)

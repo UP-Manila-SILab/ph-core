@@ -44,3 +44,14 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 * subject only Reference(PHCorePatient or Group)
 
 * type 0..* MS
+
+* insert CodeableConceptMS(serviceType)
+* insert CodeableConceptMS(priority)
+* insert CodeableConceptMS(diagnosis.use)
+* insert CodeableConceptMS(hospitalization.admitSource)
+* insert CodeableConceptMS(hospitalization.reAdmission)
+* insert CodeableConceptMS(hospitalization.dietPreference)
+* insert CodeableConceptMS(hospitalization.specialCourtesy)
+* insert CodeableConceptMS(hospitalization.specialArrangement)
+* insert CodeableConceptMS(location.physicalType)
+
