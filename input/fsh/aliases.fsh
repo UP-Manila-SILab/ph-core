@@ -1,5 +1,6 @@
 Alias: $sct = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
+Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $PSA = https://psa.gov.ph/classification
 Alias: $PSCED = https://psa.gov.ph/classification/psced/level
 Alias: $PSGC = https://psa.gov.ph/classification/psgc
@@ -15,4 +16,6 @@ Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/alle
 Alias: $v3-roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 Alias: $v2-0443 = http://terminology.hl7.org/CodeSystem/v2-0443
+Alias: $v3-Race = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $request-priority = http://hl7.org/fhir/request-priority
+Alias: $medicationdispense-performer-function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function
