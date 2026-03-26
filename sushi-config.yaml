@@ -180,7 +180,7 @@ language: en
 
 parameters:
   special-url:
-    - https://verification.fda.gov.ph/
+    - https://verification.fda.gov.ph
     - http://my-hospital.org/internal-id
     - https://psa.gov.ph/classification/psced/level
     - https://psa.gov.ph/classification/psgc
