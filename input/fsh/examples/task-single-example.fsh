@@ -5,7 +5,7 @@ Description: "A laboratory task for Juan Dela Cruz requested by Dr. Maria Clara 
 * status = #requested
 * intent = #order
 * priority = #routine
-* code = $sct#359962008 "Blood sample collection for laboratory testing"
+* code = $sct#82078001 "Collection of blood specimen for laboratory"
 * code.text = "Blood sample collection"
 * description = "Collect blood sample for complete blood count (CBC) testing"
 * for = Reference(Patient/patient-single-example)
