@@ -14,11 +14,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate-branch-name:
-    name: Validate Branch Name
+  ci:
+    name: CI - Build & QA (Core IG)
     runs-on: ubuntu-latest
+
+    env:
+      JAVA_VERSION: "21"
+      NODE_VERSION: "20"
+      RUBY_VERSION: "3.2"
+      IG_PUBLISHER_VERSION: "latest"
+
     steps:
-      - name: Check for invalid characters in branch name
+      - name: Validate branch name
         run: |
           # Use head_ref for PR events, ref_name for push events
           BRANCH_NAME="${{ github.head_ref || github.ref_name }}"
@@ -39,18 +46,6 @@ jobs:
 
           echo "Branch name validation passed!"
 
-  ci:
-    name: CI - Build & QA (Core IG)
-    runs-on: ubuntu-latest
-    needs: validate-branch-name
-
-    env:
-      JAVA_VERSION: "21"
-      NODE_VERSION: "20"
-      RUBY_VERSION: "3.2"
-      IG_PUBLISHER_VERSION: "latest"
-
-    steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
