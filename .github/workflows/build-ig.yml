@@ -26,20 +26,20 @@ jobs:
 
     steps:
       - name: Validate branch name
+        env:
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
         run: |
-          # Use head_ref for PR events, ref_name for push events
-          BRANCH_NAME="${{ github.head_ref || github.ref_name }}"
           echo "Checking branch name: $BRANCH_NAME"
 
           # Check for forward slash
-          if echo "$BRANCH_NAME" | grep -q "/"; then
+          if echo "$BRANCH_NAME" | grep -q '/'; then
             echo "::error::Branch name contains invalid character '/'. Use hyphens instead of slashes."
             echo "::error::Example: 'feat-my-feature' instead of 'feat/my-feature'"
             exit 1
           fi
 
           # Check for other problematic characters
-          if echo "$BRANCH_NAME" | grep -qE '[\\~^:\[ ]'; then
+          if echo "$BRANCH_NAME" | grep -qE '[\\~^:\[\] ]'; then
             echo "::error::Branch name contains invalid special characters. Avoid: \\ ~ ^ : [ ] spaces"
             exit 1
           fi
