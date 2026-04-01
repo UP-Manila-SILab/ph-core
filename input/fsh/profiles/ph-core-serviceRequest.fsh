@@ -23,3 +23,12 @@ Description: "The PH Core ServiceRequest Profile is a Philippine-specific FHIR p
 * status 1..1 MS
 
 * supportingInfo 0..* MS
+
+* insert CodeableConceptMS(code)
+* insert CodeableConceptMS(orderDetail)
+* insert CodeableConceptMS(asNeededCodeableConcept)
+* insert CodeableConceptMS(performerType)
+* insert CodeableConceptMS(locationCode)
+* insert CodeableConceptMS(reasonCode)
+* insert CodeableConceptMS(bodySite)
+

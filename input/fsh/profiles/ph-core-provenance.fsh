@@ -159,6 +159,11 @@ Description: "This profile localizes the FHIR R4 Provenance resource to the Phil
 
 * agent obeys provenance-1
 
+* insert CodeableConceptMS(reason)
+* insert CodeableConceptMS(activity)
+* insert CodeableConceptMS(agent.role)
+
+
 Invariant: provenance-1
 Description: "onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device"
 Severity: #error

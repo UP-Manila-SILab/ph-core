@@ -22,3 +22,11 @@ Description: "Captures Condition."
 * encounter only Reference(PHCoreEncounter)
 * recorder only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCorePatient or PHCoreRelatedPerson)
 * asserter only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCorePatient or PHCoreRelatedPerson)
+
+* insert CodeableConceptMS(clinicalStatus)
+* insert CodeableConceptMS(verificationStatus)
+* insert CodeableConceptMS(bodySite)
+* insert CodeableConceptMS(stage.summary)
+* insert CodeableConceptMS(stage.type)
+* insert CodeableConceptMS(evidence.code)
+
