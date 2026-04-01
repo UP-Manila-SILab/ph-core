@@ -7,10 +7,15 @@ Alias: $PSOC = https://psa.gov.ph/classification/psoc/unit
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
+Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $v3-roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
+Alias: $v2-0443 = http://terminology.hl7.org/CodeSystem/v2-0443
+Alias: $request-priority = http://hl7.org/fhir/request-priority
 
 // Obligation extension
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation

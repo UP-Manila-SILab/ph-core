@@ -1,9 +1,9 @@
-Instance: philhealth-employer-no
+Instance: PhilHealthPENNS
 InstanceOf: NamingSystem
 Usage: #definition
 Title: "PEN - PhilHealth Employer Number"
 Description: "The unique number issued by PhilHealth to employers."
-* name = "PhilHealth Employer Number"
+* name = "PhilHealthPEN"
 * kind = #identifier
 * status = #draft
 * date = "2025-06-01"

@@ -1,9 +1,9 @@
-Instance: doh-nhfr-code-ns
+Instance: DOHNHFRCodeNS
 InstanceOf: NamingSystem
 Usage: #definition
-Title: "DOH National Health Faciities Registry Code"
+Title: "DOH National Health Facility Registry Code"
 Description: "Health Facility Code (HFC) from the National Health Facility Registry."
-* name = "DohNhfrCode"
+* name = "DOHNHFRCode"
 * kind = #identifier
 * status = #draft
 * date = "2025-06-18"
