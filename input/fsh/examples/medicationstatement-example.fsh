@@ -18,6 +18,6 @@ Description: "Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlod
 * dosage.timing.repeat.frequency = 1
 * dosage.timing.repeat.period = 1
 * dosage.timing.repeat.periodUnit = #d
-* dosage.route = $v3-RouteOfAdministration#PO "Oral"
+* dosage.route = $v3-RouteOfAdministration#PO "Swallow, oral"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Juan Dela Cruz reports taking Twinact 40mg/5mg tablet (Telmisartan + Amlodipine) once daily for hypertension, starting March 10, 2025.</div>"

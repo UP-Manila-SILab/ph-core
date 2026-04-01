@@ -5,7 +5,7 @@ Description: "A laboratory service request for fasting blood glucose test ordere
 * status = #active
 * intent = #order
 * category = $sct#108252007 "Laboratory procedure"
-* code = $sct#271061004 "Fasting blood glucose measurement"
+* code = $sct#33747003 "Glucose measurement, blood"
 * subject = Reference(Patient/patient-single-example)
 * encounter = Reference(Encounter/encounter-single-example)
 * authoredOn = "2024-03-15T09:30:00+08:00"

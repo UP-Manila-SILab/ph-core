@@ -15,7 +15,7 @@ Description: "A comprehensive example of an appendectomy procedure performed on 
 * partOf.display = "Episode of care for acute abdomen treatment"
 
 * status = #completed
-* statusReason = $sct#281501002 "Procedure carried out successfully"
+* statusReason = $sct#385669000 "Successful"
 
 * category = $sct#387713003 "Surgical procedure"
 
@@ -45,21 +45,21 @@ Description: "A comprehensive example of an appendectomy procedure performed on 
 
 * reasonReference = Reference(Condition/condition-single-example)
 
-* bodySite = $sct#181250006 "Entire appendix"
+* bodySite = $sct#66754008 "Appendix structure"
 * bodySite.text = "Right lower quadrant abdomen"
 
 * outcome = $sct#385669000 "Successful"
 * outcome.text = "Procedure completed without complications"
 
-* complication = $sct#109721000 "No complication"
+// No complications occurred during the procedure
 
-* followUp = $sct#18949003 "Postsurgical wound care"
+* followUp = $sct#226007004 "Post-surgical wound care"
 * followUp.text = "Follow-up visit in 7 days for wound check"
 
 * note.text = "Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact. No perforation noted."
 * note.time = "2024-01-15T10:30:00+08:00"
 
-* usedCode = $sct#363708005 "Surgical instrument"
+* usedCode = $sct#261424001 "Primary operation"
 * usedCode.text = "Laparoscopic instruments"
 
 * text.status = #generated
