@@ -6,3 +6,7 @@ Description: "The PH Core Practitioner Profile inherits from the [FHIR R4 Practi
 
 * address MS
 * address only PHCoreAddress
+
+* insert CodeableConceptMS(qualification.code)
+* insert CodeableConceptMS(communication)
+

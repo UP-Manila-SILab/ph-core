@@ -21,3 +21,9 @@ Description: "Captures key FHIR Medication Statement data for the Philippine con
 
 // BasedOn references to PH Core profiles
 * basedOn only Reference(PHCoreMedicationRequest or CarePlan or ServiceRequest)
+
+* insert CodeableConceptMS(statusReason)
+* insert CodeableConceptMS(category)
+* insert CodeableConceptMS(medicationCodeableConcept)
+* insert CodeableConceptMS(reasonCode)
+

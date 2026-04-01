@@ -28,3 +28,14 @@ Description: "This profile localizes the FHIR R4 Task resource to the Philippine
 * location only Reference(PHCoreLocation)
 * restriction.recipient only Reference(PHCorePatient or PHCorePractitioner or PHCorePractitionerRole or PHCoreRelatedPerson or Group or PHCoreOrganization)
 * partOf only Reference(PHCoreTask)
+
+* insert CodeableConceptMS(statusReason)
+* insert CodeableConceptMS(businessStatus)
+* insert CodeableConceptMS(code)
+* insert CodeableConceptMS(performerType)
+* insert CodeableConceptMS(reasonCode)
+* insert CodeableConceptMS(input.type)
+* insert CodeableConceptMS(input.valueCodeableConcept)
+* insert CodeableConceptMS(output.type)
+* insert CodeableConceptMS(output.valueCodeableConcept)
+

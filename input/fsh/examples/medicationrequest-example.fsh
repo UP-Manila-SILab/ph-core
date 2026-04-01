@@ -18,9 +18,9 @@ Description: "Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipin
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
-* dosageInstruction.route = $v3-RouteOfAdministration#PO "Oral"
+* dosageInstruction.route = $v3-RouteOfAdministration#PO "Swallow, oral"
 * dosageInstruction.doseAndRate.doseQuantity = 1 '1' "tablet"
 * dispenseRequest.numberOfRepeatsAllowed = 0
-* dispenseRequest.quantity = 30 $sct#331691000 "Tablet"
+* dispenseRequest.quantity = 30 $sct#732936001 "Tablet"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodipine), 1 tablet once daily to treat hypertension for Juan Dela Cruz.</div>"
