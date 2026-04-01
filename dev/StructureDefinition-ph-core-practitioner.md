@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCorePractitioner |
+| Draft as of 2026-04-01 | *Computable Name*:PHCorePractitioner |
 
  
 The PH Core Practitioner Profile inherits from the [FHIR R4 Practitioner resource](https://hl7.org/fhir/R4/practitioner.html); refer to it for scope and usage definitions. This profile sets minimum expectations for the Practitioner resource to record, search, and fetch basic demographics and administrative information about an individual practitioner in a Philippine context. It specifies which core elements, extensions, vocabularies, and value sets SHALL be present and constrains how the elements are used. It provides the floor for standards development for Philippine use cases. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-practitioner
   "name" : "PHCorePractitioner",
   "title" : "PH Core Practitioner",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -97,6 +97,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-practitioner
         "code" : "Address",
         "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Practitioner.qualification.code",
+      "path" : "Practitioner.qualification.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Practitioner.qualification.code.coding",
+      "path" : "Practitioner.qualification.code.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Practitioner.qualification.code.coding.code",
+      "path" : "Practitioner.qualification.code.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Practitioner.communication",
+      "path" : "Practitioner.communication",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Practitioner.communication.coding",
+      "path" : "Practitioner.communication.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Practitioner.communication.coding.code",
+      "path" : "Practitioner.communication.coding.code",
       "mustSupport" : true
     }]
   }

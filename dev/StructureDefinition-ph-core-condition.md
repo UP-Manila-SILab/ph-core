@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreCondition |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreCondition |
 
  
 Captures Condition. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-condition.cs
   "name" : "PHCoreCondition",
   "title" : "PH Core Condition",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -100,6 +100,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-condition.cs
       "path" : "Condition"
     },
     {
+      "id" : "Condition.clinicalStatus",
+      "path" : "Condition.clinicalStatus",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.clinicalStatus.coding",
+      "path" : "Condition.clinicalStatus.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.clinicalStatus.coding.code",
+      "path" : "Condition.clinicalStatus.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.verificationStatus",
+      "path" : "Condition.verificationStatus",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.verificationStatus.coding",
+      "path" : "Condition.verificationStatus.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.verificationStatus.coding.code",
+      "path" : "Condition.verificationStatus.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Condition.category",
       "path" : "Condition.category",
       "mustSupport" : true
@@ -122,6 +152,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-condition.cs
     {
       "id" : "Condition.code.text",
       "path" : "Condition.code.text",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.bodySite",
+      "path" : "Condition.bodySite",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.bodySite.coding",
+      "path" : "Condition.bodySite.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.bodySite.coding.code",
+      "path" : "Condition.bodySite.coding.code",
       "mustSupport" : true
     },
     {
@@ -163,6 +208,51 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-condition.cs
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient",
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"]
       }]
+    },
+    {
+      "id" : "Condition.stage.summary",
+      "path" : "Condition.stage.summary",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.stage.summary.coding",
+      "path" : "Condition.stage.summary.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.stage.summary.coding.code",
+      "path" : "Condition.stage.summary.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.stage.type",
+      "path" : "Condition.stage.type",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.stage.type.coding",
+      "path" : "Condition.stage.type.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.stage.type.coding.code",
+      "path" : "Condition.stage.type.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.evidence.code",
+      "path" : "Condition.evidence.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.evidence.code.coding",
+      "path" : "Condition.evidence.code.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.evidence.code.coding.code",
+      "path" : "Condition.evidence.code.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "Condition.note",

@@ -1,13 +1,13 @@
 PHCoreImplementationGuide : Validation Results
 =========================================
 
-err = 76, warn = 9, info = 83
-IG Publisher Version: 2.2.3
-Generated Wed Mar 25 03:55:39 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.0 (canonical = http://doh.gov.ph/fhir/ph-core)
+err = 76, warn = 9, info = 89
+IG Publisher Version: 2.2.4
+Generated Wed Apr 01 03:23:18 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.0 (canonical = http://doh.gov.ph/fhir/ph-core)
  Build Errors : 0 / 0 / 0
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-allergy-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-example-allergy : 0 / 0 / 1
- /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example : 3 / 0 / 28
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example : 3 / 0 / 30
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PHFDACPRCS : 3 / 0 / 17
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSCED : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSGC : 1 / 0 / 2
@@ -31,8 +31,8 @@ Generated Wed Mar 25 03:55:39 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-PhilHealthPANNS : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-PhilHealthPENNS : 1 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-PhilSysIDNS : 1 / 0 / 2
- /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-blood-pressure : 0 / 0 / 7
- /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-single-example : 0 / 0 / 7
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-blood-pressure : 0 / 0 / 9
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-single-example : 0 / 0 / 9
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Organization-organization-single-example : 0 / 1 / 8
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-MiddleNameExample : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-example-patient : 1 / 0 / 5
@@ -103,6 +103,8 @@ INFORMATION: Bundle/transaction-example: Bundle.entry[2].resource/*Condition/exa
 INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.subject: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
 ERROR: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.subject: Unable to find a profile match for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient
 INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.subject: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0
+INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/transaction-example: Bundle.entry[5].resource/*AllergyIntolerance/example-allergy*/.patient: Details for urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
 == fsh-generated/resources/CodeSystem-PHFDACPRCS.json ==
 ERROR: CodeSystem.where(url = 'https://verification.fda.gov.ph/'): Conformance resource /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PHFDACPRCS.json - the canonical URL (http://doh.gov.ph/fhir/ph-core/CodeSystem/PHFDACPRCS) does not match the URL (https://verification.fda.gov.ph/). Use the special-url parameter if you really mean for it not to match
@@ -174,7 +176,11 @@ ERROR: NamingSystem/PhilHealthPENNS: NamingSystem.jurisdiction[0].coding[0].disp
 INFORMATION: NamingSystem/PhilSysIDNS: NamingSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: NamingSystem/PhilSysIDNS: NamingSystem.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
 == fsh-generated/resources/Observation-blood-pressure.json ==
+INFORMATION: Observation/blood-pressure: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/blood-pressure: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Observation-observation-single-example.json ==
+INFORMATION: Observation/observation-single-example: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/observation-single-example: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Organization-organization-single-example.json ==
 INFORMATION: Organization/organization-single-example: Organization.identifier[3]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Organization/organization-single-example: Organization.identifier[3].system: No definition could be found for URL value 'http://my-hospital.org/internal-id'
@@ -252,7 +258,7 @@ ERROR: StructureDefinition/ph-core-medicationadministration: StructureDefinition
 == fsh-generated/resources/StructureDefinition-ph-core-medicationdispense.json ==
 INFORMATION: StructureDefinition/ph-core-medicationdispense: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/ph-core-medicationdispense: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')
-INFORMATION: StructureDefinition/ph-core-medicationdispense: StructureDefinition.snapshot.element[30].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/ph-core-medicationdispense: StructureDefinition.snapshot.element[86].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 == fsh-generated/resources/StructureDefinition-ph-core-medicationrequest.json ==
 INFORMATION: StructureDefinition/ph-core-medicationrequest: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: StructureDefinition/ph-core-medicationrequest: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'Philippines' for urn:iso:std:iso:3166#PH. Valid display is 'Philippines (the)' (for the language(s) 'en')

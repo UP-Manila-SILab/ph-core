@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCorePatient |
+| Draft as of 2026-04-01 | *Computable Name*:PHCorePatient |
 
  
 Captures key demographic and administrative information about individuals receiving care or other health-related services. 
@@ -82,7 +82,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-patient.csv)
   "name" : "PHCorePatient",
   "title" : "PH Core Patient",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -322,18 +322,40 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-patient.csv)
     {
       "id" : "Patient.maritalStatus",
       "path" : "Patient.maritalStatus",
+      "mustSupport" : true,
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://hl7.org/fhir/ValueSet/marital-status"
       }
     },
     {
+      "id" : "Patient.maritalStatus.coding",
+      "path" : "Patient.maritalStatus.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Patient.maritalStatus.coding.code",
+      "path" : "Patient.maritalStatus.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Patient.contact.relationship",
       "path" : "Patient.contact.relationship",
+      "mustSupport" : true,
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
       }
+    },
+    {
+      "id" : "Patient.contact.relationship.coding",
+      "path" : "Patient.contact.relationship.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Patient.contact.relationship.coding.code",
+      "path" : "Patient.contact.relationship.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "Patient.contact.name",
@@ -350,6 +372,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-patient.csv)
         "code" : "Address",
         "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Patient.communication.language",
+      "path" : "Patient.communication.language",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Patient.communication.language.coding",
+      "path" : "Patient.communication.language.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Patient.communication.language.coding.code",
+      "path" : "Patient.communication.language.coding.code",
       "mustSupport" : true
     }]
   }

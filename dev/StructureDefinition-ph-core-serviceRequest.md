@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreServiceRequest |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreServiceRequest |
 
  
 The PH Core ServiceRequest Profile is a Philippine-specific FHIR profile that represents a record of a request for services such as diagnostic investigations, treatments, or operations to be performed within the Philippine health system. It constrains the base FHIR ServiceRequest resource by defining minimum expectations on core elements, extensions, vocabularies, and value sets relevant to local clinical and administrative workflows. It serves as a nationally consistent baseline for recording, searching, and fetching service request information to support interoperable health information exchange across Philippine health facilities and programs. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-serviceReque
   "name" : "PHCoreServiceRequest",
   "title" : "PH Core ServiceRequest",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -105,6 +105,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-serviceReque
       "mustSupport" : true
     },
     {
+      "id" : "ServiceRequest.code",
+      "path" : "ServiceRequest.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.code.coding",
+      "path" : "ServiceRequest.code.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.code.coding.code",
+      "path" : "ServiceRequest.code.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.orderDetail",
+      "path" : "ServiceRequest.orderDetail",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.orderDetail.coding",
+      "path" : "ServiceRequest.orderDetail.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.orderDetail.coding.code",
+      "path" : "ServiceRequest.orderDetail.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "ServiceRequest.subject",
       "path" : "ServiceRequest.subject",
       "type" : [{
@@ -150,6 +180,39 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-serviceReque
       "mustSupport" : true
     },
     {
+      "id" : "ServiceRequest.asNeeded[x]",
+      "path" : "ServiceRequest.asNeeded[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "ServiceRequest.asNeeded[x]:asNeededCodeableConcept",
+      "path" : "ServiceRequest.asNeeded[x]",
+      "sliceName" : "asNeededCodeableConcept",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.asNeeded[x]:asNeededCodeableConcept.coding",
+      "path" : "ServiceRequest.asNeeded[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.asNeeded[x]:asNeededCodeableConcept.coding.code",
+      "path" : "ServiceRequest.asNeeded[x].coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "ServiceRequest.authoredOn",
       "path" : "ServiceRequest.authoredOn",
       "mustSupport" : true
@@ -169,8 +232,68 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-serviceReque
       "mustSupport" : true
     },
     {
+      "id" : "ServiceRequest.performerType",
+      "path" : "ServiceRequest.performerType",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.performerType.coding",
+      "path" : "ServiceRequest.performerType.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.performerType.coding.code",
+      "path" : "ServiceRequest.performerType.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.locationCode",
+      "path" : "ServiceRequest.locationCode",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.locationCode.coding",
+      "path" : "ServiceRequest.locationCode.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.locationCode.coding.code",
+      "path" : "ServiceRequest.locationCode.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.reasonCode",
+      "path" : "ServiceRequest.reasonCode",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.reasonCode.coding",
+      "path" : "ServiceRequest.reasonCode.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.reasonCode.coding.code",
+      "path" : "ServiceRequest.reasonCode.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "ServiceRequest.supportingInfo",
       "path" : "ServiceRequest.supportingInfo",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.bodySite",
+      "path" : "ServiceRequest.bodySite",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.bodySite.coding",
+      "path" : "ServiceRequest.bodySite.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ServiceRequest.bodySite.coding.code",
+      "path" : "ServiceRequest.bodySite.coding.code",
       "mustSupport" : true
     }]
   }

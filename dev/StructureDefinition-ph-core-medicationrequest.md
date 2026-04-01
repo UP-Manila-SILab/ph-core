@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreMedicationRequest |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreMedicationRequest |
 
  
 Captures key FHIR Medication Request data for the Philippine context. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationre
   "title" : "PH Core Medication Request",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -97,6 +97,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationre
       "path" : "MedicationRequest"
     },
     {
+      "id" : "MedicationRequest.statusReason",
+      "path" : "MedicationRequest.statusReason",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.statusReason.coding",
+      "path" : "MedicationRequest.statusReason.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.statusReason.coding.code",
+      "path" : "MedicationRequest.statusReason.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.category",
+      "path" : "MedicationRequest.category",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.category.coding",
+      "path" : "MedicationRequest.category.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.category.coding.code",
+      "path" : "MedicationRequest.category.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "MedicationRequest.medication[x]",
       "path" : "MedicationRequest.medication[x]",
       "slicing" : {
@@ -128,10 +158,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationre
       "type" : [{
         "code" : "CodeableConcept"
       }],
+      "mustSupport" : true,
       "binding" : {
         "strength" : "preferred",
         "valueSet" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs"
       }
+    },
+    {
+      "id" : "MedicationRequest.medication[x]:medicationCodeableConcept.coding",
+      "path" : "MedicationRequest.medication[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.medication[x]:medicationCodeableConcept.coding.code",
+      "path" : "MedicationRequest.medication[x].coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationRequest.subject",
@@ -178,6 +219,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationre
       }]
     },
     {
+      "id" : "MedicationRequest.performerType",
+      "path" : "MedicationRequest.performerType",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.performerType.coding",
+      "path" : "MedicationRequest.performerType.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.performerType.coding.code",
+      "path" : "MedicationRequest.performerType.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "MedicationRequest.recorder",
       "path" : "MedicationRequest.recorder",
       "type" : [{
@@ -185,6 +241,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationre
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner",
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole"]
       }]
+    },
+    {
+      "id" : "MedicationRequest.reasonCode",
+      "path" : "MedicationRequest.reasonCode",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.reasonCode.coding",
+      "path" : "MedicationRequest.reasonCode.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.reasonCode.coding.code",
+      "path" : "MedicationRequest.reasonCode.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationRequest.reasonReference",
@@ -205,6 +276,69 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationre
         "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
         "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"]
       }]
+    },
+    {
+      "id" : "MedicationRequest.courseOfTherapyType",
+      "path" : "MedicationRequest.courseOfTherapyType",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.courseOfTherapyType.coding",
+      "path" : "MedicationRequest.courseOfTherapyType.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.courseOfTherapyType.coding.code",
+      "path" : "MedicationRequest.courseOfTherapyType.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.substitution.allowed[x]",
+      "path" : "MedicationRequest.substitution.allowed[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "MedicationRequest.substitution.allowed[x]:allowedCodeableConcept",
+      "path" : "MedicationRequest.substitution.allowed[x]",
+      "sliceName" : "allowedCodeableConcept",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.substitution.allowed[x]:allowedCodeableConcept.coding",
+      "path" : "MedicationRequest.substitution.allowed[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.substitution.allowed[x]:allowedCodeableConcept.coding.code",
+      "path" : "MedicationRequest.substitution.allowed[x].coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.substitution.reason",
+      "path" : "MedicationRequest.substitution.reason",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.substitution.reason.coding",
+      "path" : "MedicationRequest.substitution.reason.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.substitution.reason.coding.code",
+      "path" : "MedicationRequest.substitution.reason.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationRequest.priorPrescription",

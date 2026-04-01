@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreOrganization |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreOrganization |
 
  
 This profile localizes the FHIR R4 Organization resource to the Philippine context. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-organization
   "name" : "PHCoreOrganization",
   "title" : "PH Core Organization",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -145,6 +145,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-organization
       "mustSupport" : true
     },
     {
+      "id" : "Organization.type",
+      "path" : "Organization.type",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.type.coding",
+      "path" : "Organization.type.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.type.coding.code",
+      "path" : "Organization.type.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Organization.name",
       "path" : "Organization.name",
       "mustSupport" : true
@@ -174,6 +189,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-organization
         "code" : "Reference",
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"]
       }]
+    },
+    {
+      "id" : "Organization.contact.purpose",
+      "path" : "Organization.contact.purpose",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.contact.purpose.coding",
+      "path" : "Organization.contact.purpose.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.contact.purpose.coding.code",
+      "path" : "Organization.contact.purpose.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "Organization.contact.address",

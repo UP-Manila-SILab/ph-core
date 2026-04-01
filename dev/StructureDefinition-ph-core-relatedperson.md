@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreRelatedPerson |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreRelatedPerson |
 
  
 This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-relatedperso
   "name" : "PHCoreRelatedPerson",
   "title" : "PH Core RelatedPerson",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -121,12 +121,42 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-relatedperso
       }]
     },
     {
+      "id" : "RelatedPerson.relationship",
+      "path" : "RelatedPerson.relationship",
+      "mustSupport" : true
+    },
+    {
+      "id" : "RelatedPerson.relationship.coding",
+      "path" : "RelatedPerson.relationship.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "RelatedPerson.relationship.coding.code",
+      "path" : "RelatedPerson.relationship.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "RelatedPerson.address",
       "path" : "RelatedPerson.address",
       "type" : [{
         "code" : "Address",
         "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "RelatedPerson.communication.language",
+      "path" : "RelatedPerson.communication.language",
+      "mustSupport" : true
+    },
+    {
+      "id" : "RelatedPerson.communication.language.coding",
+      "path" : "RelatedPerson.communication.language.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "RelatedPerson.communication.language.coding.code",
+      "path" : "RelatedPerson.communication.language.coding.code",
       "mustSupport" : true
     }]
   }

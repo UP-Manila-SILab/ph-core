@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-doh-nhfr-code | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreDOHNHFRCode |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreDOHNHFRCode |
 
  
 Health Facility Code (HFC) from the National Health Facility Registry 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-doh-nhfr-cod
   "name" : "PHCoreDOHNHFRCode",
   "title" : "DOH NHFR Code",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

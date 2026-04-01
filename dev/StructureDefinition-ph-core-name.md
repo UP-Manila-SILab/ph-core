@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-name | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreName |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreName |
 
  
 A name of a person in the philippine context. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-name.csv), [
   "name" : "PHCoreName",
   "title" : "PH Core Name",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

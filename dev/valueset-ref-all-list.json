@@ -33,9 +33,9 @@
     "systems" : ["https://verification.fda.gov.ph/"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
     "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
     "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
     "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
     "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
   },
@@ -152,8 +152,8 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient",
-    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson"
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
+    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
@@ -182,8 +182,8 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
     "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
     "StructureDefinition-ph-core-condition.html" : "PH Core Condition"
   },
   {
@@ -582,11 +582,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-philhealth-pan.html" : "PhilHealth Accreditation Number",
-    "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
+    "StructureDefinition-ph-core-philhealth-pen.html" : "PhilHealth Employer Number",
     "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
-    "StructureDefinition-ph-core-philhealth-pen.html" : "PhilHealth Employer Number"
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
+    "StructureDefinition-ph-core-philhealth-pan.html" : "PhilHealth Accreditation Number",
+    "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -600,11 +600,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-philhealth-pan.html" : "PhilHealth Accreditation Number",
-    "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number",
-    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
+    "StructureDefinition-ph-core-philhealth-pen.html" : "PhilHealth Employer Number",
     "StructureDefinition-ph-core-philsys-id.html" : "PhilSys Identification Number (PhilSys ID)",
-    "StructureDefinition-ph-core-philhealth-pen.html" : "PhilHealth Employer Number"
+    "StructureDefinition-ph-core-doh-nhfr-code.html" : "DOH NHFR Code",
+    "StructureDefinition-ph-core-philhealth-pan.html" : "PhilHealth Accreditation Number",
+    "StructureDefinition-ph-core-philhealth-id.html" : "PIN - PhilHealth Identification Number"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/immunization-function",
@@ -774,24 +774,24 @@
     "uses" : {
     },
     "StructureDefinition-ph-core-patient.html" : "PH Core Patient",
+    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
     "StructureDefinition-ph-core-observation.html" : "PH Core Observation",
-    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-task.html" : "PH Core Task",
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
     "StructureDefinition-ph-core-immunization.html" : "PH Core Immunization",
     "StructureDefinition-ph-core-organization.html" : "PH Core Organization",
+    "StructureDefinition-ph-core-practitioner.html" : "PH Core Practitioner",
     "StructureDefinition-ph-core-condition.html" : "PH Core Condition",
-    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
-    "StructureDefinition-ph-core-encounter.html" : "PH Core Encounter",
-    "StructureDefinition-ph-core-task.html" : "PH Core Task",
-    "StructureDefinition-ph-core-location.html" : "PH Core Location",
-    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
-    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement",
     "StructureDefinition-ph-core-practitionerrole.html" : "PH Core PractitionerRole",
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
-    "StructureDefinition-ph-core-provenance.html" : "PH Core Provenance",
     "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
-    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
+    "StructureDefinition-ph-core-relatedperson.html" : "PH Core RelatedPerson",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
+    "StructureDefinition-ph-core-location.html" : "PH Core Location",
+    "StructureDefinition-ph-core-provenance.html" : "PH Core Provenance",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -947,8 +947,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.375"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
     "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
     "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
     "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
   },
@@ -1303,8 +1303,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
@@ -1360,8 +1360,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.432"],
     "uses" : {
     },
-    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure",
-    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest"
+    "StructureDefinition-ph-core-serviceRequest.html" : "PH Core ServiceRequest",
+    "StructureDefinition-ph-core-procedure.html" : "PH Core Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/provenance-activity-type",

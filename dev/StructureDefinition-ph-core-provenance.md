@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-provenance | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreProvenance |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreProvenance |
 
  
 This profile localizes the FHIR R4 Provenance resource to the Philippine context, capturing key information about who, what, when, and where for a set of resources. It is used to track the authorship and history of healthcare data in Philippine health information systems. 
@@ -114,7 +114,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-provenance.c
   "name" : "PHCoreProvenance",
   "title" : "PH Core Provenance",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -197,6 +197,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-provenance.c
       }]
     },
     {
+      "id" : "Provenance.reason",
+      "path" : "Provenance.reason",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Provenance.reason.coding",
+      "path" : "Provenance.reason.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Provenance.reason.coding.code",
+      "path" : "Provenance.reason.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Provenance.activity",
+      "path" : "Provenance.activity",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Provenance.activity.coding",
+      "path" : "Provenance.activity.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Provenance.activity.coding.code",
+      "path" : "Provenance.activity.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Provenance.agent",
       "path" : "Provenance.agent",
       "slicing" : {
@@ -235,6 +265,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-provenance.c
       }
     },
     {
+      "id" : "Provenance.agent.role",
+      "path" : "Provenance.agent.role",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Provenance.agent.role.coding",
+      "path" : "Provenance.agent.role.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Provenance.agent.role.coding.code",
+      "path" : "Provenance.agent.role.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Provenance.agent.who",
       "path" : "Provenance.agent.who",
       "definition" : "The individual, organization, or device that participated in the activity.",
@@ -270,6 +315,11 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-provenance.c
           "code" : "author"
         }]
       }
+    },
+    {
+      "id" : "Provenance.agent:ProvenanceAuthor.role",
+      "path" : "Provenance.agent.role",
+      "mustSupport" : true
     },
     {
       "id" : "Provenance.agent:ProvenanceAuthor.who",
@@ -319,6 +369,11 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-provenance.c
           "code" : "transmitter"
         }]
       }
+    },
+    {
+      "id" : "Provenance.agent:ProvenanceTransmitter.role",
+      "path" : "Provenance.agent.role",
+      "mustSupport" : true
     },
     {
       "id" : "Provenance.agent:ProvenanceTransmitter.who",

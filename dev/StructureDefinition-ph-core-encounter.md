@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreEncounter |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreEncounter |
 
  
 This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [FHIR R4 Encounter](https://www.hl7.org/fhir/R4/encounter.html) resource and identifies the **additional** mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
   "name" : "PHCoreEncounter",
   "title" : "PH Core Encounter",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -108,6 +108,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
     {
       "id" : "Encounter.type",
       "path" : "Encounter.type",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.serviceType",
+      "path" : "Encounter.serviceType",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.serviceType.coding",
+      "path" : "Encounter.serviceType.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.serviceType.coding.code",
+      "path" : "Encounter.serviceType.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.priority",
+      "path" : "Encounter.priority",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.priority.coding",
+      "path" : "Encounter.priority.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.priority.coding.code",
+      "path" : "Encounter.priority.coding.code",
       "mustSupport" : true
     },
     {
@@ -178,6 +208,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
       }]
     },
     {
+      "id" : "Encounter.diagnosis.use",
+      "path" : "Encounter.diagnosis.use",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.diagnosis.use.coding",
+      "path" : "Encounter.diagnosis.use.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.diagnosis.use.coding.code",
+      "path" : "Encounter.diagnosis.use.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Encounter.hospitalization",
       "path" : "Encounter.hospitalization",
       "mustSupport" : true
@@ -190,6 +235,81 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location",
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"]
       }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.admitSource",
+      "path" : "Encounter.hospitalization.admitSource",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.admitSource.coding",
+      "path" : "Encounter.hospitalization.admitSource.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.admitSource.coding.code",
+      "path" : "Encounter.hospitalization.admitSource.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.reAdmission",
+      "path" : "Encounter.hospitalization.reAdmission",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.reAdmission.coding",
+      "path" : "Encounter.hospitalization.reAdmission.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.reAdmission.coding.code",
+      "path" : "Encounter.hospitalization.reAdmission.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.dietPreference",
+      "path" : "Encounter.hospitalization.dietPreference",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.dietPreference.coding",
+      "path" : "Encounter.hospitalization.dietPreference.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.dietPreference.coding.code",
+      "path" : "Encounter.hospitalization.dietPreference.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.specialCourtesy",
+      "path" : "Encounter.hospitalization.specialCourtesy",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.specialCourtesy.coding",
+      "path" : "Encounter.hospitalization.specialCourtesy.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.specialCourtesy.coding.code",
+      "path" : "Encounter.hospitalization.specialCourtesy.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.specialArrangement",
+      "path" : "Encounter.hospitalization.specialArrangement",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.specialArrangement.coding",
+      "path" : "Encounter.hospitalization.specialArrangement.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.hospitalization.specialArrangement.coding.code",
+      "path" : "Encounter.hospitalization.specialArrangement.coding.code",
       "mustSupport" : true
     },
     {
@@ -209,6 +329,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-encounter.cs
         "code" : "Reference",
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location"]
       }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.location.physicalType",
+      "path" : "Encounter.location.physicalType",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.location.physicalType.coding",
+      "path" : "Encounter.location.physicalType.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.location.physicalType.coding.code",
+      "path" : "Encounter.location.physicalType.coding.code",
       "mustSupport" : true
     },
     {

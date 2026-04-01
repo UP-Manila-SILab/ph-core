@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreMedicationDispense |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreMedicationDispense |
 
  
 Captures key FHIR Medication Dispense data for the Philippine context. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationdi
   "title" : "PH Core Medication Dispense",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -97,6 +97,54 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationdi
       "path" : "MedicationDispense"
     },
     {
+      "id" : "MedicationDispense.statusReason[x]",
+      "path" : "MedicationDispense.statusReason[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "MedicationDispense.statusReason[x]:statusReasonCodeableConcept",
+      "path" : "MedicationDispense.statusReason[x]",
+      "sliceName" : "statusReasonCodeableConcept",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.statusReason[x]:statusReasonCodeableConcept.coding",
+      "path" : "MedicationDispense.statusReason[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.statusReason[x]:statusReasonCodeableConcept.coding.code",
+      "path" : "MedicationDispense.statusReason[x].coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.category",
+      "path" : "MedicationDispense.category",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.category.coding",
+      "path" : "MedicationDispense.category.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.category.coding.code",
+      "path" : "MedicationDispense.category.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "MedicationDispense.medication[x]",
       "path" : "MedicationDispense.medication[x]",
       "slicing" : {
@@ -128,10 +176,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationdi
       "type" : [{
         "code" : "CodeableConcept"
       }],
+      "mustSupport" : true,
       "binding" : {
         "strength" : "preferred",
         "valueSet" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs"
       }
+    },
+    {
+      "id" : "MedicationDispense.medication[x]:medicationCodeableConcept.coding",
+      "path" : "MedicationDispense.medication[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.medication[x]:medicationCodeableConcept.coding.code",
+      "path" : "MedicationDispense.medication[x].coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationDispense.subject",
@@ -150,6 +209,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationdi
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter",
         "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"]
       }]
+    },
+    {
+      "id" : "MedicationDispense.performer.function",
+      "path" : "MedicationDispense.performer.function",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.performer.function.coding",
+      "path" : "MedicationDispense.performer.function.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.performer.function.coding.code",
+      "path" : "MedicationDispense.performer.function.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationDispense.performer.actor",
@@ -181,6 +255,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationdi
       }]
     },
     {
+      "id" : "MedicationDispense.type",
+      "path" : "MedicationDispense.type",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.type.coding",
+      "path" : "MedicationDispense.type.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.type.coding.code",
+      "path" : "MedicationDispense.type.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "MedicationDispense.destination",
       "path" : "MedicationDispense.destination",
       "type" : [{
@@ -196,6 +285,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationdi
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient",
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner"]
       }]
+    },
+    {
+      "id" : "MedicationDispense.substitution.type",
+      "path" : "MedicationDispense.substitution.type",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.substitution.type.coding",
+      "path" : "MedicationDispense.substitution.type.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.substitution.type.coding.code",
+      "path" : "MedicationDispense.substitution.type.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.substitution.reason",
+      "path" : "MedicationDispense.substitution.reason",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.substitution.reason.coding",
+      "path" : "MedicationDispense.substitution.reason.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationDispense.substitution.reason.coding.code",
+      "path" : "MedicationDispense.substitution.reason.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationDispense.substitution.responsibleParty",

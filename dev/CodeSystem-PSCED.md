@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PSCED |
+| Draft as of 2026-04-01 | *Computable Name*:PSCED |
 
  
 Mock of the Philippine Standard Classification of Education. 
@@ -32,7 +32,7 @@ Mock of the Philippine Standard Classification of Education.
   "title" : "Mock PSCED",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

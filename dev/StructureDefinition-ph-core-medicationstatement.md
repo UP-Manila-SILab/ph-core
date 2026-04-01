@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreMedicationStatement |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreMedicationStatement |
 
  
 Captures key FHIR Medication Statement data for the Philippine context. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationst
   "title" : "PH Core Medication Statement",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -114,6 +114,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationst
       }]
     },
     {
+      "id" : "MedicationStatement.statusReason",
+      "path" : "MedicationStatement.statusReason",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.statusReason.coding",
+      "path" : "MedicationStatement.statusReason.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.statusReason.coding.code",
+      "path" : "MedicationStatement.statusReason.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.category",
+      "path" : "MedicationStatement.category",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.category.coding",
+      "path" : "MedicationStatement.category.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.category.coding.code",
+      "path" : "MedicationStatement.category.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "MedicationStatement.medication[x]",
       "path" : "MedicationStatement.medication[x]",
       "slicing" : {
@@ -145,10 +175,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationst
       "type" : [{
         "code" : "CodeableConcept"
       }],
+      "mustSupport" : true,
       "binding" : {
         "strength" : "preferred",
         "valueSet" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs"
       }
+    },
+    {
+      "id" : "MedicationStatement.medication[x]:medicationCodeableConcept.coding",
+      "path" : "MedicationStatement.medication[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.medication[x]:medicationCodeableConcept.coding.code",
+      "path" : "MedicationStatement.medication[x].coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationStatement.subject",
@@ -190,6 +231,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationst
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure",
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"]
       }]
+    },
+    {
+      "id" : "MedicationStatement.reasonCode",
+      "path" : "MedicationStatement.reasonCode",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.reasonCode.coding",
+      "path" : "MedicationStatement.reasonCode.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.reasonCode.coding.code",
+      "path" : "MedicationStatement.reasonCode.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationStatement.reasonReference",

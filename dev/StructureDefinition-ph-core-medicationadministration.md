@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreMedicationAdministration |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreMedicationAdministration |
 
  
 Captures key FHIR Medication Administration data for the Philippine context. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationad
   "title" : "PH Core Medication Administration",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -106,6 +106,36 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationad
       }]
     },
     {
+      "id" : "MedicationAdministration.statusReason",
+      "path" : "MedicationAdministration.statusReason",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.statusReason.coding",
+      "path" : "MedicationAdministration.statusReason.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.statusReason.coding.code",
+      "path" : "MedicationAdministration.statusReason.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.category",
+      "path" : "MedicationAdministration.category",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.category.coding",
+      "path" : "MedicationAdministration.category.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.category.coding.code",
+      "path" : "MedicationAdministration.category.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "MedicationAdministration.medication[x]",
       "path" : "MedicationAdministration.medication[x]",
       "slicing" : {
@@ -137,10 +167,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationad
       "type" : [{
         "code" : "CodeableConcept"
       }],
+      "mustSupport" : true,
       "binding" : {
         "strength" : "preferred",
         "valueSet" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs"
       }
+    },
+    {
+      "id" : "MedicationAdministration.medication[x]:medicationCodeableConcept.coding",
+      "path" : "MedicationAdministration.medication[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.medication[x]:medicationCodeableConcept.coding.code",
+      "path" : "MedicationAdministration.medication[x].coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationAdministration.subject",
@@ -161,6 +202,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationad
       }]
     },
     {
+      "id" : "MedicationAdministration.performer.function",
+      "path" : "MedicationAdministration.performer.function",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.performer.function.coding",
+      "path" : "MedicationAdministration.performer.function.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.performer.function.coding.code",
+      "path" : "MedicationAdministration.performer.function.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "MedicationAdministration.performer.actor",
       "path" : "MedicationAdministration.performer.actor",
       "type" : [{
@@ -171,6 +227,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationad
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson",
         "http://hl7.org/fhir/StructureDefinition/Device"]
       }]
+    },
+    {
+      "id" : "MedicationAdministration.reasonCode",
+      "path" : "MedicationAdministration.reasonCode",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.reasonCode.coding",
+      "path" : "MedicationAdministration.reasonCode.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.reasonCode.coding.code",
+      "path" : "MedicationAdministration.reasonCode.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "MedicationAdministration.reasonReference",
@@ -189,6 +260,51 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationad
         "code" : "Reference",
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationrequest"]
       }]
+    },
+    {
+      "id" : "MedicationAdministration.dosage.site",
+      "path" : "MedicationAdministration.dosage.site",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.dosage.site.coding",
+      "path" : "MedicationAdministration.dosage.site.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.dosage.site.coding.code",
+      "path" : "MedicationAdministration.dosage.site.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.dosage.route",
+      "path" : "MedicationAdministration.dosage.route",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.dosage.route.coding",
+      "path" : "MedicationAdministration.dosage.route.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.dosage.route.coding.code",
+      "path" : "MedicationAdministration.dosage.route.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.dosage.method",
+      "path" : "MedicationAdministration.dosage.method",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.dosage.method.coding",
+      "path" : "MedicationAdministration.dosage.method.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationAdministration.dosage.method.coding.code",
+      "path" : "MedicationAdministration.dosage.method.coding.code",
+      "mustSupport" : true
     }]
   }
 }

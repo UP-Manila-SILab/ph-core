@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreTask |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreTask |
 
  
 This profile localizes the FHIR R4 Task resource to the Philippine context. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-task.csv), [
   "name" : "PHCoreTask",
   "title" : "PH Core Task",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -104,6 +104,51 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-task.csv), [
       "mustSupport" : true
     },
     {
+      "id" : "Task.statusReason",
+      "path" : "Task.statusReason",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.statusReason.coding",
+      "path" : "Task.statusReason.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.statusReason.coding.code",
+      "path" : "Task.statusReason.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.businessStatus",
+      "path" : "Task.businessStatus",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.businessStatus.coding",
+      "path" : "Task.businessStatus.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.businessStatus.coding.code",
+      "path" : "Task.businessStatus.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.code",
+      "path" : "Task.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.code.coding",
+      "path" : "Task.code.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.code.coding.code",
+      "path" : "Task.code.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Task.for",
       "path" : "Task.for",
       "type" : [{
@@ -139,6 +184,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-task.csv), [
       }]
     },
     {
+      "id" : "Task.performerType",
+      "path" : "Task.performerType",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.performerType.coding",
+      "path" : "Task.performerType.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.performerType.coding.code",
+      "path" : "Task.performerType.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Task.owner",
       "path" : "Task.owner",
       "type" : [{
@@ -162,6 +222,21 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-task.csv), [
       }]
     },
     {
+      "id" : "Task.reasonCode",
+      "path" : "Task.reasonCode",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.reasonCode.coding",
+      "path" : "Task.reasonCode.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.reasonCode.coding.code",
+      "path" : "Task.reasonCode.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Task.note",
       "path" : "Task.note",
       "mustSupport" : true
@@ -178,6 +253,102 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-task.csv), [
         "http://hl7.org/fhir/StructureDefinition/Group",
         "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"]
       }]
+    },
+    {
+      "id" : "Task.input.type",
+      "path" : "Task.input.type",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.input.type.coding",
+      "path" : "Task.input.type.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.input.type.coding.code",
+      "path" : "Task.input.type.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.input.value[x]",
+      "path" : "Task.input.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Task.input.value[x]:valueCodeableConcept",
+      "path" : "Task.input.value[x]",
+      "sliceName" : "valueCodeableConcept",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.input.value[x]:valueCodeableConcept.coding",
+      "path" : "Task.input.value[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.input.value[x]:valueCodeableConcept.coding.code",
+      "path" : "Task.input.value[x].coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.output.type",
+      "path" : "Task.output.type",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.output.type.coding",
+      "path" : "Task.output.type.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.output.type.coding.code",
+      "path" : "Task.output.type.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.output.value[x]",
+      "path" : "Task.output.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Task.output.value[x]:valueCodeableConcept",
+      "path" : "Task.output.value[x]",
+      "sliceName" : "valueCodeableConcept",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.output.value[x]:valueCodeableConcept.coding",
+      "path" : "Task.output.value[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Task.output.value[x]:valueCodeableConcept.coding.code",
+      "path" : "Task.output.value[x].coding.code",
+      "mustSupport" : true
     }]
   }
 }

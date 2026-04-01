@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreLocation |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreLocation |
 
  
 This profile localizes the FHIR R4 Location resource to the Philippine context. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-location.csv
   "name" : "PHCoreLocation",
   "title" : "PH Core Location",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -80,12 +80,42 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-location.csv
       "path" : "Location"
     },
     {
+      "id" : "Location.type",
+      "path" : "Location.type",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Location.type.coding",
+      "path" : "Location.type.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Location.type.coding.code",
+      "path" : "Location.type.coding.code",
+      "mustSupport" : true
+    },
+    {
       "id" : "Location.address",
       "path" : "Location.address",
       "type" : [{
         "code" : "Address",
         "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address"]
       }]
+    },
+    {
+      "id" : "Location.physicalType",
+      "path" : "Location.physicalType",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Location.physicalType.coding",
+      "path" : "Location.physicalType.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Location.physicalType.coding.code",
+      "path" : "Location.physicalType.coding.code",
+      "mustSupport" : true
     },
     {
       "id" : "Location.managingOrganization",

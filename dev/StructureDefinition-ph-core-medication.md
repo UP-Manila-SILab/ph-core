@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medication | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCoreMedication |
+| Draft as of 2026-04-01 | *Computable Name*:PHCoreMedication |
 
  
 This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medication.c
   "title" : "PH Core Medication",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -94,10 +94,69 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medication.c
     {
       "id" : "Medication.code",
       "path" : "Medication.code",
+      "mustSupport" : true,
       "binding" : {
         "strength" : "preferred",
         "valueSet" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs"
       }
+    },
+    {
+      "id" : "Medication.code.coding",
+      "path" : "Medication.code.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Medication.code.coding.code",
+      "path" : "Medication.code.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Medication.form",
+      "path" : "Medication.form",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Medication.form.coding",
+      "path" : "Medication.form.coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Medication.form.coding.code",
+      "path" : "Medication.form.coding.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Medication.ingredient.item[x]",
+      "path" : "Medication.ingredient.item[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Medication.ingredient.item[x]:itemCodeableConcept",
+      "path" : "Medication.ingredient.item[x]",
+      "sliceName" : "itemCodeableConcept",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Medication.ingredient.item[x]:itemCodeableConcept.coding",
+      "path" : "Medication.ingredient.item[x].coding",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Medication.ingredient.item[x]:itemCodeableConcept.coding.code",
+      "path" : "Medication.ingredient.item[x].coding.code",
+      "mustSupport" : true
     }]
   }
 }

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-philhealth-pen | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:PHCorePhilHealthPEN |
+| Draft as of 2026-04-01 | *Computable Name*:PHCorePhilHealthPEN |
 
  
 The unique number issued by PhilHealth to employers. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-philhealth-p
   "name" : "PHCorePhilHealthPEN",
   "title" : "PhilHealth Employer Number",
   "status" : "draft",
-  "date" : "2026-03-25T03:54:03+00:00",
+  "date" : "2026-04-01T03:21:07+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
