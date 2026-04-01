@@ -13,7 +13,7 @@ A person named "Juan Santos Reyes" would be represented as:
 ```json
 {
   "use": "official",
-  "given": ["Juan", "Santos"],
+  "given": ["Juan Lawrence", "Les Dalisay"],
   "family": "Reyes"
 }
 ```
