@@ -1,9 +1,9 @@
 ## Middle Name Representation
 
-Per Philippine naming conventions, the middle name (typically the mother's maiden surname) is represented using the `given` array:
+Per naming conventions, the middle name (usually the mother's maiden surname in most cases) is represented using the `given[1]` array:
 
-- **`given[0]`**: First name (e.g., "Juan")
-- **`given[1]`**: Middle name (e.g., "Santos")
+- **`given[0]`**: First name (e.g., "Juan Lawrence")
+- **`given[1]`**: Middle name (e.g., "Les Dalisay")
 - **`family`**: Family name (e.g., "Reyes")
 
 ### Example
@@ -17,5 +17,3 @@ A person named "Juan Santos Reyes" would be represented as:
   "family": "Reyes"
 }
 ```
-
-This approach aligns with international FHIR practices while accommodating Philippine naming conventions where the middle name is an essential component of a person's full name.
