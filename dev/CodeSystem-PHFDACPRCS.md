@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://verification.fda.gov.ph/ | *Version*:0.1.0 |
+| *Official URL*:https://verification.fda.gov.ph | *Version*:0.1.0 |
 | Active as of 2026-03-21 | *Computable Name*:PHFDACPRCS |
 
  
@@ -26,7 +26,7 @@ Registered drug products from the Philippine Food and Drug Administration (FDA)
 {
   "resourceType" : "CodeSystem",
   "id" : "PHFDACPRCS",
-  "url" : "https://verification.fda.gov.ph/",
+  "url" : "https://verification.fda.gov.ph",
   "version" : "0.1.0",
   "name" : "PHFDACPRCS",
   "title" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",
@@ -46,7 +46,7 @@ Registered drug products from the Philippine Food and Drug Administration (FDA)
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "caseSensitive" : false,

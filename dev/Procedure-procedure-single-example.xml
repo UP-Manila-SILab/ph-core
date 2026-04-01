@@ -28,8 +28,8 @@
   <statusReason>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="281501002"/>
-      <display value="Procedure carried out successfully"/>
+      <code value="385669000"/>
+      <display value="Successful"/>
     </coding>
   </statusReason>
   <category>
@@ -104,8 +104,8 @@
   <bodySite>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="181250006"/>
-      <display value="Entire appendix"/>
+      <code value="66754008"/>
+      <display value="Appendix structure"/>
     </coding>
     <text value="Right lower quadrant abdomen"/>
   </bodySite>
@@ -117,18 +117,11 @@
     </coding>
     <text value="Procedure completed without complications"/>
   </outcome>
-  <complication>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="109721000"/>
-      <display value="No complication"/>
-    </coding>
-  </complication>
   <followUp>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="18949003"/>
-      <display value="Postsurgical wound care"/>
+      <code value="226007004"/>
+      <display value="Post-surgical wound care"/>
     </coding>
     <text value="Follow-up visit in 7 days for wound check"/>
   </followUp>
@@ -139,8 +132,8 @@
   <usedCode>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="363708005"/>
-      <display value="Surgical instrument"/>
+      <code value="261424001"/>
+      <display value="Primary operation"/>
     </coding>
     <text value="Laparoscopic instruments"/>
   </usedCode>

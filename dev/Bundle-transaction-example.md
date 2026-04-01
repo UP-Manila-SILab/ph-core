@@ -34,7 +34,7 @@
             "coding" : [{
               "system" : "urn:iso:std:iso:3166",
               "code" : "PH",
-              "display" : "Philippines"
+              "display" : "Philippines (the)"
             }]
           }
         },
@@ -82,7 +82,7 @@
         "extension" : [{
           "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
           "valueCoding" : {
-            "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+            "system" : "https://psa.gov.ph/classification/psgc",
             "code" : "1380100001",
             "display" : "Barangay 1"
           }
@@ -90,7 +90,7 @@
         {
           "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
           "valueCoding" : {
-            "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+            "system" : "https://psa.gov.ph/classification/psgc",
             "code" : "1380200000",
             "display" : "City of Las Piñas"
           }
@@ -98,7 +98,7 @@
         {
           "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
           "valueCoding" : {
-            "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+            "system" : "https://psa.gov.ph/classification/psgc",
             "code" : "0402100000",
             "display" : "Cavite"
           }

@@ -31,8 +31,8 @@ A laboratory service request for fasting blood glucose test ordered by Dr. Maria
   "code" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "271061004",
-      "display" : "Fasting blood glucose measurement"
+      "code" : "33747003",
+      "display" : "Glucose measurement, blood"
     }]
   },
   "subject" : {

@@ -25,8 +25,8 @@
      a fhir:CodeableConcept ;
      fhir:coding ( [
        fhir:system [
-         fhir:v "https://verification.fda.gov.ph/"^^xsd:anyURI ;
-         fhir:l <https://verification.fda.gov.ph/>
+         fhir:v "https://verification.fda.gov.ph"^^xsd:anyURI ;
+         fhir:l <https://verification.fda.gov.ph>
        ] ;
        fhir:code [ fhir:v "DRP-10144" ] ;
        fhir:display [ fhir:v "Twinact" ]
@@ -82,7 +82,7 @@
            fhir:l <http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration>
          ] ;
          fhir:code [ fhir:v "PO" ] ;
-         fhir:display [ fhir:v "Oral" ]
+         fhir:display [ fhir:v "Swallow, oral" ]
        ] )
      ]
   ] ) . # 

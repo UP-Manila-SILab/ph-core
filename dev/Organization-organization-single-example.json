@@ -40,7 +40,7 @@
     "extension" : [{
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "1401100000",
         "display" : "Benguet"
       }
@@ -48,7 +48,7 @@
     {
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "1380200000",
         "display" : "City of Las Piñas"
       }
@@ -56,7 +56,7 @@
     {
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "1380100001",
         "display" : "Barangay 1"
       }
@@ -78,7 +78,7 @@
       "extension" : [{
         "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region",
         "valueCoding" : {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1401100000",
           "display" : "Benguet"
         }
@@ -86,7 +86,7 @@
       {
         "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
         "valueCoding" : {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1380200000",
           "display" : "City of Las Piñas"
         }
@@ -94,7 +94,7 @@
       {
         "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
         "valueCoding" : {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1380100001",
           "display" : "Barangay 1"
         }

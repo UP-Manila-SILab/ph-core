@@ -47,7 +47,7 @@ The unique number issued by PhilHealth to employers.
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "uniqueId" : [{

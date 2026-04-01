@@ -39,21 +39,21 @@
   <address>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/region">
       <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <system value="https://psa.gov.ph/classification/psgc"/>
         <code value="1401100000"/>
         <display value="Benguet"/>
       </valueCoding>
     </extension>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality">
       <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <system value="https://psa.gov.ph/classification/psgc"/>
         <code value="1380200000"/>
         <display value="City of Las Piñas"/>
       </valueCoding>
     </extension>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay">
       <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <system value="https://psa.gov.ph/classification/psgc"/>
         <code value="1380100001"/>
         <display value="Barangay 1"/>
       </valueCoding>
@@ -74,21 +74,21 @@
     <address>
       <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/region">
         <valueCoding>
-          <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+          <system value="https://psa.gov.ph/classification/psgc"/>
           <code value="1401100000"/>
           <display value="Benguet"/>
         </valueCoding>
       </extension>
       <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality">
         <valueCoding>
-          <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+          <system value="https://psa.gov.ph/classification/psgc"/>
           <code value="1380200000"/>
           <display value="City of Las Piñas"/>
         </valueCoding>
       </extension>
       <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay">
         <valueCoding>
-          <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+          <system value="https://psa.gov.ph/classification/psgc"/>
           <code value="1380100001"/>
           <display value="Barangay 1"/>
         </valueCoding>

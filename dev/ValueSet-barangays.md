@@ -51,7 +51,7 @@ The Barangay codes valueset includes all barangay values from the Philippine Sta
   "title" : "Barangays",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -65,12 +65,12 @@ The Barangay codes valueset includes all barangay values from the Philippine Sta
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "compose" : {
     "include" : [{
-      "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+      "system" : "https://psa.gov.ph/classification/psgc",
       "concept" : [{
         "code" : "1380100001",
         "display" : "Barangay 1"

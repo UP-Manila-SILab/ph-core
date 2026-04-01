@@ -98,9 +98,11 @@ These define identifier and/or code system identities used by systems conforming
 | | |
 | :--- | :--- |
 | [DOH National Health Facility Registry Code](NamingSystem-DOHNHFRCodeNS.md) | Health Facility Code (HFC) from the National Health Facility Registry. |
+| [DOH Procedure Identifier](NamingSystem-DOHProcedureIDNS.md) | Identifier system for procedures assigned by the Department of Health (DOH) health facilities. |
 | [PAN - PhilHealth Accreditation Number](NamingSystem-PhilHealthPANNS.md) | The unique number issued by PhilHealth to accredited institutions. |
 | [PEN - PhilHealth Employer Number](NamingSystem-PhilHealthPENNS.md) | The unique number issued by PhilHealth to employers. |
 | [PIN - PhilHealth Identification Number](NamingSystem-PhilHealthIDNS.md) | The permanent and unique number issued by PhilHealth to individual members and to each and every dependent. |
+| [PhilHealth Procedure Identifier](NamingSystem-PhilHealthProcedureIDNS.md) | Identifier system for procedures assigned by PhilHealth for claims and reimbursement purposes. |
 | [PhilSys Identification Number (PhilSys ID)](NamingSystem-PhilSysIDNS.md) | The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program. |
 
 ### Example: Example Instances 

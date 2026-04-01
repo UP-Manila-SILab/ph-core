@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-race.csv), [Excel](S
   "name" : "Race",
   "title" : "Race",
   "status" : "draft",
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -63,7 +63,7 @@ Other representations of profile: [CSV](StructureDefinition-race.csv), [Excel](S
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "fhirVersion" : "4.0.1",

@@ -22,7 +22,7 @@ Pharmacy dispensed 30 tablets of Twinact 40mg/5mg (Telmisartan + Amlodipine) to 
   "status" : "completed",
   "medicationCodeableConcept" : {
     "coding" : [{
-      "system" : "https://verification.fda.gov.ph/",
+      "system" : "https://verification.fda.gov.ph",
       "code" : "DRP-10144",
       "display" : "Twinact"
     }],
@@ -37,9 +37,9 @@ Pharmacy dispensed 30 tablets of Twinact 40mg/5mg (Telmisartan + Amlodipine) to 
   "performer" : [{
     "function" : {
       "coding" : [{
-        "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-        "code" : "DISP",
-        "display" : "Dispensary"
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
+        "code" : "finalchecker",
+        "display" : "Final Checker"
       }]
     },
     "actor" : {
@@ -60,7 +60,7 @@ Pharmacy dispensed 30 tablets of Twinact 40mg/5mg (Telmisartan + Amlodipine) to 
     "value" : 30,
     "unit" : "Tablet",
     "system" : "http://snomed.info/sct",
-    "code" : "331691000"
+    "code" : "732936001"
   },
   "daysSupply" : {
     "value" : 7,

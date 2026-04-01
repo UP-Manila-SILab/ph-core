@@ -13,7 +13,7 @@
   <priority value="routine"/>
   <medicationCodeableConcept>
     <coding>
-      <system value="https://verification.fda.gov.ph/"/>
+      <system value="https://verification.fda.gov.ph"/>
       <code value="DRP-10144"/>
       <display value="Twinact"/>
     </coding>
@@ -53,7 +53,7 @@
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
         <code value="PO"/>
-        <display value="Oral"/>
+        <display value="Swallow, oral"/>
       </coding>
     </route>
     <doseAndRate>
@@ -71,7 +71,7 @@
       <value value="30"/>
       <unit value="Tablet"/>
       <system value="http://snomed.info/sct"/>
-      <code value="331691000"/>
+      <code value="732936001"/>
     </quantity>
   </dispenseRequest>
 </MedicationRequest>

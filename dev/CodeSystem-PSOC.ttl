@@ -11,18 +11,18 @@
   fhir:id [ fhir:v "PSOC"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSOC</b></p><a name=\"PSOC\"> </a><a name=\"hcPSOC\"> </a><p>This case-sensitive code system <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSOC</code> defines codes, but no codes are represented here</p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSOC</b></p><a name=\"PSOC\"> </a><a name=\"hcPSOC\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psoc/unit</code> provides some codes <b>that are example only</b>:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">111102<a name=\"PSOC-111102\"> </a></td><td>Hospital Administrator</td><td>Manages hospital operations</td></tr><tr><td style=\"white-space:nowrap\">111103<a name=\"PSOC-111103\"> </a></td><td>Medical Department Head</td><td>Head of a medical department</td></tr><tr><td style=\"white-space:nowrap\">121101<a name=\"PSOC-121101\"> </a></td><td>General Manager</td><td>Manages overall operations of an organization</td></tr><tr><td style=\"white-space:nowrap\">211101<a name=\"PSOC-211101\"> </a></td><td>Medical Doctor</td><td>Licensed physician practicing medicine</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
-     fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSOC"^^xsd:anyURI ;
-     fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSOC>
+     fhir:v "https://psa.gov.ph/classification/psoc/unit"^^xsd:anyURI ;
+     fhir:l <https://psa.gov.ph/classification/psoc/unit>
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PSOC"] ; # 
   fhir:title [ fhir:v "Mock PSOC"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-04-01T03:21:07+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-01T03:34:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -39,11 +39,28 @@
          fhir:l <urn:iso:std:iso:3166>
        ] ;
        fhir:code [ fhir:v "PH" ] ;
-       fhir:display [ fhir:v "Philippines" ]
+       fhir:display [ fhir:v "Philippines (the)" ]
      ] )
   ] ) ; # 
   fhir:caseSensitive [ fhir:v true] ; # 
-  fhir:content [ fhir:v "not-present"] . # 
+  fhir:content [ fhir:v "example"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "111102" ] ;
+     fhir:display [ fhir:v "Hospital Administrator" ] ;
+     fhir:definition [ fhir:v "Manages hospital operations" ]
+  ] [
+     fhir:code [ fhir:v "111103" ] ;
+     fhir:display [ fhir:v "Medical Department Head" ] ;
+     fhir:definition [ fhir:v "Head of a medical department" ]
+  ] [
+     fhir:code [ fhir:v "121101" ] ;
+     fhir:display [ fhir:v "General Manager" ] ;
+     fhir:definition [ fhir:v "Manages overall operations of an organization" ]
+  ] [
+     fhir:code [ fhir:v "211101" ] ;
+     fhir:display [ fhir:v "Medical Doctor" ] ;
+     fhir:definition [ fhir:v "Licensed physician practicing medicine" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

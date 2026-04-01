@@ -14,8 +14,8 @@
   "code" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "359962008",
-      "display" : "Blood sample collection for laboratory testing"
+      "code" : "82078001",
+      "display" : "Collection of blood specimen for laboratory"
     }],
     "text" : "Blood sample collection"
   },

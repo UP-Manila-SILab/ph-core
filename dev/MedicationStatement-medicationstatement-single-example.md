@@ -22,7 +22,7 @@ Patient Juan Dela Cruz reports taking Twinact 40mg/5mg tablet (Telmisartan + Aml
   "status" : "active",
   "medicationCodeableConcept" : {
     "coding" : [{
-      "system" : "https://verification.fda.gov.ph/",
+      "system" : "https://verification.fda.gov.ph",
       "code" : "DRP-10144",
       "display" : "Twinact"
     }],
@@ -66,7 +66,7 @@ Patient Juan Dela Cruz reports taking Twinact 40mg/5mg tablet (Telmisartan + Aml
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
         "code" : "PO",
-        "display" : "Oral"
+        "display" : "Swallow, oral"
       }]
     }
   }]

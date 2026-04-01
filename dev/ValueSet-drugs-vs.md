@@ -55,7 +55,7 @@ This value set includes all drug or medicament substance codes and all pharmaceu
   "title" : "Drugs",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -69,12 +69,12 @@ This value set includes all drug or medicament substance codes and all pharmaceu
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "compose" : {
     "include" : [{
-      "system" : "https://verification.fda.gov.ph/"
+      "system" : "https://verification.fda.gov.ph"
     }]
   }
 }

@@ -11,18 +11,18 @@
   fhir:id [ fhir:v "PSCED"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSCED</b></p><a name=\"PSCED\"> </a><a name=\"hcPSCED\"> </a><p>This case-sensitive code system <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED</code> defines codes, but no codes are represented here</p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSCED</b></p><a name=\"PSCED\"> </a><a name=\"hcPSCED\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psced/level</code> provides some codes <b>that are example only</b>:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">C201301<a name=\"PSCED-C201301\"> </a></td><td>Elementary Graduate</td><td>Completed elementary education</td></tr><tr><td style=\"white-space:nowrap\">C201302<a name=\"PSCED-C201302\"> </a></td><td>High School Graduate</td><td>Completed secondary education</td></tr><tr><td style=\"white-space:nowrap\">C201303<a name=\"PSCED-C201303\"> </a></td><td>College Graduate</td><td>Completed bachelor's degree</td></tr><tr><td style=\"white-space:nowrap\">C201304<a name=\"PSCED-C201304\"> </a></td><td>Postgraduate</td><td>Completed master's or doctoral degree</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
-     fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED"^^xsd:anyURI ;
-     fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED>
+     fhir:v "https://psa.gov.ph/classification/psced/level"^^xsd:anyURI ;
+     fhir:l <https://psa.gov.ph/classification/psced/level>
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PSCED"] ; # 
   fhir:title [ fhir:v "Mock PSCED"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-04-01T03:21:07+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-01T03:34:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -39,11 +39,28 @@
          fhir:l <urn:iso:std:iso:3166>
        ] ;
        fhir:code [ fhir:v "PH" ] ;
-       fhir:display [ fhir:v "Philippines" ]
+       fhir:display [ fhir:v "Philippines (the)" ]
      ] )
   ] ) ; # 
   fhir:caseSensitive [ fhir:v true] ; # 
-  fhir:content [ fhir:v "not-present"] . # 
+  fhir:content [ fhir:v "example"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "C201301" ] ;
+     fhir:display [ fhir:v "Elementary Graduate" ] ;
+     fhir:definition [ fhir:v "Completed elementary education" ]
+  ] [
+     fhir:code [ fhir:v "C201302" ] ;
+     fhir:display [ fhir:v "High School Graduate" ] ;
+     fhir:definition [ fhir:v "Completed secondary education" ]
+  ] [
+     fhir:code [ fhir:v "C201303" ] ;
+     fhir:display [ fhir:v "College Graduate" ] ;
+     fhir:definition [ fhir:v "Completed bachelor's degree" ]
+  ] [
+     fhir:code [ fhir:v "C201304" ] ;
+     fhir:display [ fhir:v "Postgraduate" ] ;
+     fhir:definition [ fhir:v "Completed master's or doctoral degree" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

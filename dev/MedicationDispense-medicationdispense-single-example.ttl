@@ -25,8 +25,8 @@
      a fhir:CodeableConcept ;
      fhir:coding ( [
        fhir:system [
-         fhir:v "https://verification.fda.gov.ph/"^^xsd:anyURI ;
-         fhir:l <https://verification.fda.gov.ph/>
+         fhir:v "https://verification.fda.gov.ph"^^xsd:anyURI ;
+         fhir:l <https://verification.fda.gov.ph>
        ] ;
        fhir:code [ fhir:v "DRP-10144" ] ;
        fhir:display [ fhir:v "Twinact" ]
@@ -45,11 +45,11 @@
      fhir:function [
        fhir:coding ( [
          fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+           fhir:v "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function>
          ] ;
-         fhir:code [ fhir:v "DISP" ] ;
-         fhir:display [ fhir:v "Dispensary" ]
+         fhir:code [ fhir:v "finalchecker" ] ;
+         fhir:display [ fhir:v "Final Checker" ]
        ] )
      ] ;
      fhir:actor [
@@ -79,7 +79,7 @@
        fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
        fhir:l <http://snomed.info/sct>
      ] ;
-     fhir:code [ fhir:v "331691000" ]
+     fhir:code [ fhir:v "732936001" ]
   ] ; # 
   fhir:daysSupply [
      fhir:value [ fhir:v "7"^^xsd:decimal ] ;

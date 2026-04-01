@@ -20,6 +20,7 @@ Patient's occupation.
 **Usages:**
 
 * Use this Extension: [PH Core Patient](StructureDefinition-ph-core-patient.md)
+* Examples for this Extension: [Patient/patient-single-example](Patient-patient-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/occupation)
 
@@ -49,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-occupation.csv), [Ex
   "title" : "Occupation",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -63,7 +64,7 @@ Other representations of profile: [CSV](StructureDefinition-occupation.csv), [Ex
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "fhirVersion" : "4.0.1",

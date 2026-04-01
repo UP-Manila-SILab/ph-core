@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="652cf26b-2ed7-4c8c-ac7c-17ebdd69e6c6"/>
+  <id value="36c39278-b416-4858-8582-99bf16e54d7c"/>
   <meta>
-    <lastUpdated value="2026-04-01T03:21:07.912+00:00"/>
+    <lastUpdated value="2026-04-01T03:34:09.830+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -17,7 +17,7 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 1 concepts</p>
@@ -41,8 +41,8 @@
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1380100001"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-1380100001"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-1380100001">1380100001</a>
@@ -50,12 +50,12 @@
                 <td>Barangay 1</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100001&quot;, &quot;display&quot;: &quot;Barangay 1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100001&quot;, &quot;display&quot;: &quot;Barangay 1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100001&quot;&gt;&lt;display value=&quot;Barangay 1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100001&quot;&gt;&lt;display value=&quot;Barangay 1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -68,17 +68,17 @@
         <title value="Barangays"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:21:07+00:00"/>
+        <date value="2026-04-01T03:34:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="PH"/>
-            <display value="Philippines"/>
+            <display value="Philippines (the)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:9a3620fb-d575-4eba-9b17-3b624572f209"/>
-          <timestamp value="2026-04-01T03:22:18+00:00"/>
+          <identifier value="urn:uuid:6a1b051b-e778-48c0-823e-cc9618c08e2b"/>
+          <timestamp value="2026-04-01T03:35:14+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -99,10 +99,10 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0"/>
+            <valueUri value="https://psa.gov.ph/classification/psgc|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="1380100001"/>
             <display value="Barangay 1"/>
           </contains>
@@ -121,7 +121,7 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 2 concepts</p>
@@ -145,8 +145,8 @@
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1380100000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-1380100000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-1380100000">1380100000</a>
@@ -154,19 +154,19 @@
                 <td>City of Caloocan</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100000&quot;, &quot;display&quot;: &quot;City of Caloocan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100000&quot;, &quot;display&quot;: &quot;City of Caloocan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100000&quot;&gt;&lt;display value=&quot;City of Caloocan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100000&quot;&gt;&lt;display value=&quot;City of Caloocan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1380200000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-1380200000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-1380200000">1380200000</a>
@@ -174,12 +174,12 @@
                 <td>City of Las Piñas</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380200000&quot;, &quot;display&quot;: &quot;City of Las Piñas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380200000&quot;, &quot;display&quot;: &quot;City of Las Piñas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380200000&quot;&gt;&lt;display value=&quot;City of Las Piñas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380200000&quot;&gt;&lt;display value=&quot;City of Las Piñas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -192,17 +192,17 @@
         <title value="Cities"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:21:07+00:00"/>
+        <date value="2026-04-01T03:34:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="PH"/>
-            <display value="Philippines"/>
+            <display value="Philippines (the)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6d98a9f4-ac6a-4e4d-9ae5-9192eda31cd9"/>
-          <timestamp value="2026-04-01T03:22:18+00:00"/>
+          <identifier value="urn:uuid:2bee8c78-553e-488f-844d-48d1ca2409f5"/>
+          <timestamp value="2026-04-01T03:35:14+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -223,15 +223,15 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0"/>
+            <valueUri value="https://psa.gov.ph/classification/psgc|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="1380100000"/>
             <display value="City of Caloocan"/>
           </contains>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="1380200000"/>
             <display value="City of Las Piñas"/>
           </contains>
@@ -248,15 +248,15 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #ffcccc; padding: 8px; margin-bottom: 8px">Expansion based on code system fragment 
-              <a href="CodeSystem-PHFDACPRCS.html">https://verification.fda.gov.ph/ PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-PHFDACPRCS.html">https://verification.fda.gov.ph PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://verification.fda.gov.ph/|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://verification.fda.gov.ph|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-PHFDACPRCS.html">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://verification.fda.gov.ph/|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://verification.fda.gov.ph|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains at least 3 concepts</p>
@@ -286,10 +286,10 @@
               </tr>
               <tr>
                 <td>
-                  <a name="x-https://verification.fda.gov.ph/-PH-FDA-DRUGS"> </a>1
+                  <a name="x-https://verification.fda.gov.ph-PH-FDA-DRUGS"> </a>1
                 </td>
                 <td>
-                  <code>https://verification.fda.gov.ph/</code>
+                  <code>https://verification.fda.gov.ph</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PHFDACPRCS.html#PHFDACPRCS-PH-FDA-DRUGS">PH-FDA-DRUGS</a>
@@ -298,21 +298,21 @@
                 <td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-https://verification.fda.gov.ph/-DRP-10144"> </a>2
+                  <a name="x-https://verification.fda.gov.ph-DRP-10144"> </a>2
                 </td>
                 <td>
-                  <code>https://verification.fda.gov.ph/</code>
+                  <code>https://verification.fda.gov.ph</code>
                 </td>
                 <td style="white-space:nowrap">    
                   <a href="CodeSystem-PHFDACPRCS.html#PHFDACPRCS-DRP-10144">DRP-10144</a>
@@ -321,21 +321,21 @@
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-https://verification.fda.gov.ph/-1193768"> </a>2
+                  <a name="x-https://verification.fda.gov.ph-1193768"> </a>2
                 </td>
                 <td>
-                  <code>https://verification.fda.gov.ph/</code>
+                  <code>https://verification.fda.gov.ph</code>
                 </td>
                 <td style="white-space:nowrap">    
                   <a href="CodeSystem-PHFDACPRCS.html#PHFDACPRCS-1193768">1193768</a>
@@ -344,12 +344,12 @@
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -362,17 +362,17 @@
         <title value="Drugs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:21:07+00:00"/>
+        <date value="2026-04-01T03:34:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="PH"/>
-            <display value="Philippines"/>
+            <display value="Philippines (the)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d317b247-0994-4e13-910d-2458de687bf0"/>
-          <timestamp value="2026-04-01T03:22:18+00:00"/>
+          <identifier value="urn:uuid:7af1d5ca-9283-4890-a6a9-495b63d04d90"/>
+          <timestamp value="2026-04-01T03:35:14+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -393,96 +393,27 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://verification.fda.gov.ph/|0.1.0"/>
+            <valueUri value="https://verification.fda.gov.ph|0.1.0"/>
           </parameter>
           <parameter>
             <name value="fragment"/>
-            <valueCanonical value="https://verification.fda.gov.ph/|0.1.0"/>
+            <valueCanonical value="https://verification.fda.gov.ph|0.1.0"/>
           </parameter>
           <contains>
-            <system value="https://verification.fda.gov.ph/"/>
+            <system value="https://verification.fda.gov.ph"/>
             <code value="PH-FDA-DRUGS"/>
             <display value="Philippine FDA Registered Drug Products"/>
             <contains>
-              <system value="https://verification.fda.gov.ph/"/>
+              <system value="https://verification.fda.gov.ph"/>
               <code value="DRP-10144"/>
               <display value="Twinact"/>
             </contains>
             <contains>
-              <system value="https://verification.fda.gov.ph/"/>
+              <system value="https://verification.fda.gov.ph"/>
               <code value="1193768"/>
               <display value="Ascorfed-Z Cap"/>
             </contains>
           </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments"/>
-    <resource>
-      <ValueSet>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
-            <p class="res-header-id"/>
-            <p>This value set contains 0 concepts</p>
-            <table class="codes" data-fhir="generated">
-              <tr>
-                <td>
-                  <b>System</b>
-                </td>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display (en)</b>
-                </td>
-                <td>
-                  <b>JSON</b>
-                </td>
-                <td>
-                  <b>XML</b>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments"/>
-        <version value="0.1.0"/>
-        <name value="EducationalAttainments"/>
-        <title value="Educational Attainments"/>
-        <status value="draft"/>
-        <experimental value="true"/>
-        <date value="2026-04-01T03:21:07+00:00"/>
-        <jurisdiction>
-          <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="PH"/>
-            <display value="Philippines"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:5d2a16b9-40eb-4090-9c94-4e15f9d074d4"/>
-          <timestamp value="2026-04-01T03:22:18+00:00"/>
-          <total value="0"/>
-          <offset value="0"/>
-          <parameter>
-            <name value="displayLanguage"/>
-            <valueCode value="en"/>
-          </parameter>
-          <parameter>
-            <name value="count"/>
-            <valueInteger value="1000"/>
-          </parameter>
-          <parameter>
-            <name value="offset"/>
-            <valueInteger value="0"/>
-          </parameter>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
         </expansion>
       </ValueSet>
     </resource>
@@ -1189,17 +1120,17 @@
         <title value="Indigenous Groups"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:21:07+00:00"/>
+        <date value="2026-04-01T03:34:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="PH"/>
-            <display value="Philippines"/>
+            <display value="Philippines (the)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:f1e85f7b-ac46-47cf-92c1-33d098b12a3c"/>
-          <timestamp value="2026-04-01T03:22:18+00:00"/>
+          <identifier value="urn:uuid:ec19804e-fb3c-420a-9235-eb437d51a49a"/>
+          <timestamp value="2026-04-01T03:35:15+00:00"/>
           <total value="33"/>
           <offset value="0"/>
           <parameter>
@@ -1392,75 +1323,6 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications"/>
-    <resource>
-      <ValueSet>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
-            <p class="res-header-id"/>
-            <p>This value set contains 0 concepts</p>
-            <table class="codes" data-fhir="generated">
-              <tr>
-                <td>
-                  <b>System</b>
-                </td>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display (en)</b>
-                </td>
-                <td>
-                  <b>JSON</b>
-                </td>
-                <td>
-                  <b>XML</b>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications"/>
-        <version value="0.1.0"/>
-        <name value="OccupationClassifications"/>
-        <title value="Occupation Classifications"/>
-        <status value="draft"/>
-        <experimental value="true"/>
-        <date value="2026-04-01T03:21:07+00:00"/>
-        <jurisdiction>
-          <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="PH"/>
-            <display value="Philippines"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:1907179f-d4d3-4783-9b7a-e29bcf397b3d"/>
-          <timestamp value="2026-04-01T03:22:18+00:00"/>
-          <total value="0"/>
-          <offset value="0"/>
-          <parameter>
-            <name value="displayLanguage"/>
-            <valueCode value="en"/>
-          </parameter>
-          <parameter>
-            <name value="count"/>
-            <valueInteger value="1000"/>
-          </parameter>
-          <parameter>
-            <name value="offset"/>
-            <valueInteger value="0"/>
-          </parameter>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
     <fullUrl value="http://doh.gov.ph/fhir/ph-core/ValueSet/provinces"/>
     <resource>
       <ValueSet>
@@ -1471,7 +1333,7 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 6 concepts</p>
@@ -1495,8 +1357,8 @@
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0402100000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-0402100000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-0402100000">0402100000</a>
@@ -1504,19 +1366,19 @@
                 <td>Cavite</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0402100000&quot;, &quot;display&quot;: &quot;Cavite&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0402100000&quot;, &quot;display&quot;: &quot;Cavite&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0402100000&quot;&gt;&lt;display value=&quot;Cavite&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0402100000&quot;&gt;&lt;display value=&quot;Cavite&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0403400000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-0403400000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-0403400000">0403400000</a>
@@ -1524,19 +1386,19 @@
                 <td>Laguna</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0403400000&quot;, &quot;display&quot;: &quot;Laguna&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0403400000&quot;, &quot;display&quot;: &quot;Laguna&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0403400000&quot;&gt;&lt;display value=&quot;Laguna&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0403400000&quot;&gt;&lt;display value=&quot;Laguna&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0405600000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-0405600000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-0405600000">0405600000</a>
@@ -1544,19 +1406,19 @@
                 <td>Quezon</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405600000&quot;, &quot;display&quot;: &quot;Quezon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405600000&quot;, &quot;display&quot;: &quot;Quezon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405600000&quot;&gt;&lt;display value=&quot;Quezon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405600000&quot;&gt;&lt;display value=&quot;Quezon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0405800000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-0405800000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-0405800000">0405800000</a>
@@ -1564,19 +1426,19 @@
                 <td>Rizal</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405800000&quot;, &quot;display&quot;: &quot;Rizal&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405800000&quot;, &quot;display&quot;: &quot;Rizal&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405800000&quot;&gt;&lt;display value=&quot;Rizal&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405800000&quot;&gt;&lt;display value=&quot;Rizal&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1704000000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-1704000000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-1704000000">1704000000</a>
@@ -1584,19 +1446,19 @@
                 <td>Marinduque</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1704000000&quot;, &quot;display&quot;: &quot;Marinduque&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1704000000&quot;, &quot;display&quot;: &quot;Marinduque&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1704000000&quot;&gt;&lt;display value=&quot;Marinduque&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1704000000&quot;&gt;&lt;display value=&quot;Marinduque&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1705100000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-1705100000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-1705100000">1705100000</a>
@@ -1604,12 +1466,12 @@
                 <td>Occidental Mindoro</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1705100000&quot;, &quot;display&quot;: &quot;Occidental Mindoro&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1705100000&quot;, &quot;display&quot;: &quot;Occidental Mindoro&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1705100000&quot;&gt;&lt;display value=&quot;Occidental Mindoro&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1705100000&quot;&gt;&lt;display value=&quot;Occidental Mindoro&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1622,17 +1484,17 @@
         <title value="Provinces"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:21:07+00:00"/>
+        <date value="2026-04-01T03:34:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="PH"/>
-            <display value="Philippines"/>
+            <display value="Philippines (the)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:daa72757-280c-4857-82a6-20e4b1f82cb1"/>
-          <timestamp value="2026-04-01T03:22:18+00:00"/>
+          <identifier value="urn:uuid:0798ddfb-d5ea-4a9c-963d-ad99f61e526b"/>
+          <timestamp value="2026-04-01T03:35:15+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -1653,35 +1515,35 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0"/>
+            <valueUri value="https://psa.gov.ph/classification/psgc|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="0402100000"/>
             <display value="Cavite"/>
           </contains>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="0403400000"/>
             <display value="Laguna"/>
           </contains>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="0405600000"/>
             <display value="Quezon"/>
           </contains>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="0405800000"/>
             <display value="Rizal"/>
           </contains>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="1704000000"/>
             <display value="Marinduque"/>
           </contains>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="1705100000"/>
             <display value="Occidental Mindoro"/>
           </contains>
@@ -1700,7 +1562,7 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 3 concepts</p>
@@ -1724,8 +1586,8 @@
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0102800000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-0102800000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-0102800000">0102800000</a>
@@ -1733,19 +1595,19 @@
                 <td>Ilocos Norte</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102800000&quot;, &quot;display&quot;: &quot;Ilocos Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102800000&quot;, &quot;display&quot;: &quot;Ilocos Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102800000&quot;&gt;&lt;display value=&quot;Ilocos Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102800000&quot;&gt;&lt;display value=&quot;Ilocos Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0102900000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-0102900000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-0102900000">0102900000</a>
@@ -1753,19 +1615,19 @@
                 <td>Ilocos Sur</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102900000&quot;, &quot;display&quot;: &quot;Ilocos Sur&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102900000&quot;, &quot;display&quot;: &quot;Ilocos Sur&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102900000&quot;&gt;&lt;display value=&quot;Ilocos Sur&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102900000&quot;&gt;&lt;display value=&quot;Ilocos Sur&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0103300000"> </a>
-                  <code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code>
+                  <a name="x-https://psa.gov.ph/classification/psgc-0103300000"> </a>
+                  <code>https://psa.gov.ph/classification/psgc</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-PSGC.html#PSGC-0103300000">0103300000</a>
@@ -1773,12 +1635,12 @@
                 <td>La Union</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0103300000&quot;, &quot;display&quot;: &quot;La Union&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0103300000&quot;, &quot;display&quot;: &quot;La Union&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0103300000&quot;&gt;&lt;display value=&quot;La Union&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0103300000&quot;&gt;&lt;display value=&quot;La Union&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1791,17 +1653,17 @@
         <title value="Regions"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:21:07+00:00"/>
+        <date value="2026-04-01T03:34:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="PH"/>
-            <display value="Philippines"/>
+            <display value="Philippines (the)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6710ff44-4acc-4ef7-aa75-0310b496b4ba"/>
-          <timestamp value="2026-04-01T03:22:18+00:00"/>
+          <identifier value="urn:uuid:aa8efb9b-5364-40be-b6a5-c6e9dc8950fb"/>
+          <timestamp value="2026-04-01T03:35:15+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1822,20 +1684,20 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0"/>
+            <valueUri value="https://psa.gov.ph/classification/psgc|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="0102800000"/>
             <display value="Ilocos Norte"/>
           </contains>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="0102900000"/>
             <display value="Ilocos Sur"/>
           </contains>
           <contains>
-            <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+            <system value="https://psa.gov.ph/classification/psgc"/>
             <code value="0103300000"/>
             <display value="La Union"/>
           </contains>

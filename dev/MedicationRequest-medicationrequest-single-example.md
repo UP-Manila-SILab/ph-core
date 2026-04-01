@@ -24,7 +24,7 @@ Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodip
   "priority" : "routine",
   "medicationCodeableConcept" : {
     "coding" : [{
-      "system" : "https://verification.fda.gov.ph/",
+      "system" : "https://verification.fda.gov.ph",
       "code" : "DRP-10144",
       "display" : "Twinact"
     }],
@@ -64,7 +64,7 @@ Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodip
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
         "code" : "PO",
-        "display" : "Oral"
+        "display" : "Swallow, oral"
       }]
     },
     "doseAndRate" : [{
@@ -82,7 +82,7 @@ Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodip
       "value" : 30,
       "unit" : "Tablet",
       "system" : "http://snomed.info/sct",
-      "code" : "331691000"
+      "code" : "732936001"
     }
   }
 }

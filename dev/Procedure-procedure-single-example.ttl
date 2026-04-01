@@ -44,13 +44,13 @@
   fhir:status [ fhir:v "completed"] ; # 
   fhir:statusReason [
      fhir:coding ( [
-       a sct:281501002 ;
+       a sct:385669000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:code [ fhir:v "281501002" ] ;
-       fhir:display [ fhir:v "Procedure carried out successfully" ]
+       fhir:code [ fhir:v "385669000" ] ;
+       fhir:display [ fhir:v "Successful" ]
      ] )
   ] ; # 
   fhir:category [
@@ -152,13 +152,13 @@
   ] ) ; # 
   fhir:bodySite ( [
      fhir:coding ( [
-       a sct:181250006 ;
+       a sct:66754008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:code [ fhir:v "181250006" ] ;
-       fhir:display [ fhir:v "Entire appendix" ]
+       fhir:code [ fhir:v "66754008" ] ;
+       fhir:display [ fhir:v "Appendix structure" ]
      ] ) ;
      fhir:text [ fhir:v "Right lower quadrant abdomen" ]
   ] ) ; # 
@@ -174,26 +174,15 @@
      ] ) ;
      fhir:text [ fhir:v "Procedure completed without complications" ]
   ] ; # 
-  fhir:complication ( [
-     fhir:coding ( [
-       a sct:109721000 ;
-       fhir:system [
-         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-         fhir:l <http://snomed.info/sct>
-       ] ;
-       fhir:code [ fhir:v "109721000" ] ;
-       fhir:display [ fhir:v "No complication" ]
-     ] )
-  ] ) ; # 
   fhir:followUp ( [
      fhir:coding ( [
-       a sct:18949003 ;
+       a sct:226007004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:code [ fhir:v "18949003" ] ;
-       fhir:display [ fhir:v "Postsurgical wound care" ]
+       fhir:code [ fhir:v "226007004" ] ;
+       fhir:display [ fhir:v "Post-surgical wound care" ]
      ] ) ;
      fhir:text [ fhir:v "Follow-up visit in 7 days for wound check" ]
   ] ) ; # 
@@ -203,13 +192,13 @@
   ] ) ; # 
   fhir:usedCode ( [
      fhir:coding ( [
-       a sct:363708005 ;
+       a sct:261424001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:code [ fhir:v "363708005" ] ;
-       fhir:display [ fhir:v "Surgical instrument" ]
+       fhir:code [ fhir:v "261424001" ] ;
+       fhir:display [ fhir:v "Primary operation" ]
      ] ) ;
      fhir:text [ fhir:v "Laparoscopic instruments" ]
   ] ) . # 

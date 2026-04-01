@@ -3,7 +3,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="occupational-classifications"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet occupational-classifications</b></p><a name="occupational-classifications"> </a><a name="hcoccupational-classifications"> </a><p>This value set includes codes based on the following rules:</p><ul/></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet occupational-classifications</b></p><a name="occupational-classifications"> </a><a name="hcoccupational-classifications"> </a><ul><li>Include all codes defined in <a href="CodeSystem-PSOC.html"><code>https://psa.gov.ph/classification/psoc/unit</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
   </text>
   <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications"/>
   <version value="0.1.0"/>
@@ -11,7 +11,7 @@
   <title value="Occupation Classifications"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2026-04-01T03:21:07+00:00"/>
+  <date value="2026-04-01T03:34:09+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>
@@ -25,7 +25,12 @@
     <coding>
       <system value="urn:iso:std:iso:3166"/>
       <code value="PH"/>
-      <display value="Philippines"/>
+      <display value="Philippines (the)"/>
     </coding>
   </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://psa.gov.ph/classification/psoc/unit"/>
+    </include>
+  </compose>
 </ValueSet>

@@ -26,7 +26,7 @@ Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
           "code" : "PH",
-          "display" : "Philippines"
+          "display" : "Philippines (the)"
         }]
       }
     },
@@ -74,7 +74,7 @@ Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR
     "extension" : [{
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "1380100001",
         "display" : "Barangay 1"
       }
@@ -82,7 +82,7 @@ Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR
     {
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "1380200000",
         "display" : "City of Las Piñas"
       }
@@ -90,7 +90,7 @@ Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR
     {
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "0402100000",
         "display" : "Cavite"
       }

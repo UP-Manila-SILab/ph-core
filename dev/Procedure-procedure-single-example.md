@@ -57,8 +57,8 @@
   "statusReason" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "281501002",
-      "display" : "Procedure carried out successfully"
+      "code" : "385669000",
+      "display" : "Successful"
     }]
   },
   "category" : {
@@ -133,8 +133,8 @@
   "bodySite" : [{
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "181250006",
-      "display" : "Entire appendix"
+      "code" : "66754008",
+      "display" : "Appendix structure"
     }],
     "text" : "Right lower quadrant abdomen"
   }],
@@ -146,18 +146,11 @@
     }],
     "text" : "Procedure completed without complications"
   },
-  "complication" : [{
-    "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "109721000",
-      "display" : "No complication"
-    }]
-  }],
   "followUp" : [{
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "18949003",
-      "display" : "Postsurgical wound care"
+      "code" : "226007004",
+      "display" : "Post-surgical wound care"
     }],
     "text" : "Follow-up visit in 7 days for wound check"
   }],
@@ -168,8 +161,8 @@
   "usedCode" : [{
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "363708005",
-      "display" : "Surgical instrument"
+      "code" : "261424001",
+      "display" : "Primary operation"
     }],
     "text" : "Laparoscopic instruments"
   }]

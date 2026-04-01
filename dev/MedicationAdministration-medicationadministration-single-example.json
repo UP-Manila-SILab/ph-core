@@ -11,7 +11,7 @@
   "status" : "completed",
   "medicationCodeableConcept" : {
     "coding" : [{
-      "system" : "https://verification.fda.gov.ph/",
+      "system" : "https://verification.fda.gov.ph",
       "code" : "DRP-10144",
       "display" : "Twinact"
     }],
@@ -28,7 +28,7 @@
     "function" : {
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
-        "code" : "PRCP",
+        "code" : "PP",
         "display" : "Primary Care Provider"
       }]
     },
@@ -45,7 +45,7 @@
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
         "code" : "PO",
-        "display" : "Oral"
+        "display" : "Swallow, oral"
       }]
     },
     "dose" : {

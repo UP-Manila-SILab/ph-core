@@ -47,7 +47,7 @@ Health Facility Code (HFC) from the National Health Facility Registry.
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "uniqueId" : [{

@@ -6,7 +6,7 @@
     "name" : "Barangays",
     "title" : "Barangays",
     "description" : "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
-    "systems" : ["http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"]
+    "systems" : ["https://psa.gov.ph/classification/psgc"]
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/cities",
@@ -15,7 +15,7 @@
     "name" : "Cities",
     "title" : "Cities",
     "description" : "All city values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
-    "systems" : ["http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"]
+    "systems" : ["https://psa.gov.ph/classification/psgc"]
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs",
@@ -24,7 +24,7 @@
     "name" : "DrugsVS",
     "title" : "Drugs",
     "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA.",
-    "systems" : ["https://verification.fda.gov.ph/"]
+    "systems" : ["https://verification.fda.gov.ph"]
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",
@@ -32,7 +32,8 @@
     "status" : "draft",
     "name" : "EducationalAttainments",
     "title" : "Educational Attainments",
-    "description" : "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)"
+    "description" : "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)",
+    "systems" : ["https://psa.gov.ph/classification/psced/level"]
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/indigenous-groups-vs",
@@ -49,7 +50,8 @@
     "status" : "draft",
     "name" : "OccupationClassifications",
     "title" : "Occupation Classifications",
-    "description" : "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA)."
+    "description" : "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psoc/unit"]
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/provinces",
@@ -58,7 +60,7 @@
     "name" : "Provinces",
     "title" : "Provinces",
     "description" : "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
-    "systems" : ["http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"]
+    "systems" : ["https://psa.gov.ph/classification/psgc"]
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/regions",
@@ -67,6 +69,6 @@
     "name" : "Regions",
     "title" : "Regions",
     "description" : "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
-    "systems" : ["http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"]
+    "systems" : ["https://psa.gov.ph/classification/psgc"]
   }]
 }

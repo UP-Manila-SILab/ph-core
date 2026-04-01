@@ -1,19 +1,5 @@
 {
   "codeSystems" : [{
-    "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "PSGC",
-    "title" : "Mock PSGC",
-    "description" : "Mock of the Philippine Standard Geographic Code.",
-    "uses" : {
-    },
-    "ValueSet-provinces.html" : "Provinces",
-    "ValueSet-cities.html" : "Cities",
-    "ValueSet-barangays.html" : "Barangays",
-    "ValueSet-regions.html" : "Regions"
-  },
-  {
     "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
     "version" : "0.1.0",
     "status" : "draft",
@@ -97,7 +83,43 @@
     "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type"
   },
   {
-    "url" : "https://verification.fda.gov.ph/",
+    "url" : "https://psa.gov.ph/classification/psced/level",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PSCED",
+    "title" : "Mock PSCED",
+    "description" : "Mock of the Philippine Standard Classification of Education.",
+    "uses" : {
+    },
+    "ValueSet-educational-attainments.html" : "Educational Attainments"
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psgc",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PSGC",
+    "title" : "Mock PSGC",
+    "description" : "Mock of the Philippine Standard Geographic Code.",
+    "uses" : {
+    },
+    "ValueSet-cities.html" : "Cities",
+    "ValueSet-regions.html" : "Regions",
+    "ValueSet-barangays.html" : "Barangays",
+    "ValueSet-provinces.html" : "Provinces"
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psoc/unit",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PSOC",
+    "title" : "Mock PSOC",
+    "description" : "Mock of the Philippine Standard Occupational Classification.",
+    "uses" : {
+    },
+    "ValueSet-occupational-classifications.html" : "Occupation Classifications"
+  },
+  {
+    "url" : "https://verification.fda.gov.ph",
     "version" : "0.1.0",
     "status" : "active",
     "name" : "PHFDACPRCS",

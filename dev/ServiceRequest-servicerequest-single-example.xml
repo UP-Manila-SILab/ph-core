@@ -20,8 +20,8 @@
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="271061004"/>
-      <display value="Fasting blood glucose measurement"/>
+      <code value="33747003"/>
+      <display value="Glucose measurement, blood"/>
     </coding>
   </code>
   <subject>

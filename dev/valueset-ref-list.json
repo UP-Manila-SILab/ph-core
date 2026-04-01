@@ -6,7 +6,7 @@
     "name" : "Barangays",
     "title" : "Barangays",
     "description" : "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
-    "systems" : ["http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"],
+    "systems" : ["https://psa.gov.ph/classification/psgc"],
     "uses" : {
     },
     "StructureDefinition-barangay.html" : "Barangay"
@@ -18,7 +18,7 @@
     "name" : "Cities",
     "title" : "Cities",
     "description" : "All city values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
-    "systems" : ["http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"],
+    "systems" : ["https://psa.gov.ph/classification/psgc"],
     "uses" : {
     },
     "StructureDefinition-city-municipality.html" : "City/Municipality"
@@ -30,14 +30,14 @@
     "name" : "DrugsVS",
     "title" : "Drugs",
     "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA.",
-    "systems" : ["https://verification.fda.gov.ph/"],
+    "systems" : ["https://verification.fda.gov.ph"],
     "uses" : {
     },
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement",
     "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
-    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
     "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
-    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",
@@ -46,6 +46,7 @@
     "name" : "EducationalAttainments",
     "title" : "Educational Attainments",
     "description" : "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)",
+    "systems" : ["https://psa.gov.ph/classification/psced/level"],
     "uses" : {
     },
     "StructureDefinition-educational-attainment.html" : "Educational Attainment"
@@ -69,6 +70,7 @@
     "name" : "OccupationClassifications",
     "title" : "Occupation Classifications",
     "description" : "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psoc/unit"],
     "uses" : {
     },
     "StructureDefinition-occupation.html" : "Occupation"
@@ -80,7 +82,7 @@
     "name" : "Provinces",
     "title" : "Provinces",
     "description" : "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
-    "systems" : ["http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"],
+    "systems" : ["https://psa.gov.ph/classification/psgc"],
     "uses" : {
     },
     "StructureDefinition-province.html" : "Province"
@@ -92,7 +94,7 @@
     "name" : "Regions",
     "title" : "Regions",
     "description" : "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
-    "systems" : ["http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"],
+    "systems" : ["https://psa.gov.ph/classification/psgc"],
     "uses" : {
     },
     "StructureDefinition-region.html" : "Region"

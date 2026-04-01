@@ -51,7 +51,7 @@ The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789
     "extension" : [{
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "1401100000",
         "display" : "Benguet"
       }
@@ -59,7 +59,7 @@ The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789
     {
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "1380200000",
         "display" : "City of Las Piñas"
       }
@@ -67,7 +67,7 @@ The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789
     {
       "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
       "valueCoding" : {
-        "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+        "system" : "https://psa.gov.ph/classification/psgc",
         "code" : "1380100001",
         "display" : "Barangay 1"
       }
@@ -89,7 +89,7 @@ The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789
       "extension" : [{
         "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region",
         "valueCoding" : {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1401100000",
           "display" : "Benguet"
         }
@@ -97,7 +97,7 @@ The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789
       {
         "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality",
         "valueCoding" : {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1380200000",
           "display" : "City of Las Piñas"
         }
@@ -105,7 +105,7 @@ The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789
       {
         "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
         "valueCoding" : {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1380100001",
           "display" : "Barangay 1"
         }

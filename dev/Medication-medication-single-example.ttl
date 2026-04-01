@@ -23,8 +23,8 @@
   fhir:code [
      fhir:coding ( [
        fhir:system [
-         fhir:v "https://verification.fda.gov.ph/"^^xsd:anyURI ;
-         fhir:l <https://verification.fda.gov.ph/>
+         fhir:v "https://verification.fda.gov.ph"^^xsd:anyURI ;
+         fhir:l <https://verification.fda.gov.ph>
        ] ;
        fhir:code [ fhir:v "DRP-10144" ] ;
        fhir:display [ fhir:v "Twinact" ]

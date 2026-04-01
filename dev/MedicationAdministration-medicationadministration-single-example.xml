@@ -11,7 +11,7 @@
   <status value="completed"/>
   <medicationCodeableConcept>
     <coding>
-      <system value="https://verification.fda.gov.ph/"/>
+      <system value="https://verification.fda.gov.ph"/>
       <code value="DRP-10144"/>
       <display value="Twinact"/>
     </coding>
@@ -28,7 +28,7 @@
     <function>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
-        <code value="PRCP"/>
+        <code value="PP"/>
         <display value="Primary Care Provider"/>
       </coding>
     </function>
@@ -45,7 +45,7 @@
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
         <code value="PO"/>
-        <display value="Oral"/>
+        <display value="Swallow, oral"/>
       </coding>
     </route>
     <dose>

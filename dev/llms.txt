@@ -79,9 +79,11 @@
 ### NamingSystems
 
 * [DOHNHFRCode](NamingSystem-DOHNHFRCodeNS.md)
+* [DOHProcedureID](NamingSystem-DOHProcedureIDNS.md)
 * [PhilHealthID](NamingSystem-PhilHealthIDNS.md)
 * [PhilHealthPAN](NamingSystem-PhilHealthPANNS.md)
 * [PhilHealthPEN](NamingSystem-PhilHealthPENNS.md)
+* [PhilHealthProcedureID](NamingSystem-PhilHealthProcedureIDNS.md)
 * [PhilSysID](NamingSystem-PhilSysIDNS.md)
 
 ### Examples

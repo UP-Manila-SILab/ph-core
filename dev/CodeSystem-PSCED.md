@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED | *Version*:0.1.0 |
+| *Official URL*:https://psa.gov.ph/classification/psced/level | *Version*:0.1.0 |
 | Draft as of 2026-04-01 | *Computable Name*:PSCED |
 
  
@@ -16,7 +16,7 @@ Mock of the Philippine Standard Classification of Education.
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
+* [EducationalAttainments](ValueSet-educational-attainments.md)
 
 
 
@@ -26,13 +26,13 @@ Mock of the Philippine Standard Classification of Education.
 {
   "resourceType" : "CodeSystem",
   "id" : "PSCED",
-  "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED",
+  "url" : "https://psa.gov.ph/classification/psced/level",
   "version" : "0.1.0",
   "name" : "PSCED",
   "title" : "Mock PSCED",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -46,11 +46,31 @@ Mock of the Philippine Standard Classification of Education.
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "caseSensitive" : true,
-  "content" : "not-present"
+  "content" : "example",
+  "concept" : [{
+    "code" : "C201301",
+    "display" : "Elementary Graduate",
+    "definition" : "Completed elementary education"
+  },
+  {
+    "code" : "C201302",
+    "display" : "High School Graduate",
+    "definition" : "Completed secondary education"
+  },
+  {
+    "code" : "C201303",
+    "display" : "College Graduate",
+    "definition" : "Completed bachelor's degree"
+  },
+  {
+    "code" : "C201304",
+    "display" : "Postgraduate",
+    "definition" : "Completed master's or doctoral degree"
+  }]
 }
 
 ```

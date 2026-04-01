@@ -32,7 +32,7 @@ A list of codes representing the recognized indigenous groups in the Philippines
   "title" : "Indigenous Groups",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -46,7 +46,7 @@ A list of codes representing the recognized indigenous groups in the Philippines
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "caseSensitive" : true,

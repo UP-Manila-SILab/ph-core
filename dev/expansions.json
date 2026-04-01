@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "652cf26b-2ed7-4c8c-ac7c-17ebdd69e6c6",
+  "id" : "36c39278-b416-4858-8582-99bf16e54d7c",
   "meta" : {
-    "lastUpdated" : "2026-04-01T03:21:07.912+00:00"
+    "lastUpdated" : "2026-04-01T03:34:09.830+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -11,7 +11,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PSGC.html\">codesystem Mock PSGC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 1 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1380100001\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1380100001\">1380100001</a></td><td>Barangay 1</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100001&quot;, &quot;display&quot;: &quot;Barangay 1&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100001&quot;&gt;&lt;display value=&quot;Barangay 1&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PSGC.html\">codesystem Mock PSGC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://psa.gov.ph/classification/psgc|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 1 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-1380100001\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1380100001\">1380100001</a></td><td>Barangay 1</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100001&quot;, &quot;display&quot;: &quot;Barangay 1&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100001&quot;&gt;&lt;display value=&quot;Barangay 1&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/barangays",
       "version" : "0.1.0",
@@ -19,17 +19,17 @@
       "title" : "Barangays",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-01T03:21:07+00:00",
+      "date" : "2026-04-01T03:34:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
           "code" : "PH",
-          "display" : "Philippines"
+          "display" : "Philippines (the)"
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:9a3620fb-d575-4eba-9b17-3b624572f209",
-        "timestamp" : "2026-04-01T03:22:18+00:00",
+        "identifier" : "urn:uuid:6a1b051b-e778-48c0-823e-cc9618c08e2b",
+        "timestamp" : "2026-04-01T03:35:14+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -50,10 +50,10 @@
         },
         {
           "name" : "used-codesystem",
-          "valueUri" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0"
+          "valueUri" : "https://psa.gov.ph/classification/psgc|0.1.0"
         }],
         "contains" : [{
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1380100001",
           "display" : "Barangay 1"
         }]
@@ -66,7 +66,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PSGC.html\">codesystem Mock PSGC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1380100000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1380100000\">1380100000</a></td><td>City of Caloocan</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100000&quot;, &quot;display&quot;: &quot;City of Caloocan&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100000&quot;&gt;&lt;display value=&quot;City of Caloocan&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1380200000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1380200000\">1380200000</a></td><td>City of Las Piñas</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380200000&quot;, &quot;display&quot;: &quot;City of Las Piñas&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380200000&quot;&gt;&lt;display value=&quot;City of Las Piñas&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PSGC.html\">codesystem Mock PSGC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://psa.gov.ph/classification/psgc|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-1380100000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1380100000\">1380100000</a></td><td>City of Caloocan</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100000&quot;, &quot;display&quot;: &quot;City of Caloocan&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100000&quot;&gt;&lt;display value=&quot;City of Caloocan&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-1380200000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1380200000\">1380200000</a></td><td>City of Las Piñas</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380200000&quot;, &quot;display&quot;: &quot;City of Las Piñas&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380200000&quot;&gt;&lt;display value=&quot;City of Las Piñas&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/cities",
       "version" : "0.1.0",
@@ -74,17 +74,17 @@
       "title" : "Cities",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-01T03:21:07+00:00",
+      "date" : "2026-04-01T03:34:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
           "code" : "PH",
-          "display" : "Philippines"
+          "display" : "Philippines (the)"
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:6d98a9f4-ac6a-4e4d-9ae5-9192eda31cd9",
-        "timestamp" : "2026-04-01T03:22:18+00:00",
+        "identifier" : "urn:uuid:2bee8c78-553e-488f-844d-48d1ca2409f5",
+        "timestamp" : "2026-04-01T03:35:14+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -105,15 +105,15 @@
         },
         {
           "name" : "used-codesystem",
-          "valueUri" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0"
+          "valueUri" : "https://psa.gov.ph/classification/psgc|0.1.0"
         }],
         "contains" : [{
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1380100000",
           "display" : "City of Caloocan"
         },
         {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1380200000",
           "display" : "City of Las Piñas"
         }]
@@ -126,7 +126,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #ffcccc; padding: 8px; margin-bottom: 8px\">Expansion based on code system fragment <a href=\"CodeSystem-PHFDACPRCS.html\">https://verification.fda.gov.ph/ PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph/|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PHFDACPRCS.html\">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph/|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains at least 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>Level</b></td><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph/-PH-FDA-DRUGS\"> </a>1</td><td><code>https://verification.fda.gov.ph/</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-PH-FDA-DRUGS\">PH-FDA-DRUGS</a></td><td>Philippine FDA Registered Drug Products</td><td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph/-DRP-10144\"> </a>2</td><td><code>https://verification.fda.gov.ph/</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-DRP-10144\">DRP-10144</a></td><td>Twinact</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph/-1193768\"> </a>2</td><td><code>https://verification.fda.gov.ph/</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-1193768\">1193768</a></td><td>Ascorfed-Z Cap</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph/&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph/&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #ffcccc; padding: 8px; margin-bottom: 8px\">Expansion based on code system fragment <a href=\"CodeSystem-PHFDACPRCS.html\">https://verification.fda.gov.ph PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PHFDACPRCS.html\">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains at least 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>Level</b></td><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-PH-FDA-DRUGS\"> </a>1</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-PH-FDA-DRUGS\">PH-FDA-DRUGS</a></td><td>Philippine FDA Registered Drug Products</td><td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-DRP-10144\"> </a>2</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-DRP-10144\">DRP-10144</a></td><td>Twinact</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-1193768\"> </a>2</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-1193768\">1193768</a></td><td>Ascorfed-Z Cap</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs",
       "version" : "0.1.0",
@@ -134,17 +134,17 @@
       "title" : "Drugs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-01T03:21:07+00:00",
+      "date" : "2026-04-01T03:34:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
           "code" : "PH",
-          "display" : "Philippines"
+          "display" : "Philippines (the)"
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:d317b247-0994-4e13-910d-2458de687bf0",
-        "timestamp" : "2026-04-01T03:22:18+00:00",
+        "identifier" : "urn:uuid:7af1d5ca-9283-4890-a6a9-495b63d04d90",
+        "timestamp" : "2026-04-01T03:35:14+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -165,72 +165,26 @@
         },
         {
           "name" : "used-codesystem",
-          "valueUri" : "https://verification.fda.gov.ph/|0.1.0"
+          "valueUri" : "https://verification.fda.gov.ph|0.1.0"
         },
         {
           "name" : "fragment",
-          "valueCanonical" : "https://verification.fda.gov.ph/|0.1.0"
+          "valueCanonical" : "https://verification.fda.gov.ph|0.1.0"
         }],
         "contains" : [{
-          "system" : "https://verification.fda.gov.ph/",
+          "system" : "https://verification.fda.gov.ph",
           "code" : "PH-FDA-DRUGS",
           "display" : "Philippine FDA Registered Drug Products",
           "contains" : [{
-            "system" : "https://verification.fda.gov.ph/",
+            "system" : "https://verification.fda.gov.ph",
             "code" : "DRP-10144",
             "display" : "Twinact"
           },
           {
-            "system" : "https://verification.fda.gov.ph/",
+            "system" : "https://verification.fda.gov.ph",
             "code" : "1193768",
             "display" : "Ascorfed-Z Cap"
           }]
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p>This value set contains 0 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr></table></div>"
-      },
-      "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",
-      "version" : "0.1.0",
-      "name" : "EducationalAttainments",
-      "title" : "Educational Attainments",
-      "status" : "draft",
-      "experimental" : true,
-      "date" : "2026-04-01T03:21:07+00:00",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "PH",
-          "display" : "Philippines"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:5d2a16b9-40eb-4090-9c94-4e15f9d074d4",
-        "timestamp" : "2026-04-01T03:22:18+00:00",
-        "total" : 0,
-        "offset" : 0,
-        "parameter" : [{
-          "name" : "displayLanguage",
-          "valueCode" : "en"
-        },
-        {
-          "name" : "count",
-          "valueInteger" : 1000
-        },
-        {
-          "name" : "offset",
-          "valueInteger" : 0
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : false
         }]
       }
     }
@@ -249,17 +203,17 @@
       "title" : "Indigenous Groups",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-01T03:21:07+00:00",
+      "date" : "2026-04-01T03:34:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
           "code" : "PH",
-          "display" : "Philippines"
+          "display" : "Philippines (the)"
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f1e85f7b-ac46-47cf-92c1-33d098b12a3c",
-        "timestamp" : "2026-04-01T03:22:18+00:00",
+        "identifier" : "urn:uuid:ec19804e-fb3c-420a-9235-eb437d51a49a",
+        "timestamp" : "2026-04-01T03:35:15+00:00",
         "total" : 33,
         "offset" : 0,
         "parameter" : [{
@@ -451,58 +405,12 @@
     }
   },
   {
-    "fullUrl" : "http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p>This value set contains 0 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr></table></div>"
-      },
-      "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications",
-      "version" : "0.1.0",
-      "name" : "OccupationClassifications",
-      "title" : "Occupation Classifications",
-      "status" : "draft",
-      "experimental" : true,
-      "date" : "2026-04-01T03:21:07+00:00",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "PH",
-          "display" : "Philippines"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:1907179f-d4d3-4783-9b7a-e29bcf397b3d",
-        "timestamp" : "2026-04-01T03:22:18+00:00",
-        "total" : 0,
-        "offset" : 0,
-        "parameter" : [{
-          "name" : "displayLanguage",
-          "valueCode" : "en"
-        },
-        {
-          "name" : "count",
-          "valueInteger" : 1000
-        },
-        {
-          "name" : "offset",
-          "valueInteger" : 0
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        }]
-      }
-    }
-  },
-  {
     "fullUrl" : "http://doh.gov.ph/fhir/ph-core/ValueSet/provinces",
     "resource" : {
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PSGC.html\">codesystem Mock PSGC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0402100000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0402100000\">0402100000</a></td><td>Cavite</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0402100000&quot;, &quot;display&quot;: &quot;Cavite&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0402100000&quot;&gt;&lt;display value=&quot;Cavite&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0403400000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0403400000\">0403400000</a></td><td>Laguna</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0403400000&quot;, &quot;display&quot;: &quot;Laguna&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0403400000&quot;&gt;&lt;display value=&quot;Laguna&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0405600000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0405600000\">0405600000</a></td><td>Quezon</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405600000&quot;, &quot;display&quot;: &quot;Quezon&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405600000&quot;&gt;&lt;display value=&quot;Quezon&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0405800000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0405800000\">0405800000</a></td><td>Rizal</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405800000&quot;, &quot;display&quot;: &quot;Rizal&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405800000&quot;&gt;&lt;display value=&quot;Rizal&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1704000000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1704000000\">1704000000</a></td><td>Marinduque</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1704000000&quot;, &quot;display&quot;: &quot;Marinduque&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1704000000&quot;&gt;&lt;display value=&quot;Marinduque&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-1705100000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1705100000\">1705100000</a></td><td>Occidental Mindoro</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1705100000&quot;, &quot;display&quot;: &quot;Occidental Mindoro&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1705100000&quot;&gt;&lt;display value=&quot;Occidental Mindoro&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PSGC.html\">codesystem Mock PSGC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://psa.gov.ph/classification/psgc|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-0402100000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0402100000\">0402100000</a></td><td>Cavite</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0402100000&quot;, &quot;display&quot;: &quot;Cavite&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0402100000&quot;&gt;&lt;display value=&quot;Cavite&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-0403400000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0403400000\">0403400000</a></td><td>Laguna</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0403400000&quot;, &quot;display&quot;: &quot;Laguna&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0403400000&quot;&gt;&lt;display value=&quot;Laguna&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-0405600000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0405600000\">0405600000</a></td><td>Quezon</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405600000&quot;, &quot;display&quot;: &quot;Quezon&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405600000&quot;&gt;&lt;display value=&quot;Quezon&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-0405800000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0405800000\">0405800000</a></td><td>Rizal</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405800000&quot;, &quot;display&quot;: &quot;Rizal&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405800000&quot;&gt;&lt;display value=&quot;Rizal&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-1704000000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1704000000\">1704000000</a></td><td>Marinduque</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1704000000&quot;, &quot;display&quot;: &quot;Marinduque&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1704000000&quot;&gt;&lt;display value=&quot;Marinduque&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-1705100000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-1705100000\">1705100000</a></td><td>Occidental Mindoro</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1705100000&quot;, &quot;display&quot;: &quot;Occidental Mindoro&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1705100000&quot;&gt;&lt;display value=&quot;Occidental Mindoro&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/provinces",
       "version" : "0.1.0",
@@ -510,17 +418,17 @@
       "title" : "Provinces",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-01T03:21:07+00:00",
+      "date" : "2026-04-01T03:34:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
           "code" : "PH",
-          "display" : "Philippines"
+          "display" : "Philippines (the)"
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:daa72757-280c-4857-82a6-20e4b1f82cb1",
-        "timestamp" : "2026-04-01T03:22:18+00:00",
+        "identifier" : "urn:uuid:0798ddfb-d5ea-4a9c-963d-ad99f61e526b",
+        "timestamp" : "2026-04-01T03:35:15+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -541,35 +449,35 @@
         },
         {
           "name" : "used-codesystem",
-          "valueUri" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0"
+          "valueUri" : "https://psa.gov.ph/classification/psgc|0.1.0"
         }],
         "contains" : [{
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "0402100000",
           "display" : "Cavite"
         },
         {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "0403400000",
           "display" : "Laguna"
         },
         {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "0405600000",
           "display" : "Quezon"
         },
         {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "0405800000",
           "display" : "Rizal"
         },
         {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1704000000",
           "display" : "Marinduque"
         },
         {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "1705100000",
           "display" : "Occidental Mindoro"
         }]
@@ -582,7 +490,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PSGC.html\">codesystem Mock PSGC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0102800000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0102800000\">0102800000</a></td><td>Ilocos Norte</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102800000&quot;, &quot;display&quot;: &quot;Ilocos Norte&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102800000&quot;&gt;&lt;display value=&quot;Ilocos Norte&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0102900000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0102900000\">0102900000</a></td><td>Ilocos Sur</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102900000&quot;, &quot;display&quot;: &quot;Ilocos Sur&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102900000&quot;&gt;&lt;display value=&quot;Ilocos Sur&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC-0103300000\"> </a><code>http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0103300000\">0103300000</a></td><td>La Union</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0103300000&quot;, &quot;display&quot;: &quot;La Union&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0103300000&quot;&gt;&lt;display value=&quot;La Union&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PSGC.html\">codesystem Mock PSGC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://psa.gov.ph/classification/psgc|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-0102800000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0102800000\">0102800000</a></td><td>Ilocos Norte</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102800000&quot;, &quot;display&quot;: &quot;Ilocos Norte&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102800000&quot;&gt;&lt;display value=&quot;Ilocos Norte&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-0102900000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0102900000\">0102900000</a></td><td>Ilocos Sur</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102900000&quot;, &quot;display&quot;: &quot;Ilocos Sur&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102900000&quot;&gt;&lt;display value=&quot;Ilocos Sur&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://psa.gov.ph/classification/psgc-0103300000\"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSGC.html#PSGC-0103300000\">0103300000</a></td><td>La Union</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0103300000&quot;, &quot;display&quot;: &quot;La Union&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0103300000&quot;&gt;&lt;display value=&quot;La Union&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/regions",
       "version" : "0.1.0",
@@ -590,17 +498,17 @@
       "title" : "Regions",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-01T03:21:07+00:00",
+      "date" : "2026-04-01T03:34:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
           "code" : "PH",
-          "display" : "Philippines"
+          "display" : "Philippines (the)"
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:6710ff44-4acc-4ef7-aa75-0310b496b4ba",
-        "timestamp" : "2026-04-01T03:22:18+00:00",
+        "identifier" : "urn:uuid:aa8efb9b-5364-40be-b6a5-c6e9dc8950fb",
+        "timestamp" : "2026-04-01T03:35:15+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -621,20 +529,20 @@
         },
         {
           "name" : "used-codesystem",
-          "valueUri" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC|0.1.0"
+          "valueUri" : "https://psa.gov.ph/classification/psgc|0.1.0"
         }],
         "contains" : [{
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "0102800000",
           "display" : "Ilocos Norte"
         },
         {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "0102900000",
           "display" : "Ilocos Sur"
         },
         {
-          "system" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
+          "system" : "https://psa.gov.ph/classification/psgc",
           "code" : "0103300000",
           "display" : "La Union"
         }]

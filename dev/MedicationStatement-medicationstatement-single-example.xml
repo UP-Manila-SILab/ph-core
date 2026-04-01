@@ -11,7 +11,7 @@
   <status value="active"/>
   <medicationCodeableConcept>
     <coding>
-      <system value="https://verification.fda.gov.ph/"/>
+      <system value="https://verification.fda.gov.ph"/>
       <code value="DRP-10144"/>
       <display value="Twinact"/>
     </coding>
@@ -55,7 +55,7 @@
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
         <code value="PO"/>
-        <display value="Oral"/>
+        <display value="Swallow, oral"/>
       </coding>
     </route>
   </dosage>

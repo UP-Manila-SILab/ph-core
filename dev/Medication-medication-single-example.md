@@ -21,7 +21,7 @@ Twinact (Telmisartan + Amlodipine) 40mg/5mg tablet from PH FDA CPR.
   },
   "code" : {
     "coding" : [{
-      "system" : "https://verification.fda.gov.ph/",
+      "system" : "https://verification.fda.gov.ph",
       "code" : "DRP-10144",
       "display" : "Twinact"
     }],

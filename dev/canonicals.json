@@ -1,25 +1,4 @@
 [{
-  "id" : "PSCED",
-  "type" : "CodeSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSCED",
-  "version" : "0.1.0",
-  "name" : "PSCED"
-},
-{
-  "id" : "PSGC",
-  "type" : "CodeSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC",
-  "version" : "0.1.0",
-  "name" : "PSGC"
-},
-{
-  "id" : "PSOC",
-  "type" : "CodeSystem",
-  "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSOC",
-  "version" : "0.1.0",
-  "name" : "PSOC"
-},
-{
   "id" : "indigenous-groups-cs",
   "type" : "CodeSystem",
   "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
@@ -41,6 +20,13 @@
   "name" : "DOHNHFRCode"
 },
 {
+  "id" : "DOHProcedureIDNS",
+  "type" : "NamingSystem",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/DOHProcedureIDNS",
+  "version" : "0.1.0",
+  "name" : "DOHProcedureID"
+},
+{
   "id" : "PhilHealthIDNS",
   "type" : "NamingSystem",
   "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthIDNS",
@@ -60,6 +46,13 @@
   "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPENNS",
   "version" : "0.1.0",
   "name" : "PhilHealthPEN"
+},
+{
+  "id" : "PhilHealthProcedureIDNS",
+  "type" : "NamingSystem",
+  "url" : "http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthProcedureIDNS",
+  "version" : "0.1.0",
+  "name" : "PhilHealthProcedureID"
 },
 {
   "id" : "PhilSysIDNS",
@@ -377,9 +370,30 @@
   "name" : "Regions"
 },
 {
+  "id" : "PSCED",
+  "type" : "CodeSystem",
+  "url" : "https://psa.gov.ph/classification/psced/level",
+  "version" : "0.1.0",
+  "name" : "PSCED"
+},
+{
+  "id" : "PSGC",
+  "type" : "CodeSystem",
+  "url" : "https://psa.gov.ph/classification/psgc",
+  "version" : "0.1.0",
+  "name" : "PSGC"
+},
+{
+  "id" : "PSOC",
+  "type" : "CodeSystem",
+  "url" : "https://psa.gov.ph/classification/psoc/unit",
+  "version" : "0.1.0",
+  "name" : "PSOC"
+},
+{
   "id" : "PHFDACPRCS",
   "type" : "CodeSystem",
-  "url" : "https://verification.fda.gov.ph/",
+  "url" : "https://verification.fda.gov.ph",
   "version" : "0.1.0",
   "name" : "PHFDACPRCS"
 }]

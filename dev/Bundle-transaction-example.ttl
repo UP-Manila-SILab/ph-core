@@ -131,7 +131,7 @@
              fhir:l <urn:iso:std:iso:3166>
            ] ;
            fhir:code [ fhir:v "PH" ] ;
-           fhir:display [ fhir:v "Philippines" ]
+           fhir:display [ fhir:v "Philippines (the)" ]
          ] )
        ]
      ] [
@@ -205,8 +205,8 @@
        fhir:value [
          a fhir:Coding ;
          fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
          ] ;
          fhir:code [ fhir:v "1380100001" ] ;
          fhir:display [ fhir:v "Barangay 1" ]
@@ -219,8 +219,8 @@
        fhir:value [
          a fhir:Coding ;
          fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
          ] ;
          fhir:code [ fhir:v "1380200000" ] ;
          fhir:display [ fhir:v "City of Las Piñas" ]
@@ -233,8 +233,8 @@
        fhir:value [
          a fhir:Coding ;
          fhir:system [
-           fhir:v "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"^^xsd:anyURI ;
-           fhir:l <http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC>
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
          ] ;
          fhir:code [ fhir:v "0402100000" ] ;
          fhir:display [ fhir:v "Cavite" ]

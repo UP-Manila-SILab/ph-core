@@ -10,7 +10,7 @@
   </text>
   <code>
     <coding>
-      <system value="https://verification.fda.gov.ph/"/>
+      <system value="https://verification.fda.gov.ph"/>
       <code value="DRP-10144"/>
       <display value="Twinact"/>
     </coding>

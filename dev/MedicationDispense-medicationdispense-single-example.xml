@@ -11,7 +11,7 @@
   <status value="completed"/>
   <medicationCodeableConcept>
     <coding>
-      <system value="https://verification.fda.gov.ph/"/>
+      <system value="https://verification.fda.gov.ph"/>
       <code value="DRP-10144"/>
       <display value="Twinact"/>
     </coding>
@@ -26,9 +26,9 @@
   <performer>
     <function>
       <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-        <code value="DISP"/>
-        <display value="Dispensary"/>
+        <system value="http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"/>
+        <code value="finalchecker"/>
+        <display value="Final Checker"/>
       </coding>
     </function>
     <actor>
@@ -49,7 +49,7 @@
     <value value="30"/>
     <unit value="Tablet"/>
     <system value="http://snomed.info/sct"/>
-    <code value="331691000"/>
+    <code value="732936001"/>
   </quantity>
   <daysSupply>
     <value value="7"/>

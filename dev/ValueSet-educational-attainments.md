@@ -20,11 +20,11 @@ All categories of educational programs, courses, and attainment levels in the Ph
 
 ### Logical Definition (CLD)
 
-No formal definition provided for this value set
-
  
 
 ### Expansion
+
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -53,7 +53,7 @@ No formal definition provided for this value set
   "title" : "Educational Attainments",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -67,9 +67,14 @@ No formal definition provided for this value set
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
-  }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psced/level"
+    }]
+  }
 }
 
 ```

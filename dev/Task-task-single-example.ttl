@@ -25,13 +25,13 @@
   fhir:priority [ fhir:v "routine"] ; # 
   fhir:code [
      fhir:coding ( [
-       a sct:359962008 ;
+       a sct:82078001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:code [ fhir:v "359962008" ] ;
-       fhir:display [ fhir:v "Blood sample collection for laboratory testing" ]
+       fhir:code [ fhir:v "82078001" ] ;
+       fhir:display [ fhir:v "Collection of blood specimen for laboratory" ]
      ] ) ;
      fhir:text [ fhir:v "Blood sample collection" ]
   ] ; # 

@@ -3,7 +3,7 @@
   "id" : "educational-attainments",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet educational-attainments</b></p><a name=\"educational-attainments\"> </a><a name=\"hceducational-attainments\"> </a><p>This value set includes codes based on the following rules:</p><ul/></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet educational-attainments</b></p><a name=\"educational-attainments\"> </a><a name=\"hceducational-attainments\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-PSCED.html\"><code>https://psa.gov.ph/classification/psced/level</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
   },
   "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",
   "version" : "0.1.0",
@@ -11,7 +11,7 @@
   "title" : "Educational Attainments",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -25,7 +25,12 @@
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
-  }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psced/level"
+    }]
+  }
 }

@@ -14,8 +14,8 @@
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="359962008"/>
-      <display value="Blood sample collection for laboratory testing"/>
+      <code value="82078001"/>
+      <display value="Collection of blood specimen for laboratory"/>
     </coding>
     <text value="Blood sample collection"/>
   </code>

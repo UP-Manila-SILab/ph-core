@@ -35,13 +35,13 @@
   ] ) ; # 
   fhir:code [
      fhir:coding ( [
-       a sct:271061004 ;
+       a sct:33747003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:code [ fhir:v "271061004" ] ;
-       fhir:display [ fhir:v "Fasting blood glucose measurement" ]
+       fhir:code [ fhir:v "33747003" ] ;
+       fhir:display [ fhir:v "Glucose measurement, blood" ]
      ] )
   ] ; # 
   fhir:subject [

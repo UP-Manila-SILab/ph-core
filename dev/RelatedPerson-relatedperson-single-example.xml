@@ -31,14 +31,14 @@
   <address>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/region">
       <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <system value="https://psa.gov.ph/classification/psgc"/>
         <code value="0102800000"/>
         <display value="Ilocos Norte"/>
       </valueCoding>
     </extension>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
       <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <system value="https://psa.gov.ph/classification/psgc"/>
         <code value="1705100000"/>
         <display value="Occidental Mindoro"/>
       </valueCoding>

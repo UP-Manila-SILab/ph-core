@@ -20,8 +20,8 @@
   "code" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "271061004",
-      "display" : "Fasting blood glucose measurement"
+      "code" : "33747003",
+      "display" : "Glucose measurement, blood"
     }]
   },
   "subject" : {

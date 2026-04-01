@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/CodeSystem/PSOC | *Version*:0.1.0 |
+| *Official URL*:https://psa.gov.ph/classification/psoc/unit | *Version*:0.1.0 |
 | Draft as of 2026-04-01 | *Computable Name*:PSOC |
 
  
@@ -16,7 +16,7 @@ Mock of the Philippine Standard Occupational Classification.
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
+* [OccupationClassifications](ValueSet-occupational-classifications.md)
 
 
 
@@ -26,13 +26,13 @@ Mock of the Philippine Standard Occupational Classification.
 {
   "resourceType" : "CodeSystem",
   "id" : "PSOC",
-  "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/PSOC",
+  "url" : "https://psa.gov.ph/classification/psoc/unit",
   "version" : "0.1.0",
   "name" : "PSOC",
   "title" : "Mock PSOC",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:21:07+00:00",
+  "date" : "2026-04-01T03:34:09+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -46,11 +46,31 @@ Mock of the Philippine Standard Occupational Classification.
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "PH",
-      "display" : "Philippines"
+      "display" : "Philippines (the)"
     }]
   }],
   "caseSensitive" : true,
-  "content" : "not-present"
+  "content" : "example",
+  "concept" : [{
+    "code" : "111102",
+    "display" : "Hospital Administrator",
+    "definition" : "Manages hospital operations"
+  },
+  {
+    "code" : "111103",
+    "display" : "Medical Department Head",
+    "definition" : "Head of a medical department"
+  },
+  {
+    "code" : "121101",
+    "display" : "General Manager",
+    "definition" : "Manages overall operations of an organization"
+  },
+  {
+    "code" : "211101",
+    "display" : "Medical Doctor",
+    "definition" : "Licensed physician practicing medicine"
+  }]
 }
 
 ```

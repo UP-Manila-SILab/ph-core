@@ -45,7 +45,7 @@
   <name value="PHCoreProvenance"/>
   <title value="PH Core Provenance"/>
   <status value="draft"/>
-  <date value="2026-04-01T03:21:07+00:00"/>
+  <date value="2026-04-01T03:34:09+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>
@@ -59,7 +59,7 @@
     <coding>
       <system value="urn:iso:std:iso:3166"/>
       <code value="PH"/>
-      <display value="Philippines"/>
+      <display value="Philippines (the)"/>
     </coding>
   </jurisdiction>
   <fhirVersion value="4.0.1"/>

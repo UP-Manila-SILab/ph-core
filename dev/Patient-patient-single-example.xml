@@ -14,7 +14,7 @@
         <coding>
           <system value="urn:iso:std:iso:3166"/>
           <code value="PH"/>
-          <display value="Philippines"/>
+          <display value="Philippines (the)"/>
         </coding>
       </valueCodeableConcept>
     </extension>
@@ -55,6 +55,31 @@
       </coding>
     </valueCodeableConcept>
   </extension>
+  <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/educational-attainment">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://psa.gov.ph/classification/psced/level"/>
+        <code value="C201301"/>
+        <display value="Elementary Graduate"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/occupation">
+    <extension url="occupationClassification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://psa.gov.ph/classification/psoc/unit"/>
+          <code value="111102"/>
+          <display value="Hospital Administrator"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="occupationLength">
+      <valuePeriod>
+        <start value="2020-01-01"/>
+      </valuePeriod>
+    </extension>
+  </extension>
   <identifier>
     <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
     <value value="63-584789845-5"/>
@@ -70,21 +95,21 @@
   <address>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay">
       <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <system value="https://psa.gov.ph/classification/psgc"/>
         <code value="1380100001"/>
         <display value="Barangay 1"/>
       </valueCoding>
     </extension>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality">
       <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <system value="https://psa.gov.ph/classification/psgc"/>
         <code value="1380200000"/>
         <display value="City of Las Piñas"/>
       </valueCoding>
     </extension>
     <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
       <valueCoding>
-        <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/PSGC"/>
+        <system value="https://psa.gov.ph/classification/psgc"/>
         <code value="0402100000"/>
         <display value="Cavite"/>
       </valueCoding>

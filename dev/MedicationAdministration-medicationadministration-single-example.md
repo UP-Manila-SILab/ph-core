@@ -22,7 +22,7 @@ Juan Dela Cruz took 1 tablet of Twinact (Telmisartan + Amlodipine) orally on Mar
   "status" : "completed",
   "medicationCodeableConcept" : {
     "coding" : [{
-      "system" : "https://verification.fda.gov.ph/",
+      "system" : "https://verification.fda.gov.ph",
       "code" : "DRP-10144",
       "display" : "Twinact"
     }],
@@ -39,7 +39,7 @@ Juan Dela Cruz took 1 tablet of Twinact (Telmisartan + Amlodipine) orally on Mar
     "function" : {
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
-        "code" : "PRCP",
+        "code" : "PP",
         "display" : "Primary Care Provider"
       }]
     },
@@ -56,7 +56,7 @@ Juan Dela Cruz took 1 tablet of Twinact (Telmisartan + Amlodipine) orally on Mar
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
         "code" : "PO",
-        "display" : "Oral"
+        "display" : "Swallow, oral"
       }]
     },
     "dose" : {
