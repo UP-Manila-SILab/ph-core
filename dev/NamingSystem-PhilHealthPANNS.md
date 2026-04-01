@@ -1,4 +1,4 @@
-# PAN - PhilHealth Accreditation Number - Draft PH Core Implementation Guide v0.1.0
+# PAN - PhilHealth Accreditation Number - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPANNS | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPANNS | *Version*:0.2.0 |
 | Draft as of 2025-06-01 | *Computable Name*:PhilHealthPAN |
 
  
@@ -28,7 +28,7 @@ The unique number issued by PhilHealth to accredited institutions.
   },
   {
     "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-    "valueString" : "0.1.0"
+    "valueString" : "0.2.0"
   }],
   "name" : "PhilHealthPAN",
   "status" : "draft",

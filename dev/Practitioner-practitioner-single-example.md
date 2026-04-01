@@ -1,4 +1,4 @@
-# practitioner-single-example - Draft PH Core Implementation Guide v0.1.0
+# practitioner-single-example - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

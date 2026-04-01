@@ -17,12 +17,12 @@
      fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/region"^^xsd:anyURI ;
      fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/region>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "Region"] ; # 
   fhir:title [ fhir:v "Region"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-04-01T03:34:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-01T03:44:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;

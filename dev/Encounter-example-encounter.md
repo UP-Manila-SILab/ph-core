@@ -1,4 +1,4 @@
-# example-encounter - Draft PH Core Implementation Guide v0.1.0
+# example-encounter - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

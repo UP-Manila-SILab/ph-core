@@ -1,4 +1,4 @@
-# PH FDA Certificate of Product Registration (CPR) CodeSystem - Draft PH Core Implementation Guide v0.1.0
+# PH FDA Certificate of Product Registration (CPR) CodeSystem - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://verification.fda.gov.ph | *Version*:0.1.0 |
+| *Official URL*:https://verification.fda.gov.ph | *Version*:0.2.0 |
 | Active as of 2026-03-21 | *Computable Name*:PHFDACPRCS |
 
  
@@ -27,7 +27,7 @@ Registered drug products from the Philippine Food and Drug Administration (FDA)
   "resourceType" : "CodeSystem",
   "id" : "PHFDACPRCS",
   "url" : "https://verification.fda.gov.ph",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PHFDACPRCS",
   "title" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",
   "status" : "active",

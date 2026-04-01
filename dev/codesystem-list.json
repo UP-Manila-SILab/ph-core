@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "IndigenousGroupsCS",
     "title" : "Indigenous Groups",
@@ -9,7 +9,7 @@
   },
   {
     "url" : "https://psa.gov.ph/classification/psced/level",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "PSCED",
     "title" : "Mock PSCED",
@@ -17,7 +17,7 @@
   },
   {
     "url" : "https://psa.gov.ph/classification/psgc",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "PSGC",
     "title" : "Mock PSGC",
@@ -25,7 +25,7 @@
   },
   {
     "url" : "https://psa.gov.ph/classification/psoc/unit",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "PSOC",
     "title" : "Mock PSOC",
@@ -33,7 +33,7 @@
   },
   {
     "url" : "https://verification.fda.gov.ph",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "active",
     "name" : "PHFDACPRCS",
     "title" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",

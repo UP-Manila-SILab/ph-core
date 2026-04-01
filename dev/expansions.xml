@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="36c39278-b416-4858-8582-99bf16e54d7c"/>
+  <id value="0a1000f3-0af8-49ed-bb04-fe707c9a280e"/>
   <meta>
-    <lastUpdated value="2026-04-01T03:34:09.830+00:00"/>
+    <lastUpdated value="2026-04-01T03:44:59.025+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -15,9 +15,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.2.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 1 concepts</p>
@@ -50,12 +50,12 @@
                 <td>Barangay 1</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100001&quot;, &quot;display&quot;: &quot;Barangay 1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1380100001&quot;, &quot;display&quot;: &quot;Barangay 1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100001&quot;&gt;&lt;display value=&quot;Barangay 1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1380100001&quot;&gt;&lt;display value=&quot;Barangay 1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -63,12 +63,12 @@
           </div>
         </text>
         <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/barangays"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="Barangays"/>
         <title value="Barangays"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:34:09+00:00"/>
+        <date value="2026-04-01T03:44:59+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -77,8 +77,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6a1b051b-e778-48c0-823e-cc9618c08e2b"/>
-          <timestamp value="2026-04-01T03:35:14+00:00"/>
+          <identifier value="urn:uuid:f51b3feb-abf5-40ed-bdba-a7ef0d8cf188"/>
+          <timestamp value="2026-04-01T03:46:01+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -99,7 +99,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://psa.gov.ph/classification/psgc|0.1.0"/>
+            <valueUri value="https://psa.gov.ph/classification/psgc|0.2.0"/>
           </parameter>
           <contains>
             <system value="https://psa.gov.ph/classification/psgc"/>
@@ -119,9 +119,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.2.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 2 concepts</p>
@@ -154,12 +154,12 @@
                 <td>City of Caloocan</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380100000&quot;, &quot;display&quot;: &quot;City of Caloocan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1380100000&quot;, &quot;display&quot;: &quot;City of Caloocan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380100000&quot;&gt;&lt;display value=&quot;City of Caloocan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1380100000&quot;&gt;&lt;display value=&quot;City of Caloocan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -174,12 +174,12 @@
                 <td>City of Las Piñas</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1380200000&quot;, &quot;display&quot;: &quot;City of Las Piñas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1380200000&quot;, &quot;display&quot;: &quot;City of Las Piñas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1380200000&quot;&gt;&lt;display value=&quot;City of Las Piñas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1380200000&quot;&gt;&lt;display value=&quot;City of Las Piñas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -187,12 +187,12 @@
           </div>
         </text>
         <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/cities"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="Cities"/>
         <title value="Cities"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:34:09+00:00"/>
+        <date value="2026-04-01T03:44:59+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -201,8 +201,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2bee8c78-553e-488f-844d-48d1ca2409f5"/>
-          <timestamp value="2026-04-01T03:35:14+00:00"/>
+          <identifier value="urn:uuid:028772c0-e933-41f4-80db-86a4226e0825"/>
+          <timestamp value="2026-04-01T03:46:01+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -223,7 +223,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://psa.gov.ph/classification/psgc|0.1.0"/>
+            <valueUri value="https://psa.gov.ph/classification/psgc|0.2.0"/>
           </parameter>
           <contains>
             <system value="https://psa.gov.ph/classification/psgc"/>
@@ -248,15 +248,15 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #ffcccc; padding: 8px; margin-bottom: 8px">Expansion based on code system fragment 
-              <a href="CodeSystem-PHFDACPRCS.html">https://verification.fda.gov.ph PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-PHFDACPRCS.html">https://verification.fda.gov.ph PH FDA Certificate of Product Registration (CPR) CodeSystem v0.2.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://verification.fda.gov.ph|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://verification.fda.gov.ph|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-PHFDACPRCS.html">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-PHFDACPRCS.html">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.2.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://verification.fda.gov.ph|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://verification.fda.gov.ph|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains at least 3 concepts</p>
@@ -298,12 +298,12 @@
                 <td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -321,12 +321,12 @@
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -344,12 +344,12 @@
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -357,12 +357,12 @@
           </div>
         </text>
         <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="DrugsVS"/>
         <title value="Drugs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:34:09+00:00"/>
+        <date value="2026-04-01T03:44:59+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -371,8 +371,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:7af1d5ca-9283-4890-a6a9-495b63d04d90"/>
-          <timestamp value="2026-04-01T03:35:14+00:00"/>
+          <identifier value="urn:uuid:6df917ee-5dfb-4488-909d-cd26f0e2e895"/>
+          <timestamp value="2026-04-01T03:46:01+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -393,11 +393,11 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://verification.fda.gov.ph|0.1.0"/>
+            <valueUri value="https://verification.fda.gov.ph|0.2.0"/>
           </parameter>
           <parameter>
             <name value="fragment"/>
-            <valueCanonical value="https://verification.fda.gov.ph|0.1.0"/>
+            <valueCanonical value="https://verification.fda.gov.ph|0.2.0"/>
           </parameter>
           <contains>
             <system value="https://verification.fda.gov.ph"/>
@@ -427,9 +427,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-indigenous-groups-cs.html">codesystem Indigenous Groups v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-indigenous-groups-cs.html">codesystem Indigenous Groups v0.2.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 33 concepts</p>
@@ -462,12 +462,12 @@
                 <td>Aetas</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Aetas&quot;, &quot;display&quot;: &quot;Aetas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Aetas&quot;, &quot;display&quot;: &quot;Aetas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Aetas&quot;&gt;&lt;display value=&quot;Aetas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Aetas&quot;&gt;&lt;display value=&quot;Aetas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -482,12 +482,12 @@
                 <td>Ati</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Ati&quot;, &quot;display&quot;: &quot;Ati&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Ati&quot;, &quot;display&quot;: &quot;Ati&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Ati&quot;&gt;&lt;display value=&quot;Ati&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Ati&quot;&gt;&lt;display value=&quot;Ati&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -502,12 +502,12 @@
                 <td>Badjaos</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Badjaos&quot;, &quot;display&quot;: &quot;Badjaos&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Badjaos&quot;, &quot;display&quot;: &quot;Badjaos&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Badjaos&quot;&gt;&lt;display value=&quot;Badjaos&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Badjaos&quot;&gt;&lt;display value=&quot;Badjaos&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -522,12 +522,12 @@
                 <td>Batak</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Batak&quot;, &quot;display&quot;: &quot;Batak&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Batak&quot;, &quot;display&quot;: &quot;Batak&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Batak&quot;&gt;&lt;display value=&quot;Batak&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Batak&quot;&gt;&lt;display value=&quot;Batak&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -542,12 +542,12 @@
                 <td>Blaan</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Blaan&quot;, &quot;display&quot;: &quot;Blaan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Blaan&quot;, &quot;display&quot;: &quot;Blaan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Blaan&quot;&gt;&lt;display value=&quot;Blaan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Blaan&quot;&gt;&lt;display value=&quot;Blaan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -562,12 +562,12 @@
                 <td>Bontoc</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Bontoc&quot;, &quot;display&quot;: &quot;Bontoc&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Bontoc&quot;, &quot;display&quot;: &quot;Bontoc&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Bontoc&quot;&gt;&lt;display value=&quot;Bontoc&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Bontoc&quot;&gt;&lt;display value=&quot;Bontoc&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -582,12 +582,12 @@
                 <td>Bukidnon</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Bukidnon&quot;, &quot;display&quot;: &quot;Bukidnon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Bukidnon&quot;, &quot;display&quot;: &quot;Bukidnon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Bukidnon&quot;&gt;&lt;display value=&quot;Bukidnon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Bukidnon&quot;&gt;&lt;display value=&quot;Bukidnon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -602,12 +602,12 @@
                 <td>Higaonon</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Higaonon&quot;, &quot;display&quot;: &quot;Higaonon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Higaonon&quot;, &quot;display&quot;: &quot;Higaonon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Higaonon&quot;&gt;&lt;display value=&quot;Higaonon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Higaonon&quot;&gt;&lt;display value=&quot;Higaonon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -622,12 +622,12 @@
                 <td>Ibaloi</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Ibaloi&quot;, &quot;display&quot;: &quot;Ibaloi&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Ibaloi&quot;, &quot;display&quot;: &quot;Ibaloi&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Ibaloi&quot;&gt;&lt;display value=&quot;Ibaloi&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Ibaloi&quot;&gt;&lt;display value=&quot;Ibaloi&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -642,12 +642,12 @@
                 <td>Igorot</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Igorot&quot;, &quot;display&quot;: &quot;Igorot&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Igorot&quot;, &quot;display&quot;: &quot;Igorot&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Igorot&quot;&gt;&lt;display value=&quot;Igorot&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Igorot&quot;&gt;&lt;display value=&quot;Igorot&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -662,12 +662,12 @@
                 <td>Ilongots</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Ilongots&quot;, &quot;display&quot;: &quot;Ilongots&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Ilongots&quot;, &quot;display&quot;: &quot;Ilongots&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Ilongots&quot;&gt;&lt;display value=&quot;Ilongots&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Ilongots&quot;&gt;&lt;display value=&quot;Ilongots&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -682,12 +682,12 @@
                 <td>Isnag</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Isnag&quot;, &quot;display&quot;: &quot;Isnag&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Isnag&quot;, &quot;display&quot;: &quot;Isnag&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Isnag&quot;&gt;&lt;display value=&quot;Isnag&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Isnag&quot;&gt;&lt;display value=&quot;Isnag&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -702,12 +702,12 @@
                 <td>Isneg</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Isneg&quot;, &quot;display&quot;: &quot;Isneg&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Isneg&quot;, &quot;display&quot;: &quot;Isneg&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Isneg&quot;&gt;&lt;display value=&quot;Isneg&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Isneg&quot;&gt;&lt;display value=&quot;Isneg&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -722,12 +722,12 @@
                 <td>Kalinga</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Kalinga&quot;, &quot;display&quot;: &quot;Kalinga&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Kalinga&quot;, &quot;display&quot;: &quot;Kalinga&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Kalinga&quot;&gt;&lt;display value=&quot;Kalinga&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Kalinga&quot;&gt;&lt;display value=&quot;Kalinga&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -742,12 +742,12 @@
                 <td>Kankanaey</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Kankanaey&quot;, &quot;display&quot;: &quot;Kankanaey&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Kankanaey&quot;, &quot;display&quot;: &quot;Kankanaey&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Kankanaey&quot;&gt;&lt;display value=&quot;Kankanaey&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Kankanaey&quot;&gt;&lt;display value=&quot;Kankanaey&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -762,12 +762,12 @@
                 <td>Lumad</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Lumad&quot;, &quot;display&quot;: &quot;Lumad&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Lumad&quot;, &quot;display&quot;: &quot;Lumad&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Lumad&quot;&gt;&lt;display value=&quot;Lumad&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Lumad&quot;&gt;&lt;display value=&quot;Lumad&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -782,12 +782,12 @@
                 <td>Mamanwa</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Mamanwa&quot;, &quot;display&quot;: &quot;Mamanwa&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Mamanwa&quot;, &quot;display&quot;: &quot;Mamanwa&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Mamanwa&quot;&gt;&lt;display value=&quot;Mamanwa&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Mamanwa&quot;&gt;&lt;display value=&quot;Mamanwa&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -802,12 +802,12 @@
                 <td>Mandaya</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Mandaya&quot;, &quot;display&quot;: &quot;Mandaya&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Mandaya&quot;, &quot;display&quot;: &quot;Mandaya&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Mandaya&quot;&gt;&lt;display value=&quot;Mandaya&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Mandaya&quot;&gt;&lt;display value=&quot;Mandaya&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -822,12 +822,12 @@
                 <td>Mangyan</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Mangyan&quot;, &quot;display&quot;: &quot;Mangyan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Mangyan&quot;, &quot;display&quot;: &quot;Mangyan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Mangyan&quot;&gt;&lt;display value=&quot;Mangyan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Mangyan&quot;&gt;&lt;display value=&quot;Mangyan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -842,12 +842,12 @@
                 <td>Manobo</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Manobo&quot;, &quot;display&quot;: &quot;Manobo&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Manobo&quot;, &quot;display&quot;: &quot;Manobo&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Manobo&quot;&gt;&lt;display value=&quot;Manobo&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Manobo&quot;&gt;&lt;display value=&quot;Manobo&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -862,12 +862,12 @@
                 <td>Mansaka</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Mansaka&quot;, &quot;display&quot;: &quot;Mansaka&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Mansaka&quot;, &quot;display&quot;: &quot;Mansaka&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Mansaka&quot;&gt;&lt;display value=&quot;Mansaka&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Mansaka&quot;&gt;&lt;display value=&quot;Mansaka&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -882,12 +882,12 @@
                 <td>Palawano</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Palawano&quot;, &quot;display&quot;: &quot;Palawano&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Palawano&quot;, &quot;display&quot;: &quot;Palawano&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Palawano&quot;&gt;&lt;display value=&quot;Palawano&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Palawano&quot;&gt;&lt;display value=&quot;Palawano&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -902,12 +902,12 @@
                 <td>Palaweño</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Palaweño&quot;, &quot;display&quot;: &quot;Palaweño&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Palaweño&quot;, &quot;display&quot;: &quot;Palaweño&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Palaweño&quot;&gt;&lt;display value=&quot;Palaweño&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Palaweño&quot;&gt;&lt;display value=&quot;Palaweño&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -922,12 +922,12 @@
                 <td>Sangir</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Sangir&quot;, &quot;display&quot;: &quot;Sangir&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Sangir&quot;, &quot;display&quot;: &quot;Sangir&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Sangir&quot;&gt;&lt;display value=&quot;Sangir&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Sangir&quot;&gt;&lt;display value=&quot;Sangir&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -942,12 +942,12 @@
                 <td>Subanen</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Subanen&quot;, &quot;display&quot;: &quot;Subanen&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Subanen&quot;, &quot;display&quot;: &quot;Subanen&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Subanen&quot;&gt;&lt;display value=&quot;Subanen&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Subanen&quot;&gt;&lt;display value=&quot;Subanen&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -962,12 +962,12 @@
                 <td>T`boli</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;T`boli&quot;, &quot;display&quot;: &quot;T`boli&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;T`boli&quot;, &quot;display&quot;: &quot;T`boli&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;T`boli&quot;&gt;&lt;display value=&quot;T`boli&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;T`boli&quot;&gt;&lt;display value=&quot;T`boli&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -982,12 +982,12 @@
                 <td>Tagabawa</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Tagabawa&quot;, &quot;display&quot;: &quot;Tagabawa&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Tagabawa&quot;, &quot;display&quot;: &quot;Tagabawa&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Tagabawa&quot;&gt;&lt;display value=&quot;Tagabawa&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Tagabawa&quot;&gt;&lt;display value=&quot;Tagabawa&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1002,12 +1002,12 @@
                 <td>Tagakaulo</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Tagakaulo&quot;, &quot;display&quot;: &quot;Tagakaulo&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Tagakaulo&quot;, &quot;display&quot;: &quot;Tagakaulo&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Tagakaulo&quot;&gt;&lt;display value=&quot;Tagakaulo&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Tagakaulo&quot;&gt;&lt;display value=&quot;Tagakaulo&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1022,12 +1022,12 @@
                 <td>Tagbanwa</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Tagbanwa&quot;, &quot;display&quot;: &quot;Tagbanwa&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Tagbanwa&quot;, &quot;display&quot;: &quot;Tagbanwa&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Tagbanwa&quot;&gt;&lt;display value=&quot;Tagbanwa&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Tagbanwa&quot;&gt;&lt;display value=&quot;Tagbanwa&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1042,12 +1042,12 @@
                 <td>Tasaday</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Tasaday&quot;, &quot;display&quot;: &quot;Tasaday&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Tasaday&quot;, &quot;display&quot;: &quot;Tasaday&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Tasaday&quot;&gt;&lt;display value=&quot;Tasaday&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Tasaday&quot;&gt;&lt;display value=&quot;Tasaday&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1062,12 +1062,12 @@
                 <td>Tinguian</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Tinguian&quot;, &quot;display&quot;: &quot;Tinguian&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Tinguian&quot;, &quot;display&quot;: &quot;Tinguian&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Tinguian&quot;&gt;&lt;display value=&quot;Tinguian&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Tinguian&quot;&gt;&lt;display value=&quot;Tinguian&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1082,12 +1082,12 @@
                 <td>Tumandok</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Tumandok&quot;, &quot;display&quot;: &quot;Tumandok&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Tumandok&quot;, &quot;display&quot;: &quot;Tumandok&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Tumandok&quot;&gt;&lt;display value=&quot;Tumandok&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Tumandok&quot;&gt;&lt;display value=&quot;Tumandok&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1102,12 +1102,12 @@
                 <td>Others</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Others&quot;, &quot;display&quot;: &quot;Others&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;Others&quot;, &quot;display&quot;: &quot;Others&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Others&quot;&gt;&lt;display value=&quot;Others&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;Others&quot;&gt;&lt;display value=&quot;Others&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1115,12 +1115,12 @@
           </div>
         </text>
         <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/indigenous-groups-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="IndigenousGroupsVS"/>
         <title value="Indigenous Groups"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:34:09+00:00"/>
+        <date value="2026-04-01T03:44:59+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1129,8 +1129,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:ec19804e-fb3c-420a-9235-eb437d51a49a"/>
-          <timestamp value="2026-04-01T03:35:15+00:00"/>
+          <identifier value="urn:uuid:81bb2c0e-ffa0-43ee-8e48-2dae7dd9f718"/>
+          <timestamp value="2026-04-01T03:46:01+00:00"/>
           <total value="33"/>
           <offset value="0"/>
           <parameter>
@@ -1151,7 +1151,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs|0.1.0"/>
+            <valueUri value="http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs|0.2.0"/>
           </parameter>
           <contains>
             <system value="http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs"/>
@@ -1331,9 +1331,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.2.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 6 concepts</p>
@@ -1366,12 +1366,12 @@
                 <td>Cavite</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0402100000&quot;, &quot;display&quot;: &quot;Cavite&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0402100000&quot;, &quot;display&quot;: &quot;Cavite&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0402100000&quot;&gt;&lt;display value=&quot;Cavite&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0402100000&quot;&gt;&lt;display value=&quot;Cavite&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1386,12 +1386,12 @@
                 <td>Laguna</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0403400000&quot;, &quot;display&quot;: &quot;Laguna&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0403400000&quot;, &quot;display&quot;: &quot;Laguna&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0403400000&quot;&gt;&lt;display value=&quot;Laguna&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0403400000&quot;&gt;&lt;display value=&quot;Laguna&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1406,12 +1406,12 @@
                 <td>Quezon</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405600000&quot;, &quot;display&quot;: &quot;Quezon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0405600000&quot;, &quot;display&quot;: &quot;Quezon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405600000&quot;&gt;&lt;display value=&quot;Quezon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0405600000&quot;&gt;&lt;display value=&quot;Quezon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1426,12 +1426,12 @@
                 <td>Rizal</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0405800000&quot;, &quot;display&quot;: &quot;Rizal&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0405800000&quot;, &quot;display&quot;: &quot;Rizal&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0405800000&quot;&gt;&lt;display value=&quot;Rizal&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0405800000&quot;&gt;&lt;display value=&quot;Rizal&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1446,12 +1446,12 @@
                 <td>Marinduque</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1704000000&quot;, &quot;display&quot;: &quot;Marinduque&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1704000000&quot;, &quot;display&quot;: &quot;Marinduque&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1704000000&quot;&gt;&lt;display value=&quot;Marinduque&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1704000000&quot;&gt;&lt;display value=&quot;Marinduque&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1466,12 +1466,12 @@
                 <td>Occidental Mindoro</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1705100000&quot;, &quot;display&quot;: &quot;Occidental Mindoro&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1705100000&quot;, &quot;display&quot;: &quot;Occidental Mindoro&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1705100000&quot;&gt;&lt;display value=&quot;Occidental Mindoro&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1705100000&quot;&gt;&lt;display value=&quot;Occidental Mindoro&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1479,12 +1479,12 @@
           </div>
         </text>
         <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/provinces"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="Provinces"/>
         <title value="Provinces"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:34:09+00:00"/>
+        <date value="2026-04-01T03:44:59+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1493,8 +1493,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0798ddfb-d5ea-4a9c-963d-ad99f61e526b"/>
-          <timestamp value="2026-04-01T03:35:15+00:00"/>
+          <identifier value="urn:uuid:8baf5871-b2a8-4244-8d64-17ce79aadc45"/>
+          <timestamp value="2026-04-01T03:46:02+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -1515,7 +1515,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://psa.gov.ph/classification/psgc|0.1.0"/>
+            <valueUri value="https://psa.gov.ph/classification/psgc|0.2.0"/>
           </parameter>
           <contains>
             <system value="https://psa.gov.ph/classification/psgc"/>
@@ -1560,9 +1560,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-PSGC.html">codesystem Mock PSGC v0.2.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 3 concepts</p>
@@ -1595,12 +1595,12 @@
                 <td>Ilocos Norte</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102800000&quot;, &quot;display&quot;: &quot;Ilocos Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0102800000&quot;, &quot;display&quot;: &quot;Ilocos Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102800000&quot;&gt;&lt;display value=&quot;Ilocos Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0102800000&quot;&gt;&lt;display value=&quot;Ilocos Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1615,12 +1615,12 @@
                 <td>Ilocos Sur</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0102900000&quot;, &quot;display&quot;: &quot;Ilocos Sur&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0102900000&quot;, &quot;display&quot;: &quot;Ilocos Sur&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0102900000&quot;&gt;&lt;display value=&quot;Ilocos Sur&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0102900000&quot;&gt;&lt;display value=&quot;Ilocos Sur&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1635,12 +1635,12 @@
                 <td>La Union</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0103300000&quot;, &quot;display&quot;: &quot;La Union&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0103300000&quot;, &quot;display&quot;: &quot;La Union&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0103300000&quot;&gt;&lt;display value=&quot;La Union&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0103300000&quot;&gt;&lt;display value=&quot;La Union&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1648,12 +1648,12 @@
           </div>
         </text>
         <url value="http://doh.gov.ph/fhir/ph-core/ValueSet/regions"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="Regions"/>
         <title value="Regions"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-01T03:34:09+00:00"/>
+        <date value="2026-04-01T03:44:59+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1662,8 +1662,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:aa8efb9b-5364-40be-b6a5-c6e9dc8950fb"/>
-          <timestamp value="2026-04-01T03:35:15+00:00"/>
+          <identifier value="urn:uuid:0f9497db-f5bd-49e9-9b5b-b7ca78090ac8"/>
+          <timestamp value="2026-04-01T03:46:02+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1684,7 +1684,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://psa.gov.ph/classification/psgc|0.1.0"/>
+            <valueUri value="https://psa.gov.ph/classification/psgc|0.2.0"/>
           </parameter>
           <contains>
             <system value="https://psa.gov.ph/classification/psgc"/>

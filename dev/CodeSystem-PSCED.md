@@ -1,4 +1,4 @@
-# Mock PSCED - Draft PH Core Implementation Guide v0.1.0
+# Mock PSCED - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://psa.gov.ph/classification/psced/level | *Version*:0.1.0 |
+| *Official URL*:https://psa.gov.ph/classification/psced/level | *Version*:0.2.0 |
 | Draft as of 2026-04-01 | *Computable Name*:PSCED |
 
  
@@ -27,12 +27,12 @@ Mock of the Philippine Standard Classification of Education.
   "resourceType" : "CodeSystem",
   "id" : "PSCED",
   "url" : "https://psa.gov.ph/classification/psced/level",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PSCED",
   "title" : "Mock PSCED",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

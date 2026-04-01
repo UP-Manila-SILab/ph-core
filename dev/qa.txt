@@ -3,7 +3,7 @@ PHCoreImplementationGuide : Validation Results
 
 err = 0, warn = 11, info = 84
 IG Publisher Version: 2.2.4
-Generated Wed Apr 01 03:36:07 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.0 (canonical = http://doh.gov.ph/fhir/ph-core)
+Generated Wed Apr 01 03:46:59 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.2.0 (canonical = http://doh.gov.ph/fhir/ph-core)
  Build Errors : 0 / 0 / 0
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-allergy-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-example-allergy : 0 / 0 / 1
@@ -96,8 +96,8 @@ Generated Wed Apr 01 03:36:07 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.1.
 == fsh-generated/resources/AllergyIntolerance-example-allergy.json ==
 == fsh-generated/resources/Bundle-transaction-example.json ==
 INFORMATION: Bundle/transaction-example: Bundle.entry[0].resource/*Patient/example-patient*/.extension[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/transaction-example: Bundle.entry[4].resource/*Observation/blood-pressure*/.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/CodeSystem-PHFDACPRCS.json ==
 INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[0]: This property has only a code ('productInfo') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
@@ -152,13 +152,13 @@ INFORMATION: NamingSystem/PhilHealthProcedureIDNS: NamingSystem.jurisdiction[0]:
 == fsh-generated/resources/NamingSystem-PhilSysIDNS.json ==
 INFORMATION: NamingSystem/PhilSysIDNS: NamingSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 == fsh-generated/resources/Observation-blood-pressure.json ==
-INFORMATION: Observation/blood-pressure: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/blood-pressure: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/blood-pressure: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/blood-pressure: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Observation-observation-single-example.json ==
-INFORMATION: Observation/observation-single-example: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/observation-single-example: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/observation-single-example: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/observation-single-example: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Organization-organization-single-example.json ==
-INFORMATION: Organization/organization-single-example: Organization.identifier[3]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Organization/organization-single-example: Organization.identifier[3]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Organization/organization-single-example: Organization.identifier[3].system: No definition could be found for URL value 'http://my-hospital.org/internal-id'
 == fsh-generated/resources/Patient-MiddleNameExample.json ==
 == fsh-generated/resources/Patient-example-patient.json ==

@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "DOHNHFRCodeNS"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem DOHNHFRCodeNS</b></p><a name=\"DOHNHFRCodeNS\"> </a><a name=\"hcDOHNHFRCodeNS\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>http://doh.gov.ph/fhir/ph-core/NamingSystem/DOHNHFRCodeNS</td></tr><tr><td>Version</td><td>0.1.0</td></tr><tr><td>Name</td><td>DOHNHFRCode</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>Health Facility Code (HFC) from the National Health Facility Registry.</p>\n</div></td></tr><tr><td>Publisher</td><td>UP Manila National TeleHealth Center</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>URI</td><td>http://doh.gov.ph/fhir/Identifier/doh-nhfr-code</td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem DOHNHFRCodeNS</b></p><a name=\"DOHNHFRCodeNS\"> </a><a name=\"hcDOHNHFRCodeNS\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>http://doh.gov.ph/fhir/ph-core/NamingSystem/DOHNHFRCodeNS</td></tr><tr><td>Version</td><td>0.2.0</td></tr><tr><td>Name</td><td>DOHNHFRCode</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>Health Facility Code (HFC) from the National Health Facility Registry.</p>\n</div></td></tr><tr><td>Publisher</td><td>UP Manila National TeleHealth Center</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>URI</td><td>http://doh.gov.ph/fhir/Identifier/doh-nhfr-code</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [
@@ -30,7 +30,7 @@
      ] ;
      fhir:value [
        a fhir:String ;
-       fhir:v "0.1.0"
+       fhir:v "0.2.0"
      ]
   ] ) ; # 
   fhir:name [ fhir:v "DOHNHFRCode"] ; # 

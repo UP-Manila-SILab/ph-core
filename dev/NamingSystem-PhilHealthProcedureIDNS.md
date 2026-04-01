@@ -1,4 +1,4 @@
-# PhilHealth Procedure Identifier - Draft PH Core Implementation Guide v0.1.0
+# PhilHealth Procedure Identifier - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthProcedureIDNS | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthProcedureIDNS | *Version*:0.2.0 |
 | Draft as of 2025-06-01 | *Computable Name*:PhilHealthProcedureID |
 
  
@@ -28,7 +28,7 @@ Identifier system for procedures assigned by PhilHealth for claims and reimburse
   },
   {
     "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-    "valueString" : "0.1.0"
+    "valueString" : "0.2.0"
   }],
   "name" : "PhilHealthProcedureID",
   "status" : "draft",

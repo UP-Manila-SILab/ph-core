@@ -7,11 +7,11 @@
     "div" : "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.ph.core</b></p><a name=\"fhir.ph.core\"> </a><a name=\"hcfhir.ph.core\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><h2>PHCoreImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://doh.gov.ph/fhir/ph-core/ImplementationGuide/fhir.ph.core</pre><div><p>This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.</p>\n</div></div>"
   },
   "url" : "http://doh.gov.ph/fhir/ph-core/ImplementationGuide/fhir.ph.core",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

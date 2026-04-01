@@ -1,4 +1,4 @@
-# Drugs - Draft PH Core Implementation Guide v0.1.0
+# Drugs - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs | *Version*:0.2.0 |
 | Draft as of 2026-04-01 | *Computable Name*:DrugsVS |
 
  
@@ -50,12 +50,12 @@ This value set includes all drug or medicament substance codes and all pharmaceu
   "resourceType" : "ValueSet",
   "id" : "drugs-vs",
   "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DrugsVS",
   "title" : "Drugs",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

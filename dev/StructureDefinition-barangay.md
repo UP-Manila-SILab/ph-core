@@ -1,4 +1,4 @@
-# Barangay - Draft PH Core Implementation Guide v0.1.0
+# Barangay - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay | *Version*:0.2.0 |
 | Draft as of 2026-04-01 | *Computable Name*:Barangay |
 
 Barangay from the standard geographic code.
@@ -45,11 +45,11 @@ Other representations of profile: [CSV](StructureDefinition-barangay.csv), [Exce
   "resourceType" : "StructureDefinition",
   "id" : "barangay",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "Barangay",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

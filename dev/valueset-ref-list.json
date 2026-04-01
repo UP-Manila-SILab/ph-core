@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/barangays",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "Barangays",
     "title" : "Barangays",
@@ -13,7 +13,7 @@
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/cities",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "Cities",
     "title" : "Cities",
@@ -25,7 +25,7 @@
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "DrugsVS",
     "title" : "Drugs",
@@ -35,13 +35,13 @@
     },
     "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement",
     "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
-    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
     "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
-    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense"
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request"
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/educational-attainments",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "EducationalAttainments",
     "title" : "Educational Attainments",
@@ -53,7 +53,7 @@
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/indigenous-groups-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "IndigenousGroupsVS",
     "title" : "Indigenous Groups",
@@ -65,7 +65,7 @@
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "OccupationClassifications",
     "title" : "Occupation Classifications",
@@ -77,7 +77,7 @@
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/provinces",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "Provinces",
     "title" : "Provinces",
@@ -89,7 +89,7 @@
   },
   {
     "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/regions",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "Regions",
     "title" : "Regions",

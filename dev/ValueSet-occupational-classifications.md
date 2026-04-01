@@ -1,4 +1,4 @@
-# Occupation Classifications - Draft PH Core Implementation Guide v0.1.0
+# Occupation Classifications - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications | *Version*:0.2.0 |
 | Draft as of 2026-04-01 | *Computable Name*:OccupationClassifications |
 
  
@@ -48,12 +48,12 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "occupational-classifications",
   "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/occupational-classifications",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "OccupationClassifications",
   "title" : "Occupation Classifications",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

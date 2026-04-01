@@ -3,7 +3,7 @@
   "id" : "PhilHealthPENNS",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem PhilHealthPENNS</b></p><a name=\"PhilHealthPENNS\"> </a><a name=\"hcPhilHealthPENNS\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPENNS</td></tr><tr><td>Version</td><td>0.1.0</td></tr><tr><td>Name</td><td>PhilHealthPEN</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>The unique number issued by PhilHealth to employers.</p>\n</div></td></tr><tr><td>Publisher</td><td>UP Manila National TeleHealth Center</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>URI</td><td>http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem PhilHealthPENNS</b></p><a name=\"PhilHealthPENNS\"> </a><a name=\"hcPhilHealthPENNS\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>http://doh.gov.ph/fhir/ph-core/NamingSystem/PhilHealthPENNS</td></tr><tr><td>Version</td><td>0.2.0</td></tr><tr><td>Name</td><td>PhilHealthPEN</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>The unique number issued by PhilHealth to employers.</p>\n</div></td></tr><tr><td>Publisher</td><td>UP Manila National TeleHealth Center</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>URI</td><td>http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber</td></tr></table></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
@@ -11,7 +11,7 @@
   },
   {
     "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-    "valueString" : "0.1.0"
+    "valueString" : "0.2.0"
   }],
   "name" : "PhilHealthPEN",
   "status" : "draft",

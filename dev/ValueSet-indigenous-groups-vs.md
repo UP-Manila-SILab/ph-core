@@ -1,4 +1,4 @@
-# Indigenous Groups - Draft PH Core Implementation Guide v0.1.0
+# Indigenous Groups - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/indigenous-groups-vs | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/indigenous-groups-vs | *Version*:0.2.0 |
 | Draft as of 2026-04-01 | *Computable Name*:IndigenousGroupsVS |
 
  
@@ -46,12 +46,12 @@ A value set representing the recognized Indigenous groups to which a person may 
   "resourceType" : "ValueSet",
   "id" : "indigenous-groups-vs",
   "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/indigenous-groups-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "IndigenousGroupsVS",
   "title" : "Indigenous Groups",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

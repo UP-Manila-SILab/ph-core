@@ -1,4 +1,4 @@
-# Indigenous People - Draft PH Core Implementation Guide v0.1.0
+# Indigenous People - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people | *Version*:0.2.0 |
 | Draft as of 2026-04-01 | *Computable Name*:IndigenousPeople |
 
 If the patient is a member of an indigenous group.
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-indigenous-people.cs
   "resourceType" : "StructureDefinition",
   "id" : "indigenous-people",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "IndigenousPeople",
   "title" : "Indigenous People",
   "status" : "draft",
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

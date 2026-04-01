@@ -11,18 +11,18 @@
   fhir:id [ fhir:v "cities"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet cities</b></p><a name=\"cities\"> </a><a name=\"hccities\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100000\">1380100000</a></td><td>City of Caloocan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380200000\">1380200000</a></td><td>City of Las Piñas</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet cities</b></p><a name=\"cities\"> </a><a name=\"hccities\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100000\">1380100000</a></td><td>City of Caloocan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380200000\">1380200000</a></td><td>City of Las Piñas</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://doh.gov.ph/fhir/ph-core/ValueSet/cities"^^xsd:anyURI ;
      fhir:l <http://doh.gov.ph/fhir/ph-core/ValueSet/cities>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "Cities"] ; # 
   fhir:title [ fhir:v "Cities"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-04-01T03:34:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-01T03:44:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;

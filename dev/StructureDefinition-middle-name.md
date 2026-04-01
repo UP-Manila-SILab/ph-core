@@ -1,4 +1,4 @@
-# Middle Name - Draft PH Core Implementation Guide v0.1.0
+# Middle Name - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name | *Version*:0.2.0 |
 | Draft as of 2026-04-01 | *Computable Name*:MiddleName |
 
 Extension to capture middle name information for a person
@@ -42,11 +42,11 @@ Other representations of profile: [CSV](StructureDefinition-middle-name.csv), [E
   "resourceType" : "StructureDefinition",
   "id" : "middle-name",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "MiddleName",
   "title" : "Middle Name",
   "status" : "draft",
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

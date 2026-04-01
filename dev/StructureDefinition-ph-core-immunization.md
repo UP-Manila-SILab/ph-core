@@ -1,4 +1,4 @@
-# PH Core Immunization - Draft PH Core Implementation Guide v0.1.0
+# PH Core Immunization - Draft PH Core Implementation Guide v0.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-immunization | *Version*:0.1.0 |
+| *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-immunization | *Version*:0.2.0 |
 | Draft as of 2026-04-01 | *Computable Name*:PHCoreImmunization |
 
  
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-immunization
   "resourceType" : "StructureDefinition",
   "id" : "ph-core-immunization",
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-immunization",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PHCoreImmunization",
   "title" : "PH Core Immunization",
   "status" : "draft",
-  "date" : "2026-04-01T03:34:09+00:00",
+  "date" : "2026-04-01T03:44:59+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://doh.gov.ph/fhir/ph-core/ImplementationGuide/fhir.ph.core"/>
-  <version value="0.1.0"/>
+  <version value="0.2.0"/>
   <name value="PHCoreImplementationGuide"/>
   <title value="Draft PH Core Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-04-01T03:34:09+00:00"/>
+  <date value="2026-04-01T03:44:59+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>

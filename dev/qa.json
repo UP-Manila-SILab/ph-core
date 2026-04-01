@@ -5,9 +5,9 @@
   "description" : "This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.",
   "status" : "draft",
   "package-id" : "fhir.ph.core",
-  "ig-ver" : "0.1.0",
-  "date" : "Wed, 01 Apr, 2026 03:34:09 +0000",
-  "dateISO8601" : "2026-04-01T03:34:09+00:00",
+  "ig-ver" : "0.2.0",
+  "date" : "Wed, 01 Apr, 2026 03:44:59 +0000",
+  "dateISO8601" : "2026-04-01T03:44:59+00:00",
   "errs" : 0,
   "warnings" : 11,
   "hints" : 84,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 2631497808
+  "maxMemory" : 1899926184
 }
