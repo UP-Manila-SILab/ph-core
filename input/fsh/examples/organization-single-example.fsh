@@ -8,9 +8,17 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 
 
 * active = true
+* identifier[NhfrCode].system = "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"
 * identifier[NhfrCode].value = "1234567890"
+* identifier[PAN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
 * identifier[PAN].value = "PAN-2024-56789"
+* identifier[PEN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
 * identifier[PEN].value = "PEN-987654321"
+
+// A custom identifier not defined in PH Core profile
+* identifier[+].system = "http://my-hospital.org/internal-id"
+* identifier[=].value = "HOSP-INT-12345"
+
 * name = "Department of Health - Sattelite Office"
 
 * telecom.system = #phone
@@ -24,9 +32,9 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 * address.line = "123 Hospital Street"
 * address.postalCode = "1740"
 * address.country = "PH"
-* address.extension[region].valueCoding = PSGC#1401100000 "Benguet"
-* address.extension[cityMunicipality].valueCoding = PSGC#1380200000 "City of Las Piñas"
-* address.extension[barangay].valueCoding = PSGC#1380100001 "Barangay 1"
+* address.extension[region].valueCoding = $PSGC#1401100000 "Benguet"
+* address.extension[cityMunicipality].valueCoding = $PSGC#1380200000 "City of Las Piñas"
+* address.extension[barangay].valueCoding = $PSGC#1380100001 "Barangay 1"
 
 * contact.name.text = "Health Facility Contact"
 * contact.telecom.system = #phone
@@ -35,6 +43,6 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 * contact.address.line = "125 Central Office Street"
 * contact.address.postalCode = "1740"
 * contact.address.country = "PH"
-* contact.address.extension[region].valueCoding = PSGC#1401100000 "Benguet"
-* contact.address.extension[cityMunicipality].valueCoding = PSGC#1380200000 "City of Las Piñas"
-* contact.address.extension[barangay].valueCoding = PSGC#1380100001 "Barangay 1"
+* contact.address.extension[region].valueCoding = $PSGC#1401100000 "Benguet"
+* contact.address.extension[cityMunicipality].valueCoding = $PSGC#1380200000 "City of Las Piñas"
+* contact.address.extension[barangay].valueCoding = $PSGC#1380100001 "Barangay 1"

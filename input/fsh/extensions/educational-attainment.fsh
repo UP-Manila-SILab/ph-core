@@ -5,4 +5,4 @@ Context: Patient
 Description: "Highest educational attainment of the patient."
 * insert ExperimentalStructureDefinition
 * value[x] only CodeableConcept
-* value[x] from educational-attainments (required)
+* value[x] from EducationalAttainments (required)

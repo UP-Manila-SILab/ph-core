@@ -1,13 +1,13 @@
-Instance: philsys-id-ns
+Instance: PhilSysIDNS
 InstanceOf: NamingSystem
 Usage: #definition
 Title: "PhilSys Identification Number (PhilSys ID)"
-Description: "The National ID Number is a unique and randomly-generated 12-digit permanent identification number that is assigned to every citizen or resident alien upon successful registration to National ID system."
+Description: "The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program."
 * name = "PhilSysID"
 * kind = #identifier
 * status = #draft
 * date = "2025-06-13"
-* jurisdiction.coding = urn:iso:std:iso:3166#PH
-* publisher = "Philippine National Indentification System"
+* jurisdiction.coding = urn:iso:std:iso:3166#PH "Philippines (the)"
+* publisher = "Philippine National Identification System"
 * uniqueId.type = #uri
-* uniqueId.value = "https://philsys.gov.ph"
+* uniqueId.value = "http://philsys.gov.ph/fhir/Identifier/philsys-id"

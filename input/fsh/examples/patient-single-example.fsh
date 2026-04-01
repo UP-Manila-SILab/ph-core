@@ -10,7 +10,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * active = true
 * gender = #male
 * birthDate = "1985-06-15"
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines"
+* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines (the)"
 * extension[nationality].extension[period].valuePeriod.start = "2020-01-01"
 * extension[nationality].extension[period].valuePeriod.end = "2023-01-01"
 * extension[religion].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
@@ -21,7 +21,11 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * extension[indigenousGroup].valueCodeableConcept = IndigenousGroupsCS#Aetas "Aetas" 
 * extension[race].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/race"
 * extension[race].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-Race#2036-2 "Filipino"
-* identifier.system = "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"
+* extension[educationalAttainment].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/educational-attainment"
+* extension[educationalAttainment].valueCodeableConcept = $PSCED#C201301 "Elementary Graduate"
+* extension[occupation].extension[occupationClassification].valueCodeableConcept = $PSOC#111102 "Hospital Administrator"
+* extension[occupation].extension[occupationLength].valuePeriod.start = "2020-01-01"
+* identifier.system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"
 * identifier.value = "63-584789845-5"
 * address.line = "123 Mabini Street"
 * address.line[+] = "Barangay Malinis"
@@ -31,25 +35,12 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.country = "PH"
 
 * address.extension.url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/barangay"
-* address.extension.valueCoding = PSGC#1380100001 "Barangay 1"
-
-* address.extension.url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality"
-* address.extension.valueCoding = PSGC#1380200000 "City of Las Piñas"
+* address.extension.valueCoding = $PSGC#1380100001 "Barangay 1"
 
 * address.extension[+].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality"
-* address.extension[=].valueCoding = PSGC#1380100000 "City of Caloocan"
+* address.extension[=].valueCoding = $PSGC#1380200000 "City of Las Piñas"
 
 * address.extension[+].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"
-* address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
-* address.extension[+].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"
-* address.extension[=].valueCoding = PSGC#0403400000  "Laguna"
-* address.extension[+].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"
-* address.extension[=].valueCoding = PSGC#0405800000  "Rizal"
-* address.extension[+].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"
-* address.extension[=].valueCoding = PSGC#1704000000  "Marinduque"
-* address.extension[+].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"
-* address.extension[=].valueCoding = PSGC#0402100000  "Cavite"
-* address.extension[+].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"
-* address.extension[=].valueCoding = PSGC#1705100000  "Occidental Mindoro"
+* address.extension[=].valueCoding = $PSGC#0402100000  "Cavite"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"

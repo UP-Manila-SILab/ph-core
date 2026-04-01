@@ -56,9 +56,9 @@ Use the following prefixes for issue titles:
    git clone https://github.com/YOUR-USERNAME/ph-core.git
    ```
 
-3. **Create a Branch**: Use a meaningful branch name (see [Branching Strategy](#3-branching-strategy)).
+3. **Create a Branch**: Use a meaningful branch name (see [Branching Strategy](#3-branching-strategy)). Use hyphens, not slashes.
    ```bash
-   git checkout -b feature/short-description
+   git checkout -b feat-short-description
    ```
 
 4. **Make Changes**: Implement your changes while following the [Coding Style Guidelines](#2-coding-style-guidelines).
@@ -84,7 +84,7 @@ Use the following prefixes for issue titles:
 
 7. **Push the Changes**: Push your branch to your forked repository.
    ```bash
-   git push origin feature/short-description
+   git push origin feat-short-description
    ```
 
 8. **Create a Pull Request**: Go to the original repository, click "New Pull Request," and select your branch. Include:
@@ -150,6 +150,15 @@ Severity: #error
 
 ## 3. Branching Strategy
 
+### **Branch Naming Conventions**
+
+> **Important:** Branch names must **NOT** contain `/` or other special characters that may cause issues with the FHIR auto-IG builder (build.fhir.org).
+>
+> **Correct:** `feat-create-medication-series`, `fix-patient-profile`, `hotfix-build-error`
+> **Incorrect:** `feat/create-medication-series`, `feature/update`, `bug_fix/validator`
+>
+> The auto-IG builder converts `/` to `-` in URLs, which can cause broken build links and failed IG previews.
+
 ### **Main Branches:**
 
 * **main**: This branch contains the latest working code and is where new features are merged before going to production.
@@ -158,11 +167,12 @@ Severity: #error
 ### **Feature Branches:**
 
 * Create a feature branch from `main` for new features or bug fixes.
+* Use the format: `feat-short-description` (e.g., `feat-patient-profile`, `feat-medication-resource`)
 * Merge your feature branch back into `main` when your work is done, and submit a pull request.
 
 ### **Hotfix Branches:**
 
-* If an urgent bug needs fixing in production, create a `hotfix/<description>` branch off `main`, fix the issue, then merge it back into `main`.
+* If an urgent bug needs fixing in production, create a `hotfix-short-description` branch off `main`, fix the issue, then merge it back into `main`.
 
 ### **Release Branches:**
 
