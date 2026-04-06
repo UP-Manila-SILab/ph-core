@@ -1,0 +1,17 @@
+# CODEOWNERS file for PH Core Implementation Guide
+# 
+# This file defines the default code owners who will be automatically
+# requested to review all pull requests in this repository.
+#
+# For more information about CODEOWNERS, see:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# IMPORTANT: The teams listed below must have write access to this repository.
+
+# Default owners for everything in the repository
+# These teams will be automatically requested for review on all PRs
+* @UP-Manila-SILab/ph-core-reviewer @UP-Manila-SILab/nthc-interoperability-team
+
+# Protect the CODEOWNERS file itself - requires admin/reviewer team approval
+# for any changes to this file
+/.github/CODEOWNERS @UP-Manila-SILab/ph-core-reviewer
