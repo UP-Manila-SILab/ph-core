@@ -16,6 +16,16 @@ Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/alle
 Alias: $v3-roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 Alias: $v2-0443 = http://terminology.hl7.org/CodeSystem/v2-0443
-Alias: $v3-Race = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $request-priority = http://hl7.org/fhir/request-priority
+
+// Obligation extension
+Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+
+// PH Core ActorDefinitions for obligations
+// Using lowercase aliases with $ prefix (like EU EPS) for concise RuleSet usage
+// These resolve to full canonical URLs required by the obligation extension
+Alias: $server = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Server
+Alias: $consumer = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Consumer
+Alias: $creator = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Creator
+Alias: $v3-Race = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $medicationdispense-performer-function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function
