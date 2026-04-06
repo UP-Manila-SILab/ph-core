@@ -28,5 +28,4 @@ Alias: $server = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Server
 Alias: $consumer = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Consumer
 Alias: $creator = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Creator
 Alias: $v3-Race = http://terminology.hl7.org/ValueSet/v3-Race
-Alias: $request-priority = http://hl7.org/fhir/request-priority
 Alias: $medicationdispense-performer-function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function
