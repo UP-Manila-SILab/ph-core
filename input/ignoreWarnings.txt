@@ -9,3 +9,15 @@ MSG_EXPERIMENTAL
 
 #   The deprecation is caused by R5 validation, which cannot be suppressed.
 MSG_DEPENDS_ON_DEPRECATED
+
+#   Philippine CodeSystems (PSCED, PSOC, PSGC, Indigenous Groups) are local to this IG
+#   The IG Publisher cannot validate codes against them without a local terminology server
+#   The codes ARE valid per the CodeSystem definitions in this IG
+A definition for CodeSystem .* could not be found
+
+#   ValueSet validation fails for same reason - local CodeSystems not on terminology server
+#   The codes ARE in the ValueSet compose/expansion definitions
+None of the codings provided are in the value set
+
+#   ISO 3166 jurisdiction CodeSystem should be standard but may not be in validator cache
+A definition for CodeSystem 'urn:iso:std:iso:3166'
