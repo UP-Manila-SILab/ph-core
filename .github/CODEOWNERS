@@ -14,4 +14,4 @@
 
 # Protect the CODEOWNERS file itself - requires admin/reviewer team approval
 # for any changes to this file
-/.github/CODEOWNERS @UP-Manila-SILab/ph-core-reviewer
+/.github/CODEOWNERS @UP-Manila-SILab/nthc-interoperability-team
