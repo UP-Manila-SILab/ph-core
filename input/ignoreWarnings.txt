@@ -9,7 +9,3 @@ MSG_EXPERIMENTAL
 
 #   The deprecation is caused by R5 validation, which cannot be suppressed.
 MSG_DEPENDS_ON_DEPRECATED
-
-#   ValueSet expansion fails because PSCED/PSOC are local PH CodeSystems not on any terminology server
-#   The IG Publisher cannot expand ValueSets that reference these local codes - this is expected
-No server available
