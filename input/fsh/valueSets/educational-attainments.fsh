@@ -12,8 +12,8 @@ Description: "All categories of educational programs, courses, and attainment le
 * ^expansion.timestamp = "2026-04-07T00:00:00Z"
 * ^expansion.total = 4
 * ^expansion.offset = 0
-* ^expansion.parameter.name = "version"
-* ^expansion.parameter.valueUri = "https://psa.gov.ph/classification/psced/level|0.1.0"
+// * ^expansion.parameter.name = "version"
+// * ^expansion.parameter.valueUri = "https://psa.gov.ph/classification/psced/level|0.1.0"
 * ^expansion.contains.system = "https://psa.gov.ph/classification/psced/level"
 * ^expansion.contains.code = #C201301
 * ^expansion.contains.display = "Elementary Graduate"
