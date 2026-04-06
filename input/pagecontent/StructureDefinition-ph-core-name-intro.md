@@ -8,7 +8,7 @@ Per naming conventions, the middle name (usually the mother's maiden surname in 
 
 ### Example
 
-A person named "Juan Santos Reyes" would be represented as:
+A person named "Juan Lawrence Les Dalisay Reyes" would be represented as:
 
 ```json
 {
