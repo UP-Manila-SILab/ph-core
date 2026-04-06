@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-provenance | *Version*:0.2.0 |
-| Draft as of 2026-04-01 | *Computable Name*:PHCoreProvenance |
+| Draft as of 2026-04-06 | *Computable Name*:PHCoreProvenance |
 
  
 This profile localizes the FHIR R4 Provenance resource to the Philippine context, capturing key information about who, what, when, and where for a set of resources. It is used to track the authorship and history of healthcare data in Philippine health information systems. 
@@ -114,7 +114,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-provenance.c
   "name" : "PHCoreProvenance",
   "title" : "PH Core Provenance",
   "status" : "draft",
-  "date" : "2026-04-01T03:44:59+00:00",
+  "date" : "2026-04-06T07:53:57+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

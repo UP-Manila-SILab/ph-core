@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location | *Version*:0.2.0 |
-| Draft as of 2026-04-01 | *Computable Name*:PHCoreLocation |
+| Draft as of 2026-04-06 | *Computable Name*:PHCoreLocation |
 
  
 This profile localizes the FHIR R4 Location resource to the Philippine context. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-location.csv
   "name" : "PHCoreLocation",
   "title" : "PH Core Location",
   "status" : "draft",
-  "date" : "2026-04-01T03:44:59+00:00",
+  "date" : "2026-04-06T07:53:57+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

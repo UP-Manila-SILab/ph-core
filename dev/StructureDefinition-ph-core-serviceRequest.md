@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest | *Version*:0.2.0 |
-| Draft as of 2026-04-01 | *Computable Name*:PHCoreServiceRequest |
+| Draft as of 2026-04-06 | *Computable Name*:PHCoreServiceRequest |
 
  
 The PH Core ServiceRequest Profile is a Philippine-specific FHIR profile that represents a record of a request for services such as diagnostic investigations, treatments, or operations to be performed within the Philippine health system. It constrains the base FHIR ServiceRequest resource by defining minimum expectations on core elements, extensions, vocabularies, and value sets relevant to local clinical and administrative workflows. It serves as a nationally consistent baseline for recording, searching, and fetching service request information to support interoperable health information exchange across Philippine health facilities and programs. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-serviceReque
   "name" : "PHCoreServiceRequest",
   "title" : "PH Core ServiceRequest",
   "status" : "draft",
-  "date" : "2026-04-01T03:44:59+00:00",
+  "date" : "2026-04-06T07:53:57+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

@@ -102,10 +102,10 @@
     "description" : "Mock of the Philippine Standard Geographic Code.",
     "uses" : {
     },
+    "ValueSet-barangays.html" : "Barangays",
     "ValueSet-provinces.html" : "Provinces",
-    "ValueSet-cities.html" : "Cities",
     "ValueSet-regions.html" : "Regions",
-    "ValueSet-barangays.html" : "Barangays"
+    "ValueSet-cities.html" : "Cities"
   },
   {
     "url" : "https://psa.gov.ph/classification/psoc/unit",

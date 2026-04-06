@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement | *Version*:0.2.0 |
-| Draft as of 2026-04-01 | *Computable Name*:PHCoreMedicationStatement |
+| Draft as of 2026-04-06 | *Computable Name*:PHCoreMedicationStatement |
 
  
 Captures key FHIR Medication Statement data for the Philippine context. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationst
   "title" : "PH Core Medication Statement",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:44:59+00:00",
+  "date" : "2026-04-06T07:53:57+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

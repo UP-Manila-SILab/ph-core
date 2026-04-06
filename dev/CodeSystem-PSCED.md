@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://psa.gov.ph/classification/psced/level | *Version*:0.2.0 |
-| Draft as of 2026-04-01 | *Computable Name*:PSCED |
+| Draft as of 2026-04-06 | *Computable Name*:PSCED |
 
  
 Mock of the Philippine Standard Classification of Education. 
@@ -32,7 +32,7 @@ Mock of the Philippine Standard Classification of Education.
   "title" : "Mock PSCED",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-01T03:44:59+00:00",
+  "date" : "2026-04-06T07:53:57+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
