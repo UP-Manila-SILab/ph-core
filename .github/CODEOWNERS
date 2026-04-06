@@ -13,7 +13,7 @@
 * @UP-Manila-SILab/nthc-interoperability-team
 
 # Explicit owners for PH Core FSH input files (profiles, extensions, etc.)
-# Both teams are required to review changes to the core FHIR implementation
+# Both teams will be automatically requested to review changes to the core FHIR implementation
 /input/ @UP-Manila-SILab/ph-core-reviewer @UP-Manila-SILab/nthc-interoperability-team
 
 # Protect the CODEOWNERS file itself - requires admin/reviewer team approval
