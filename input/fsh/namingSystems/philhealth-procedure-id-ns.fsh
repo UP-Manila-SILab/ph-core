@@ -7,7 +7,7 @@ Description: "Identifier system for procedures assigned by PhilHealth for claims
 * kind = #identifier
 * status = #draft
 * date = "2025-06-01"
-* jurisdiction.coding = urn:iso:std:iso:3166#PH "Philippines (the)"
+* jurisdiction.coding = urn:iso:std:iso:3166#PH "Philippines"
 * publisher = "PhilHealth"
 * uniqueId.type = #uri
 * uniqueId.value = "http://philhealth.gov.ph/procedure"

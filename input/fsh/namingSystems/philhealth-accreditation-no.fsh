@@ -7,7 +7,7 @@ Description: "The unique number issued by PhilHealth to accredited institutions.
 * kind = #identifier
 * status = #draft
 * date = "2025-06-01"
-* jurisdiction.coding = urn:iso:std:iso:3166#PH "Philippines (the)"
+* jurisdiction.coding = urn:iso:std:iso:3166#PH "Philippines"
 * publisher = "PhilHealth"
 * uniqueId.type = #uri
 * uniqueId.value = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
