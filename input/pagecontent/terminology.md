@@ -24,9 +24,7 @@ The following ConceptMaps are defined in this implementation guide:
 
 The following table summarizes terminology bindings across all profiles in this implementation guide. For detailed binding information, see each profile's definition.
 
-| Profile | Element | Binding Strength | ValueSet |
-|---------|---------|-----------------|----------|
-| _To be auto-generated from FSH definitions_ | | | |
+{% include bindings-list-generator.md %}
 
 ---
 
