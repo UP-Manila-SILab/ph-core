@@ -6,6 +6,6 @@ Description: "This resource is primarily used for the identification and definit
 * insert ExperimentalStructureDefinition
 * code from DrugsVS (preferred)
 
-* insert CodeableConceptMS(code)
-* insert CodeableConceptMS(form)
-* insert CodeableConceptMS(ingredient.itemCodeableConcept)
+* insert CodeableConceptSO(code)
+* insert CodeableConceptSO(form)
+* insert CodeableConceptSO(ingredient.itemCodeableConcept)

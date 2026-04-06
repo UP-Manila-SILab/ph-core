@@ -16,7 +16,7 @@ Description: "This profile localizes the FHIR R4 RelatedPerson resource to the P
 * address MS
 * address only PHCoreAddress
 
-* insert CodeableConceptMS(relationship)
-* insert CodeableConceptMS(communication.language)
+* insert CodeableConceptSO(relationship)
+* insert CodeableConceptSO(communication.language)
 
 // TODO: Explicitly cite system url when RelatedPerson is being reviewed

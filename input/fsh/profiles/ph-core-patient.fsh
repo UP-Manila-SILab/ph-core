@@ -53,7 +53,7 @@ Description: "Captures key demographic and administrative information about indi
 * contact.address insert ObligationOptional
 * contact.address only PHCoreAddress
 
-* insert CodeableConceptMS(maritalStatus)
-* insert CodeableConceptMS(contact.relationship)
-* insert CodeableConceptMS(communication.language)
+* insert CodeableConceptSO(maritalStatus)
+* insert CodeableConceptSO(contact.relationship)
+* insert CodeableConceptSO(communication.language)
 

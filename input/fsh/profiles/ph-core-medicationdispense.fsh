@@ -19,11 +19,11 @@ Description: "Captures key FHIR Medication Dispense data for the Philippine cont
 // Philippine-specific binding for medication codes
 * medicationCodeableConcept from DrugsVS (preferred)
 
-* insert CodeableConceptMS(statusReasonCodeableConcept)
-* insert CodeableConceptMS(category)
-* insert CodeableConceptMS(medicationCodeableConcept)
-* insert CodeableConceptMS(performer.function)
-* insert CodeableConceptMS(type)
-* insert CodeableConceptMS(substitution.type)
-* insert CodeableConceptMS(substitution.reason)
+* insert CodeableConceptSO(statusReasonCodeableConcept)
+* insert CodeableConceptSO(category)
+* insert CodeableConceptSO(medicationCodeableConcept)
+* insert CodeableConceptSO(performer.function)
+* insert CodeableConceptSO(type)
+* insert CodeableConceptSO(substitution.type)
+* insert CodeableConceptSO(substitution.reason)
 

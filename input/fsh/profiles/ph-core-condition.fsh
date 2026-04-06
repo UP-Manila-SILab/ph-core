@@ -23,10 +23,10 @@ Description: "Captures Condition."
 * recorder only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCorePatient or PHCoreRelatedPerson)
 * asserter only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCorePatient or PHCoreRelatedPerson)
 
-* insert CodeableConceptMS(clinicalStatus)
-* insert CodeableConceptMS(verificationStatus)
-* insert CodeableConceptMS(bodySite)
-* insert CodeableConceptMS(stage.summary)
-* insert CodeableConceptMS(stage.type)
-* insert CodeableConceptMS(evidence.code)
+* insert CodeableConceptSO(clinicalStatus)
+* insert CodeableConceptSO(verificationStatus)
+* insert CodeableConceptSO(bodySite)
+* insert CodeableConceptSO(stage.summary)
+* insert CodeableConceptSO(stage.type)
+* insert CodeableConceptSO(evidence.code)
 
