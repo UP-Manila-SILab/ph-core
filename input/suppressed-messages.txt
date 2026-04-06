@@ -1,0 +1,11 @@
+== Suppressed Messages ==
+
+# Add messages here to suppress them from the QA report
+# See: https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/qa.html#suppressed-messages
+
+# ValueSet expansion fails because PSCED/PSOC are local PH CodeSystems
+# The IG Publisher cannot expand ValueSets that reference these local codes - this is expected
+No server available
+
+# Editor comments explaining why these are suppressed
+The IG Publisher cannot expand ValueSets that reference these local codes - this is expected
