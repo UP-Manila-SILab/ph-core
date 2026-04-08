@@ -19,12 +19,12 @@ Description: "Captures key FHIR Medication Request data for the Philippine conte
 // Philippine-specific binding for medication codes
 * medicationCodeableConcept from DrugsVS (preferred)
 
-* insert CodeableConceptMS(statusReason)
-* insert CodeableConceptMS(category)
-* insert CodeableConceptMS(medicationCodeableConcept)
-* insert CodeableConceptMS(performerType)
-* insert CodeableConceptMS(reasonCode)
-* insert CodeableConceptMS(courseOfTherapyType)
-* insert CodeableConceptMS(substitution.allowedCodeableConcept)
-* insert CodeableConceptMS(substitution.reason)
+* insert CodeableConceptSO(statusReason)
+* insert CodeableConceptSO(category)
+* insert CodeableConceptSO(medicationCodeableConcept)
+* insert CodeableConceptSO(performerType)
+* insert CodeableConceptSO(reasonCode)
+* insert CodeableConceptSO(courseOfTherapyType)
+* insert CodeableConceptSO(substitution.allowedCodeableConcept)
+* insert CodeableConceptSO(substitution.reason)
 

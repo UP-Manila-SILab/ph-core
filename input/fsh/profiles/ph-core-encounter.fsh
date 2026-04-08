@@ -45,13 +45,13 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 
 * type 0..* MS
 
-* insert CodeableConceptMS(serviceType)
-* insert CodeableConceptMS(priority)
-* insert CodeableConceptMS(diagnosis.use)
-* insert CodeableConceptMS(hospitalization.admitSource)
-* insert CodeableConceptMS(hospitalization.reAdmission)
-* insert CodeableConceptMS(hospitalization.dietPreference)
-* insert CodeableConceptMS(hospitalization.specialCourtesy)
-* insert CodeableConceptMS(hospitalization.specialArrangement)
-* insert CodeableConceptMS(location.physicalType)
+* insert CodeableConceptSO(serviceType)
+* insert CodeableConceptSO(priority)
+* insert CodeableConceptSO(diagnosis.use)
+* insert CodeableConceptSO(hospitalization.admitSource)
+* insert CodeableConceptSO(hospitalization.reAdmission)
+* insert CodeableConceptSO(hospitalization.dietPreference)
+* insert CodeableConceptSO(hospitalization.specialCourtesy)
+* insert CodeableConceptSO(hospitalization.specialArrangement)
+* insert CodeableConceptSO(location.physicalType)
 

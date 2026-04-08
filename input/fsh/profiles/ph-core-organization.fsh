@@ -32,5 +32,5 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 
 * partOf only Reference(PHCoreOrganization)
 
-* insert CodeableConceptMS(type)
-* insert CodeableConceptMS(contact.purpose)
+* insert CodeableConceptSO(type)
+* insert CodeableConceptSO(contact.purpose)

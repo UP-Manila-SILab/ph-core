@@ -7,6 +7,6 @@ Description: "This profile localizes the FHIR R4 Location resource to the Philip
 * managingOrganization only Reference(ph-core-organization)
 * partOf only Reference(ph-core-location)
 
-* insert CodeableConceptMS(type)
-* insert CodeableConceptMS(physicalType)
+* insert CodeableConceptSO(type)
+* insert CodeableConceptSO(physicalType)
 
