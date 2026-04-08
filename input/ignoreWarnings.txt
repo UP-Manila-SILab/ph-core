@@ -9,7 +9,3 @@ MSG_EXPERIMENTAL
 
 #   The deprecation is caused by R5 validation, which cannot be suppressed.
 MSG_DEPENDS_ON_DEPRECATED
-
-# Note: Previous suppressions for local CodeSystem validation errors have been
-# removed as the CI/CD now uses -tx http://tx.fhir.org terminology server flag,
-# which aligns validation with build.fhir.org behavior.
