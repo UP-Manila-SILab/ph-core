@@ -1,5 +1,26 @@
 The **PH Core Patient** profile captures key demographic and administrative information about individuals receiving care or other health-related services in the Philippines.
 
+## Name Representation
+
+Per naming conventions, the middle name (usually the mother's maiden surname in most cases) is represented using the `given[1]` array:
+
+- **`given[0]`**: First name (e.g., "Paolo Niccolo")
+- **`given[1]`**: Middle name (e.g., "Buenaventura")
+- **`family`**: Family name (e.g., "Macalalad")
+
+### Example
+
+A person named "Paolo Niccolo Buenaventura Macalalad" would be represented as:
+
+```json
+{
+  "use": "official",
+  "given": ["Paolo Niccolo", "Buenaventura"],
+  "family": "Macalalad"
+}
+```
+
+
 ## Birth Date and Age Derivation
 
 ### Deriving `birthDate` from Age Information
