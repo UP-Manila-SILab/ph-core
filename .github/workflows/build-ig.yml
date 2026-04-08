@@ -107,7 +107,7 @@ jobs:
       - name: Build IG
         run: |
           set -euo pipefail
-          java -jar input-cache/publisher.jar publisher -ig .
+          java -jar input-cache/publisher.jar publisher -ig . -tx http://tx.fhir.org
           test -d output || (echo "IG Publisher did not create output/" && exit 1)
 
       - name: Fail if output is empty
