@@ -12,7 +12,7 @@
   <name value="PHCoreImplementationGuide"/>
   <title value="Draft PH Core Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-04-06T07:53:57+00:00"/>
+  <date value="2026-04-08T04:01:15+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>
@@ -886,28 +886,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/middle-name"/>
-      </reference>
-      <name value="Middle Name"/>
-      <description value="Extension to capture middle name information for a person"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/MiddleNameExample"/>
-      </reference>
-      <name value="MiddleNameExample"/>
-      <description value="Juan Jane Macalalad Buenaventura (born 1980)."/>
-      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -1025,6 +1003,28 @@
       </reference>
       <name value="PH Core Condition"/>
       <description value="Captures Condition."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/Consumer"/>
+      </reference>
+      <name value="PH Core Consumer"/>
+      <description value="A PH Core Consumer is a system that receives and uses PH Core resources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/Creator"/>
+      </reference>
+      <name value="PH Core Creator"/>
+      <description value="A PH Core Creator is a system which produces/assembles/creates PH Core resources."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1212,6 +1212,17 @@
       </reference>
       <name value="PH Core RelatedPerson"/>
       <description value="This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/Server"/>
+      </reference>
+      <name value="PH Core Server"/>
+      <description value="A PH Core Server is a FHIR server that stores and provides access to PH Core resources."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1477,6 +1488,14 @@
         </extension>
         <nameUrl value="otherIds.html"/>
         <title value="Other Ids"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="terminology.html"/>
+        </extension>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
         <generation value="markdown"/>
       </page>
     </page>

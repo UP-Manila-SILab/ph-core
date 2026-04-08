@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-04-06T07:53:57+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-08T04:01:15+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -2228,49 +2228,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name> ;
-         fhir:reference [ fhir:v "StructureDefinition/middle-name" ]
-       ] ;
-       fhir:name [ fhir:v "Middle Name" ] ;
-       fhir:description [ fhir:v "Extension to capture middle name information for a person" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Patient"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/Patient/MiddleNameExample> ;
-         fhir:reference [ fhir:v "Patient/MiddleNameExample" ]
-       ] ;
-       fhir:name [ fhir:v "MiddleNameExample" ] ;
-       fhir:description [ fhir:v "Juan Jane Macalalad Buenaventura (born 1980)." ] ;
-       fhir:example [
-         a fhir:Canonical ;
-         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"^^xsd:anyURI ;
-         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "CodeSystem"
          ]
        ] ) ;
@@ -2492,6 +2449,48 @@
        ] ;
        fhir:name [ fhir:v "PH Core Condition" ] ;
        fhir:description [ fhir:v "Captures Condition." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ActorDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/ActorDefinition/Consumer> ;
+         fhir:reference [ fhir:v "ActorDefinition/Consumer" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Consumer" ] ;
+       fhir:description [ fhir:v "A PH Core Consumer is a system that receives and uses PH Core resources." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ActorDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/ActorDefinition/Creator> ;
+         fhir:reference [ fhir:v "ActorDefinition/Creator" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Creator" ] ;
+       fhir:description [ fhir:v "A PH Core Creator is a system which produces/assembles/creates PH Core resources." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2849,6 +2848,27 @@
        ] ;
        fhir:name [ fhir:v "PH Core RelatedPerson" ] ;
        fhir:description [ fhir:v "This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ActorDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/ActorDefinition/Server> ;
+         fhir:reference [ fhir:v "ActorDefinition/Server" ]
+       ] ;
+       fhir:name [ fhir:v "PH Core Server" ] ;
+       fhir:description [ fhir:v "A PH Core Server is a FHIR server that stores and provides access to PH Core resources." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -3378,6 +3398,25 @@
            fhir:l fhir:otherIds.html
          ] ;
          fhir:title [ fhir:v "Other Ids" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "terminology.html"^^xsd:anyURI ;
+             fhir:l fhir:terminology.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "terminology.html"^^xsd:anyURI ;
+           fhir:l fhir:terminology.html
+         ] ;
+         fhir:title [ fhir:v "Terminology" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;

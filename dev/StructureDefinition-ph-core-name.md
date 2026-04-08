@@ -9,10 +9,31 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-name | *Version*:0.2.0 |
-| Draft as of 2026-04-06 | *Computable Name*:PHCoreName |
+| Draft as of 2026-04-08 | *Computable Name*:PHCoreName |
 
  
 A name of a person in the philippine context. 
+
+## Middle Name Representation
+
+Per naming conventions, the middle name (usually the mother's maiden surname in most cases) is represented using the `given[1]` array:
+
+* **`given[0]`**: First name (e.g., "Juan Lawrence")
+* **`given[1]`**: Middle name (e.g., "Les Dalisay")
+* **`family`**: Family name (e.g., "Reyes")
+
+### Example
+
+A person named "Juan Lawrence Les Dalisay Reyes" would be represented as:
+
+```
+{
+  "use": "official",
+  "given": ["Juan Lawrence", "Les Dalisay"],
+  "family": "Reyes"
+}
+
+```
 
 **Usages:**
 
@@ -41,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-name.csv), [
   "name" : "PHCoreName",
   "title" : "PH Core Name",
   "status" : "draft",
-  "date" : "2026-04-06T07:53:57+00:00",
+  "date" : "2026-04-08T04:01:15+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -85,21 +106,10 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-name.csv), [
       "path" : "HumanName"
     },
     {
-      "id" : "HumanName.extension:middleName",
-      "path" : "HumanName.extension",
-      "sliceName" : "middleName",
-      "short" : "Middle Name",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "Extension",
-        "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name"]
-      }]
-    },
-    {
       "id" : "HumanName.given",
       "path" : "HumanName.given",
-      "short" : "First Name"
+      "short" : "First and middle names",
+      "definition" : "First name (given[0]) and Middle Name (given[1])."
     }]
   }
 }

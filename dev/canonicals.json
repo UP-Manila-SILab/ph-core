@@ -1,4 +1,25 @@
 [{
+  "id" : "Consumer",
+  "type" : "ActorDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/ActorDefinition/Consumer",
+  "version" : "0.2.0",
+  "name" : "Consumer"
+},
+{
+  "id" : "Creator",
+  "type" : "ActorDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/ActorDefinition/Creator",
+  "version" : "0.2.0",
+  "name" : "Creator"
+},
+{
+  "id" : "Server",
+  "type" : "ActorDefinition",
+  "url" : "http://doh.gov.ph/fhir/ph-core/ActorDefinition/Server",
+  "version" : "0.2.0",
+  "name" : "Server"
+},
+{
   "id" : "indigenous-groups-cs",
   "type" : "CodeSystem",
   "url" : "http://doh.gov.ph/fhir/ph-core/CodeSystem/indigenous-groups-cs",
@@ -95,13 +116,6 @@
   "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people",
   "version" : "0.2.0",
   "name" : "IndigenousPeople"
-},
-{
-  "id" : "middle-name",
-  "type" : "StructureDefinition",
-  "url" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name",
-  "version" : "0.2.0",
-  "name" : "MiddleName"
 },
 {
   "id" : "occupation",

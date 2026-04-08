@@ -103,9 +103,9 @@
     "uses" : {
     },
     "ValueSet-barangays.html" : "Barangays",
-    "ValueSet-provinces.html" : "Provinces",
     "ValueSet-regions.html" : "Regions",
-    "ValueSet-cities.html" : "Cities"
+    "ValueSet-cities.html" : "Cities",
+    "ValueSet-provinces.html" : "Provinces"
   },
   {
     "url" : "https://psa.gov.ph/classification/psoc/unit",

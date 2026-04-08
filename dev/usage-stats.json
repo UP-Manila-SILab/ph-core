@@ -40,13 +40,6 @@
       ]
     },
     {
-      "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name",
-      "title": "Middle Name",
-      "types": [
-        "string"
-      ]
-    },
-    {
       "url": "http://doh.gov.ph/fhir/ph-core/StructureDefinition/occupation",
       "title": "Occupation",
       "types": [
@@ -267,9 +260,6 @@
     "http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people": [
       "Patient"
     ],
-    "http://doh.gov.ph/fhir/ph-core/StructureDefinition/middle-name": [
-      "HumanName"
-    ],
     "http://doh.gov.ph/fhir/ph-core/StructureDefinition/occupation": [
       "Patient"
     ],
@@ -288,6 +278,45 @@
       "Organization.address",
       "Organization.contact.address",
       "RelatedPerson.address"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.contact": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.date": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.description": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.documentation": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.experimental": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.jurisdiction": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.name": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.publisher": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.status": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.title": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.type": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.url": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.version": [
+      "Basic"
     ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url": [
       "NamingSystem"
@@ -309,6 +338,7 @@
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.differential.element",
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity|5.2.0": [
@@ -316,6 +346,10 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.2.0": [
       "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/obligation": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/patient-nationality": [
       "Bundle.entry.resource",

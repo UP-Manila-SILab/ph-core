@@ -7,6 +7,16 @@
 
 This page provides a list of the FHIR artifacts defined as part of this implementation guide.
 
+### Requirements: Actor Definitions 
+
+The following artifacts define the types of individuals and/or systems that will interact as part of the use cases covered by this implementation guide.
+
+| | |
+| :--- | :--- |
+| [PH Core Consumer](ActorDefinition-Consumer.md) | A PH Core Consumer is a system that receives and uses PH Core resources. |
+| [PH Core Creator](ActorDefinition-Creator.md) | A PH Core Creator is a system which produces/assembles/creates PH Core resources. |
+| [PH Core Server](ActorDefinition-Server.md) | A PH Core Server is a FHIR server that stores and provides access to PH Core resources. |
+
 ### Structures: Resource Profiles 
 
 These define constraints on FHIR resources for systems conforming to this implementation guide.
@@ -58,7 +68,6 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [Educational Attainment](StructureDefinition-educational-attainment.md) | Highest educational attainment of the patient. |
 | [Indigenous Group](StructureDefinition-indigenous-group.md) | Indigenous / ethnic group that the patient belongs to. |
 | [Indigenous People](StructureDefinition-indigenous-people.md) | If the patient is a member of an indigenous group. |
-| [Middle Name](StructureDefinition-middle-name.md) | Extension to capture middle name information for a person |
 | [Occupation](StructureDefinition-occupation.md) | Patient's occupation. |
 | [Province](StructureDefinition-province.md) | Province from the standard geographic code. |
 | [Race](StructureDefinition-race.md) | race of a patient. |
@@ -112,7 +121,6 @@ These are example instances that show what data produced and consumed by systems
 | | |
 | :--- | :--- |
 | [Example PH Core Organization](Organization-organization-single-example.md) | An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, PAN, PEN) and Must Support fields. |
-| [MiddleNameExample](Patient-MiddleNameExample.md) | Juan Jane Macalalad Buenaventura (born 1980). |
 | [allergy-single-example](AllergyIntolerance-allergy-single-example.md) | Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin. |
 | [blood-pressure](Observation-blood-pressure.md) | Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal). |
 | [condition-single-example](Condition-condition-single-example.md) | Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus. |

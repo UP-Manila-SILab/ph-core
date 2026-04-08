@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/province | *Version*:0.2.0 |
-| Draft as of 2026-04-06 | *Computable Name*:Province |
+| Draft as of 2026-04-08 | *Computable Name*:Province |
 
 Province from the standard geographic code.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-province.csv), [Exce
   "name" : "Province",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-06T07:53:57+00:00",
+  "date" : "2026-04-08T04:01:15+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

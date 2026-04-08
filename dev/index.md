@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/ImplementationGuide/fhir.ph.core | *Version*:0.2.0 |
-| Draft as of 2026-04-06 | *Computable Name*:PHCoreImplementationGuide |
+| Draft as of 2026-04-08 | *Computable Name*:PHCoreImplementationGuide |
 
 # Draft Philippine Core FHIR Implementation Guide (PH Core IG)
 
@@ -142,7 +142,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-04-06T07:53:57+00:00",
+  "date" : "2026-04-08T04:01:15+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -1234,30 +1234,6 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/middle-name"
-      },
-      "name" : "Middle Name",
-      "description" : "Extension to capture middle name information for a person",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/MiddleNameExample"
-      },
-      "name" : "MiddleNameExample",
-      "description" : "Juan Jane Macalalad Buenaventura (born 1980).",
-      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -1385,6 +1361,30 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       },
       "name" : "PH Core Condition",
       "description" : "Captures Condition.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/Consumer"
+      },
+      "name" : "PH Core Consumer",
+      "description" : "A PH Core Consumer is a system that receives and uses PH Core resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/Creator"
+      },
+      "name" : "PH Core Creator",
+      "description" : "A PH Core Creator is a system which produces/assembles/creates PH Core resources.",
       "exampleBoolean" : false
     },
     {
@@ -1589,6 +1589,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       },
       "name" : "PH Core RelatedPerson",
       "description" : "This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/Server"
+      },
+      "name" : "PH Core Server",
+      "description" : "A PH Core Server is a FHIR server that stores and provides access to PH Core resources.",
       "exampleBoolean" : false
     },
     {
@@ -1879,6 +1891,15 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         }],
         "nameUrl" : "otherIds.html",
         "title" : "Other Ids",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "terminology.html"
+        }],
+        "nameUrl" : "terminology.html",
+        "title" : "Terminology",
         "generation" : "markdown"
       }]
     },
