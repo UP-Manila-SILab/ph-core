@@ -65,9 +65,3 @@
 - **Build hangs**: Use offline mode (`-tx n/a`) for faster builds when working with large codesystems
 - **Memory issues**: Increase Java heap with `export JAVA_TOOL_OPTIONS="-Xmx4g"`
 - **Validation**: Review `output/qa.html` for errors, warnings, and broken links
-
-## Support
-
-- GitHub Issues: https://github.com/UP-Manila-SILab/ph-core/issues
-- Contributing Guide: `.github/contributing.md`
-- Contact: UP Manila National TeleHealth Center / DOH-KMITS
