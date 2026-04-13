@@ -82,8 +82,6 @@ jobs:
 
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          lfs: true
 
       # The hl7fhir/ig-publisher-base container already includes:
       # - Java (OpenJDK)
