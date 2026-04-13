@@ -231,7 +231,8 @@ jobs:
         run: chown -R $(id -u):$(id -g) ./output 2>/dev/null || true
 
       - name: Inject build timestamp into IG
-        if: github.event_name == 'push'
+        # Always inject timestamp even if QA failed
+        if: always() && github.event_name == 'push'
         run: |
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
           SHORT_SHA="${GITHUB_SHA:0:7}"
@@ -241,7 +242,8 @@ jobs:
           echo "✅ Injected build timestamp into IG index.html"
 
       - name: Display GitHub Pages URL
-        if: github.event_name == 'push'
+        # Always display URL even if QA failed (for debugging)
+        if: always() && github.event_name == 'push'
         run: |
           echo ""
           echo "=== GitHub Pages Deployment Info ==="
@@ -249,9 +251,17 @@ jobs:
           echo "QA Report: https://up-manila-silab.github.io/ph-core/qa.html"
           echo "Build: $(date -u '+%Y-%m-%d %H:%M:%S UTC') | Commit: ${GITHUB_SHA:0:7}"
           echo ""
+          if [ -f output/qa.json ]; then
+            node -e "
+              const q = require('./output/qa.json');
+              console.log('QA Summary: Errors: ' + (q.errs ?? 0) + ', Warnings: ' + (q.warnings ?? 0));
+            " 2>/dev/null || true
+          fi
 
       - name: Publish to GitHub Pages root
-        if: github.event_name == 'push'
+        # Always deploy even if QA failed (for debugging purposes)
+        # QA gate still shows red X when there are errors
+        if: always() && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
