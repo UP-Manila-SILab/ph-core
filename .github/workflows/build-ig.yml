@@ -22,7 +22,8 @@ jobs:
       JAVA_VERSION: "21"
       NODE_VERSION: "20"
       RUBY_VERSION: "3.2"
-      IG_PUBLISHER_VERSION: "latest"
+      IG_PUBLISHER_VERSION: "2.2.5"
+      TX_SERVER: "https://tx.fhir.org/r4"
 
     steps:
       - name: Validate branch name
