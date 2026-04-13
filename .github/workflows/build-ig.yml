@@ -1,61 +1,23 @@
-# Build, Test, and Deploy PH Core FHIR IG
-#
-# References and Influences:
-# 1. WHO SMART Guidelines Base Workflow
-#    https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
-#    - Uses container-based approach with hl7fhir/ig-publisher-base:latest
-#    - Includes -auto-ig-build flag for proper validation alignment with build.fhir.org
-#    - Supports terminology server via -tx parameter
-#
-# 2. PH-RoadSafetyIG / Argentix Blog Pattern
-#    https://github.com/UPM-NTHC/PH-RoadSafetyIG/blob/main/.github/workflows/main.yml
-#    https://www.argentixinfo.com/archives/156
-#    - Original Docker-based FHIR IG build pattern
-#
-# 3. HL7 FHIR Auto-IG-Builder
-#    https://github.com/FHIR/auto-ig-builder/tree/master/images/ig-publisher
-#    - Container images and build approach
-#
-# Key Changes from Previous build-ig.yml:
-# - Switched from manual Java/Node/Ruby setup to Docker container (hl7fhir/ig-publisher-base:latest)
-# - Added -auto-ig-build flag to align with build.fhir.org validation behavior
-# - Uses latest publisher instead of pinned version to match build.fhir.org
-# - Maintains terminology server support (-tx http://tx.fhir.org)
-
-name: Build, Test, and Deploy PH Core FHIR IG
+name: Build PH Core FHIR IG
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: [main]
   push:
-    branches: ["main"]
+    branches: [main]
 
 permissions:
   contents: write
 
-concurrency:
-  group: fhir-ig-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  ci:
-    name: CI - Build & QA (Core IG)
+  build:
     runs-on: ubuntu-latest
-    # Use the official HL7 FHIR IG Publisher container for consistent build environment
-    # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
     container:
       image: hl7fhir/ig-publisher-base:latest
       options: --user root
 
     env:
-      # Terminology server URL for validation
-      # Using http (not https) to match build.fhir.org configuration
-      # The HL7 public terminology server at tx.fhir.org supports both protocols,
-      # but the IG Publisher's -auto-ig-build mode expects http for internal routing
       TX_SERVER: "http://tx.fhir.org"
-      # Java memory allocation for IG Publisher (configurable, default 6GB)
-      # GitHub Actions Ubuntu runners have ~7GB RAM total
-      # Increase if builds fail with OutOfMemoryError; decrease if other jobs need RAM
       JAVA_MEMORY: "6g"
 
     steps:
@@ -63,185 +25,65 @@ jobs:
         env:
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
         run: |
-          echo "Checking branch name: $BRANCH_NAME"
-
-          # Check for forward slash
           if echo "$BRANCH_NAME" | grep -q '/'; then
-            echo "::error::Branch name contains invalid character '/'. Use hyphens instead of slashes."
-            echo "::error::Example: 'feat-my-feature' instead of 'feat/my-feature'"
+            echo "::error::Branch name contains '/'. Use hyphens instead."
             exit 1
           fi
-
-          # Check for other problematic characters
           if echo "$BRANCH_NAME" | grep -qE '[\\~^:\[\] ]'; then
-            echo "::error::Branch name contains invalid special characters. Avoid: \\ ~ ^ : [ ] spaces"
+            echo "::error::Branch name contains invalid special characters."
             exit 1
           fi
 
-          echo "Branch name validation passed!"
+      - uses: actions/checkout@v4
 
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      # The hl7fhir/ig-publisher-base container already includes:
-      # - Java (OpenJDK)
-      # - Node.js and npm
-      # - Ruby and Jekyll
-      # - fsh-sushi (global install)
-      # Reference: https://hub.docker.com/r/hl7fhir/ig-publisher-base
-
-      - name: Install Graphviz (for PlantUML dot renderer)
+      - name: Install Graphviz
         run: |
           apt-get update && apt-get install -y graphviz
-          which dot
-          dot -v
 
-      - name: Cache publisher + packages
-        uses: actions/cache@v4
-        with:
-          path: |
-            input-cache
-            /root/.fhir/packages
-          # Cache key versioned to force fresh download when dependencies change
-          key: fhir-core-v2-${{ hashFiles('**/sushi-config.yaml', '**/ig.ini', '**/package.json') }}
-          restore-keys: |
-            fhir-core-v2-
-            fhir-core-
-
-      - name: Download IG Publisher (latest)
+      - name: Download IG Publisher
         run: |
-          set -eu
           mkdir -p input-cache
-          # Download latest publisher to match build.fhir.org behavior
-          # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
           curl -fsSL \
             "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" \
             -o "input-cache/publisher.jar"
-          java -jar input-cache/publisher.jar -v || true
 
       - name: Install SUSHI
         run: |
-          set -eu
           npm install -g fsh-sushi
           sushi --version
 
       - name: Run SUSHI
-        run: |
-          set -eu
-          sushi . --log-level debug
+        run: sushi . --log-level debug
 
       - name: Build IG
         run: |
-          set -eu
-          # Use -auto-ig-build flag to align validation with build.fhir.org
-          # This flag is critical for consistent error/warning reporting
-          # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
           java -Xmx${{ env.JAVA_MEMORY }} -jar input-cache/publisher.jar publisher \
             -ig . \
             -auto-ig-build \
             -tx ${{ env.TX_SERVER }}
-          test -d output || (echo "IG Publisher did not create output/" && exit 1)
 
-      - name: Fail if output is empty
+      - name: QA Gate
         run: |
-          set -eu
-          if [ -z "$(ls -A output 2>/dev/null)" ]; then
-            echo "IG Publisher did not generate output files."
-            exit 1
-          fi
-
-      - name: QA gate (prefer qa.json, fallback to qa.html)
-        run: |
-          set -eu
-
           if [ -f output/qa.json ]; then
-            echo "Found qa.json, parsing..."
-            # Extract counts from qa.json (property names: errs, warnings, hints)
-            QA_OUTPUT=$(node -e "
-              const q = require('./output/qa.json');
-              const errors = q.errs ?? 0;
-              const warnings = q.warnings ?? 0;
-              const hints = q.hints ?? 0;
-              console.log(\`Errors: \${errors}, Warnings: \${warnings}, Hints: \${hints}\`);
-            " || echo "parse-failed")
-
-            if [ "$QA_OUTPUT" = "parse-failed" ]; then
-              echo "::warning::Failed to parse qa.json, falling back to basic error check"
-              ERRORS=$(node -e "const q=require('./output/qa.json'); console.log((q.errs ?? 0))" || echo "0")
-            else
-              echo "$QA_OUTPUT"
-              ERRORS=$(echo "$QA_OUTPUT" | grep -oP 'Errors:\s*\K[0-9]+' || echo "0")
-            fi
-
-            if [ "$ERRORS" != "0" ]; then
-              echo "::error::QA errors found in qa.json (count=$ERRORS)"
+            ERRORS=$(node -e "console.log(require('./output/qa.json').errs || 0)")
+            if [ "$ERRORS" -gt 0 ]; then
+              echo "::error::QA errors found: $ERRORS"
               exit 1
             fi
-            echo "✅ QA passed via qa.json (errors=0) - Build matches build.fhir.org expectations"
-
-          elif [ -f output/qa.html ]; then
-            echo "Found qa.html, parsing..."
-            # Extract counts from qa.html summary line
-            QA_LINE=$(grep -oP 'Errors:\s*\d+,\s*Warnings:\s*\d+,\s*Info:\s*\d+' output/qa.html | head -1 || echo "")
-
-            if [ -n "$QA_LINE" ]; then
-              echo "QA Report Summary: $QA_LINE"
-              ERRORS=$(echo "$QA_LINE" | grep -oP 'Errors:\s*\K[0-9]+' || echo "0")
-            else
-              # Fallback: check for error indicators
-              if grep -qE "Errors:\s*[1-9]" output/qa.html; then
-                echo "::error::QA errors detected in qa.html (pattern match)"
-                exit 1
-              fi
-              ERRORS=0
-            fi
-
-            if [ "$ERRORS" != "0" ]; then
-              echo "::error::QA errors found in qa.html (count=$ERRORS)"
-              exit 1
-            fi
-            echo "✅ QA passed via qa.html (errors=0) - Build matches build.fhir.org expectations"
-
-          else
-            echo "::error::No qa.json or qa.html found in output/. Failing for safety."
-            exit 1
           fi
 
-      # Fix output directory ownership before deployment
-      # The container runs as root, so output files are owned by root
-      # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
-      - name: Fix output directory ownership
+      - name: Fix output ownership
         if: ${{ !cancelled() }}
         run: chown -R $(id -u):$(id -g) ./output 2>/dev/null || true
 
-      - name: Upload build artifacts
+      - name: Upload output
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ig-output
           path: output/
-          if-no-files-found: warn
 
-      - name: Display GitHub Pages URL
-        # Always display URL even if QA failed (for debugging)
-        if: always() && github.event_name == 'push'
-        run: |
-          echo ""
-          echo "=== GitHub Pages Deployment Info ==="
-          echo "URL: https://up-manila-silab.github.io/ph-core/"
-          echo "QA Report: https://up-manila-silab.github.io/ph-core/qa.html"
-          echo "Build: $(date -u '+%Y-%m-%d %H:%M:%S UTC') | Commit: ${GITHUB_SHA:0:7}"
-          echo ""
-          if [ -f output/qa.json ]; then
-            node -e "
-              const q = require('./output/qa.json');
-              console.log('QA Summary: Errors: ' + (q.errs ?? 0) + ', Warnings: ' + (q.warnings ?? 0));
-            " 2>/dev/null || true
-          fi
-
-      - name: Publish to GitHub Pages root
-        # Always deploy even if QA failed (for debugging purposes)
-        # QA gate still shows red X when there are errors
+      - name: Publish to GitHub Pages
         if: always() && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -250,4 +92,4 @@ jobs:
           publish_dir: ./output
           keep_files: false
           single_commit: true
-          commit_message: "Deploy IG root - ${{ github.sha }} - $(date -u +%Y%m%d-%H%M%S)"
+          commit_message: "Deploy IG - ${{ github.sha }}"
