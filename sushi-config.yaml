@@ -29,7 +29,7 @@ publisher:
 # See: https://github.com/UP-Manila-SILab/ph-core/issues/249
 dependencies:
   hl7.terminology.r4: 6.0.0
-  hl7.fhir.uv.extensions.r4: 4.0.0
+  hl7.fhir.uv.extensions.r4: 5.2.0
   # hl7.fhir.us.core: 3.1.0
   # hl7.fhir.us.mcode:
   #   id: mcode
