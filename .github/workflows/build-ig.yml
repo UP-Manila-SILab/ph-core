@@ -118,6 +118,12 @@ jobs:
             -o "input-cache/publisher.jar"
           java -jar input-cache/publisher.jar -v || true
 
+      - name: Install SUSHI
+        run: |
+          set -eu
+          npm install -g fsh-sushi
+          sushi --version
+
       - name: Run SUSHI
         run: |
           set -eu
