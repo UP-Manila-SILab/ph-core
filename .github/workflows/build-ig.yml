@@ -12,14 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: hl7fhir/ig-publisher-base:latest
-      options: --user root
-
-    env:
-      TX_SERVER: "http://tx.fhir.org"
-      JAVA_MEMORY: "6g"
-
+    
     steps:
       - name: Validate branch name
         env:
@@ -36,60 +29,39 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - name: Install Graphviz
+      - name: Install dependencies
         run: |
-          apt-get update && apt-get install -y graphviz
-
-      - name: Download IG Publisher
-        run: |
-          mkdir -p input-cache
-          curl -fsSL \
-            "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" \
-            -o "input-cache/publisher.jar"
-
-      - name: Install SUSHI
-        run: |
-          npm install -g fsh-sushi
-          sushi --version
-
-      - name: Run SUSHI
-        run: sushi . --log-level debug
+          sudo apt-get update
+          sudo apt-get install -y graphviz
+          sudo gem install jekyll
+          sudo npm install -g fsh-sushi
 
       - name: Build IG
         run: |
-          java -Xmx${{ env.JAVA_MEMORY }} -jar input-cache/publisher.jar publisher \
-            -ig . \
-            -auto-ig-build \
-            -tx ${{ env.TX_SERVER }}
+          chmod +x ./_updatePublisher.sh
+          ./_updatePublisher.sh -y
+          chmod +x ./_genonce.sh
+          ./_genonce.sh
 
       - name: QA Gate
         run: |
           if [ -f output/qa.json ]; then
-            ERRORS=$(node -e "console.log(require('./output/qa.json').errs || 0)")
+            ERRORS=$(grep -o '"errs":[0-9]*' output/qa.json | grep -o '[0-9]*' || echo "0")
             if [ "$ERRORS" -gt 0 ]; then
               echo "::error::QA errors found: $ERRORS"
               exit 1
             fi
+            echo "✅ QA passed: $ERRORS errors"
+          else
+            echo "::warning::No qa.json found"
           fi
 
-      - name: Fix output ownership
-        if: ${{ !cancelled() }}
-        run: chown -R $(id -u):$(id -g) ./output 2>/dev/null || true
-
-      - name: Upload output
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ig-output
-          path: output/
-
-      - name: Publish to GitHub Pages
+      - name: Deploy to GitHub Pages
         if: always() && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./output
-          keep_files: false
           single_commit: true
           commit_message: "Deploy IG - ${{ github.sha }}"
