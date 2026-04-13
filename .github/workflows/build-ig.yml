@@ -102,9 +102,10 @@ jobs:
           path: |
             input-cache
             /root/.fhir/packages
-          key: fhir-core-latest-${{ hashFiles('**/sushi-config.yaml', '**/ig.ini', '**/package.json') }}
+          # Cache key versioned to force fresh download when dependencies change
+          key: fhir-core-v2-${{ hashFiles('**/sushi-config.yaml', '**/ig.ini', '**/package.json') }}
           restore-keys: |
-            fhir-core-latest-
+            fhir-core-v2-
             fhir-core-
 
       - name: Download IG Publisher (latest)
@@ -206,23 +207,6 @@ jobs:
             exit 1
           fi
 
-      - name: Upload IG artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: core-ig-output
-          path: output
-
-      - name: Upload QA report artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: qa-reports
-          path: |
-            output/qa.json
-            output/qa.html
-            output/qa.min.html
-          if-no-files-found: warn
-
       # Fix output directory ownership before deployment
       # The container runs as root, so output files are owned by root
       # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
@@ -230,16 +214,13 @@ jobs:
         if: ${{ !cancelled() }}
         run: chown -R $(id -u):$(id -g) ./output 2>/dev/null || true
 
-      - name: Inject build timestamp into IG
-        # Always inject timestamp even if QA failed
-        if: always() && github.event_name == 'push'
-        run: |
-          TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
-          SHORT_SHA="${GITHUB_SHA:0:7}"
-          
-          # Add build info banner to index.html
-          sed -i "s|</body>|<div style='background:#e8f4f8;padding:10px;margin-top:30px;font-size:12px;text-align:center;border-top:2px solid #0066cc;'>🚀 <strong>GitHub Pages Build</strong> | Deployed: ${TIMESTAMP} | Commit: <a href='https://github.com/${{ github.repository }}/commit/${GITHUB_SHA}'>${SHORT_SHA}</a> | Branch: ${{ github.ref_name }}</div></body>|" ./output/index.html
-          echo "✅ Injected build timestamp into IG index.html"
+      - name: Upload build artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-output
+          path: output/
+          if-no-files-found: warn
 
       - name: Display GitHub Pages URL
         # Always display URL even if QA failed (for debugging)
