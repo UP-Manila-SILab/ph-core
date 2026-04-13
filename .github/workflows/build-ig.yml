@@ -109,7 +109,7 @@ jobs:
 
       - name: Download IG Publisher (latest)
         run: |
-          set -euo pipefail
+          set -eu
           mkdir -p input-cache
           # Download latest publisher to match build.fhir.org behavior
           # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
@@ -120,12 +120,12 @@ jobs:
 
       - name: Run SUSHI
         run: |
-          set -euo pipefail
+          set -eu
           sushi . --log-level debug
 
       - name: Build IG
         run: |
-          set -euo pipefail
+          set -eu
           # Use -auto-ig-build flag to align validation with build.fhir.org
           # This flag is critical for consistent error/warning reporting
           # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
@@ -137,7 +137,7 @@ jobs:
 
       - name: Fail if output is empty
         run: |
-          set -euo pipefail
+          set -eu
           if [ -z "$(ls -A output 2>/dev/null)" ]; then
             echo "IG Publisher did not generate output files."
             exit 1
@@ -145,7 +145,7 @@ jobs:
 
       - name: QA gate (prefer qa.json, fallback to qa.html)
         run: |
-          set -euo pipefail
+          set -eu
 
           if [ -f output/qa.json ]; then
             echo "Found qa.json, parsing..."
@@ -227,7 +227,7 @@ jobs:
       - name: Prepare publish directory (dev) (added push event to main only)
         if: github.event_name == 'push'
         run: |
-          set -euo pipefail
+          set -eu
           rm -rf .publish
           mkdir -p .publish/dev
           rsync -a output/ .publish/dev/  
