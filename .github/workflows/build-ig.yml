@@ -1,3 +1,27 @@
+# Build, Test, and Deploy PH Core FHIR IG
+#
+# References and Influences:
+# 1. WHO SMART Guidelines Base Workflow
+#    https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
+#    - Uses container-based approach with hl7fhir/ig-publisher-base:latest
+#    - Includes -auto-ig-build flag for proper validation alignment with build.fhir.org
+#    - Supports terminology server via -tx parameter
+#
+# 2. PH-RoadSafetyIG / Argentix Blog Pattern
+#    https://github.com/UPM-NTHC/PH-RoadSafetyIG/blob/main/.github/workflows/main.yml
+#    https://www.argentixinfo.com/archives/156
+#    - Original Docker-based FHIR IG build pattern
+#
+# 3. HL7 FHIR Auto-IG-Builder
+#    https://github.com/FHIR/auto-ig-builder/tree/master/images/ig-publisher
+#    - Container images and build approach
+#
+# Key Changes from Previous build-ig.yml:
+# - Switched from manual Java/Node/Ruby setup to Docker container (hl7fhir/ig-publisher-base:latest)
+# - Added -auto-ig-build flag to align with build.fhir.org validation behavior
+# - Uses latest publisher instead of pinned version to match build.fhir.org
+# - Maintains terminology server support (-tx http://tx.fhir.org)
+
 name: Build, Test, and Deploy PH Core FHIR IG
 
 on:
@@ -17,13 +41,22 @@ jobs:
   ci:
     name: CI - Build & QA (Core IG)
     runs-on: ubuntu-latest
+    # Use the official HL7 FHIR IG Publisher container for consistent build environment
+    # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
+    container:
+      image: hl7fhir/ig-publisher-base:latest
+      options: --user root
 
     env:
-      JAVA_VERSION: "21"
-      NODE_VERSION: "20"
-      RUBY_VERSION: "3.2"
-      IG_PUBLISHER_VERSION: "2.2.5"
-      TX_SERVER: "https://tx.fhir.org/r4"
+      # Terminology server URL for validation
+      # Using http (not https) to match build.fhir.org configuration
+      # The HL7 public terminology server at tx.fhir.org supports both protocols,
+      # but the IG Publisher's -auto-ig-build mode expects http for internal routing
+      TX_SERVER: "http://tx.fhir.org"
+      # Java memory allocation for IG Publisher (configurable, default 6GB)
+      # GitHub Actions Ubuntu runners have ~7GB RAM total
+      # Increase if builds fail with OutOfMemoryError; decrease if other jobs need RAM
+      JAVA_MEMORY: "6g"
 
     steps:
       - name: Validate branch name
@@ -52,49 +85,36 @@ jobs:
         with:
           lfs: true
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: ${{ env.JAVA_VERSION }}
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{ env.RUBY_VERSION }}
-
-      - name: Install Jekyll
-        run: gem install jekyll bundler
-
-      - name: Install SUSHI
-        run: npm install -g fsh-sushi
+      # The hl7fhir/ig-publisher-base container already includes:
+      # - Java (OpenJDK)
+      # - Node.js and npm
+      # - Ruby and Jekyll
+      # - fsh-sushi (global install)
+      # Reference: https://hub.docker.com/r/hl7fhir/ig-publisher-base
 
       - name: Install Graphviz (for PlantUML dot renderer)
         run: |
-          sudo apt-get install -y graphviz
+          apt-get update && apt-get install -y graphviz
           which dot
           dot -v
-          
+
       - name: Cache publisher + packages
         uses: actions/cache@v4
         with:
           path: |
             input-cache
-            ~/.fhir/packages
-          key: ${{ runner.os }}-fhir-core-${{ env.IG_PUBLISHER_VERSION }}-${{ hashFiles('**/sushi-config.yaml', '**/ig.ini', '**/package.json') }}
+            /root/.fhir/packages
+          key: fhir-core-latest-${{ hashFiles('**/sushi-config.yaml', '**/ig.ini', '**/package.json') }}
           restore-keys: |
-            ${{ runner.os }}-fhir-core-${{ env.IG_PUBLISHER_VERSION }}-
-            ${{ runner.os }}-fhir-core-
+            fhir-core-latest-
+            fhir-core-
 
-      - name: Download IG Publisher
+      - name: Download IG Publisher (latest)
         run: |
           set -euo pipefail
           mkdir -p input-cache
+          # Download latest publisher to match build.fhir.org behavior
+          # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
           curl -fsSL \
             "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" \
             -o "input-cache/publisher.jar"
@@ -108,7 +128,13 @@ jobs:
       - name: Build IG
         run: |
           set -euo pipefail
-          java -jar input-cache/publisher.jar publisher -ig . -tx http://tx.fhir.org
+          # Use -auto-ig-build flag to align validation with build.fhir.org
+          # This flag is critical for consistent error/warning reporting
+          # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
+          java -Xmx${{ env.JAVA_MEMORY }} -jar input-cache/publisher.jar publisher \
+            -ig . \
+            -auto-ig-build \
+            -tx ${{ env.TX_SERVER }}
           test -d output || (echo "IG Publisher did not create output/" && exit 1)
 
       - name: Fail if output is empty
@@ -146,7 +172,7 @@ jobs:
               echo "::error::QA errors found in qa.json (count=$ERRORS)"
               exit 1
             fi
-            echo "✅ QA passed via qa.json (errors=0)"
+            echo "✅ QA passed via qa.json (errors=0) - Build matches build.fhir.org expectations"
 
           elif [ -f output/qa.html ]; then
             echo "Found qa.html, parsing..."
@@ -169,7 +195,7 @@ jobs:
               echo "::error::QA errors found in qa.html (count=$ERRORS)"
               exit 1
             fi
-            echo "✅ QA passed via qa.html (errors=0)"
+            echo "✅ QA passed via qa.html (errors=0) - Build matches build.fhir.org expectations"
 
           else
             echo "::error::No qa.json or qa.html found in output/. Failing for safety."
@@ -192,6 +218,13 @@ jobs:
             output/qa.html
             output/qa.min.html
           if-no-files-found: warn
+
+      # Fix output directory ownership before deployment
+      # The container runs as root, so output files are owned by root
+      # Reference: https://github.com/WorldHealthOrganization/smart-base/blob/main/.github/workflows/ghbuild.yml
+      - name: Fix output directory ownership
+        if: ${{ !cancelled() }}
+        run: chown -R $(id -u):$(id -g) ./output 2>/dev/null || true
 
       - name: Prepare publish directory (dev) (added push event to main only)
         if: github.event_name == 'push'
@@ -218,6 +251,11 @@ jobs:
           </body>
           </html>
           EOF
+
+      # Fix .publish ownership before deployment (created by root in container)
+      - name: Fix publish directory ownership
+        if: github.event_name == 'push'
+        run: chown -R $(id -u):$(id -g) ./.publish 2>/dev/null || true
 
       - name: Publish to gh-pages:/dev/
         if: github.event_name == 'push'
