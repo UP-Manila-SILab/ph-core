@@ -24,12 +24,17 @@ publisher:
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
-# dependencies:
-#   hl7.fhir.us.core: 3.1.0
-#   hl7.fhir.us.mcode:
-#     id: mcode
-#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
-#     version: 1.0.0
+# Pin to R4-specific versions to prevent package server from auto-resolving
+# to R4B versions which have incompatible canonical URLs
+# See: https://github.com/UP-Manila-SILab/ph-core/issues/249
+dependencies:
+  hl7.terminology.r4: 6.0.0
+  hl7.fhir.uv.extensions.r4: 4.0.0
+  # hl7.fhir.us.core: 3.1.0
+  # hl7.fhir.us.mcode:
+  #   id: mcode
+  #   uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
+  #   version: 1.0.0
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
