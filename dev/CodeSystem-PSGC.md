@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://psa.gov.ph/classification/psgc | *Version*:0.2.0 |
-| Draft as of 2026-04-08 | *Computable Name*:PSGC |
+| Draft as of 2026-04-13 | *Computable Name*:PSGC |
 
  
 Mock of the Philippine Standard Geographic Code. 
@@ -35,7 +35,7 @@ Mock of the Philippine Standard Geographic Code.
   "title" : "Mock PSGC",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-08T04:01:15+00:00",
+  "date" : "2026-04-13T08:21:24+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

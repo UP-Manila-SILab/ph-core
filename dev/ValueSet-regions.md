@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/regions | *Version*:0.2.0 |
-| Draft as of 2026-04-08 | *Computable Name*:Regions |
+| Draft as of 2026-04-13 | *Computable Name*:Regions |
 
  
 The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA). 
@@ -51,7 +51,7 @@ The Region codes valueset includes all region values from the Philippine Standar
   "title" : "Regions",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-08T04:01:15+00:00",
+  "date" : "2026-04-13T08:21:24+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

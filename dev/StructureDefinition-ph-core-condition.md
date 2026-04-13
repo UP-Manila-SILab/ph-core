@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-condition | *Version*:0.2.0 |
-| Draft as of 2026-04-08 | *Computable Name*:PHCoreCondition |
+| Draft as of 2026-04-13 | *Computable Name*:PHCoreCondition |
 
  
 Captures Condition. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-condition.cs
   "name" : "PHCoreCondition",
   "title" : "PH Core Condition",
   "status" : "draft",
-  "date" : "2026-04-08T04:01:15+00:00",
+  "date" : "2026-04-13T08:21:24+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

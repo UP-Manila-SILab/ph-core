@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/city-municipality | *Version*:0.2.0 |
-| Draft as of 2026-04-08 | *Computable Name*:CityMunicipality |
+| Draft as of 2026-04-13 | *Computable Name*:CityMunicipality |
 
 City/municipality from the standard geographic code.
 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-city-municipality.cs
   "title" : "City/Municipality",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-08T04:01:15+00:00",
+  "date" : "2026-04-13T08:21:24+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

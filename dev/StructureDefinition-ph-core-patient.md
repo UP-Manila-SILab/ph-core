@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient | *Version*:0.2.0 |
-| Draft as of 2026-04-08 | *Computable Name*:PHCorePatient |
+| Draft as of 2026-04-13 | *Computable Name*:PHCorePatient |
 
  
 Captures key demographic and administrative information about individuals receiving care or other health-related services. 
@@ -103,7 +103,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-patient.csv)
   "name" : "PHCorePatient",
   "title" : "PH Core Patient",
   "status" : "draft",
-  "date" : "2026-04-08T04:01:15+00:00",
+  "date" : "2026-04-13T08:21:24+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

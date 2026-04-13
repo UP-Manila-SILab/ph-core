@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense | *Version*:0.2.0 |
-| Draft as of 2026-04-08 | *Computable Name*:PHCoreMedicationDispense |
+| Draft as of 2026-04-13 | *Computable Name*:PHCoreMedicationDispense |
 
  
 Captures key FHIR Medication Dispense data for the Philippine context. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationdi
   "title" : "PH Core Medication Dispense",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-08T04:01:15+00:00",
+  "date" : "2026-04-13T08:21:24+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

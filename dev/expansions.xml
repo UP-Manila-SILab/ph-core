@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="1a83fa63-75cb-40f7-9f60-8c59e4149987"/>
+  <id value="ee4587c6-357d-4dfd-ac90-0f47519d14f9"/>
   <meta>
-    <lastUpdated value="2026-04-08T04:01:15.879+00:00"/>
+    <lastUpdated value="2026-04-13T08:21:24.344+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -68,7 +68,7 @@
         <title value="Barangays"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-08T04:01:15+00:00"/>
+        <date value="2026-04-13T08:21:24+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -77,8 +77,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:f0783056-2062-44e5-8172-e58b5f5396da"/>
-          <timestamp value="2026-04-08T04:02:37+00:00"/>
+          <identifier value="urn:uuid:419b049f-1bbd-4056-a15e-12ea7e1a91a7"/>
+          <timestamp value="2026-04-13T08:23:02+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -192,7 +192,7 @@
         <title value="Cities"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-08T04:01:15+00:00"/>
+        <date value="2026-04-13T08:21:24+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -201,8 +201,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:ee57e63d-534f-4882-8b18-53f3eac2d219"/>
-          <timestamp value="2026-04-08T04:02:37+00:00"/>
+          <identifier value="urn:uuid:d0957857-255d-41e0-95e3-cb112c466a64"/>
+          <timestamp value="2026-04-13T08:23:02+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -247,19 +247,13 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
-            <p style="border: black 1px dotted; background-color: #ffcccc; padding: 8px; margin-bottom: 8px">Expansion based on code system fragment 
-              <a href="CodeSystem-PHFDACPRCS.html">https://verification.fda.gov.ph PH FDA Certificate of Product Registration (CPR) CodeSystem v0.2.0 (CodeSystem)</a>
-              <span class="copy-text-inline">
-                <button data-clipboard-text="https://verification.fda.gov.ph|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
-              </span>
-            </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-PHFDACPRCS.html">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.2.0 (CodeSystem)</a>
               <span class="copy-text-inline">
                 <button data-clipboard-text="https://verification.fda.gov.ph|0.2.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
-            <p>This value set contains at least 3 concepts</p>
+            <p>This value set contains 3 concepts</p>
             <table class="codes" data-fhir="generated">
               <tr>
                 <td>
@@ -362,7 +356,7 @@
         <title value="Drugs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-08T04:01:15+00:00"/>
+        <date value="2026-04-13T08:21:24+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -371,8 +365,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:f01f6b75-29f5-403e-ad8e-bac88873601f"/>
-          <timestamp value="2026-04-08T04:02:37+00:00"/>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
+            <valueBoolean value="true"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed-reason">
+            <valueString value="This extension is based on a fragment of the code system https://verification.fda.gov.ph"/>
+          </extension>
+          <identifier value="urn:uuid:18d9c62b-c5d2-42ee-8f8e-8bf8103dad99"/>
+          <timestamp value="2026-04-13T08:23:02+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -396,8 +396,8 @@
             <valueUri value="https://verification.fda.gov.ph|0.2.0"/>
           </parameter>
           <parameter>
-            <name value="fragment"/>
-            <valueCanonical value="https://verification.fda.gov.ph|0.2.0"/>
+            <name value="used-fragment"/>
+            <valueUri value="https://verification.fda.gov.ph|0.2.0"/>
           </parameter>
           <contains>
             <system value="https://verification.fda.gov.ph"/>
@@ -1120,7 +1120,7 @@
         <title value="Indigenous Groups"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-08T04:01:15+00:00"/>
+        <date value="2026-04-13T08:21:24+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1129,8 +1129,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:01c85f2c-5fe8-43fb-9ec6-80ac53cfb02d"/>
-          <timestamp value="2026-04-08T04:02:37+00:00"/>
+          <identifier value="urn:uuid:1c743f61-f0e8-40f5-8c6d-fc6b33bd5e19"/>
+          <timestamp value="2026-04-13T08:23:02+00:00"/>
           <total value="33"/>
           <offset value="0"/>
           <parameter>
@@ -1484,7 +1484,7 @@
         <title value="Provinces"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-08T04:01:15+00:00"/>
+        <date value="2026-04-13T08:21:24+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1493,8 +1493,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:da5de282-c970-4bfe-a4ac-70670a05d72b"/>
-          <timestamp value="2026-04-08T04:02:38+00:00"/>
+          <identifier value="urn:uuid:af833149-c5c6-4646-8aae-0f22cbcba745"/>
+          <timestamp value="2026-04-13T08:23:02+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -1653,7 +1653,7 @@
         <title value="Regions"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-04-08T04:01:15+00:00"/>
+        <date value="2026-04-13T08:21:24+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1662,8 +1662,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:60337841-3f6c-4609-88e6-0e9a0c912fce"/>
-          <timestamp value="2026-04-08T04:02:38+00:00"/>
+          <identifier value="urn:uuid:700c97d1-42d5-46a4-aac3-07aed0dd9c65"/>
+          <timestamp value="2026-04-13T08:23:02+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>

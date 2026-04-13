@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "1a83fa63-75cb-40f7-9f60-8c59e4149987",
+  "id" : "ee4587c6-357d-4dfd-ac90-0f47519d14f9",
   "meta" : {
-    "lastUpdated" : "2026-04-08T04:01:15.879+00:00"
+    "lastUpdated" : "2026-04-13T08:21:24.344+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "title" : "Barangays",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-08T04:01:15+00:00",
+      "date" : "2026-04-13T08:21:24+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -28,8 +28,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f0783056-2062-44e5-8172-e58b5f5396da",
-        "timestamp" : "2026-04-08T04:02:37+00:00",
+        "identifier" : "urn:uuid:419b049f-1bbd-4056-a15e-12ea7e1a91a7",
+        "timestamp" : "2026-04-13T08:23:02+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -74,7 +74,7 @@
       "title" : "Cities",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-08T04:01:15+00:00",
+      "date" : "2026-04-13T08:21:24+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -83,8 +83,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:ee57e63d-534f-4882-8b18-53f3eac2d219",
-        "timestamp" : "2026-04-08T04:02:37+00:00",
+        "identifier" : "urn:uuid:d0957857-255d-41e0-95e3-cb112c466a64",
+        "timestamp" : "2026-04-13T08:23:02+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -126,7 +126,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #ffcccc; padding: 8px; margin-bottom: 8px\">Expansion based on code system fragment <a href=\"CodeSystem-PHFDACPRCS.html\">https://verification.fda.gov.ph PH FDA Certificate of Product Registration (CPR) CodeSystem v0.2.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph|0.2.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PHFDACPRCS.html\">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.2.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph|0.2.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains at least 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>Level</b></td><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-PH-FDA-DRUGS\"> </a>1</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-PH-FDA-DRUGS\">PH-FDA-DRUGS</a></td><td>Philippine FDA Registered Drug Products</td><td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-DRP-10144\"> </a>2</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-DRP-10144\">DRP-10144</a></td><td>Twinact</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-1193768\"> </a>2</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-1193768\">1193768</a></td><td>Ascorfed-Z Cap</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-PHFDACPRCS.html\">codesystem PH FDA Certificate of Product Registration (CPR) CodeSystem v0.2.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://verification.fda.gov.ph|0.2.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>Level</b></td><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-PH-FDA-DRUGS\"> </a>1</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-PH-FDA-DRUGS\">PH-FDA-DRUGS</a></td><td>Philippine FDA Registered Drug Products</td><td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;PH-FDA-DRUGS&quot;, &quot;display&quot;: &quot;Philippine FDA Registered Drug Products&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;PH-FDA-DRUGS&quot;&gt;&lt;display value=&quot;Philippine FDA Registered Drug Products&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-DRP-10144\"> </a>2</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-DRP-10144\">DRP-10144</a></td><td>Twinact</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;DRP-10144&quot;, &quot;display&quot;: &quot;Twinact&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;DRP-10144&quot;&gt;&lt;display value=&quot;Twinact&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://verification.fda.gov.ph-1193768\"> </a>2</td><td><code>https://verification.fda.gov.ph</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-PHFDACPRCS.html#PHFDACPRCS-1193768\">1193768</a></td><td>Ascorfed-Z Cap</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://verification.fda.gov.ph&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1193768&quot;, &quot;display&quot;: &quot;Ascorfed-Z Cap&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://verification.fda.gov.ph&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1193768&quot;&gt;&lt;display value=&quot;Ascorfed-Z Cap&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://doh.gov.ph/fhir/ph-core/ValueSet/drugs-vs",
       "version" : "0.2.0",
@@ -134,7 +134,7 @@
       "title" : "Drugs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-08T04:01:15+00:00",
+      "date" : "2026-04-13T08:21:24+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -143,8 +143,16 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f01f6b75-29f5-403e-ad8e-bac88873601f",
-        "timestamp" : "2026-04-08T04:02:37+00:00",
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+          "valueBoolean" : true
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed-reason",
+          "valueString" : "This extension is based on a fragment of the code system https://verification.fda.gov.ph"
+        }],
+        "identifier" : "urn:uuid:18d9c62b-c5d2-42ee-8f8e-8bf8103dad99",
+        "timestamp" : "2026-04-13T08:23:02+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -168,8 +176,8 @@
           "valueUri" : "https://verification.fda.gov.ph|0.2.0"
         },
         {
-          "name" : "fragment",
-          "valueCanonical" : "https://verification.fda.gov.ph|0.2.0"
+          "name" : "used-fragment",
+          "valueUri" : "https://verification.fda.gov.ph|0.2.0"
         }],
         "contains" : [{
           "system" : "https://verification.fda.gov.ph",
@@ -203,7 +211,7 @@
       "title" : "Indigenous Groups",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-08T04:01:15+00:00",
+      "date" : "2026-04-13T08:21:24+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -212,8 +220,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:01c85f2c-5fe8-43fb-9ec6-80ac53cfb02d",
-        "timestamp" : "2026-04-08T04:02:37+00:00",
+        "identifier" : "urn:uuid:1c743f61-f0e8-40f5-8c6d-fc6b33bd5e19",
+        "timestamp" : "2026-04-13T08:23:02+00:00",
         "total" : 33,
         "offset" : 0,
         "parameter" : [{
@@ -418,7 +426,7 @@
       "title" : "Provinces",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-08T04:01:15+00:00",
+      "date" : "2026-04-13T08:21:24+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -427,8 +435,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:da5de282-c970-4bfe-a4ac-70670a05d72b",
-        "timestamp" : "2026-04-08T04:02:38+00:00",
+        "identifier" : "urn:uuid:af833149-c5c6-4646-8aae-0f22cbcba745",
+        "timestamp" : "2026-04-13T08:23:02+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -498,7 +506,7 @@
       "title" : "Regions",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-04-08T04:01:15+00:00",
+      "date" : "2026-04-13T08:21:24+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -507,8 +515,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:60337841-3f6c-4609-88e6-0e9a0c912fce",
-        "timestamp" : "2026-04-08T04:02:38+00:00",
+        "identifier" : "urn:uuid:700c97d1-42d5-46a4-aac3-07aed0dd9c65",
+        "timestamp" : "2026-04-13T08:23:02+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{

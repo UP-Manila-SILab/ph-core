@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/ActorDefinition/Creator | *Version*:0.2.0 |
-| Draft as of 2026-04-08 | *Computable Name*:Creator |
+| Draft as of 2026-04-13 | *Computable Name*:Creator |
 
  
 A PH Core Creator is a system which produces/assembles/creates PH Core resources. 
