@@ -8,9 +8,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * gender = #male
 * birthDate = "1980-01-01"
 * active = true
-* gender = #male
-* birthDate = "1985-06-15"
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines (the)"
+* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines"
 * extension[nationality].extension[period].valuePeriod.start = "2020-01-01"
 * extension[nationality].extension[period].valuePeriod.end = "2023-01-01"
 * extension[religion].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
@@ -41,6 +39,6 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.extension[=].valueCoding = $PSGC#1380200000 "City of Las Piñas"
 
 * address.extension[+].url = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/province"
-* address.extension[=].valueCoding = $PSGC#0402100000  "Cavite"
+* address.extension[=].valueCoding = $PSGC#0402100000 "Cavite"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"

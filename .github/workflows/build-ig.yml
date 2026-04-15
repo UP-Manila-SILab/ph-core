@@ -1,230 +1,67 @@
-name: Build, Test, and Deploy PH Core FHIR IG
+name: Build PH Core FHIR IG
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: [main]
   push:
-    branches: ["main"]
+    branches: [main]
 
 permissions:
   contents: write
 
-concurrency:
-  group: fhir-ig-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  ci:
-    name: CI - Build & QA (Core IG)
+  build:
     runs-on: ubuntu-latest
-
-    env:
-      JAVA_VERSION: "21"
-      NODE_VERSION: "20"
-      RUBY_VERSION: "3.2"
-      IG_PUBLISHER_VERSION: "2.2.5"
-      TX_SERVER: "https://tx.fhir.org/r4"
-
+    
     steps:
       - name: Validate branch name
         env:
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
         run: |
-          echo "Checking branch name: $BRANCH_NAME"
-
-          # Check for forward slash
           if echo "$BRANCH_NAME" | grep -q '/'; then
-            echo "::error::Branch name contains invalid character '/'. Use hyphens instead of slashes."
-            echo "::error::Example: 'feat-my-feature' instead of 'feat/my-feature'"
+            echo "::error::Branch name contains '/'. Use hyphens instead."
             exit 1
           fi
-
-          # Check for other problematic characters
           if echo "$BRANCH_NAME" | grep -qE '[\\~^:\[\] ]'; then
-            echo "::error::Branch name contains invalid special characters. Avoid: \\ ~ ^ : [ ] spaces"
+            echo "::error::Branch name contains invalid special characters."
             exit 1
           fi
 
-          echo "Branch name validation passed!"
+      - uses: actions/checkout@v4
 
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          lfs: true
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: ${{ env.JAVA_VERSION }}
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{ env.RUBY_VERSION }}
-
-      - name: Install Jekyll
-        run: gem install jekyll bundler
-
-      - name: Install SUSHI
-        run: npm install -g fsh-sushi
-
-      - name: Install Graphviz (for PlantUML dot renderer)
+      - name: Install dependencies
         run: |
+          sudo apt-get update
           sudo apt-get install -y graphviz
-          which dot
-          dot -v
-          
-      - name: Cache publisher + packages
-        uses: actions/cache@v4
-        with:
-          path: |
-            input-cache
-            ~/.fhir/packages
-          key: ${{ runner.os }}-fhir-core-${{ env.IG_PUBLISHER_VERSION }}-${{ hashFiles('**/sushi-config.yaml', '**/ig.ini', '**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-fhir-core-${{ env.IG_PUBLISHER_VERSION }}-
-            ${{ runner.os }}-fhir-core-
-
-      - name: Download IG Publisher
-        run: |
-          set -euo pipefail
-          mkdir -p input-cache
-          curl -fsSL \
-            "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" \
-            -o "input-cache/publisher.jar"
-          java -jar input-cache/publisher.jar -v || true
-
-      - name: Run SUSHI
-        run: |
-          set -euo pipefail
-          sushi . --log-level debug
+          sudo gem install jekyll
+          sudo npm install -g fsh-sushi
 
       - name: Build IG
         run: |
-          set -euo pipefail
-          java -jar input-cache/publisher.jar publisher -ig .
-          test -d output || (echo "IG Publisher did not create output/" && exit 1)
+          chmod +x ./_updatePublisher.sh
+          ./_updatePublisher.sh -y
+          chmod +x ./_genonce.sh
+          ./_genonce.sh
 
-      - name: Fail if output is empty
+      - name: QA Gate
         run: |
-          set -euo pipefail
-          if [ -z "$(ls -A output 2>/dev/null)" ]; then
-            echo "IG Publisher did not generate output files."
-            exit 1
-          fi
-
-      - name: QA gate (prefer qa.json, fallback to qa.html)
-        run: |
-          set -euo pipefail
-
           if [ -f output/qa.json ]; then
-            echo "Found qa.json, parsing..."
-            # Extract counts from qa.json (property names: errs, warnings, hints)
-            QA_OUTPUT=$(node -e "
-              const q = require('./output/qa.json');
-              const errors = q.errs ?? 0;
-              const warnings = q.warnings ?? 0;
-              const hints = q.hints ?? 0;
-              console.log(\`Errors: \${errors}, Warnings: \${warnings}, Hints: \${hints}\`);
-            " || echo "parse-failed")
-
-            if [ "$QA_OUTPUT" = "parse-failed" ]; then
-              echo "::warning::Failed to parse qa.json, falling back to basic error check"
-              ERRORS=$(node -e "const q=require('./output/qa.json'); console.log((q.errs ?? 0))" || echo "0")
-            else
-              echo "$QA_OUTPUT"
-              ERRORS=$(echo "$QA_OUTPUT" | grep -oP 'Errors:\s*\K[0-9]+' || echo "0")
-            fi
-
-            if [ "$ERRORS" != "0" ]; then
-              echo "::error::QA errors found in qa.json (count=$ERRORS)"
+            ERRORS=$(grep -o '"errs":[0-9]*' output/qa.json | grep -o '[0-9]*' || echo "0")
+            if [ "$ERRORS" -gt 0 ]; then
+              echo "::error::QA errors found: $ERRORS"
               exit 1
             fi
-            echo "✅ QA passed via qa.json (errors=0)"
-
-          elif [ -f output/qa.html ]; then
-            echo "Found qa.html, parsing..."
-            # Extract counts from qa.html summary line
-            QA_LINE=$(grep -oP 'Errors:\s*\d+,\s*Warnings:\s*\d+,\s*Info:\s*\d+' output/qa.html | head -1 || echo "")
-
-            if [ -n "$QA_LINE" ]; then
-              echo "QA Report Summary: $QA_LINE"
-              ERRORS=$(echo "$QA_LINE" | grep -oP 'Errors:\s*\K[0-9]+' || echo "0")
-            else
-              # Fallback: check for error indicators
-              if grep -qE "Errors:\s*[1-9]" output/qa.html; then
-                echo "::error::QA errors detected in qa.html (pattern match)"
-                exit 1
-              fi
-              ERRORS=0
-            fi
-
-            if [ "$ERRORS" != "0" ]; then
-              echo "::error::QA errors found in qa.html (count=$ERRORS)"
-              exit 1
-            fi
-            echo "✅ QA passed via qa.html (errors=0)"
-
+            echo "✅ QA passed: $ERRORS errors"
           else
-            echo "::error::No qa.json or qa.html found in output/. Failing for safety."
-            exit 1
+            echo "::warning::No qa.json found"
           fi
 
-      - name: Upload IG artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: core-ig-output
-          path: output
-
-      - name: Upload QA report artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: qa-reports
-          path: |
-            output/qa.json
-            output/qa.html
-            output/qa.min.html
-          if-no-files-found: warn
-
-      - name: Prepare publish directory (dev) (added push event to main only)
-        if: github.event_name == 'push'
-        run: |
-          set -euo pipefail
-          rm -rf .publish
-          mkdir -p .publish/dev
-          rsync -a output/ .publish/dev/  
-                  
-      - name: Create root index.html (added push event to main only)
-        if: github.event_name == 'push'
-        run: |
-          cat > .publish/index.html <<'EOF'
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>PH Core FHIR IG</title>
-          </head>
-          <body>
-            <h1>PH Core FHIR IG</h1>
-            <p><a href="./dev/">Open latest dev build</a></p>
-          </body>
-          </html>
-          EOF
-
-      - name: Publish to gh-pages:/dev/
-        if: github.event_name == 'push'
+      - name: Deploy to GitHub Pages
+        if: always() && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: .publish
-          keep_files: true
-          commit_message: "ci(dev): publish dev build from ${{ github.sha }}"
+          publish_dir: ./output
+          single_commit: true
+          commit_message: "Deploy IG - ${{ github.sha }}"

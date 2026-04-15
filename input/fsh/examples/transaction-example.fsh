@@ -3,31 +3,31 @@ InstanceOf: Bundle
 Usage: #example
 Description: "Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos."
 * type = #transaction
-* entry[0].fullUrl = "urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b"
+* entry[0].fullUrl = "http://doh.gov.ph/fhir/ph-core/Patient/example-patient"
 * entry[=].resource = example-patient
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
-* entry[+].fullUrl = "urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae"
+* entry[+].fullUrl = "http://doh.gov.ph/fhir/ph-core/Encounter/example-encounter"
 * entry[=].resource = example-encounter
 * entry[=].request.method = #POST
 * entry[=].request.url = "Encounter"
-* entry[+].fullUrl = "urn:uuid:1a391d1e-a068-479a-88e3-e3d52c3a6f64"
+* entry[+].fullUrl = "http://doh.gov.ph/fhir/ph-core/Condition/example-condition"
 * entry[=].resource = example-condition
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
-* entry[+].fullUrl = "urn:uuid:024dcb47-cc23-407a-839b-b4634e95abae"
+* entry[+].fullUrl = "http://doh.gov.ph/fhir/ph-core/Medication/example-medication"
 * entry[=].resource = example-medication
 * entry[=].request.method = #POST
 * entry[=].request.url = "Medication"
-* entry[+].fullUrl = "urn:uuid:013f46df-f245-4a2f-beaf-9eb2c47fb1a3"
+* entry[+].fullUrl = "http://doh.gov.ph/fhir/ph-core/Observation/blood-pressure"
 * entry[=].resource = blood-pressure
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
-* entry[+].fullUrl = "urn:uuid:b43c67e7-d9c4-48bb-a1b4-55769eeb9066"
+* entry[+].fullUrl = "http://doh.gov.ph/fhir/ph-core/AllergyIntolerance/example-allergy"
 * entry[=].resource = example-allergy
 * entry[=].request.method = #POST
 * entry[=].request.url = "AllergyIntolerance"
-* entry[+].fullUrl = "urn:uuid:a036fd4c-c950-497b-8905-0d2c5ec6f1d4"
+* entry[+].fullUrl = "http://doh.gov.ph/fhir/ph-core/Practitioner/example-practitioner"
 * entry[=].resource = example-practitioner
 * entry[=].request.method = #POST
 * entry[=].request.url = "Practitioner"
@@ -43,9 +43,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * birthDate = "1980-01-01"
 //* identifier.system = "https://www.philhealth.gov.ph/advisories/2016/adv2016-0012.pdf"
 * active = true
-* gender = #male
-* birthDate = "1985-06-15"
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines (the)"
+* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines"
 * extension[nationality].extension[period].valuePeriod.start = "2020-01-01"
 * extension[nationality].extension[period].valuePeriod.end = "2023-01-01"
 * extension[religion].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1007 "Atheism"
@@ -77,7 +75,7 @@ Usage: #example
 Description: "An ambulatory encounter for Juan Dela Cruz that has been completed."
 * status = #finished
 * class = $v3-ActCode#AMB "ambulatory"
-* subject = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
+* subject = Reference(Patient/example-patient)
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">An ambulatory encounter for Juan Dela Cruz that has been completed.</div>"
 
@@ -87,8 +85,8 @@ Usage: #example
 Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus."
 * clinicalStatus = $condition-clinical#active "Active"
 * code = $sct#44054006 "Diabetes mellitus type 2"
-* subject = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
-* encounter = Reference(urn:uuid:60b7132e-7cfd-44bc-83c2-de140dc8aaae)
+* subject = Reference(Patient/example-patient)
+* encounter = Reference(Encounter/example-encounter)
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"
 
@@ -113,9 +111,9 @@ Description: "Blood pressure observation for Juan Dela Cruz taken on 17 Septembe
 * category = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * code.text = "Blood pressure systolic & diastolic"
-* subject = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
+* subject = Reference(Patient/example-patient)
 * effectiveDateTime = "2012-09-17"
-* performer = Reference(urn:uuid:a036fd4c-c950-497b-8905-0d2c5ec6f1d4)
+* performer = Reference(Practitioner/example-practitioner)
 * interpretation = $v3-ObservationInterpretation#L "Low"
 * interpretation.text = "Below low normal"
 * bodySite = $sct#368209003 "Right arm"
@@ -137,7 +135,7 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 * code = $sct#294494002 "Benethamine penicillin allergy"
 * criticality = #high
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
-* patient = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
+* patient = Reference(Patient/example-patient)
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>"
 
@@ -155,8 +153,8 @@ Usage: #example
 * lotNumber = "AAJN11K"
 * note.text = "Notes on adminstration of vaccine"
 * occurrenceDateTime = "2013-01-10"
-* patient = Reference(urn:uuid:64eb2d39-8da6-4c1d-b4c7-a6d3e916cd5b)
-* performer.actor = Reference(urn:uuid:a036fd4c-c950-497b-8905-0d2c5ec6f1d4)
+* patient = Reference(Patient/example-patient)
+* performer.actor = Reference(Practitioner/example-practitioner)
 * performer.function = $v2-0443#OP
 * primarySource = true
 * route = $v3-RouteOfAdministration#IM "Injection, intramuscular"
