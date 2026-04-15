@@ -1,0 +1,76 @@
+# Mock PSCED - Draft PH Core Implementation Guide v0.2.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Mock PSCED**
+
+## CodeSystem: Mock PSCED (Experimental) 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://psa.gov.ph/classification/psced/level | *Version*:0.2.0 |
+| Draft as of 2026-04-15 | *Computable Name*:PSCED |
+
+ 
+Mock of the Philippine Standard Classification of Education. 
+
+ This Code system is referenced in the content logical definition of the following value sets: 
+
+* [EducationalAttainments](ValueSet-educational-attainments.md)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CodeSystem",
+  "id" : "PSCED",
+  "url" : "https://psa.gov.ph/classification/psced/level",
+  "version" : "0.2.0",
+  "name" : "PSCED",
+  "title" : "Mock PSCED",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-04-15T02:52:43+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "Mock of the Philippine Standard Classification of Education.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "example",
+  "concept" : [{
+    "code" : "C201301",
+    "display" : "Elementary Graduate",
+    "definition" : "Completed elementary education"
+  },
+  {
+    "code" : "C201302",
+    "display" : "High School Graduate",
+    "definition" : "Completed secondary education"
+  },
+  {
+    "code" : "C201303",
+    "display" : "College Graduate",
+    "definition" : "Completed bachelor's degree"
+  },
+  {
+    "code" : "C201304",
+    "display" : "Postgraduate",
+    "definition" : "Completed master's or doctoral degree"
+  }]
+}
+
+```

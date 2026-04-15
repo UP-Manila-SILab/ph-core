@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="relatedperson-single-example"/>
+  <meta>
+    <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Maria Cruz Santos, born on January 1, 1955, is the mother of the patient. She resides at 123 Mabini Street, 1100, Philippines, with regional associations to Ilocos Norte and Occidental Mindoro. Her PhilSys ID is 1234-1234567-1.</div>
+  </text>
+  <identifier>
+    <system value="http://philsys.gov.ph/fhir/Identifier/philsys-id"/>
+    <value value="1234-1234567-1"/>
+  </identifier>
+  <patient>
+    <reference value="Patient/patient-single-example"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="MTH"/>
+    </coding>
+  </relationship>
+  <name>
+    <family value="Santos"/>
+    <given value="Maria"/>
+    <given value="Cruz"/>
+  </name>
+  <gender value="female"/>
+  <birthDate value="1955-01-01"/>
+  <address>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0102800000"/>
+        <display value="Ilocos Norte"/>
+      </valueCoding>
+    </extension>
+    <extension url="http://doh.gov.ph/fhir/ph-core/StructureDefinition/province">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1705100000"/>
+        <display value="Occidental Mindoro"/>
+      </valueCoding>
+    </extension>
+    <line value="123 Mabini Street"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+</RelatedPerson>
