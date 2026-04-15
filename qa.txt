@@ -3,7 +3,7 @@ PHCoreImplementationGuide : Validation Results
 
 err = 0, warn = 10, info = 965
 IG Publisher Version: 2.2.6
-Generated Wed Apr 15 02:55:33 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.2.0 (canonical = http://doh.gov.ph/fhir/ph-core)
+Generated Wed Apr 15 02:56:26 UTC 2026. FHIR version 4.0.1 for fhir.ph.core#0.2.0 (canonical = http://doh.gov.ph/fhir/ph-core)
  Build Errors : 0 / 0 / 0
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/ActorDefinition-Consumer : 0 / 0 / 2
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/ActorDefinition-Creator : 0 / 0 / 2
