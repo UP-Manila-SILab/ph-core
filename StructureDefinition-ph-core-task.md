@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-task.csv), [
   "name" : "PHCoreTask",
   "title" : "PH Core Task",
   "status" : "draft",
-  "date" : "2026-04-15T02:53:51+00:00",
+  "date" : "2026-04-15T02:57:51+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
