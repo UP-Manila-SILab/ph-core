@@ -43,18 +43,22 @@ jobs:
           chmod +x ./_genonce.sh
           ./_genonce.sh
 
+      # QA gate using jq (pre-installed on GitHub Actions Ubuntu runners)
       - name: QA Gate
         run: |
-          if [ -f output/qa.json ]; then
-            ERRORS=$(grep -o '"errs":[0-9]*' output/qa.json | grep -o '[0-9]*' || echo "0")
-            if [ "$ERRORS" -gt 0 ]; then
-              echo "::error::QA errors found: $ERRORS"
-              exit 1
-            fi
-            echo "✅ QA passed: $ERRORS errors"
-          else
-            echo "::warning::No qa.json found"
+          if [ ! -f output/qa.json ]; then
+            echo "::error::No qa.json found in output/. Failing for safety."
+            exit 1
           fi
+
+          # Extract error count using jq (clean and reliable)
+          ERRORS=$(jq -r '.errs // 0' output/qa.json)
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "::error::QA errors found: $ERRORS"
+            exit 1
+          fi
+          echo "✅ QA passed: $ERRORS errors"
 
       - name: Deploy to GitHub Pages
         if: always() && github.event_name == 'push'
