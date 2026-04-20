@@ -4,7 +4,7 @@ Usage: #example
 Description: "Dr. Maria Clara Santos as a General Practitioner at the Department of Health."
 * practitioner = Reference(Practitioner/practitioner-single-example)
 * organization = Reference(Organization/organization-single-example)
-* code = $v3-roleCode#PHYS "Physician"
+* code = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
 * specialty = $sct#394802001 "General medicine"
 * active = true
 * text.status = #generated
