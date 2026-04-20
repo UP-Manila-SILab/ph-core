@@ -66,7 +66,7 @@ Usage: #example
 Description: "Basic Metabolic Panel with references to individual electrolyte observations."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#24326-1 "Basic metabolic 2000 panel - Serum or Plasma"
+* code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * subject = Reference(Patient/patient-single-example)
 * encounter = Reference(Encounter/encounter-single-example)
 * effectiveDateTime = "2024-01-15T08:00:00Z"
@@ -258,7 +258,7 @@ Usage: #example
 Description: "Environmental temperature observation for a hospital ward (Location as subject)."
 * status = #final
 * category = $observation-category#survey "Survey"
-* code = $loinc#8310-5 "Body temperature"
+* code = $loinc#60832-3 "Room temperature"
 * code.text = "Environmental temperature"
 * subject = Reference(Location/location-single-example)
 * effectiveDateTime = "2024-03-15T14:00:00Z"
