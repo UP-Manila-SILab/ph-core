@@ -24,8 +24,8 @@ Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
 // PH Core ActorDefinitions for obligations
 // Using lowercase aliases with $ prefix (like EU EPS) for concise RuleSet usage
 // These resolve to full canonical URLs required by the obligation extension
-Alias: $server = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Server
-Alias: $consumer = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Consumer
-Alias: $creator = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Creator
+Alias: $server = http://fhir.doh.gov.ph/ph-core/ActorDefinition/Server
+Alias: $consumer = http://fhir.doh.gov.ph/ph-core/ActorDefinition/Consumer
+Alias: $creator = http://fhir.doh.gov.ph/ph-core/ActorDefinition/Creator
 Alias: $v3-Race = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $medicationdispense-performer-function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function
