@@ -3,7 +3,7 @@ InstanceOf: PHCoreProvenance
 Usage: #example
 Description: "Provenance record documenting that Dr. Maria Clara Santos created the blood pressure observation for Juan Dela Cruz on September 17, 2012, on behalf of the Department of Health - Central Office."
 
-* target = Reference(Observation/observation-single-example)
+* target = Reference(Observation/observation-bp-example)
 * occurredDateTime = "2012-09-17T08:30:00+08:00"
 * recorded = "2012-09-17T08:30:15+08:00"
 
