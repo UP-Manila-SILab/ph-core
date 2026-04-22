@@ -3,31 +3,31 @@ InstanceOf: Bundle
 Usage: #example
 Description: "Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos."
 * type = #transaction
-* entry[0].fullUrl = "http://fhir.doh.gov.ph/ph-core/Patient/example-patient"
+* entry[0].fullUrl = "https://fhir.doh.gov.ph/phcore/Patient/example-patient"
 * entry[=].resource = example-patient
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
-* entry[+].fullUrl = "http://fhir.doh.gov.ph/ph-core/Encounter/example-encounter"
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Encounter/example-encounter"
 * entry[=].resource = example-encounter
 * entry[=].request.method = #POST
 * entry[=].request.url = "Encounter"
-* entry[+].fullUrl = "http://fhir.doh.gov.ph/ph-core/Condition/example-condition"
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Condition/example-condition"
 * entry[=].resource = example-condition
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
-* entry[+].fullUrl = "http://fhir.doh.gov.ph/ph-core/Medication/example-medication"
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Medication/example-medication"
 * entry[=].resource = example-medication
 * entry[=].request.method = #POST
 * entry[=].request.url = "Medication"
-* entry[+].fullUrl = "http://fhir.doh.gov.ph/ph-core/Observation/blood-pressure"
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Observation/blood-pressure"
 * entry[=].resource = blood-pressure
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
-* entry[+].fullUrl = "http://fhir.doh.gov.ph/ph-core/AllergyIntolerance/example-allergy"
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/AllergyIntolerance/example-allergy"
 * entry[=].resource = example-allergy
 * entry[=].request.method = #POST
 * entry[=].request.url = "AllergyIntolerance"
-* entry[+].fullUrl = "http://fhir.doh.gov.ph/ph-core/Practitioner/example-practitioner"
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Practitioner/example-practitioner"
 * entry[=].resource = example-practitioner
 * entry[=].request.method = #POST
 * entry[=].request.url = "Practitioner"
@@ -57,13 +57,13 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.postalCode = "1100"
 * address.country = "PH"
 
-* address.extension.url = "http://fhir.doh.gov.ph/ph-core/StructureDefinition/barangay"
+* address.extension.url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"
 * address.extension.valueCoding = $PSGC#1380100001 "Barangay 1"
 
-* address.extension[+].url = "http://fhir.doh.gov.ph/ph-core/StructureDefinition/city-municipality"
+* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"
 * address.extension[=].valueCoding = $PSGC#1380200000 "City of Las Piñas"
 
-* address.extension[+].url = "http://fhir.doh.gov.ph/ph-core/StructureDefinition/province"
+* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/province"
 * address.extension[=].valueCoding = $PSGC#0402100000  "Cavite"
 
 * text.status = #generated
