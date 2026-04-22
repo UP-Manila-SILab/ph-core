@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://doh.gov.ph/fhir/ph-core/Location/location-single-example> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "location-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location"^^xsd:anyURI ;
+       fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital Main Building - A tertiary hospital located in Manila.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name [ fhir:v "Philippine General Hospital"] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "HOSP" ] ;
+       fhir:display [ fhir:v "Hospital" ]
+     ] )
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [ fhir:v "Taft Avenue" ] ) ;
+     fhir:city [ fhir:v "Manila" ] ;
+     fhir:district [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1000" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/race | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:Race |
+| Draft as of 2026-04-22 | *Computable Name*:Race |
 
 race of a patient.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-race.csv), [Excel](S
   "name" : "Race",
   "title" : "Race",
   "status" : "draft",
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

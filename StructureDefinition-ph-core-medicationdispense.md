@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PHCoreMedicationDispense |
+| Draft as of 2026-04-22 | *Computable Name*:PHCoreMedicationDispense |
 
  
 Captures key FHIR Medication Dispense data for the Philippine context. 
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md)
+* Refer to this Profile: [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md) and [PH Core Observation](StructureDefinition-ph-core-observation.md)
 * Examples for this Profile: [MedicationDispense/medicationdispense-single-example](MedicationDispense-medicationdispense-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-medicationdispense)
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationdi
   "title" : "PH Core Medication Dispense",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

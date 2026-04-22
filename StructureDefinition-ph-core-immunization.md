@@ -9,13 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-immunization | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PHCoreImmunization |
+| Draft as of 2026-04-22 | *Computable Name*:PHCoreImmunization |
 
  
 Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party. 
 
 **Usages:**
 
+* Refer to this Profile: [PH Core Observation](StructureDefinition-ph-core-observation.md)
 * Examples for this Profile: [Immunization/example-immunization](Immunization-example-immunization.md) and [Immunization/immunization-single-example](Immunization-immunization-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-immunization)
@@ -41,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-immunization
   "name" : "PHCoreImmunization",
   "title" : "PH Core Immunization",
   "status" : "draft",
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

@@ -20,8 +20,8 @@
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Provenance record documenting that Dr. Maria Clara Santos created the blood pressure observation for Juan Dela Cruz on September 17, 2012, on behalf of the Department of Health - Central Office.</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:target ( [
-     fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-single-example> ;
-     fhir:reference [ fhir:v "Observation/observation-single-example" ]
+     fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-bp-example> ;
+     fhir:reference [ fhir:v "Observation/observation-bp-example" ]
   ] ) ; # 
   fhir:occurred [
      a fhir:DateTime ;

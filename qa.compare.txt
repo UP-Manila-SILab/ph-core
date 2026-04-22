@@ -1,7 +1,7 @@
 PHCoreImplementationGuide : Validation Results
 =========================================
 
-err = 0, warn = 10, info = 965
+err = 0, warn = 8, info = 977
 $--
 Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov.ph/fhir/ph-core)
  Build Errors : 0 / 0 / 0
@@ -23,6 +23,7 @@ Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Immunization-example-immunization : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Immunization-immunization-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/ImplementationGuide-fhir.ph.core : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Location-location-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Medication-example-medication : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Medication-medication-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/MedicationAdministration-medicationadministration-single-example : 0 / 0 / 1
@@ -37,12 +38,25 @@ Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-PhilHealthProcedureIDNS : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-PhilSysIDNS : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-blood-pressure : 0 / 0 / 9
- /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-single-example : 0 / 0 / 9
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-based-on-service-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-bp-example : 0 / 0 / 9
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-derived-bmi-example : 0 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-environmental-temp-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-glucose-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-height-example : 0 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-lab-panel-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-part-of-procedure-example : 0 / 0 / 4
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-performer-role-example : 0 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-potassium-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-sodium-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-vitals-encounter-example : 0 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-weight-example : 0 / 0 / 3
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Organization-organization-single-example : 0 / 1 / 8
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-example-patient : 0 / 0 / 4
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-patient-single-example : 0 / 2 / 5
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Practitioner-example-practitioner : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Practitioner-practitioner-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/PractitionerRole-practitionerrole-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Procedure-procedure-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/Provenance-provenance-single-example : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/RelatedPerson-relatedperson-single-example : 0 / 0 / 3
@@ -58,7 +72,7 @@ Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-doh-nhfr-code : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter : 0 / 0 / 82
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-immunization : 0 / 0 / 100
- /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-location : 0 / 1 / 19
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-location : 0 / 0 / 19
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medication : 0 / 0 / 28
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medicationadministration : 0 / 0 / 73
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medicationdispense : 0 / 0 / 65
@@ -73,7 +87,7 @@ Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = http://doh.gov
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-philhealth-pen : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-philsys-id : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitioner : 0 / 0 / 19
- /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitionerrole : 0 / 1 / 10
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitionerrole : 0 / 0 / 10
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-procedure : 0 / 0 / 1
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-provenance : 0 / 0 / 40
  /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-relatedperson : 0 / 0 / 19
@@ -131,6 +145,7 @@ INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[14]: This property has o
 == fsh-generated/resources/Immunization-example-immunization.json ==
 == fsh-generated/resources/Immunization-immunization-single-example.json ==
 == fsh-generated/resources/ImplementationGuide-fhir.ph.core.json ==
+== fsh-generated/resources/Location-location-single-example.json ==
 == fsh-generated/resources/Medication-example-medication.json ==
 == fsh-generated/resources/Medication-medication-single-example.json ==
 == fsh-generated/resources/MedicationAdministration-medicationadministration-single-example.json ==
@@ -147,9 +162,33 @@ INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[14]: This property has o
 == fsh-generated/resources/Observation-blood-pressure.json ==
 INFORMATION: Observation/blood-pressure: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Observation/blood-pressure: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-== fsh-generated/resources/Observation-observation-single-example.json ==
-INFORMATION: Observation/observation-single-example: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/observation-single-example: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-based-on-service-example.json ==
+INFORMATION: Observation/observation-based-on-service-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-bp-example.json ==
+INFORMATION: Observation/observation-bp-example: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/observation-bp-example: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-derived-bmi-example.json ==
+INFORMATION: Observation/observation-derived-bmi-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-environmental-temp-example.json ==
+INFORMATION: Observation/observation-environmental-temp-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-glucose-example.json ==
+INFORMATION: Observation/observation-glucose-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-height-example.json ==
+INFORMATION: Observation/observation-height-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-lab-panel-example.json ==
+== fsh-generated/resources/Observation-observation-part-of-procedure-example.json ==
+INFORMATION: Observation/observation-part-of-procedure-example: Observation.component[0].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/observation-part-of-procedure-example: Observation.component[1].value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-performer-role-example.json ==
+INFORMATION: Observation/observation-performer-role-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-potassium-example.json ==
+INFORMATION: Observation/observation-potassium-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-sodium-example.json ==
+INFORMATION: Observation/observation-sodium-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-vitals-encounter-example.json ==
+INFORMATION: Observation/observation-vitals-encounter-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-observation-weight-example.json ==
+INFORMATION: Observation/observation-weight-example: Observation.value.ofType(Quantity): This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Organization-organization-single-example.json ==
 INFORMATION: Organization/organization-single-example: Organization.identifier[3]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Organization/organization-single-example: Organization.identifier[3].system: No definition could be found for URL value 'http://my-hospital.org/internal-id'
@@ -159,6 +198,7 @@ WARNING: Patient/patient-single-example: Patient.extension[5].value.ofType(Codea
 WARNING: Patient/patient-single-example: Patient.extension[6].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://psa.gov.ph/classification/psoc/unit' could not be found, so the code cannot be validated
 == fsh-generated/resources/Practitioner-example-practitioner.json ==
 == fsh-generated/resources/Practitioner-practitioner-single-example.json ==
+== fsh-generated/resources/PractitionerRole-practitionerrole-single-example.json ==
 == fsh-generated/resources/Procedure-procedure-single-example.json ==
 == fsh-generated/resources/Provenance-provenance-single-example.json ==
 == fsh-generated/resources/RelatedPerson-relatedperson-single-example.json ==
@@ -427,7 +467,6 @@ INFORMATION: StructureDefinition/ph-core-location: StructureDefinition.snapshot.
 INFORMATION: StructureDefinition/ph-core-location: StructureDefinition.snapshot.element[27].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ph-core-location: StructureDefinition.snapshot.element[27].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ph-core-location: StructureDefinition.snapshot.element[27].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-ph-core-medication.json ==
 INFORMATION: StructureDefinition/ph-core-medication: StructureDefinition.snapshot.element[10].extension[0].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ph-core-medication: StructureDefinition.snapshot.element[10].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -927,7 +966,6 @@ INFORMATION: StructureDefinition/ph-core-practitionerrole: StructureDefinition.s
 INFORMATION: StructureDefinition/ph-core-practitionerrole: StructureDefinition.snapshot.element[18].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ph-core-practitionerrole: StructureDefinition.snapshot.element[18].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ph-core-practitionerrole: StructureDefinition.snapshot.element[18].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-WARNING: StructureDefinition.where(url = 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-ph-core-procedure.json ==
 == fsh-generated/resources/StructureDefinition-ph-core-provenance.json ==
 INFORMATION: StructureDefinition/ph-core-provenance: StructureDefinition.snapshot.element[20].extension[0].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)

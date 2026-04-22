@@ -133,14 +133,28 @@ These are example instances that show what data produced and consumed by systems
 | [example-patient](Patient-example-patient.md) | Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines. |
 | [example-practitioner](Practitioner-example-practitioner.md) | Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. |
 | [immunization-single-example](Immunization-immunization-single-example.md) | Flu shot for H5N1-1203. |
+| [location-single-example](Location-location-single-example.md) | Philippine General Hospital Main Building - A tertiary hospital located in Manila. |
 | [medication-single-example](Medication-medication-single-example.md) | Twinact (Telmisartan + Amlodipine) from PH FDA CPR. |
 | [medicationadministration-single-example](MedicationAdministration-medicationadministration-single-example.md) | Juan Dela Cruz takes Twinact (Telmisartan + Amlodipine) tablet as prescribed. |
 | [medicationdispense-single-example](MedicationDispense-medicationdispense-single-example.md) | Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela Cruz based on Dr. Santos prescription. |
 | [medicationrequest-single-example](MedicationRequest-medicationrequest-single-example.md) | Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension. |
 | [medicationstatement-single-example](MedicationStatement-medicationstatement-single-example.md) | Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlodipine) for hypertension. |
-| [observation-single-example](Observation-observation-single-example.md) | Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal). |
+| [observation-based-on-service-example](Observation-observation-based-on-service-example.md) | Hemoglobin A1c lab result based on a service request for diabetes monitoring. |
+| [observation-bp-example](Observation-observation-bp-example.md) | Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal). |
+| [observation-derived-bmi-example](Observation-observation-derived-bmi-example.md) | BMI calculated from height and weight observations for Juan Dela Cruz. |
+| [observation-environmental-temp-example](Observation-observation-environmental-temp-example.md) | Environmental temperature observation for a hospital ward (Location as subject). |
+| [observation-glucose-example](Observation-observation-glucose-example.md) | Fasting blood glucose observation for Juan Dela Cruz. |
+| [observation-height-example](Observation-observation-height-example.md) | Body height observation for Juan Dela Cruz. |
+| [observation-lab-panel-example](Observation-observation-lab-panel-example.md) | Basic Metabolic Panel with references to individual electrolyte observations. |
+| [observation-part-of-procedure-example](Observation-observation-part-of-procedure-example.md) | Intraoperative blood pressure observation during appendectomy procedure. |
+| [observation-performer-role-example](Observation-observation-performer-role-example.md) | Heart rate observation performed by a practitioner in a specific role. |
+| [observation-potassium-example](Observation-observation-potassium-example.md) | Serum potassium observation for Juan Dela Cruz. |
+| [observation-sodium-example](Observation-observation-sodium-example.md) | Serum sodium observation for Juan Dela Cruz. |
+| [observation-vitals-encounter-example](Observation-observation-vitals-encounter-example.md) | Body temperature observation for Juan Dela Cruz taken during an ambulatory encounter. |
+| [observation-weight-example](Observation-observation-weight-example.md) | Body weight observation for Juan Dela Cruz. |
 | [patient-single-example](Patient-patient-single-example.md) | Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines. |
 | [practitioner-single-example](Practitioner-practitioner-single-example.md) | Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. |
+| [practitionerrole-single-example](PractitionerRole-practitionerrole-single-example.md) | Dr. Maria Clara Santos as a General Practitioner at the Department of Health. |
 | [procedure-single-example](Procedure-procedure-single-example.md) | A comprehensive example of an appendectomy procedure performed on Juan Dela Cruz, demonstrating extensive use of Procedure resource elements including identifiers, status history, multiple performers, body site, complications, and follow-up care. |
 | [provenance-single-example](Provenance-provenance-single-example.md) | Provenance record documenting that Dr. Maria Clara Santos created the blood pressure observation for Juan Dela Cruz on September 17, 2012, on behalf of the Department of Health - Central Office. |
 | [relatedperson-single-example](RelatedPerson-relatedperson-single-example.md) | Maria Cruz Santos is a female born on 1 January 1955. |

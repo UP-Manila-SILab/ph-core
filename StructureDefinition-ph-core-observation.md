@@ -9,15 +9,15 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PHCoreObservation |
+| Draft as of 2026-04-22 | *Computable Name*:PHCoreObservation |
 
  
 Measurements and simple assertions made about a patient, device or other subject. 
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md), [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md), [PH Core Medication Request](StructureDefinition-ph-core-medicationrequest.md), [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md) and [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
-* Examples for this Profile: [Observation/blood-pressure](Observation-blood-pressure.md) and [Observation/observation-single-example](Observation-observation-single-example.md)
+* Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md), [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md), [PH Core Medication Request](StructureDefinition-ph-core-medicationrequest.md), [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md)... Show 2 more, [PH Core Observation](StructureDefinition-ph-core-observation.md) and [PH Core Procedure](StructureDefinition-ph-core-procedure.md)
+* Examples for this Profile: [Observation/blood-pressure](Observation-blood-pressure.md), [Observation/observation-based-on-service-example](Observation-observation-based-on-service-example.md), [Observation/observation-bp-example](Observation-observation-bp-example.md), [Observation/observation-derived-bmi-example](Observation-observation-derived-bmi-example.md)... Show 10 more, [Observation/observation-environmental-temp-example](Observation-observation-environmental-temp-example.md), [Observation/observation-glucose-example](Observation-observation-glucose-example.md), [Observation/observation-height-example](Observation-observation-height-example.md), [Observation/observation-lab-panel-example](Observation-observation-lab-panel-example.md), [Observation/observation-part-of-procedure-example](Observation-observation-part-of-procedure-example.md), [Observation/observation-performer-role-example](Observation-observation-performer-role-example.md), [Observation/observation-potassium-example](Observation-observation-potassium-example.md), [Observation/observation-sodium-example](Observation-observation-sodium-example.md), [Observation/observation-vitals-encounter-example](Observation-observation-vitals-encounter-example.md) and [Observation/observation-weight-example](Observation-observation-weight-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-observation)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-observation.
   "name" : "PHCoreObservation",
   "title" : "PH Core Observation",
   "status" : "draft",
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -99,6 +99,32 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-observation.
     "element" : [{
       "id" : "Observation",
       "path" : "Observation"
+    },
+    {
+      "id" : "Observation.basedOn",
+      "path" : "Observation.basedOn",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/CarePlan",
+        "http://hl7.org/fhir/StructureDefinition/DeviceRequest",
+        "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
+        "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+        "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-serviceRequest"]
+      }]
+    },
+    {
+      "id" : "Observation.partOf",
+      "path" : "Observation.partOf",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationdispense",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationstatement",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-procedure",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-immunization",
+        "http://hl7.org/fhir/StructureDefinition/ImagingStudy"]
+      }]
     },
     {
       "id" : "Observation.category",
@@ -341,7 +367,10 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-observation.
       "path" : "Observation.subject",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"]
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient",
+        "http://hl7.org/fhir/StructureDefinition/Group",
+        "http://hl7.org/fhir/StructureDefinition/Device",
+        "http://hl7.org/fhir/StructureDefinition/Location"]
       }]
     },
     {
@@ -350,6 +379,19 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-observation.
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"]
+      }]
+    },
+    {
+      "id" : "Observation.performer",
+      "path" : "Observation.performer",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson",
+        "http://hl7.org/fhir/StructureDefinition/CareTeam"]
       }]
     },
     {
@@ -1195,6 +1237,31 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-observation.
       }],
       "path" : "Observation.referenceRange.appliesTo.text",
       "mustSupport" : true
+    },
+    {
+      "id" : "Observation.hasMember",
+      "path" : "Observation.hasMember",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation",
+        "http://hl7.org/fhir/StructureDefinition/Observation",
+        "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+        "http://hl7.org/fhir/StructureDefinition/MolecularSequence"]
+      }]
+    },
+    {
+      "id" : "Observation.derivedFrom",
+      "path" : "Observation.derivedFrom",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/DocumentReference",
+        "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+        "http://hl7.org/fhir/StructureDefinition/Media",
+        "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+        "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation",
+        "http://hl7.org/fhir/StructureDefinition/Observation",
+        "http://hl7.org/fhir/StructureDefinition/MolecularSequence"]
+      }]
     },
     {
       "id" : "Observation.component.code",

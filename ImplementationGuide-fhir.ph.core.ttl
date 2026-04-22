@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHCoreImplementationGuide"] ; # 
   fhir:title [ fhir:v "Draft PH Core Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-04-15T02:57:51+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-22T03:27:54+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
@@ -2118,6 +2118,28 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Location"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Location/location-single-example> ;
+         fhir:reference [ fhir:v "Location/location-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "location-single-example" ] ;
+       fhir:description [ fhir:v "Philippine General Hospital Main Building - A tertiary hospital located in Manila." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Medication"
          ]
        ] ) ;
@@ -2295,11 +2317,275 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-single-example> ;
-         fhir:reference [ fhir:v "Observation/observation-single-example" ]
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-based-on-service-example> ;
+         fhir:reference [ fhir:v "Observation/observation-based-on-service-example" ]
        ] ;
-       fhir:name [ fhir:v "observation-single-example" ] ;
+       fhir:name [ fhir:v "observation-based-on-service-example" ] ;
+       fhir:description [ fhir:v "Hemoglobin A1c lab result based on a service request for diabetes monitoring." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-bp-example> ;
+         fhir:reference [ fhir:v "Observation/observation-bp-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-bp-example" ] ;
        fhir:description [ fhir:v "Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal)." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-derived-bmi-example> ;
+         fhir:reference [ fhir:v "Observation/observation-derived-bmi-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-derived-bmi-example" ] ;
+       fhir:description [ fhir:v "BMI calculated from height and weight observations for Juan Dela Cruz." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-environmental-temp-example> ;
+         fhir:reference [ fhir:v "Observation/observation-environmental-temp-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-environmental-temp-example" ] ;
+       fhir:description [ fhir:v "Environmental temperature observation for a hospital ward (Location as subject)." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-glucose-example> ;
+         fhir:reference [ fhir:v "Observation/observation-glucose-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-glucose-example" ] ;
+       fhir:description [ fhir:v "Fasting blood glucose observation for Juan Dela Cruz." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-height-example> ;
+         fhir:reference [ fhir:v "Observation/observation-height-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-height-example" ] ;
+       fhir:description [ fhir:v "Body height observation for Juan Dela Cruz." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-lab-panel-example> ;
+         fhir:reference [ fhir:v "Observation/observation-lab-panel-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-lab-panel-example" ] ;
+       fhir:description [ fhir:v "Basic Metabolic Panel with references to individual electrolyte observations." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-part-of-procedure-example> ;
+         fhir:reference [ fhir:v "Observation/observation-part-of-procedure-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-part-of-procedure-example" ] ;
+       fhir:description [ fhir:v "Intraoperative blood pressure observation during appendectomy procedure." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-performer-role-example> ;
+         fhir:reference [ fhir:v "Observation/observation-performer-role-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-performer-role-example" ] ;
+       fhir:description [ fhir:v "Heart rate observation performed by a practitioner in a specific role." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-potassium-example> ;
+         fhir:reference [ fhir:v "Observation/observation-potassium-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-potassium-example" ] ;
+       fhir:description [ fhir:v "Serum potassium observation for Juan Dela Cruz." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-sodium-example> ;
+         fhir:reference [ fhir:v "Observation/observation-sodium-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-sodium-example" ] ;
+       fhir:description [ fhir:v "Serum sodium observation for Juan Dela Cruz." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-vitals-encounter-example> ;
+         fhir:reference [ fhir:v "Observation/observation-vitals-encounter-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-vitals-encounter-example" ] ;
+       fhir:description [ fhir:v "Body temperature observation for Juan Dela Cruz taken during an ambulatory encounter." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/Observation/observation-weight-example> ;
+         fhir:reference [ fhir:v "Observation/observation-weight-example" ]
+       ] ;
+       fhir:name [ fhir:v "observation-weight-example" ] ;
+       fhir:description [ fhir:v "Body weight observation for Juan Dela Cruz." ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
@@ -3104,6 +3390,28 @@
          a fhir:Canonical ;
          fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner"^^xsd:anyURI ;
          fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://doh.gov.ph/fhir/ph-core/PractitionerRole/practitionerrole-single-example> ;
+         fhir:reference [ fhir:v "PractitionerRole/practitionerrole-single-example" ]
+       ] ;
+       fhir:name [ fhir:v "practitionerrole-single-example" ] ;
+       fhir:description [ fhir:v "Dr. Maria Clara Santos as a General Practitioner at the Department of Health." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole"^^xsd:anyURI ;
+         fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole>
        ]
      ] [
        fhir:extension ( [

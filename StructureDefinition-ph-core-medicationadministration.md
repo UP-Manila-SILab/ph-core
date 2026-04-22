@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-medicationadministration | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PHCoreMedicationAdministration |
+| Draft as of 2026-04-22 | *Computable Name*:PHCoreMedicationAdministration |
 
  
 Captures key FHIR Medication Administration data for the Philippine context. 
 
 **Usages:**
 
-* Refer to this Profile: [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md) and [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md)
+* Refer to this Profile: [PH Core Medication Administration](StructureDefinition-ph-core-medicationadministration.md), [PH Core Medication Statement](StructureDefinition-ph-core-medicationstatement.md) and [PH Core Observation](StructureDefinition-ph-core-observation.md)
 * Examples for this Profile: [MedicationAdministration/medicationadministration-single-example](MedicationAdministration-medicationadministration-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-medicationadministration)
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-medicationad
   "title" : "PH Core Medication Administration",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

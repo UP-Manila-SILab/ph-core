@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/ImplementationGuide/fhir.ph.core | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PHCoreImplementationGuide |
+| Draft as of 2026-04-22 | *Computable Name*:PHCoreImplementationGuide |
 
 # Draft Philippine Core FHIR Implementation Guide (PH Core IG)
 
@@ -82,12 +82,12 @@ This publication includes IP covered under the following statements.
 
 * This material contains content from [LOINC](http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the [license](http://loinc.org/license). LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
 
-* LOINC: [Bundle/transaction-example](Bundle-transaction-example.md), [Observation/blood-pressure](Observation-blood-pressure.md) and [Observation/observation-single-example](Observation-observation-single-example.md)
+* LOINC: [Bundle/transaction-example](Bundle-transaction-example.md), [Observation/blood-pressure](Observation-blood-pressure.md)... Show 13 more, [Observation/observation-based-on-service-example](Observation-observation-based-on-service-example.md), [Observation/observation-bp-example](Observation-observation-bp-example.md), [Observation/observation-derived-bmi-example](Observation-observation-derived-bmi-example.md), [Observation/observation-environmental-temp-example](Observation-observation-environmental-temp-example.md), [Observation/observation-glucose-example](Observation-observation-glucose-example.md), [Observation/observation-height-example](Observation-observation-height-example.md), [Observation/observation-lab-panel-example](Observation-observation-lab-panel-example.md), [Observation/observation-part-of-procedure-example](Observation-observation-part-of-procedure-example.md), [Observation/observation-performer-role-example](Observation-observation-performer-role-example.md), [Observation/observation-potassium-example](Observation-observation-potassium-example.md), [Observation/observation-sodium-example](Observation-observation-sodium-example.md), [Observation/observation-vitals-encounter-example](Observation-observation-vitals-encounter-example.md) and [Observation/observation-weight-example](Observation-observation-weight-example.md)
 
 
 * This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
 
-* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://hl7.org/fhir/R4/codesystem-snomedct.html): [AllergyIntolerance/allergy-single-example](AllergyIntolerance-allergy-single-example.md), [AllergyIntolerance/example-allergy](AllergyIntolerance-example-allergy.md)... Show 12 more, [Bundle/transaction-example](Bundle-transaction-example.md), [Condition/condition-single-example](Condition-condition-single-example.md), [Condition/example-condition](Condition-example-condition.md), [Medication/medication-single-example](Medication-medication-single-example.md), [MedicationDispense/medicationdispense-single-example](MedicationDispense-medicationdispense-single-example.md), [MedicationRequest/medicationrequest-single-example](MedicationRequest-medicationrequest-single-example.md), [MedicationStatement/medicationstatement-single-example](MedicationStatement-medicationstatement-single-example.md), [Observation/blood-pressure](Observation-blood-pressure.md), [Observation/observation-single-example](Observation-observation-single-example.md), [Procedure/procedure-single-example](Procedure-procedure-single-example.md), [ServiceRequest/servicerequest-single-example](ServiceRequest-servicerequest-single-example.md) and [Task/task-single-example](Task-task-single-example.md)
+* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://hl7.org/fhir/R4/codesystem-snomedct.html): [AllergyIntolerance/allergy-single-example](AllergyIntolerance-allergy-single-example.md), [AllergyIntolerance/example-allergy](AllergyIntolerance-example-allergy.md)... Show 13 more, [Bundle/transaction-example](Bundle-transaction-example.md), [Condition/condition-single-example](Condition-condition-single-example.md), [Condition/example-condition](Condition-example-condition.md), [Medication/medication-single-example](Medication-medication-single-example.md), [MedicationDispense/medicationdispense-single-example](MedicationDispense-medicationdispense-single-example.md), [MedicationRequest/medicationrequest-single-example](MedicationRequest-medicationrequest-single-example.md), [MedicationStatement/medicationstatement-single-example](MedicationStatement-medicationstatement-single-example.md), [Observation/blood-pressure](Observation-blood-pressure.md), [Observation/observation-bp-example](Observation-observation-bp-example.md), [PractitionerRole/practitionerrole-single-example](PractitionerRole-practitionerrole-single-example.md), [Procedure/procedure-single-example](Procedure-procedure-single-example.md), [ServiceRequest/servicerequest-single-example](ServiceRequest-servicerequest-single-example.md) and [Task/task-single-example](Task-task-single-example.md)
 
 
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
@@ -98,7 +98,8 @@ This publication includes IP covered under the following statements.
 * [ConditionVerificationStatus](http://terminology.hl7.org/7.1.0/CodeSystem-condition-ver-status.html): [Condition/condition-single-example](Condition-condition-single-example.md)
 * [Immunization Funding Source](http://terminology.hl7.org/7.1.0/CodeSystem-immunization-funding-source.html): [Immunization/example-immunization](Immunization-example-immunization.md) and [Immunization/immunization-single-example](Immunization-immunization-single-example.md)
 * [MedicationDispense Performer Function Codes](http://terminology.hl7.org/7.1.0/CodeSystem-medicationdispense-performer-function.html): [MedicationDispense/medicationdispense-single-example](MedicationDispense-medicationdispense-single-example.md)
-* [Observation Category Codes](http://terminology.hl7.org/7.1.0/CodeSystem-observation-category.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Observation/blood-pressure](Observation-blood-pressure.md) and [Observation/observation-single-example](Observation-observation-single-example.md)
+* [Observation Category Codes](http://terminology.hl7.org/7.1.0/CodeSystem-observation-category.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Observation/blood-pressure](Observation-blood-pressure.md)... Show 13 more, [Observation/observation-based-on-service-example](Observation-observation-based-on-service-example.md), [Observation/observation-bp-example](Observation-observation-bp-example.md), [Observation/observation-derived-bmi-example](Observation-observation-derived-bmi-example.md), [Observation/observation-environmental-temp-example](Observation-observation-environmental-temp-example.md), [Observation/observation-glucose-example](Observation-observation-glucose-example.md), [Observation/observation-height-example](Observation-observation-height-example.md), [Observation/observation-lab-panel-example](Observation-observation-lab-panel-example.md), [Observation/observation-part-of-procedure-example](Observation-observation-part-of-procedure-example.md), [Observation/observation-performer-role-example](Observation-observation-performer-role-example.md), [Observation/observation-potassium-example](Observation-observation-potassium-example.md), [Observation/observation-sodium-example](Observation-observation-sodium-example.md), [Observation/observation-vitals-encounter-example](Observation-observation-vitals-encounter-example.md) and [Observation/observation-weight-example](Observation-observation-weight-example.md)
+* [Practitioner role](http://terminology.hl7.org/7.1.0/CodeSystem-practitioner-role.html): [PractitionerRole/practitionerrole-single-example](PractitionerRole-practitionerrole-single-example.md)
 * [Provenance participant type](http://terminology.hl7.org/7.1.0/CodeSystem-provenance-participant-type.html): [PHCoreProvenance](StructureDefinition-ph-core-provenance.md) and [Provenance/provenance-single-example](Provenance-provenance-single-example.md)
 * [contactRole2](http://terminology.hl7.org/7.1.0/CodeSystem-v2-0131.html): [PHCorePatient](StructureDefinition-ph-core-patient.md)
 * [providerRole](http://terminology.hl7.org/7.1.0/CodeSystem-v2-0443.html): [Immunization/example-immunization](Immunization-example-immunization.md), [Immunization/immunization-single-example](Immunization-immunization-single-example.md) and [MedicationAdministration/medicationadministration-single-example](MedicationAdministration-medicationadministration-single-example.md)
@@ -108,11 +109,11 @@ This publication includes IP covered under the following statements.
 * [DataOperation](http://terminology.hl7.org/7.1.0/CodeSystem-v3-DataOperation.html): [Provenance/provenance-single-example](Provenance-provenance-single-example.md)
 * [MaritalStatus](http://terminology.hl7.org/7.1.0/CodeSystem-v3-MaritalStatus.html): [PHCorePatient](StructureDefinition-ph-core-patient.md)
 * [NullFlavor](http://terminology.hl7.org/7.1.0/CodeSystem-v3-NullFlavor.html): [PHCorePatient](StructureDefinition-ph-core-patient.md)
-* [ObservationInterpretation](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ObservationInterpretation.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Observation/blood-pressure](Observation-blood-pressure.md) and [Observation/observation-single-example](Observation-observation-single-example.md)
+* [ObservationInterpretation](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ObservationInterpretation.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Observation/blood-pressure](Observation-blood-pressure.md)... Show 7 more, [Observation/observation-based-on-service-example](Observation-observation-based-on-service-example.md), [Observation/observation-bp-example](Observation-observation-bp-example.md), [Observation/observation-derived-bmi-example](Observation-observation-derived-bmi-example.md), [Observation/observation-glucose-example](Observation-observation-glucose-example.md), [Observation/observation-performer-role-example](Observation-observation-performer-role-example.md), [Observation/observation-potassium-example](Observation-observation-potassium-example.md) and [Observation/observation-sodium-example](Observation-observation-sodium-example.md)
 * [ParticipationType](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ParticipationType.html): [Encounter/encounter-single-example](Encounter-encounter-single-example.md)
 * [Race](http://terminology.hl7.org/7.1.0/CodeSystem-v3-Race.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Patient/example-patient](Patient-example-patient.md), [Patient/patient-single-example](Patient-patient-single-example.md) and [Race](StructureDefinition-race.md)
 * [Religious Affiliation](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ReligiousAffiliation.html): [Bundle/transaction-example](Bundle-transaction-example.md), [Patient/example-patient](Patient-example-patient.md) and [Patient/patient-single-example](Patient-patient-single-example.md)
-* [RoleCode](http://terminology.hl7.org/7.1.0/CodeSystem-v3-RoleCode.html): [PHCorePatient](StructureDefinition-ph-core-patient.md) and [RelatedPerson/relatedperson-single-example](RelatedPerson-relatedperson-single-example.md)
+* [RoleCode](http://terminology.hl7.org/7.1.0/CodeSystem-v3-RoleCode.html): [PHCorePatient](StructureDefinition-ph-core-patient.md), [Philippine General Hospital](Location-location-single-example.md) and [RelatedPerson/relatedperson-single-example](RelatedPerson-relatedperson-single-example.md)
 * [RouteOfAdministration](http://terminology.hl7.org/7.1.0/CodeSystem-v3-RouteOfAdministration.html): [Immunization/example-immunization](Immunization-example-immunization.md), [Immunization/immunization-single-example](Immunization-immunization-single-example.md), [MedicationAdministration/medicationadministration-single-example](MedicationAdministration-medicationadministration-single-example.md), [MedicationRequest/medicationrequest-single-example](MedicationRequest-medicationrequest-single-example.md) and [MedicationStatement/medicationstatement-single-example](MedicationStatement-medicationstatement-single-example.md)
 
 
@@ -142,7 +143,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
   "name" : "PHCoreImplementationGuide",
   "title" : "Draft PH Core Implementation Guide",
   "status" : "draft",
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",
@@ -1174,6 +1175,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/location-single-example"
+      },
+      "name" : "location-single-example",
+      "description" : "Philippine General Hospital Main Building - A tertiary hospital located in Manila.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Medication"
       }],
       "reference" : {
@@ -1273,10 +1286,154 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/observation-single-example"
+        "reference" : "Observation/observation-based-on-service-example"
       },
-      "name" : "observation-single-example",
+      "name" : "observation-based-on-service-example",
+      "description" : "Hemoglobin A1c lab result based on a service request for diabetes monitoring.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-bp-example"
+      },
+      "name" : "observation-bp-example",
       "description" : "Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal).",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-derived-bmi-example"
+      },
+      "name" : "observation-derived-bmi-example",
+      "description" : "BMI calculated from height and weight observations for Juan Dela Cruz.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-environmental-temp-example"
+      },
+      "name" : "observation-environmental-temp-example",
+      "description" : "Environmental temperature observation for a hospital ward (Location as subject).",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-glucose-example"
+      },
+      "name" : "observation-glucose-example",
+      "description" : "Fasting blood glucose observation for Juan Dela Cruz.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-height-example"
+      },
+      "name" : "observation-height-example",
+      "description" : "Body height observation for Juan Dela Cruz.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-lab-panel-example"
+      },
+      "name" : "observation-lab-panel-example",
+      "description" : "Basic Metabolic Panel with references to individual electrolyte observations.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-part-of-procedure-example"
+      },
+      "name" : "observation-part-of-procedure-example",
+      "description" : "Intraoperative blood pressure observation during appendectomy procedure.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-performer-role-example"
+      },
+      "name" : "observation-performer-role-example",
+      "description" : "Heart rate observation performed by a practitioner in a specific role.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-potassium-example"
+      },
+      "name" : "observation-potassium-example",
+      "description" : "Serum potassium observation for Juan Dela Cruz.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-sodium-example"
+      },
+      "name" : "observation-sodium-example",
+      "description" : "Serum sodium observation for Juan Dela Cruz.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-vitals-encounter-example"
+      },
+      "name" : "observation-vitals-encounter-example",
+      "description" : "Body temperature observation for Juan Dela Cruz taken during an ambulatory encounter.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-weight-example"
+      },
+      "name" : "observation-weight-example",
+      "description" : "Body weight observation for Juan Dela Cruz.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
     },
     {
@@ -1734,6 +1891,18 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
       "name" : "practitioner-single-example",
       "description" : "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.",
       "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/practitionerrole-single-example"
+      },
+      "name" : "practitionerrole-single-example",
+      "description" : "Dr. Maria Clara Santos as a General Practitioner at the Department of Health.",
+      "exampleCanonical" : "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole"
     },
     {
       "extension" : [{

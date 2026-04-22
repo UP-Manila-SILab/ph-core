@@ -8,7 +8,7 @@
 
 | |
 | :--- |
-| Draft as of 2026-04-15 |
+| Draft as of 2026-04-22 |
 
 [Raw json](ActorDefinition-Creator.json) | [Download](ActorDefinition-Creator.json)
 

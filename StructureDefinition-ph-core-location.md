@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PHCoreLocation |
+| Draft as of 2026-04-22 | *Computable Name*:PHCoreLocation |
 
  
 This profile localizes the FHIR R4 Location resource to the Philippine context. 
@@ -17,6 +17,7 @@ This profile localizes the FHIR R4 Location resource to the Philippine context.
 **Usages:**
 
 * Refer to this Profile: [PH Core Encounter](StructureDefinition-ph-core-encounter.md), [PH Core Location](StructureDefinition-ph-core-location.md), [PH Core Medication Dispense](StructureDefinition-ph-core-medicationdispense.md), [PH Core PractitionerRole](StructureDefinition-ph-core-practitionerrole.md)... Show 4 more, [PH Core Procedure](StructureDefinition-ph-core-procedure.md), [PH Core Provenance](StructureDefinition-ph-core-provenance.md), [PH Core ServiceRequest](StructureDefinition-ph-core-serviceRequest.md) and [PH Core Task](StructureDefinition-ph-core-task.md)
+* Examples for this Profile: [Philippine General Hospital](Location-location-single-example.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.ph.core|current/StructureDefinition/ph-core-location)
 
@@ -41,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-location.csv
   "name" : "PHCoreLocation",
   "title" : "PH Core Location",
   "status" : "draft",
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

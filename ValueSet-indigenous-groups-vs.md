@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/ValueSet/indigenous-groups-vs | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:IndigenousGroupsVS |
+| Draft as of 2026-04-22 | *Computable Name*:IndigenousGroupsVS |
 
  
 A value set representing the recognized Indigenous groups to which a person may belong. 
@@ -51,7 +51,7 @@ A value set representing the recognized Indigenous groups to which a person may 
   "title" : "Indigenous Groups",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

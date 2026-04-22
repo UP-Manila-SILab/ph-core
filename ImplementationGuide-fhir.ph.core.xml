@@ -12,7 +12,7 @@
   <name value="PHCoreImplementationGuide"/>
   <title value="Draft PH Core Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-04-15T02:57:51+00:00"/>
+  <date value="2026-04-22T03:27:54+00:00"/>
   <publisher value="UP Manila National TeleHealth Center"/>
   <contact>
     <name value="UP Manila National TeleHealth Center"/>
@@ -831,6 +831,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/location-single-example"/>
+      </reference>
+      <name value="location-single-example"/>
+      <description value="Philippine General Hospital Main Building - A tertiary hospital located in Manila."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-location"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Medication"/>
       </extension>
       <reference>
@@ -922,10 +933,142 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/observation-single-example"/>
+        <reference value="Observation/observation-based-on-service-example"/>
       </reference>
-      <name value="observation-single-example"/>
+      <name value="observation-based-on-service-example"/>
+      <description value="Hemoglobin A1c lab result based on a service request for diabetes monitoring."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-bp-example"/>
+      </reference>
+      <name value="observation-bp-example"/>
       <description value="Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal)."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-derived-bmi-example"/>
+      </reference>
+      <name value="observation-derived-bmi-example"/>
+      <description value="BMI calculated from height and weight observations for Juan Dela Cruz."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-environmental-temp-example"/>
+      </reference>
+      <name value="observation-environmental-temp-example"/>
+      <description value="Environmental temperature observation for a hospital ward (Location as subject)."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-glucose-example"/>
+      </reference>
+      <name value="observation-glucose-example"/>
+      <description value="Fasting blood glucose observation for Juan Dela Cruz."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-height-example"/>
+      </reference>
+      <name value="observation-height-example"/>
+      <description value="Body height observation for Juan Dela Cruz."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-lab-panel-example"/>
+      </reference>
+      <name value="observation-lab-panel-example"/>
+      <description value="Basic Metabolic Panel with references to individual electrolyte observations."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-part-of-procedure-example"/>
+      </reference>
+      <name value="observation-part-of-procedure-example"/>
+      <description value="Intraoperative blood pressure observation during appendectomy procedure."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-performer-role-example"/>
+      </reference>
+      <name value="observation-performer-role-example"/>
+      <description value="Heart rate observation performed by a practitioner in a specific role."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-potassium-example"/>
+      </reference>
+      <name value="observation-potassium-example"/>
+      <description value="Serum potassium observation for Juan Dela Cruz."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-sodium-example"/>
+      </reference>
+      <name value="observation-sodium-example"/>
+      <description value="Serum sodium observation for Juan Dela Cruz."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-vitals-encounter-example"/>
+      </reference>
+      <name value="observation-vitals-encounter-example"/>
+      <description value="Body temperature observation for Juan Dela Cruz taken during an ambulatory encounter."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-weight-example"/>
+      </reference>
+      <name value="observation-weight-example"/>
+      <description value="Body weight observation for Juan Dela Cruz."/>
       <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
     </resource>
     <resource>
@@ -1345,6 +1488,17 @@
       <name value="practitioner-single-example"/>
       <description value="Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph."/>
       <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/practitionerrole-single-example"/>
+      </reference>
+      <name value="practitionerrole-single-example"/>
+      <description value="Dr. Maria Clara Santos as a General Practitioner at the Department of Health."/>
+      <exampleCanonical value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-practitionerrole"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

@@ -8,7 +8,7 @@
 
 | |
 | :--- |
-| Draft as of 2026-04-15 |
+| Draft as of 2026-04-22 |
 
 [Raw ttl](ActorDefinition-Consumer.ttl) | [Download](ActorDefinition-Consumer.ttl)
 

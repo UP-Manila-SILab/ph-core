@@ -20,7 +20,7 @@ Provenance record documenting that Dr. Maria Clara Santos created the blood pres
     "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-provenance"]
   },
   "target" : [{
-    "reference" : "Observation/observation-single-example"
+    "reference" : "Observation/observation-bp-example"
   }],
   "occurredDateTime" : "2012-09-17T08:30:00+08:00",
   "recorded" : "2012-09-17T08:30:15+08:00",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://psa.gov.ph/classification/psoc/unit | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PSOC |
+| Draft as of 2026-04-22 | *Computable Name*:PSOC |
 
  
 Mock of the Philippine Standard Occupational Classification. 
@@ -32,7 +32,7 @@ Mock of the Philippine Standard Occupational Classification.
   "title" : "Mock PSOC",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

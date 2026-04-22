@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-task | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PHCoreTask |
+| Draft as of 2026-04-22 | *Computable Name*:PHCoreTask |
 
  
 This profile localizes the FHIR R4 Task resource to the Philippine context. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-task.csv), [
   "name" : "PHCoreTask",
   "title" : "PH Core Task",
   "status" : "draft",
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

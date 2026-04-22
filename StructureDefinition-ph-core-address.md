@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-address | *Version*:0.2.0 |
-| Draft as of 2026-04-15 | *Computable Name*:PHCoreAddress |
+| Draft as of 2026-04-22 | *Computable Name*:PHCoreAddress |
 
  
 An address for the individual. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ph-core-address.csv)
   "name" : "PHCoreAddress",
   "title" : "PH Core Address",
   "status" : "draft",
-  "date" : "2026-04-15T02:57:51+00:00",
+  "date" : "2026-04-22T03:27:54+00:00",
   "publisher" : "UP Manila National TeleHealth Center",
   "contact" : [{
     "name" : "UP Manila National TeleHealth Center",

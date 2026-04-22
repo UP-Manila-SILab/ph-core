@@ -9,7 +9,7 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Provenance record documenting that Dr. Maria Clara Santos created the blood pressure observation for Juan Dela Cruz on September 17, 2012, on behalf of the Department of Health - Central Office.</div>"
   },
   "target" : [{
-    "reference" : "Observation/observation-single-example"
+    "reference" : "Observation/observation-bp-example"
   }],
   "occurredDateTime" : "2012-09-17T08:30:00+08:00",
   "recorded" : "2012-09-17T08:30:15+08:00",
