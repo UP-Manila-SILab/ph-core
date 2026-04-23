@@ -2,20 +2,346 @@
 
 Thank you for your interest in contributing to the PH Core Implementation Guide! This document provides guidelines and instructions for contributing to this FHIR Implementation Guide (IG) project.
 
+> ⚠️ **Living Document Notice:** The heuristics and decision principles in this guide are subject to change as the IG undergoes review and edge cases are discovered. The PH Core team is actively refining these rules through implementation experience. **This guide will be updated accordingly** as agreements evolve—contributors should expect changes and check for the latest version when contributing.
+
 ---
 
 ## Table of Contents
 
-1. [How to Submit Issues and Pull Requests](#1-how-to-submit-issues-and-pull-requests)
-2. [Coding Style Guidelines](#2-coding-style-guidelines)
-3. [Branching Strategy](#3-branching-strategy)
-4. [Process for Code Review](#4-process-for-code-review)
-5. [Development Setup](#5-development-setup)
-6. [Internal Contributing Workflow](#6-internal-contributing-workflow-ph-core-team)
+1. [PH Core Philosophy](#ph-core-philosophy)
+2. [Profile Inclusion Criteria](#profile-inclusion-criteria)
+3. [Profile Development Rules](#profile-development-rules)
+4. [Profile Reference Hierarchy](#profile-reference-hierarchy)
+5. [Registry Engagement Framework](#registry-engagement-framework)
+6. [Decision Log](#decision-log)
+7. [Visual Documentation](#visual-documentation)
+8. [How to Submit Issues and Pull Requests](#how-to-submit-issues-and-pull-requests)
+9. [Coding Style Guidelines](#coding-style-guidelines)
+10. [Branching Strategy](#branching-strategy)
+11. [Process for Code Review](#process-for-code-review)
+12. [Development Setup](#development-setup)
+13. [Internal Contributing Workflow](#internal-contributing-workflow-ph-core-team)
+14. [Additional Resources](#additional-resources)
 
 ---
 
-## 1. How to Submit Issues and Pull Requests?
+## PH Core Philosophy
+
+### Mission Statement
+
+> PH Core defines the **minimum data commonly required for health information exchange across the Philippine health system**, similar to AU Base and US Core approaches.
+
+### Key Concepts
+
+| Concept | Description |
+|---------|-------------|
+| **National Commonality** | PH Core captures data elements that are *commonly needed* across multiple Philippine health programs, facilities, and use cases—not specialized or program-specific data |
+| **Foundation, Not Ceiling** | PH Core provides a **floor** (minimum baseline), not a ceiling. Program-specific IGs can extend PH Core with additional constraints |
+| **Reuse and Alignment** | Elements in PH Core are those that have demonstrated reuse value across ≥2 implementation contexts |
+
+### Comparison with Peer IGs
+
+| IG | Philosophy |
+|----|------------|
+| **AU Base** | "A set of resources and profiles that define the common and base level requirements for Australian implementations" |
+| **US Core** | "Defines the minimum set of constraints on the FHIR resources to create the US Core Profiles" |
+| **PH Core** | "Defines the minimum expectations for data commonly exchanged across Philippine health systems" |
+
+---
+
+## Profile Inclusion Criteria
+
+### Standard Rule: The ≥2 IG Rule
+
+A resource or data element is eligible for PH Core when it is **used by 2 or more independent Implementation Guides** (IGs) or programs within the Philippine health system.
+
+**Rationale:** This ensures PH Core contains only nationally reusable components, avoiding program-specific bloat while enabling true interoperability.
+
+**Process:**
+1. Identify data elements across local IGs (e.g., NHDR, eReferral, PhilHealth Claims, Facility Systems)
+2. Map to base FHIR resources
+3. If ≥2 IGs independently use the same element → candidate for PH Core
+4. Profile the element with PH Core constraints
+
+### Exception Rule: Human Appraisal
+
+The ≥2 rule may be waived through **human appraisal** when:
+- The element has **high national policy priority** (e.g., mandated by DOH JAO)
+- The element **enables critical interoperability** despite limited current adoption
+- The element is **essential for patient safety** or **regulatory compliance**
+- The element is **foundational infrastructure** (e.g., identifiers, addresses)
+
+### Documentation Requirement
+
+When bypassing the ≥2 rule, the justification must be documented in:
+1. The profile's FSH comments (e.g., `// Exception: Required by DOH JAO 2021-0002`)
+2. The issue/PR description
+3. The [Decision Log](#decision-log)
+
+---
+
+## Profile Development Rules
+
+> 📝 **Note:** These rules represent the current team consensus as of the latest IG review cycle. They are subject to refinement as edge cases are identified and the IG matures.
+
+### Rule Summary Table
+
+| Rule | Description | Example |
+|------|-------------|---------|
+| **Rule 1: Cardinality → Obligation Mapping** | Map cardinality to Must Support + Obligation | `1..1` → `ObligationRequired` |
+| **Rule 2: CodeableConcept Optional** | Use `CodeableConceptSO` RuleSet | `* insert CodeableConceptSO(elementName)` |
+| **Rule 3: CodeableConcept Required** | Declare explicitly, don't use SO | `* element 1..* MS` + explicit obligations |
+| **Rule 4: Non-CodeableConcept Elements** | Always separate MS and obligation | `* element 0..1 MS` then `* element insert ObligationOptional` |
+| **Rule 5: Sub-Element Obligations** | Parent = existence, Sub-elements = representation flexibility | `reaction.manifestation` (1..*) with flexible coding |
+
+### Detailed Rules
+
+#### Rule 1: Cardinality → Obligation Mapping
+
+Map cardinality constraints to Must Support flags and obligation extensions:
+
+```fsh
+// Cardinality 1..1 with Must Support and Required obligation
+* status 1..1 MS
+* status insert ObligationRequired
+
+// Cardinality 0..1 with Must Support and Optional obligation  
+* birthDate 0..1 MS
+* birthDate insert ObligationOptional
+```
+
+#### Rule 2: CodeableConcept Optional
+
+For optional CodeableConcept elements, use the `CodeableConceptSO` RuleSet:
+
+```fsh
+// Optional CodeableConcept - uses RuleSet
+* insert CodeableConceptSO(maritalStatus)
+* insert CodeableConceptSO(contact.relationship)
+```
+
+#### Rule 3: CodeableConcept Required
+
+For required CodeableConcept elements, declare explicitly without the RuleSet:
+
+```fsh
+// Required CodeableConcept - explicit declaration
+* code 1..* MS
+* code.text MS
+* code.coding MS
+* code insert ObligationRequired
+```
+
+#### Rule 4: Non-CodeableConcept Elements
+
+For non-CodeableConcept elements, always separate Must Support and obligation declarations:
+
+```fsh
+// Non-CodeableConcept element
+* birthDate 0..1 MS
+* birthDate insert ObligationOptional
+
+* gender 0..1 MS
+* gender insert ObligationOptional
+```
+
+#### Rule 5: Sub-Element Obligations
+
+For parent elements with sub-elements, the parent controls existence while sub-elements control representation flexibility:
+
+```fsh
+// Parent controls cardinality (must exist)
+* reaction 0..* MS
+* reaction insert ObligationOptional
+
+// Sub-elements control representation (coding vs text)
+* reaction.manifestation 1..* MS
+* reaction.manifestation.text MS
+* reaction.manifestation.coding MS
+```
+
+---
+
+## Profile Reference Hierarchy
+
+### Reference Priority Order
+
+When profiles reference other resources, follow this priority:
+
+1. **PH Core profiles FIRST** (when available)
+2. **Base FHIR R4 resources SECOND** (when no PH Core profile exists)
+3. **Document missing profiles** with comments like `// Add PHCoreX once available`
+
+### Decision Flowchart
+
+```
+For each reference element (subject, encounter, performer, etc.):
+├── Is there a PH Core profile for this resource type?
+│   ├── YES → Reference PH Core first, then base FHIR if needed
+│   └── NO  → Reference base FHIR only
+└── Is PH Core profile planned but not yet available?
+    ├── YES → Add comment: // Add PHCoreX once available (see issue #N)
+    └── NO  → Use base FHIR reference only
+```
+
+### Example FSH Pattern
+
+```fsh
+// CORRECT: PH Core first, then base FHIR
+* subject only Reference(PHCorePatient or Group)
+* encounter only Reference(PHCoreEncounter)
+* performer.actor only Reference(PHCorePractitioner or PHCorePractitionerRole or Device)
+
+// CORRECT: With documentation for missing PH Core profile
+* reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure)
+// Note: PHCoreCondition should be added when available
+```
+
+### How to Determine Valid Reference Choices
+
+Contributors must **dynamically check** the base FHIR R4 documentation. Do NOT rely on static lists.
+
+**Step 1: Check the FHIR R4 Documentation**
+- **FHIR R4 Index**: https://hl7.org/fhir/R4/index.html
+- **FHIR R4 Table of Contents**: https://hl7.org/fhir/R4/toc.html
+
+Use the Table of Contents to find the resource page, then check the element's `Reference(...)` type.
+
+**Step 2: Map to PH Core Equivalents**
+
+If a PH Core profile exists, use it instead of base FHIR:
+
+| Base FHIR | PH Core Equivalent |
+|-----------|-------------------|
+| `Patient` | `PHCorePatient` |
+| `Encounter` | `PHCoreEncounter` |
+| `Observation` | `PHCoreObservation` |
+| `Condition` | `PHCoreCondition` |
+| `Procedure` | `PHCoreProcedure` |
+| `Practitioner` | `PHCorePractitioner` |
+| `PractitionerRole` | `PHCorePractitionerRole` |
+| `Organization` | `PHCoreOrganization` |
+| `Location` | `PHCoreLocation` |
+| `RelatedPerson` | `PHCoreRelatedPerson` |
+| `ServiceRequest` | `PHCoreServiceRequest` |
+| `Medication` | `PHCoreMedication` |
+| `MedicationRequest` | `PHCoreMedicationRequest` |
+| `Immunization` | `PHCoreImmunization` |
+| `Task` | `PHCoreTask` |
+| `Provenance` | `PHCoreProvenance` |
+
+> ⚠️ **Important**: This list is a **sample**. Always check the [PH Core IG Artifacts](https://build.fhir.org/ig/UP-Manila-SILab/ph-core/artifacts.html) page for the current, complete list of available profiles. For any resource not listed there, use the base FHIR resource name directly.
+
+---
+
+## Registry Engagement Framework
+
+### External Registries
+
+PH Core integrates with Philippine national registries for identifiers and terminology:
+
+| Registry | Data Type | Current Status | Engagement Model | Agreement Needed |
+|----------|-----------|----------------|------------------|------------------|
+| **NHFR** | Facility codes | Endpoint identified | Terminology artifact | MOU or data use |
+| **PhilHealth** | Member IDs, accreditation | NamingSystem exists | Canonical URL alignment | DOH coordination |
+| **PhilSys** (PSA) | National ID | NamingSystem exists | Identifier validation | PSA agreement |
+| **PRC** | License numbers | Not in PH Core | License verification | PRC data sharing |
+| **BIR** | TIN for organizations | Not defined | Tax identifier use | BIR coordination |
+| **DOH** | eHealth standards | Active collaboration | Governance authority | Formal mandate |
+
+### Registry Engagement Principles
+
+1. **Non-FHIR Registry Integration**: For registries without FHIR APIs, PH Core publishes NamingSystems and CodeSystems that reference the external registry's canonical identifiers.
+
+2. **Governance Model**: Registry updates are coordinated through DOH-KMITS as the national health IT governance body. Changes to external code systems require registry owner approval.
+
+3. **Versioning Strategy**: When external registries change their code sets:
+   - Minor changes (new codes): Added in patch releases
+   - Major changes (breaking): Coordinated with registry owner, announced in release notes
+   - Deprecated codes: Marked with `inactive` status in CodeSystem
+
+4. **Legal Framework**: 
+   - **MOU required** for data sharing agreements (NHFR, PRC)
+   - **DOH coordination** sufficient for government bodies (PhilHealth, PhilSys)
+   - **Formal mandate** applies to DOH-published standards
+
+5. **CodeSystem Publication**: PH Core publishes its own CodeSystems for:
+   - Philippine government classifications (PSGC, PSOC, PSCED)
+   - DOH-maintained code lists
+   - Interim registries without FHIR endpoints
+
+---
+
+## Decision Log
+
+This section documents significant decisions that bypassed standard rules or established new patterns.
+
+| Date | Issue/PR | Decision | Rationale | Rule Bypassed |
+|------|----------|----------|-----------|---------------|
+| 2026-02 | #139 | Adopt CamelCase with CS/VS/NS suffixes | Better tooling support, explicit resource type identification | Previous naming conventions |
+| 2026-03 | #150 | Change example suffix from `-ex` to `-example` | "ex" was ambiguous (Extension vs Example) | Previous file naming |
+| 2026-03 | #166, #175 | Complete transition to `-example` suffix | Consistency across all example files | Previous file naming |
+
+### Example Entry Format
+
+```markdown
+| 2026-01-15 | #176 | Create PHCorePRCIdentifier profile | Required for PRC license verification; foundational for practitioner credentials | ≥2 IG Rule |
+| | | | DOH JAO requires PRC verification for e-prescribing | |
+```
+
+---
+
+## Visual Documentation
+
+The following diagrams illustrate PH Core architecture and workflows:
+
+### IG Structure Overview
+
+![IG Structure](../images/ig-structure-diagram.png)
+
+*Diagram showing the relationship between sushi-config, input/fsh directories, and output generation*
+
+### Profile Inheritance Chain
+
+![Profile Inheritance](../images/profile-inheritance-diagram.png)
+
+*Diagram showing PH Core profiles extending base FHIR R4 resources*
+
+### Profile Reference Hierarchy
+
+![Reference Hierarchy](../images/reference-hierarchy-diagram.png)
+
+*Diagram showing PH Core → Base FHIR → External profile relationships*
+
+### Profile Inclusion Flow
+
+![Inclusion Flow](../images/inclusion-flow-diagram.png)
+
+*Flowchart of the ≥2 IG Rule from identification to inclusion*
+
+### Identifier Systems Map
+
+![Identifier Systems](../images/identifier-systems-diagram.png)
+
+*Diagram showing Philippine identifier systems (PhilHealth, PhilSys, PRC, NHFR) connecting to profiles*
+
+### Terminology Publication Flow
+
+![Terminology Flow](../images/terminology-flow-diagram.png)
+
+*Diagram showing NHFR/DOH sources → CodeSystem → ValueSet → Profile binding*
+
+### Contribution Workflow
+
+![Contribution Workflow](../images/contribution-workflow-diagram.png)
+
+*Visual workflow: Branch → FSH changes → Build → QA → PR → Review → Merge*
+
+> **Note**: Diagrams are stored in `/images/` directory. To update diagrams, edit source files in `/images-source/` and regenerate using the appropriate tooling.
+
+---
+
+## How to Submit Issues and Pull Requests
 
 ### **SUBMITTING ISSUES**
 
@@ -56,12 +382,12 @@ Use the following prefixes for issue titles:
    git clone https://github.com/YOUR-USERNAME/ph-core.git
    ```
 
-3. **Create a Branch**: Use a meaningful branch name (see [Branching Strategy](#3-branching-strategy)). Use hyphens, not slashes.
+3. **Create a Branch**: Use a meaningful branch name (see [Branching Strategy](#branching-strategy)). Use hyphens, not slashes.
    ```bash
    git checkout -b feat-short-description
    ```
 
-4. **Make Changes**: Implement your changes while following the [Coding Style Guidelines](#2-coding-style-guidelines).
+4. **Make Changes**: Implement your changes while following the [Coding Style Guidelines](#coding-style-guidelines).
 
 5. **Build and Test Locally**: Run SUSHI and the IG publisher to ensure your changes build correctly.
    ```bash
@@ -94,21 +420,41 @@ Use the following prefixes for issue titles:
 
 ---
 
-## 2. Coding Style Guidelines
+## Coding Style Guidelines
 
 ### **Follow these coding standards to ensure consistency across the project:**
 
 #### FSH (FHIR Shorthand) Guidelines
 
-* **Indentation:** Use 2 spaces for indentation in all FSH files.
+* **Indentation:** Use 2 spaces for indentation in all FSH files when continuing lines. Top-level declarations have no indentation.
 * **Line Length:** Limit lines to a maximum of 100 characters.
-* **Naming Conventions:**
-  * **Profiles:** Use PascalCase (e.g., `PHCorePatient`, `PHCoreEncounter`)
-  * **Extensions:** Use lowercase with hyphens (e.g., `ph-core-religion`)
-  * **ValueSets:** Use PascalCase with "VS" prefix (e.g., `PHCorePatientVS`)
-  * **CodeSystems:** Use PascalCase with "CS" prefix (e.g., `PHCoreIdentifierCS`)
-  * **Instances:** Use camelCase or lowercase with hyphens (e.g., `patient-example-1`)
-  * **Aliases:** Use UPPER_CASE for aliases (e.g., `UCUM`, `LOINC`)
+* **File Organization:** Flat structure preferred. Indent only for line continuations and nested elements.
+
+#### Naming Conventions
+
+PH Core follows **CamelCase with explicit suffixes** (established Feb-Mar 2026 via PR #139):
+
+| Element Type | FSH Name Pattern | ID Pattern | File Pattern | Example |
+|--------------|------------------|------------|--------------|---------|
+| **Profile** | `PHCore{Resource}` | `ph-core-{resource}` | `ph-core-{resource}.fsh` | `PHCorePatient`, `ph-core-patient.fsh` |
+| **Extension** | `{PascalCase}` | `{kebab-case}` | `{id}.fsh` | `IndigenousPeople`, `indigenous-people.fsh` |
+| **CodeSystem** | `{Name}CS` or `{ACRONYM}` | `{kebab}-cs` or `{ACRONYM}` | `{name}.fsh` | `IndigenousGroupsCS`, `indigenous-groups.fsh` |
+| **ValueSet** | `{Name}VS` or `{Plural}` | `{kebab}-vs` or `{plural}` | `{name}.fsh` | `Regions`, `regions.fsh` |
+| **NamingSystem** | `{System}NS` | `{system}-ns` | `{system}-ns.fsh` | `PhilHealthIDNS`, `philhealth-id-ns.fsh` |
+| **Example** | `{resource}-{scenario}-example` | (same as name) | `{id}.fsh` | `patient-single-example.fsh` |
+| **Actor** | `{Noun}` | `{noun}` | `{noun}.fsh` | `Server`, `server.fsh` |
+| **RuleSet** | `{PascalCaseDescription}` | (inline only) | `{description}.fsh` | `ObligationRequired`, `obligation.fsh` |
+| **Alias (External)** | `${UPPERCASE}` | N/A | aliases.fsh | `$sct`, `$PSOC` |
+| **Alias (Actor)** | `${lowercase}` | N/A | aliases.fsh | `$server`, `$creator` |
+
+**Key Points:**
+- Profile names use `PHCore` prefix (PascalCase)
+- Extensions do NOT use PHCore prefix (implicitly PH Core)
+- CodeSystems use `CS` suffix OR official acronym (PSOC, PSGC, PSCED)
+- ValueSets use `VS` suffix OR simple plural noun (Regions, Provinces)
+- NamingSystems use `NS` suffix
+- Examples use `-example` suffix (changed from `-ex` via Issue #150)
+- Aliases: external terminology = UPPERCASE, actors = lowercase (EU EPS pattern)
 
 #### FSH File Organization
 
@@ -124,9 +470,10 @@ Id: ph-core-patient
 Title: "PH Core Patient Profile"
 Description: "Philippine Core Patient Profile"
 
-// 3. Rules
+// 3. Rules - flat structure, * prefix
 * identifier 1..*
 * name 1..*
+* insert CodeableConceptSO(maritalStatus)
 
 // 4. Invariants (if any)
 Invariant: ph-pat-001
@@ -138,17 +485,19 @@ Severity: #error
 
 * Use `//` for inline comments where necessary.
 * Add comments for complex rules or business logic.
+* **TDG References:** Format as `// TDG Row REF-XX: "{element}" -> {FHIR path}`
 * Ensure profiles and extensions have clear descriptions.
 
 #### Testing
 
 * Ensure your FSH compiles without errors using `sushi .`
+* Expected result: `0 Errors, 0 Warnings`
 * Provide examples for new profiles.
 * Validate the IG builds successfully before submitting a PR.
 
 ---
 
-## 3. Branching Strategy
+## Branching Strategy
 
 ### **Branch Naming Conventions**
 
@@ -167,7 +516,7 @@ Severity: #error
 ### **Feature Branches:**
 
 * Create a feature branch from `main` for new features or bug fixes.
-* Use the format: `feat-short-description` (e.g., `feat-patient-profile`, `feat-medication-resource`)
+* Use the format: `{type}-{issue-number}-{description}` (e.g., `feature-272-contributing-md`, `fix-156-patient-binding`)
 * Merge your feature branch back into `main` when your work is done, and submit a pull request.
 
 ### **Hotfix Branches:**
@@ -180,7 +529,7 @@ Severity: #error
 
 ---
 
-## 4. Process for Code Review
+## Process for Code Review
 
 ### After you submit a pull request, it will go through the following review process:
 
@@ -226,7 +575,7 @@ Severity: #error
 
 ---
 
-## 5. Development Setup
+## Development Setup
 
 ### Prerequisites & Installation
 
@@ -292,7 +641,7 @@ Severity: #error
 
 ---
 
-## 6. Internal Contributing Workflow (PH Core Team)
+## Internal Contributing Workflow (PH Core Team)
 
 For PH Core team members, follow this workflow:
 
@@ -330,7 +679,28 @@ For PH Core team members, follow this workflow:
 - Are identifiers and canonical URLs correct?
 - Are changes documented in PR notes?
 
-### Contact Us:
+---
 
+## Additional Resources
+
+- **PH Core IG Build**: https://build.fhir.org/ig/UP-Manila-SILab/ph-core
+- **FHIR R4 Specification**: https://hl7.org/fhir/R4/index.html
+- **SUSHI Documentation**: https://fshschool.org/
+- **Issue Tracker**: https://github.com/UP-Manila-SILab/ph-core/issues
+
+### Reference Implementations
+
+- [AU Base](https://github.com/hl7au/au-fhir-base) - Australian base patterns
+- [AU Core](https://github.com/hl7au/au-fhir-core) - Australian FHIR Core
+- [US Core](https://github.com/HL7/US-Core) - US Core implementation
+- [UK Core](https://github.com/NHSDigital/FHIR-R4-UKCORE) - NHS England patterns
+
+---
+
+## Questions?
+
+- Open an issue: https://github.com/UP-Manila-SILab/ph-core/issues
 - Email: nih-nthc.upmanila@up.edu.ph
 - Facebook Page: https://www.facebook.com/UPMTelehealth
+
+Thank you for contributing to Philippine health interoperability!
