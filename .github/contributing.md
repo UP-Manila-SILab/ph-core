@@ -297,43 +297,43 @@ The following diagrams illustrate PH Core architecture and workflows:
 
 ### IG Structure Overview
 
-![IG Structure](../images/ig-structure-diagram.svg)
+![IG Structure](images/ig-structure-diagram.svg)
 
 *Diagram showing the relationship between sushi-config, input/fsh directories, and output generation*
 
 ### Profile Inheritance Chain
 
-![Profile Inheritance](../images/profile-inheritance-diagram.svg)
+![Profile Inheritance](images/profile-inheritance-diagram.svg)
 
 *Diagram showing PH Core profiles extending base FHIR R4 resources*
 
 ### Profile Reference Hierarchy
 
-![Reference Hierarchy](../images/reference-hierarchy-diagram.svg)
+![Reference Hierarchy](images/reference-hierarchy-diagram.svg)
 
 *Diagram showing PH Core → Base FHIR → External profile relationships*
 
 ### Profile Inclusion Flow
 
-![Inclusion Flow](../images/inclusion-flow-diagram.svg)
+![Inclusion Flow](images/inclusion-flow-diagram.svg)
 
 *Flowchart of the ≥2 IG Rule from identification to inclusion*
 
 ### Identifier Systems Map
 
-![Identifier Systems](../images/identifier-systems-diagram.svg)
+![Identifier Systems](images/identifier-systems-diagram.svg)
 
 *Diagram showing Philippine identifier systems (PhilHealth, PhilSys, PRC, NHFR) connecting to profiles*
 
 ### Terminology Publication Flow
 
-![Terminology Flow](../images/terminology-flow-diagram.svg)
+![Terminology Flow](images/terminology-flow-diagram.svg)
 
 *Diagram showing NHFR/DOH sources → CodeSystem → ValueSet → Profile binding*
 
 ### Contribution Workflow
 
-![Contribution Workflow](../images/contribution-workflow-diagram.svg)
+![Contribution Workflow](images/contribution-workflow-diagram.svg)
 
 *Visual workflow: Branch → FSH changes → Build → QA → PR → Review → Merge*
 
