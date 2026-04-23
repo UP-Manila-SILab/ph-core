@@ -28,7 +28,7 @@
   <rect x="50" y="350" width="700" height="140" fill="white" stroke="#ddd" stroke-width="1" rx="5"/>
   <text x="70" y="375" font-size="14" font-weight="bold" fill="#333">Example 2: Procedure.performer.actor</text>
   <text x="70" y="400" font-family="monospace" font-size="11" fill="#1976d2">* performer.actor only Reference(PHCorePractitioner or PHCorePractitionerRole or Device)</text>
-  <text x="70" y="425" font-size="11" fill="#666">PHCorePractitioner &amp; PHCorePractitionerRole preferred, Device (base) as fallback</text>
+  <text x="70" y="425" font-size="11" fill="#666">PHCorePractitioner and PHCorePractitionerRole preferred, Device (base) as fallback</text>
   
   <rect x="50" y="500" width="700" height="80" fill="white" stroke="#ddd" stroke-width="1" rx="5"/>
   <text x="70" y="525" font-size="14" font-weight="bold" fill="#333">Example 3: Procedure.reasonReference with documentation</text>
