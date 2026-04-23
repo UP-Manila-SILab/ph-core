@@ -1,0 +1,48 @@
+graph LR
+    subgraph "Philippine National Registries"
+        PHILHEALTH[PhilHealth<br/>philhealth.gov.ph]
+        PSYS[PhilSys<br/>PSA]
+        PRC[PRC<br/>prc.gov.ph]
+        NHFR[NHFR<br/>DOH facility registry]
+        BIR[BIR<br/>TIN numbers]
+        DOHREG[DOH<br/>eHealth standards]
+    end
+
+    subgraph "PH Core NamingSystems"
+        PHNS[PhilHealthIDNS]
+        PSNS[PhilSysIDNS]
+        NHFRNS[DOHNHFRCodeNS]
+        PHPAN[PhilHealthAccreditationNS]
+        PHPEN[PhilHealthEmployerNS]
+    end
+
+    subgraph "PH Core Profiles"
+        PAT[PHCorePatient]
+        PRAC[PHCorePractitioner]
+        ORG[PHCoreOrganization]
+        LOC[PHCoreLocation]
+    end
+
+    PHILHEALTH -->|member ID| PHNS
+    PHILHEALTH -->|accreditation| PHPAN
+    PHILHEALTH -->|employer no| PHPEN
+    PSYS -->|national ID| PSNS
+    NHFR -->|facility code| NHFRNS
+    
+    PHNS -->|identifier| PAT
+    PSNS -->|identifier| PAT
+    NHFRNS -->|identifier| LOC
+    NHFRNS -->|identifier| ORG
+    PHPAN -->|qualification| PRAC
+    
+    PRC -.->|future| PRAC
+    BIR -.->|future| ORG
+    DOHREG -.->|standards| PRAC
+
+    style PHILHEALTH fill:#e1f5fe
+    style PSYS fill:#e1f5fe
+    style NHFR fill:#e1f5fe
+    style PRC fill:#ffcc80
+    style BIR fill:#ffcc80
+    style PAT fill:#c8e6c9
+    style PRAC fill:#c8e6c9

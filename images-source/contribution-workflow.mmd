@@ -1,0 +1,57 @@
+graph LR
+    subgraph "1. Setup"
+        FORK[Fork/Clone<br/>repository]
+        REMOTE[Add upstream<br/>remote]
+        SYNC[Sync main<br/>branch]
+    end
+
+    subgraph "2. Development"
+        BRANCH[Create feature<br/>branch]
+        CODE[Make FSH<br/>changes]
+        VALIDATE[Run sushi .<br/>0 errors]
+        BUILD[Build IG<br/>./_genonce.sh]
+    end
+
+    subgraph "3. Submission"
+        COMMIT[Commit with<br/>clear message]
+        PUSH[Push to<br/>origin]
+        PR[Open Pull<br/>Request]
+    end
+
+    subgraph "4. Review"
+        CI[CI Checks<br/>pass]
+        REVIEW[Code review<br/>by maintainers]
+        FEEDBACK[Address<br/>feedback]
+    end
+
+    subgraph "5. Merge"
+        APPROVE[Approved<br/>by reviewer]
+        SQUASH[Squash<br/>merge]
+        DELETE[Delete<br/>branch]
+        CLOSE[Closes<br/>linked issue]
+    end
+
+    FORK --> REMOTE
+    REMOTE --> SYNC
+    SYNC --> BRANCH
+    BRANCH --> CODE
+    CODE --> VALIDATE
+    VALIDATE -->|errors| CODE
+    VALIDATE -->|success| BUILD
+    BUILD --> COMMIT
+    COMMIT --> PUSH
+    PUSH --> PR
+    PR --> CI
+    CI -->|fails| CODE
+    CI -->|passes| REVIEW
+    REVIEW -->|changes| FEEDBACK
+    FEEDBACK --> CODE
+    REVIEW -->|approved| APPROVE
+    APPROVE --> SQUASH
+    SQUASH --> DELETE
+    DELETE --> CLOSE
+
+    style VALIDATE fill:#fff9c4
+    style CI fill:#fff9c4
+    style APPROVE fill:#c8e6c9
+    style CLOSE fill:#bbdefb

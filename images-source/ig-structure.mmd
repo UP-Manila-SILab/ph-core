@@ -1,0 +1,57 @@
+graph TB
+    subgraph "Configuration"
+        SUSHI[sushi-config.yaml<br/>IG metadata, dependencies]
+        IGINI[ig.ini<br/>Publisher settings]
+    end
+
+    subgraph "Input"
+        FSH[input/fsh/<br/>FHIR Shorthand source]
+        PROFILES[profiles/<br/>PHCore* definitions]
+        EXT[extensions/<br/>PH Core extensions]
+        CS[codeSystems/<br/>Philippine classifications]
+        VS[valueSets/<br/>Value sets]
+        NS[namingSystems/<br/>Identifier systems]
+        RULES[ruleSets/<br/>Reusable rules]
+        EX[examples/<br/>Example instances]
+        ACT[actors/<br/>ActorDefinitions]
+        PAGE[pagecontent/<br/>Narrative content]
+        IMG[images/<br/>Diagrams, figures]
+    end
+
+    subgraph "Processing"
+        SUSHI_CMD[sushi .<br/>Compile FSH to JSON]
+        PUBLISHER[IG Publisher<br/>Java-based builder]
+    end
+
+    subgraph "Output"
+        GEN[fsh-generated/<br/>Compiled FHIR JSON]
+        OUT[output/<br/>Final IG website]
+        QA[qa.html<br/>Validation report]
+        TEMP[temp/<br/>Build temp files]
+    end
+
+    SUSHI --> SUSHI_CMD
+    IGINI --> PUBLISHER
+    FSH --> SUSHI_CMD
+    PROFILES --> FSH
+    EXT --> FSH
+    CS --> FSH
+    VS --> FSH
+    NS --> FSH
+    RULES --> FSH
+    EX --> FSH
+    ACT --> FSH
+    PAGE --> PUBLISHER
+    IMG --> PUBLISHER
+    
+    SUSHI_CMD --> GEN
+    GEN --> PUBLISHER
+    PUBLISHER --> OUT
+    PUBLISHER --> QA
+    PUBLISHER --> TEMP
+
+    style SUSHI fill:#e1f5fe
+    style IGINI fill:#e1f5fe
+    style FSH fill:#fff3e0
+    style OUT fill:#e8f5e9
+    style QA fill:#ffebee

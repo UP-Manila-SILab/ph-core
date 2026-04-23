@@ -1,0 +1,55 @@
+graph TB
+    subgraph "Source Systems"
+        NHFR[NHFR<br/>Facility Registry]
+        PSA[PSA<br/>Philippine Statistics Authority]
+        DOH[DOH<br/>eHealth Standards]
+        FDA[FDA<br/>Drug Database]
+    end
+
+    subgraph "PH Core Terminology"
+        CS[CodeSystem<br/>complete codes]
+        VS[ValueSet<br/>usable subsets]
+        NS[NamingSystem<br/>identifier systems]
+    end
+
+    subgraph "Profile Bindings"
+        BIND_REQUIRED[Required Binding<br/>SHALL use from ValueSet]
+        BIND_PREFERRED[Preferred Binding<br/>SHOULD use from ValueSet]
+        BIND_EXAMPLE[Example Binding<br/>MAY use for guidance]
+    end
+
+    subgraph "Implementation"
+        SERVER[PH Core Server<br/>validates terminology]
+        CLIENT[PH Core Client<br/>uses bound codes]
+        VALID[Terminology Validation<br/>@ tx.fhirlab.net]
+    end
+
+    NHFR -->|facility codes| CS
+    PSA -->|PSGC/PSOC/PSCED| CS
+    DOH -->|eHealth codes| CS
+    FDA -->|drug codes| CS
+    
+    NHFR -->|facility URI| NS
+    PSA -->|classification URIs| NS
+    
+    CS -->|defines codes| VS
+    CS -->|referenced by| BIND_REQUIRED
+    CS -->|referenced by| BIND_PREFERRED
+    VS -->|bound to| BIND_REQUIRED
+    VS -->|bound to| BIND_PREFERRED
+    VS -->|bound to| BIND_EXAMPLE
+    
+    BIND_REQUIRED -->|constrains| SERVER
+    BIND_REQUIRED -->|constrains| CLIENT
+    BIND_PREFERRED -->|guides| CLIENT
+    BIND_EXAMPLE -->|suggests| CLIENT
+    
+    SERVER -->|validates against| VALID
+    CLIENT -->|validates against| VALID
+
+    style CS fill:#c8e6c9
+    style VS fill:#fff9c4
+    style NS fill:#ffcc80
+    style BIND_REQUIRED fill:#ffcdd2
+    style BIND_PREFERRED fill:#ffe0b2
+    style BIND_EXAMPLE fill:#f5f5f5
