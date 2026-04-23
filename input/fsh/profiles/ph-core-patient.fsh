@@ -58,19 +58,8 @@ Description: "Captures key demographic and administrative information about indi
 * insert CodeableConceptSO(communication.language)
 
 // PH Core Profile References - Issue #274
-* generalPractitioner 0..* MS
-* generalPractitioner insert ObligationOptional
 * generalPractitioner only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization)
-
-* managingOrganization 0..1 MS
-* managingOrganization insert ObligationOptional
 * managingOrganization only Reference(PHCoreOrganization)
-
-* link.other 1..1 MS
-* link.other insert ObligationOptional
 * link.other only Reference(PHCorePatient or PHCoreRelatedPerson)
-
-* contact.organization 0..1 MS
-* contact.organization insert ObligationOptional
 * contact.organization only Reference(PHCoreOrganization)
 
