@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  <text x="400" y="100" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">IG Structure Overview</text>
+  <text x="400" y="140" text-anchor="middle" font-size="14" fill="#666">Source: images-source/ig-structure.mmd</text>
+  
+  <!-- Configuration -->
+  <rect x="50" y="180" width="200" height="80" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" rx="5"/>
+  <text x="150" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#01579b">Configuration</text>
+  <text x="150" y="230" text-anchor="middle" font-size="12" fill="#333">sushi-config.yaml</text>
+  <text x="150" y="245" text-anchor="middle" font-size="12" fill="#333">ig.ini</text>
+  
+  <!-- Input -->
+  <rect x="300" y="180" width="200" height="120" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="400" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">Input: FSH Source</text>
+  <text x="400" y="230" text-anchor="middle" font-size="11" fill="#333">profiles/, extensions/</text>
+  <text x="400" y="245" text-anchor="middle" font-size="11" fill="#333">codeSystems/, valueSets/</text>
+  <text x="400" y="260" text-anchor="middle" font-size="11" fill="#333">namingSystems/, examples/</text>
+  
+  <!-- Processing -->
+  <rect x="550" y="180" width="150" height="80" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="625" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a148c">Processing</text>
+  <text x="625" y="230" text-anchor="middle" font-size="11" fill="#333">SUSHI compiler</text>
+  <text x="625" y="245" text-anchor="middle" font-size="11" fill="#333">IG Publisher</text>
+  
+  <!-- Output -->
+  <rect x="300" y="350" width="200" height="100" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="400" y="380" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">Output</text>
+  <text x="400" y="400" text-anchor="middle" font-size="11" fill="#333">fsh-generated/</text>
+  <text x="400" y="415" text-anchor="middle" font-size="11" fill="#333">output/ (IG website)</text>
+  <text x="400" y="430" text-anchor="middle" font-size="11" fill="#333">qa.html (validation)</text>
+  
+  <!-- Arrows -->
+  <line x1="250" y1="220" x2="300" y2="240" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="240" x2="550" y2="220" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="625" y1="260" x2="400" y2="350" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <text x="400" y="550" text-anchor="middle" font-size="12" fill="#999">Placeholder - Generate from images-source/ig-structure.mmd</text>
+</svg>

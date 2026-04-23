@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">Identifier Systems Map</text>
+  <text x="400" y="65" text-anchor="middle" font-size="14" fill="#666">Source: images-source/identifier-systems.mmd</text>
+  
+  <!-- Source Registries -->
+  <text x="140" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#01579b">Philippine Registries</text>
+  
+  <rect x="40" y="120" width="200" height="45" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" rx="5"/>
+  <text x="140" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#01579b">PhilHealth</text>
+  <text x="140" y="155" text-anchor="middle" font-size="10" fill="#333">philhealth.gov.ph</text>
+  
+  <rect x="40" y="175" width="200" height="45" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" rx="5"/>
+  <text x="140" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#01579b">PhilSys (PSA)</text>
+  <text x="140" y="210" text-anchor="middle" font-size="10" fill="#333">psa.gov.ph</text>
+  
+  <rect x="40" y="230" width="200" height="45" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" rx="5"/>
+  <text x="140" y="250" text-anchor="middle" font-size="13" font-weight="bold" fill="#01579b">NHFR (DOH)</text>
+  <text x="140" y="265" text-anchor="middle" font-size="10" fill="#333">Facility Registry</text>
+  
+  <rect x="40" y="285" width="200" height="45" fill="#ffcc80" stroke="#ef6c00" stroke-width="2" rx="5"/>
+  <text x="140" y="305" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">PRC</text>
+  <text x="140" y="320" text-anchor="middle" font-size="10" fill="#666">Future / Planned</text>
+  
+  <rect x="40" y="340" width="200" height="45" fill="#ffcc80" stroke="#ef6c00" stroke-width="2" rx="5"/>
+  <text x="140" y="360" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">BIR</text>
+  <text x="140" y="375" text-anchor="middle" font-size="10" fill="#666">Future / Planned</text>
+  
+  <!-- NamingSystems -->
+  <text x="400" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">PH Core NamingSystems</text>
+  
+  <rect x="320" y="120" width="160" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="400" y="142" text-anchor="middle" font-size="12" fill="#333">PhilHealthIDNS</text>
+  
+  <rect x="320" y="165" width="160" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="400" y="187" text-anchor="middle" font-size="12" fill="#333">PhilSysIDNS</text>
+  
+  <rect x="320" y="210" width="160" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="400" y="232" text-anchor="middle" font-size="12" fill="#333">DOHNHFRCodeNS</text>
+  
+  <rect x="320" y="255" width="160" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="400" y="277" text-anchor="middle" font-size="12" fill="#333">PhilHealthAccreditationNS</text>
+  
+  <rect x="320" y="300" width="160" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="400" y="322" text-anchor="middle" font-size="12" fill="#333">PhilHealthEmployerNS</text>
+  
+  <!-- Profiles -->
+  <text x="640" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">PH Core Profiles</text>
+  
+  <rect x="560" y="140" width="160" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="640" y="162" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">PHCorePatient</text>
+  <text x="640" y="180" text-anchor="middle" font-size="10" fill="#333">identifiers[]</text>
+  
+  <rect x="560" y="210" width="160" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="640" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">PHCorePractitioner</text>
+  <text x="640" y="250" text-anchor="middle" font-size="10" fill="#333">qualification[]</text>
+  
+  <rect x="560" y="280" width="160" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="640" y="302" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">PHCoreLocation</text>
+  <text x="640" y="320" text-anchor="middle" font-size="10" fill="#333">identifier[]</text>
+  
+  <rect x="560" y="350" width="160" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="640" y="372" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">PHCoreOrganization</text>
+  <text x="640" y="390" text-anchor="middle" font-size="10" fill="#333">identifier[]</text>
+  
+  <!-- Arrows -->
+  <line x1="240" y1="142" x2="320" y2="137" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="240" y1="197" x2="320" y2="182" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="240" y1="252" x2="320" y2="227" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="480" y1="137" x2="560" y2="165" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="182" x2="560" y2="165" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="227" x2="560" y2="290" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="272" x2="560" y2="235" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="317" x2="560" y2="375" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Future indicators -->
+  <line x1="240" y1="307" x2="320" y2="307" stroke="#ff9800" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="240" y1="362" x2="320" y2="362" stroke="#ff9800" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <text x="280" y="300" font-size="10" fill="#ef6c00">future</text>
+  <text x="280" y="355" font-size="10" fill="#ef6c00">future</text>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <rect x="40" y="420" width="20" height="15" fill="#e1f5fe" stroke="#0288d1"/>
+  <text x="70" y="432" font-size="11" fill="#333">= Active Registry</text>
+  
+  <rect x="200" y="420" width="20" height="15" fill="#ffcc80" stroke="#ef6c00"/>
+  <text x="230" y="432" font-size="11" fill="#333">= Planned / Future</text>
+  
+  <rect x="380" y="420" width="20" height="15" fill="#fff9c4" stroke="#f9a825"/>
+  <text x="410" y="432" font-size="11" fill="#333">= NamingSystem</text>
+  
+  <rect x="550" y="420" width="20" height="15" fill="#c8e6c9" stroke="#388e3c"/>
+  <text x="580" y="432" font-size="11" fill="#333">= Profile (uses identifier)</text>
+  
+  <text x="400" y="475" text-anchor="middle" font-size="12" fill="#999">Placeholder - Generate from images-source/identifier-systems.mmd</text>
+</svg>

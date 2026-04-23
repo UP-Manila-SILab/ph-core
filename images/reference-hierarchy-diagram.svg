@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">Profile Reference Hierarchy</text>
+  <text x="400" y="65" text-anchor="middle" font-size="14" fill="#666">Source: images-source/reference-hierarchy.mmd</text>
+  
+  <!-- Priority boxes -->
+  <rect x="50" y="90" width="220" height="80" fill="#c8e6c9" stroke="#388e3c" stroke-width="3" rx="10"/>
+  <text x="160" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#1b5e20">1️⃣ PH Core FIRST</text>
+  <text x="160" y="140" text-anchor="middle" font-size="12" fill="#333">When profile available</text>
+  <text x="160" y="158" text-anchor="middle" font-size="11" fill="#666">PHCorePatient, PHCoreEncounter...</text>
+  
+  <rect x="290" y="90" width="220" height="80" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="10"/>
+  <text x="400" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#f57f17">2️⃣ Base FHIR SECOND</text>
+  <text x="400" y="140" text-anchor="middle" font-size="12" fill="#333">When no PH Core profile</text>
+  <text x="400" y="158" text-anchor="middle" font-size="11" fill="#666">Patient, Encounter, Group...</text>
+  
+  <rect x="530" y="90" width="220" height="80" fill="#ffcc80" stroke="#ef6c00" stroke-width="2" rx="10"/>
+  <text x="640" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#e65100">3️⃣ Document Missing</text>
+  <text x="640" y="140" text-anchor="middle" font-size="12" fill="#333">Add comment for future</text>
+  <text x="640" y="158" text-anchor="middle" font-size="11" fill="#666">// Add PHCoreX when available</text>
+  
+  <!-- Examples -->
+  <rect x="50" y="200" width="700" height="140" fill="white" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="70" y="225" font-size="14" font-weight="bold" fill="#333">Example 1: Procedure.subject</text>
+  <text x="70" y="250" font-family="monospace" font-size="12" fill="#1976d2">* subject only Reference(PHCorePatient or Group)</text>
+  <text x="70" y="275" font-size="11" fill="#666">PHCorePatient (PH Core) preferred, Group (base FHIR) as fallback</text>
+  
+  <rect x="50" y="350" width="700" height="140" fill="white" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="70" y="375" font-size="14" font-weight="bold" fill="#333">Example 2: Procedure.performer.actor</text>
+  <text x="70" y="400" font-family="monospace" font-size="11" fill="#1976d2">* performer.actor only Reference(PHCorePractitioner or PHCorePractitionerRole or Device)</text>
+  <text x="70" y="425" font-size="11" fill="#666">PHCorePractitioner & PHCorePractitionerRole preferred, Device (base) as fallback</text>
+  
+  <rect x="50" y="500" width="700" height="80" fill="white" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="70" y="525" font-size="14" font-weight="bold" fill="#333">Example 3: Procedure.reasonReference with documentation</text>
+  <text x="70" y="550" font-family="monospace" font-size="12" fill="#1976d2">* reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure or DiagnosticReport)</text>
+  <text x="70" y="570" font-family="monospace" font-size="11" fill="#ff6f00">// Note: PHCoreDiagnosticReport should be added when available</text>
+  
+  <text x="400" y="595" text-anchor="middle" font-size="12" fill="#999">Placeholder - Generate from images-source/reference-hierarchy.mmd</text>
+</svg>
