@@ -9,6 +9,6 @@ This repository is currently in the development phase. The project is not yet re
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](.github/contributing.md) for details on how to submit issues and pull requests.
+We welcome contributions! Please see our [Contributing Guide](https://github.com/UP-Manila-SILab/ph-core?tab=contributing-ov-file) for details on how to submit issues and pull requests.
 
 **Note:** When creating branches, please use hyphens instead of slashes (e.g., `feat-my-feature` not `feat/my-feature`). Branch names with `/` can cause issues with the FHIR auto-IG builder.

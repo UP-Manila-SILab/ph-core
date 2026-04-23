@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="600" viewBox="0 0 700 600">
+  <rect width="700" height="600" fill="#f5f5f5"/>
+  <text x="350" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">Profile Inclusion Flow</text>
+  <text x="350" y="65" text-anchor="middle" font-size="14" fill="#666">Source: images-source/inclusion-flow.mmd</text>
+  
+  <!-- Start -->
+  <ellipse cx="350" cy="100" rx="60" ry="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+  <text x="350" y="105" text-anchor="middle" font-size="14" fill="#0d47a1">Start</text>
+  
+  <!-- Identify -->
+  <rect x="270" y="150" width="160" height="50" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="350" y="170" text-anchor="middle" font-size="12" fill="#333">Identify data element</text>
+  <text x="350" y="188" text-anchor="middle" font-size="11" fill="#666">in use case analysis</text>
+  
+  <!-- Check -->
+  <polygon points="350,220 430,260 350,300 270,260" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
+  <text x="350" y="250" text-anchor="middle" font-size="11" fill="#333">Check existing</text>
+  <text x="350" y="265" text-anchor="middle" font-size="11" fill="#333">PH Core?</text>
+  
+  <!-- Exists -->
+  <rect x="480" y="240" width="140" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="550" y="265" text-anchor="middle" font-size="12" fill="#1b5e20">Use existing profile</text>
+  
+  <!-- Count -->
+  <polygon points="350,320 430,360 350,400 270,360" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
+  <text x="350" y="352" text-anchor="middle" font-size="11" fill="#333">≥2 independent</text>
+  <text x="350" y="367" text-anchor="middle" font-size="11" fill="#333">IGs use it?</text>
+  
+  <!-- Yes - Candidate -->
+  <rect x="480" y="340" width="140" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="550" y="360" text-anchor="middle" font-size="11" fill="#1b5e20">PH Core candidate</text>
+  <text x="550" y="373" text-anchor="middle" font-size="10" fill="#1b5e20">(≥2 Rule met)</text>
+  
+  <!-- Exception -->
+  <polygon points="350,420 430,460 350,500 270,460" fill="#ffcc80" stroke="#ef6c00" stroke-width="2"/>
+  <text x="350" y="450" text-anchor="middle" font-size="11" fill="#333">Exception criteria?</text>
+  <text x="350" y="465" text-anchor="middle" font-size="9" fill="#666">Policy / Critical / Safety</text>
+  
+  <!-- Appraisal -->
+  <rect x="480" y="440" width="140" height="40" fill="#ffcc80" stroke="#ef6c00" stroke-width="2" rx="5"/>
+  <text x="550" y="455" text-anchor="middle" font-size="11" fill="#e65100">Human appraisal</text>
+  <text x="550" y="468" text-anchor="middle" font-size="10" fill="#e65100">by PH Core team</text>
+  
+  <!-- Program specific -->
+  <rect x="50" y="440" width="140" height="40" fill="#ffe0b2" stroke="#ef6c00" stroke-width="2" rx="5"/>
+  <text x="120" y="460" text-anchor="middle" font-size="11" fill="#e65100">Keep program-</text>
+  <text x="120" y="473" text-anchor="middle" font-size="11" fill="#e65100">specific</text>
+  
+  <!-- Profile -->
+  <rect x="270" y="520" width="160" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="350" y="540" text-anchor="middle" font-size="11" fill="#1b5e20">Create PH Core profile</text>
+  <text x="350" y="553" text-anchor="middle" font-size="10" fill="#1b5e20">Document in Decision Log</text>
+  
+  <!-- End -->
+  <ellipse cx="350" cy="585" rx="60" ry="20" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+  <text x="350" y="590" text-anchor="middle" font-size="14" fill="#0d47a1">End</text>
+  
+  <!-- Lines -->
+  <line x1="350" y1="130" x2="350" y2="150" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="200" x2="350" y2="220" stroke="#333" stroke-width="2"/>
+  <line x1="430" y1="260" x2="480" y2="260" stroke="#333" stroke-width="2"/>
+  <line x1="550" y1="280" x2="550" y2="500" stroke="#333" stroke-width="2"/>
+  <line x1="550" y1="500" x2="510" y2="520" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="300" x2="350" y2="320" stroke="#333" stroke-width="2"/>
+  <line x1="430" y1="360" x2="480" y2="360" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="400" x2="350" y2="420" stroke="#333" stroke-width="2"/>
+  <line x1="270" y1="460" x2="190" y2="460" stroke="#333" stroke-width="2"/>
+  <line x1="430" y1="460" x2="480" y2="460" stroke="#333" stroke-width="2"/>
+  <line x1="120" y1="480" x2="120" y2="585" stroke="#333" stroke-width="2"/>
+  <line x1="120" y1="585" x2="290" y2="585" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="500" x2="350" y2="520" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="560" x2="350" y2="565" stroke="#333" stroke-width="2"/>
+  
+  <!-- Labels -->
+  <text x="440" y="250" font-size="10" fill="#388e3c">Yes</text>
+  <text x="440" y="350" font-size="10" fill="#388e3c">Yes</text>
+  <text x="380" y="450" font-size="10" fill="#ef6c00">Yes</text>
+  <text x="240" y="455" font-size="10" fill="#ef6c00">No</text>
+  <text x="380" y="490" font-size="10" fill="#666">Denied</text>
+  <text x="500" y="490" font-size="10" fill="#388e3c">Approved</text>
+</svg>
