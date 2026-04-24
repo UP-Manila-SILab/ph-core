@@ -3,10 +3,46 @@ Parent: Location
 Id: ph-core-location
 Title: "PH Core Location"
 Description: "This profile localizes the FHIR R4 Location resource to the Philippine context."
-* address only PHCoreAddress
-* managingOrganization only Reference(ph-core-organization)
-* partOf only Reference(ph-core-location)
 
+// ============================================
+// PH Core Specific References
+// ============================================
+* address only PHCoreAddress
+* managingOrganization only Reference(PHCoreOrganization)
+* partOf only Reference(PHCoreLocation)
+
+// ============================================
+// Must Support Elements with Obligations
+// ============================================
+
+// Status
+* status MS
+* status insert ObligationOptional
+
+// Name
+* name MS
+* name insert ObligationOptional
+
+// Address and sub-elements
+* address MS
+* address insert ObligationOptional
+* address.line MS
+* address.line insert ObligationOptional
+
+// Managing Organization
+* managingOrganization MS
+* managingOrganization insert ObligationOptional
+
+// Position and sub-elements
+* position MS
+* position insert ObligationOptional
+* position.longitude MS
+* position.longitude insert ObligationOptional
+* position.latitude MS
+* position.latitude insert ObligationOptional
+
+// ============================================
+// CodeableConcept Elements
+// ============================================
 * insert CodeableConceptSO(type)
 * insert CodeableConceptSO(physicalType)
-
