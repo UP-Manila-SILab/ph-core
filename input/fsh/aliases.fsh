@@ -30,3 +30,4 @@ Alias: $consumer = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Consumer
 Alias: $creator = http://doh.gov.ph/fhir/ph-core/ActorDefinition/Creator
 Alias: $v3-Race = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $medicationdispense-performer-function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function
+Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type
