@@ -19,9 +19,9 @@ Description: "This profile localizes the FHIR R4 Location resource to the Philip
 * status MS
 * status insert ObligationOptional
 
-// Name - Required
+// Name - Optional
 * name MS
-* name insert ObligationRequired
+* name insert ObligationOptional
 
 // Address and sub-elements
 * address MS
@@ -37,9 +37,9 @@ Description: "This profile localizes the FHIR R4 Location resource to the Philip
 * position MS
 * position insert ObligationOptional
 * position.longitude MS
-* position.longitude insert ObligationRequired
+* position.longitude insert ObligationOptional
 * position.latitude MS
-* position.latitude insert ObligationRequired
+* position.latitude insert ObligationOptional
 
 // ============================================
 // CodeableConcept Elements (SO = Optional)
