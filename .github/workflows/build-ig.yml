@@ -37,15 +37,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build IG with Docker
-        run: |
-          docker run --rm \
-            -v ${{ github.workspace }}:/github/workspace \
-            -w /github/workspace \
-            hl7fhir/ig-publisher-base:latest \
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          args: |
             bash -c "
               chmod +x ./_updatePublisher.sh && ./_updatePublisher.sh -y &&
               sushi . &&
-              chmod +x ./_genonce.sh && ./_genonce.sh
+              chmod +x ./_genonce.sh && ./_genonce.sh -y
             "
 
       # QA gate using jq (pre-installed on GitHub Actions Ubuntu runners)
