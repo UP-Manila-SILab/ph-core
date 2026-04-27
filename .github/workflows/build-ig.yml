@@ -43,7 +43,7 @@ jobs:
             bash -c "
               chmod +x ./_updatePublisher.sh && ./_updatePublisher.sh -y &&
               sushi . &&
-              chmod +x ./_genonce.sh && ./_genonce.sh -y
+              chmod +x ./_genonce.sh && ./_genonce.sh -y -tx http://tx.fhir.org
             "
 
       # QA gate using jq (pre-installed on GitHub Actions Ubuntu runners)
