@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <rect width="900" height="500" fill="#f5f5f5"/>
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">Profile Inheritance Chain</text>
+  <text x="450" y="70" text-anchor="middle" font-size="14" fill="#666">Source: images-source/profile-inheritance.mmd</text>
+  
+  <!-- Base FHIR -->
+  <rect x="50" y="100" width="120" height="300" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="110" y="125" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">Base FHIR R4</text>
+  
+  <rect x="60" y="140" width="100" height="20" fill="white" stroke="#1976d2" rx="3"/>
+  <text x="110" y="154" text-anchor="middle" font-size="10" fill="#333">Patient</text>
+  <rect x="60" y="165" width="100" height="20" fill="white" stroke="#1976d2" rx="3"/>
+  <text x="110" y="179" text-anchor="middle" font-size="10" fill="#333">Encounter</text>
+  <rect x="60" y="190" width="100" height="20" fill="white" stroke="#1976d2" rx="3"/>
+  <text x="110" y="204" text-anchor="middle" font-size="10" fill="#333">Observation</text>
+  <rect x="60" y="215" width="100" height="20" fill="white" stroke="#1976d2" rx="3"/>
+  <text x="110" y="229" text-anchor="middle" font-size="10" fill="#333">Practitioner</text>
+  <rect x="60" y="240" width="100" height="20" fill="white" stroke="#1976d2" rx="3"/>
+  <text x="110" y="254" text-anchor="middle" font-size="10" fill="#333">Organization</text>
+  <rect x="60" y="265" width="100" height="20" fill="white" stroke="#1976d2" rx="3"/>
+  <text x="110" y="279" text-anchor="middle" font-size="10" fill="#333">Location</text>
+  <rect x="60" y="290" width="100" height="20" fill="white" stroke="#1976d2" rx="3"/>
+  <text x="110" y="304" text-anchor="middle" font-size="10" fill="#333">Medication</text>
+  <rect x="60" y="315" width="100" height="20" fill="white" stroke="#1976d2" rx="3"/>
+  <text x="110" y="329" text-anchor="middle" font-size="10" fill="#333">+ more...</text>
+  
+  <!-- PH Core -->
+  <rect x="350" y="100" width="140" height="300" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="420" y="125" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">PH Core Profiles</text>
+  
+  <rect x="360" y="140" width="120" height="20" fill="white" stroke="#388e3c" rx="3"/>
+  <text x="420" y="154" text-anchor="middle" font-size="10" fill="#333">PHCorePatient</text>
+  <rect x="360" y="165" width="120" height="20" fill="white" stroke="#388e3c" rx="3"/>
+  <text x="420" y="179" text-anchor="middle" font-size="10" fill="#333">PHCoreEncounter</text>
+  <rect x="360" y="190" width="120" height="20" fill="white" stroke="#388e3c" rx="3"/>
+  <text x="420" y="204" text-anchor="middle" font-size="10" fill="#333">PHCoreObservation</text>
+  <rect x="360" y="215" width="120" height="20" fill="white" stroke="#388e3c" rx="3"/>
+  <text x="420" y="229" text-anchor="middle" font-size="10" fill="#333">PHCorePractitioner</text>
+  <rect x="360" y="240" width="120" height="20" fill="white" stroke="#388e3c" rx="3"/>
+  <text x="420" y="254" text-anchor="middle" font-size="10" fill="#333">PHCoreOrganization</text>
+  <rect x="360" y="265" width="120" height="20" fill="white" stroke="#388e3c" rx="3"/>
+  <text x="420" y="279" text-anchor="middle" font-size="10" fill="#333">PHCoreLocation</text>
+  <rect x="360" y="290" width="120" height="20" fill="white" stroke="#388e3c" rx="3"/>
+  <text x="420" y="304" text-anchor="middle" font-size="10" fill="#333">PHCoreMedication</text>
+  <rect x="360" y="315" width="120" height="20" fill="white" stroke="#388e3c" rx="3"/>
+  <text x="420" y="329" text-anchor="middle" font-size="10" fill="#333">+ 10+ more...</text>
+  
+  <!-- Program IGs -->
+  <rect x="680" y="100" width="140" height="300" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="750" y="125" text-anchor="middle" font-size="14" font-weight="bold" fill="#f57f17">Program-Specific IGs</text>
+  
+  <rect x="690" y="140" width="120" height="30" fill="white" stroke="#f9a825" rx="3"/>
+  <text x="750" y="160" text-anchor="middle" font-size="11" fill="#333">NHDR IG</text>
+  <rect x="690" y="180" width="120" height="30" fill="white" stroke="#f9a825" rx="3"/>
+  <text x="750" y="200" text-anchor="middle" font-size="11" fill="#333">eReferral IG</text>
+  <rect x="690" y="220" width="120" height="30" fill="white" stroke="#f9a825" rx="3"/>
+  <text x="750" y="240" text-anchor="middle" font-size="11" fill="#333">PhilHealth Claims</text>
+  <rect x="690" y="260" width="120" height="30" fill="white" stroke="#f9a825" rx="3"/>
+  <text x="750" y="280" text-anchor="middle" font-size="11" fill="#333">Facility Systems</text>
+  <rect x="690" y="300" width="120" height="30" fill="white" stroke="#f9a825" rx="3"/>
+  <text x="750" y="320" text-anchor="middle" font-size="11" fill="#333">+ more...</text>
+  
+  <!-- Arrows -->
+  <text x="240" y="250" text-anchor="middle" font-size="12" fill="#666">extends →</text>
+  <line x1="170" y1="150" x2="360" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="175" x2="360" y2="175" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="200" x2="360" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="225" x2="360" y2="225" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="250" x2="360" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="275" x2="360" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="300" x2="360" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <text x="570" y="250" text-anchor="middle" font-size="12" fill="#666">referenced by →</text>
+  <line x1="480" y1="150" x2="690" y2="155" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="175" x2="690" y2="195" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="200" x2="690" y2="235" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <text x="450" y="470" text-anchor="middle" font-size="12" fill="#999">Placeholder - Generate from images-source/profile-inheritance.mmd</text>
+</svg>

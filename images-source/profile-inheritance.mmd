@@ -1,0 +1,73 @@
+graph TB
+    subgraph "Base FHIR R4"
+        FHIR[FHIR R4 Resources<br/>hl7.org/fhir/R4]
+        PAT[Patient]
+        ENC[Encounter]
+        OBS[Observation]
+        COND[Condition]
+        PROC[Procedure]
+        PRAC[Practitioner]
+        PR[PractitionerRole]
+        ORG[Organization]
+        LOC[Location]
+        RP[RelatedPerson]
+        SR[ServiceRequest]
+        MED[Medication]
+        MR[MedicationRequest]
+        IMM[Immunization]
+    end
+
+    subgraph "PH Core Profiles"
+        PCP[PHCorePatient]
+        PCE[PHCoreEncounter]
+        PCO[PHCoreObservation]
+        PCC[PHCoreCondition]
+        PCProc[PHCoreProcedure]
+        PCPrac[PHCorePractitioner]
+        PCPR[PHCorePractitionerRole]
+        PCOrg[PHCoreOrganization]
+        PCLoc[PHCoreLocation]
+        PCRP[PHCoreRelatedPerson]
+        PCS[PHCoreServiceRequest]
+        PCM[PHCoreMedication]
+        PCMR[PHCoreMedicationRequest]
+        PCIMM[PHCoreImmunization]
+    end
+
+    subgraph "Program-Specific IGs"
+        NHDR[NHDR IG]
+        EREF[eReferral IG]
+        PHC[PhilHealth Claims]
+        FAC[Facility Systems]
+    end
+
+    PAT -->|extends| PCP
+    ENC -->|extends| PCE
+    OBS -->|extends| PCO
+    COND -->|extends| PCC
+    PROC -->|extends| PCProc
+    PRAC -->|extends| PCPrac
+    PR -->|extends| PCPR
+    ORG -->|extends| PCOrg
+    LOC -->|extends| PCLoc
+    RP -->|extends| PCRP
+    SR -->|extends| PCS
+    MED -->|extends| PCM
+    MR -->|extends| PCMR
+    IMM -->|extends| PCIMM
+
+    PCP -->|referenced by| NHDR
+    PCP -->|referenced by| EREF
+    PCP -->|referenced by| PHC
+    PCE -->|referenced by| NHDR
+    PCE -->|referenced by| EREF
+    PCO -->|referenced by| NHDR
+    PCPrac -->|referenced by| EREF
+    PCOrg -->|referenced by| FAC
+
+    style FHIR fill:#bbdefb
+    style PCP fill:#c8e6c9
+    style NHDR fill:#fff9c4
+    style EREF fill:#fff9c4
+    style PHC fill:#fff9c4
+    style FAC fill:#fff9c4

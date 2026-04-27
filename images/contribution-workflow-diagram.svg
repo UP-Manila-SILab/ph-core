@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400">
+  <rect width="900" height="400" fill="#f5f5f5"/>
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">Contribution Workflow</text>
+  <text x="450" y="65" text-anchor="middle" font-size="14" fill="#666">Source: images-source/contribution-workflow.mmd</text>
+  
+  <!-- Phase 1 -->
+  <text x="100" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#01579b">1. Setup</text>
+  
+  <rect x="40" y="120" width="120" height="40" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="100" y="138" text-anchor="middle" font-size="11" fill="#333">Fork/Clone</text>
+  <text x="100" y="152" text-anchor="middle" font-size="9" fill="#666">repository</text>
+  
+  <rect x="40" y="170" width="120" height="40" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="100" y="188" text-anchor="middle" font-size="11" fill="#333">Add upstream</text>
+  <text x="100" y="202" text-anchor="middle" font-size="9" fill="#666">remote</text>
+  
+  <rect x="40" y="220" width="120" height="40" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="100" y="238" text-anchor="middle" font-size="11" fill="#333">Sync main</text>
+  <text x="100" y="252" text-anchor="middle" font-size="9" fill="#666">branch</text>
+  
+  <!-- Phase 2 -->
+  <text x="300" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#f57f17">2. Development</text>
+  
+  <rect x="240" y="120" width="120" height="40" fill="#ffe0b2" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="300" y="138" text-anchor="middle" font-size="11" fill="#333">Create feature</text>
+  <text x="300" y="152" text-anchor="middle" font-size="9" fill="#666">branch</text>
+  
+  <rect x="240" y="170" width="120" height="40" fill="#ffe0b2" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="300" y="188" text-anchor="middle" font-size="11" fill="#333">Make FSH</text>
+  <text x="300" y="202" text-anchor="middle" font-size="9" fill="#666">changes</text>
+  
+  <rect x="240" y="220" width="120" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="300" y="238" text-anchor="middle" font-size="11" fill="#333">Run sushi .</text>
+  <text x="300" y="252" text-anchor="middle" font-size="9" fill="#666">0 errors</text>
+  
+  <rect x="240" y="270" width="120" height="40" fill="#ffe0b2" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="300" y="288" text-anchor="middle" font-size="11" fill="#333">Build IG</text>
+  <text x="300" y="302" text-anchor="middle" font-size="9" fill="#666">./_genonce.sh</text>
+  
+  <!-- Phase 3 -->
+  <text x="500" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#388e3c">3. Submission</text>
+  
+  <rect x="440" y="120" width="120" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="500" y="138" text-anchor="middle" font-size="11" fill="#333">Commit with</text>
+  <text x="500" y="152" text-anchor="middle" font-size="9" fill="#666">clear message</text>
+  
+  <rect x="440" y="170" width="120" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="500" y="188" text-anchor="middle" font-size="11" fill="#333">Push to</text>
+  <text x="500" y="202" text-anchor="middle" font-size="9" fill="#666">origin</text>
+  
+  <rect x="440" y="220" width="120" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="500" y="238" text-anchor="middle" font-size="11" fill="#333">Open Pull</text>
+  <text x="500" y="252" text-anchor="middle" font-size="9" fill="#666">Request</text>
+  
+  <!-- Phase 4 -->
+  <text x="700" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#7b1fa2">4. Review</text>
+  
+  <rect x="640" y="120" width="120" height="40" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="700" y="138" text-anchor="middle" font-size="11" fill="#333">CI Checks</text>
+  <text x="700" y="152" text-anchor="middle" font-size="9" fill="#666">pass</text>
+  
+  <rect x="640" y="170" width="120" height="40" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="700" y="188" text-anchor="middle" font-size="11" fill="#333">Code review</text>
+  <text x="700" y="202" text-anchor="middle" font-size="9" fill="#666">by maintainers</text>
+  
+  <rect x="640" y="220" width="120" height="40" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="700" y="238" text-anchor="middle" font-size="11" fill="#333">Address</text>
+  <text x="700" y="252" text-anchor="middle" font-size="9" fill="#666">feedback</text>
+  
+  <!-- Phase 5 -->
+  <text x="850" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#d32f2f">5. Merge</text>
+  
+  <rect x="790" y="120" width="120" height="35" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="850" y="138" text-anchor="middle" font-size="10" fill="#333">Approved</text>
+  <text x="850" y="150" text-anchor="middle" font-size="9" fill="#666">by reviewer</text>
+  
+  <rect x="790" y="165" width="120" height="35" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="850" y="183" text-anchor="middle" font-size="10" fill="#333">Squash</text>
+  <text x="850" y="195" text-anchor="middle" font-size="9" fill="#666">merge</text>
+  
+  <rect x="790" y="210" width="120" height="35" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="850" y="228" text-anchor="middle" font-size="10" fill="#333">Delete</text>
+  <text x="850" y="240" text-anchor="middle" font-size="9" fill="#666">branch</text>
+  
+  <rect x="790" y="255" width="120" height="35" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="850" y="273" text-anchor="middle" font-size="10" fill="#333">Closes</text>
+  <text x="850" y="285" text-anchor="middle" font-size="9" fill="#666">linked issue</text>
+  
+  <!-- Arrows -->
+  <line x1="160" y1="140" x2="240" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="160" y1="190" x2="240" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="160" y1="240" x2="240" y2="240" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="360" y1="140" x2="440" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="360" y1="190" x2="440" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="360" y1="240" x2="440" y2="240" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="360" y1="290" x2="440" y2="240" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="560" y1="140" x2="640" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="560" y1="190" x2="640" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="560" y1="240" x2="640" y2="240" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="760" y1="140" x2="790" y2="137" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="760" y1="190" x2="790" y2="182" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="760" y1="240" x2="790" y2="227" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Feedback loops -->
+  <path d="M 700 260 Q 500 350 300 280" fill="none" stroke="#d32f2f" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <text x="400" y="340" font-size="10" fill="#d32f2f">feedback loop</text>
+  
+  <path d="M 300 290 Q 150 320 100 260" fill="none" stroke="#f57c00" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <text x="180" y="315" font-size="10" fill="#f57c00">fix errors</text>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <text x="450" y="380" text-anchor="middle" font-size="12" fill="#999">Placeholder - Generate from images-source/contribution-workflow.mmd</text>
+</svg>
