@@ -1,3 +1,10 @@
+# This CI/CD workflow was derived from the HL7 FHIR IPS project:
+# https://github.com/HL7/fhir-ips/blob/master/.github/workflows/validate-docs.yml
+# Original license: Apache 2.0 (per HL7 FHIR licensing)
+# Modified to follow linear build pattern from PH Core IG
+# Docker implementation inspired by:
+# https://www.argentixinfo.com/archives/156 (Automating Github FHIR IG Builds)
+
 name: Build PH Core FHIR IG
 
 on:
@@ -29,19 +36,15 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y graphviz
-          sudo gem install jekyll
-          sudo npm install -g fsh-sushi
-
-      - name: Build IG
-        run: |
-          chmod +x ./_updatePublisher.sh
-          ./_updatePublisher.sh -y
-          chmod +x ./_genonce.sh
-          ./_genonce.sh
+      - name: Build IG with Docker
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          args: |
+            bash -c "
+              chmod +x ./_updatePublisher.sh && ./_updatePublisher.sh --force &&
+              sushi . &&
+              chmod +x ./_genonce.sh && ./_genonce.sh
+            "
 
       # QA gate using jq (pre-installed on GitHub Actions Ubuntu runners)
       - name: QA Gate
@@ -67,5 +70,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./output
-          single_commit: true
           commit_message: "Deploy IG - ${{ github.sha }}"
