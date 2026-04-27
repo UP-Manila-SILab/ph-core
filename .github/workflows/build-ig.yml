@@ -43,7 +43,7 @@ jobs:
             -w /github/workspace \
             hl7fhir/ig-publisher-base:latest \
             bash -c "
-              chmod +x ./_updatePublisher.sh && ./_updatePublisher.sh --force &&
+              chmod +x ./_updatePublisher.sh && ./_updatePublisher.sh -y &&
               sushi . &&
               chmod +x ./_genonce.sh && ./_genonce.sh
             "
