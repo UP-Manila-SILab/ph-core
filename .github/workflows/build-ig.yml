@@ -37,9 +37,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build IG with Docker
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: |
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/github/workspace \
+            -w /github/workspace \
+            hl7fhir/ig-publisher-base:latest \
             bash -c "
               chmod +x ./_updatePublisher.sh && ./_updatePublisher.sh --force &&
               sushi . &&
