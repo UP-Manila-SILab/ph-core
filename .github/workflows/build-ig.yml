@@ -64,7 +64,7 @@ jobs:
           echo "✅ QA passed: $ERRORS errors"
 
       - name: Deploy to GitHub Pages
-        if: always()
+        if: always() && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
