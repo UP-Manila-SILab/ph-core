@@ -31,7 +31,6 @@ Description: "The PH Core Practitioner Profile inherits from the [FHIR R4 Practi
 
 * birthDate 0..1 MS
 * birthDate insert ObligationOptional
-
 * gender 0..1 MS
 * gender insert ObligationOptional
 

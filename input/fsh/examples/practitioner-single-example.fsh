@@ -8,7 +8,6 @@ Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-1
 * name.given[0] = "Maria"
 * name.given[+] = "Clara"
 * name.suffix = "MD"
-
 * telecom[0].system = #phone
 * telecom[=].value = "+63-912-345-6789"
 * telecom[=].use = #mobile
