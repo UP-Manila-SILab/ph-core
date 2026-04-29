@@ -45,7 +45,7 @@ Description: "Describes the event of a patient being administered a vaccine or a
 * primarySource MS
 * primarySource insert ObligationOptional
 
-* note 0..* MS
+* note MS
 * note insert ObligationOptional
 
 * protocolApplied MS
@@ -53,16 +53,6 @@ Description: "Describes the event of a patient being administered a vaccine or a
 
 * protocolApplied.doseNumberPositiveInt 0..1 MS
 * protocolApplied.doseNumberPositiveInt insert ObligationOptional
-
-
-* vaccineCode.coding ^slicing.discriminator.type = #value
-* vaccineCode.coding ^slicing.discriminator.path = "system"
-* vaccineCode.coding ^slicing.rules = #open
-* vaccineCode.coding contains
-    amtVaccineCode MS and
-    airVaccineCode MS
-* vaccineCode.coding[amtVaccineCode] insert ObligationOptional
-* vaccineCode.coding[airVaccineCode] insert ObligationOptional
 
 * insert CodeableConceptSO(statusReason)
 * insert CodeableConceptSO(vaccineCode)
