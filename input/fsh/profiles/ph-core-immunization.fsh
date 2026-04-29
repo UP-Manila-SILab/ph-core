@@ -51,7 +51,7 @@ Description: "Describes the event of a patient being administered a vaccine or a
 * protocolApplied MS
 * protocolApplied insert ObligationOptional
 
-* protocolApplied.doseNumberPositiveInt 0..1 MS
+* protocolApplied.doseNumberPositiveInt MS
 * protocolApplied.doseNumberPositiveInt insert ObligationOptional
 
 * insert CodeableConceptSO(statusReason)
