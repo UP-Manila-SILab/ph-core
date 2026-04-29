@@ -9,3 +9,4 @@ Description: "All province values from the Philippine Standard Geographic Codes 
 * $PSGC#0405800000  "Rizal"
 * $PSGC#1704000000  "Marinduque"
 * $PSGC#1705100000  "Occidental Mindoro"
+* $PSGC#0133000000  "La Union"
