@@ -10,45 +10,45 @@ Description: "Describes the event of a patient being administered a vaccine or a
 * extension[batchNumber] insert ObligationOptional
 * extension[administeredProduct] insert ObligationOptional
 
-* patient 1..1 MS
+* patient MS
 * patient only Reference(PHCorePatient)
 * patient insert ObligationRequired
 
-* status 1..1 MS
+* status MS
 * status insert ObligationRequired
 
-* lotNumber 0..1 MS
+* lotNumber MS
 * lotNumber insert ObligationOptional
 
-* encounter 0..1 MS
+* encounter MS
 * encounter only Reference(PHCoreEncounter)
 * encounter insert ObligationOptional
 
-* location 0..1 MS
+* location MS
 * location only Reference(PHCoreLocation)
 * location insert ObligationOptional
 
 * occurrence[x] only dateTime
-* occurrenceDateTime 1..1 MS
+* occurrenceDateTime MS
 * occurrenceDateTime insert ObligationRequired
 
-* performer 0..* MS
+* performer MS
 * performer insert ObligationOptional
 
-* performer.actor 1..1 MS
+* performer.actor MS
 * performer.actor only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization) // In FHIR R5 additional Profile was added Patient and RelatedPerson
 * performer.actor insert ObligationRequired
 
-* performer.actor.display 0..1 MS
+* performer.actor.display MS
 * performer.actor.display insert ObligationOptional
 
-* primarySource 0..1 MS
+* primarySource MS
 * primarySource insert ObligationOptional
 
 * note 0..* MS
 * note insert ObligationOptional
 
-* protocolApplied 0..* MS
+* protocolApplied MS
 * protocolApplied insert ObligationOptional
 
 * protocolApplied.doseNumberPositiveInt 0..1 MS
@@ -59,8 +59,8 @@ Description: "Describes the event of a patient being administered a vaccine or a
 * vaccineCode.coding ^slicing.discriminator.path = "system"
 * vaccineCode.coding ^slicing.rules = #open
 * vaccineCode.coding contains
-    amtVaccineCode 0..1 MS and
-    airVaccineCode 0..1 MS
+    amtVaccineCode MS and
+    airVaccineCode MS
 * vaccineCode.coding[amtVaccineCode] insert ObligationOptional
 * vaccineCode.coding[airVaccineCode] insert ObligationOptional
 
