@@ -17,9 +17,6 @@ Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-1
 
 * address.use = #home
 * address.line = "1234 Mabini Street"
-* address.line[+] = "Barangay Ermita"
-* address.city = "Manila"
-* address.district = "NCR"
 * address.postalCode = "1000"
 * address.country = "PH"
 * address.extension.url = "https://fhir.doh.gov.ph/ph-core/StructureDefinition/barangay"

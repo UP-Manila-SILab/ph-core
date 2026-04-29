@@ -14,24 +14,24 @@ Description: "The PH Core Practitioner Profile inherits from the [FHIR R4 Practi
 * extension[genderIdentity] ^short = "Gender Identity - in compliance with SOGIE Bill"
 * extension[individualPronouns] ^short = "Individual pronouns - in compliance with SOGIE Bill"
 
-* name 0..* MS
+* name MS
 * name insert ObligationOptional
 * name only PHCoreName
-* name.family 0..1 MS
+* name.family MS
 * name.family insert ObligationOptional
-* name.given 0..* MS
+* name.given MS
 * name.given insert ObligationOptional
 
-* telecom 0..* MS
+* telecom MS
 * telecom insert ObligationOptional
 
-* address 0..* MS
+* address MS
 * address insert ObligationOptional
 * address only PHCoreAddress
 
-* birthDate 0..1 MS
+* birthDate MS
 * birthDate insert ObligationOptional
-* gender 0..1 MS
+* gender MS
 * gender insert ObligationOptional
 
 * insert CodeableConceptSO(qualification.code)
