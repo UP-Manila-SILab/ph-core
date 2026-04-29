@@ -41,7 +41,7 @@
 - **Source**: FSH definitions, narrative content, and configuration in `input/`
 - **Generated**: SUSHI output, final IG documentation, and temporary build products
 - **Publisher**: HL7 FHIR IG Publisher (Java-based)
-- **Canonical base**: `http://doh.gov.ph/fhir/ph-core`
+- **Canonical base**: `https://fhir.doh.gov.ph/ph-core`
 
 ## Code Style & Conventions
 
@@ -51,6 +51,8 @@
 - **ID pattern**: Use lowercase with hyphens (e.g., `ph-core-patient`)
 - **Branch naming**: Use hyphens, never slashes (e.g., `feat-name` not `feat/name`)
 
+> 📚 **For detailed conventions** (naming patterns, Profile Development Rules, Reference Hierarchy, etc.), see [CONTRIBUTING.md](.github/CONTRIBUTING.md#code-style--conventions).
+
 ## Contribution Workflow
 
 1. Check for existing issue or create one using templates
@@ -58,6 +60,8 @@
 3. Reference issue in commits: `git commit -m "Description (#247)"`
 4. Open PR linking to issue: `Fixes #247`
 5. Merge only when CI is green, use squash merge, delete branch after
+
+> 📚 **For detailed contribution guidelines** (Issue labels, Development Setup, Code Review Process, etc.), see [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ## Debugging Tips
 

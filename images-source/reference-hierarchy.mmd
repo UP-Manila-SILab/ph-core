@@ -1,0 +1,68 @@
+graph TB
+    subgraph "Reference Priority"
+        direction TB
+        P1["1️⃣ PH Core Profiles<br/>(when available)"]
+        P2["2️⃣ Base FHIR R4<br/>(when no PH Core profile)"]
+        P3["3️⃣ Document Missing<br/>(// Add PHCoreX once available)"]
+    end
+
+    subgraph "Example: Procedure.subject"
+        PHCP[PHCorePatient]
+        BASE_PAT[Patient - base FHIR]
+        BASE_GROUP[Group - base FHIR]
+        REF["* subject only Reference(PHCorePatient or Group)"]
+    end
+
+    subgraph "Example: Procedure.performer.actor"
+        PHCPRAC[PHCorePractitioner]
+        PHCPRR[PHCorePractitionerRole]
+        PHCPAT[PHCorePatient]
+        PHCRP[PHCoreRelatedPerson]
+        BASE_DEV[Device - base FHIR]
+        REF2["* performer.actor only Reference(PHCorePractitioner or PHCorePractitionerRole or Device)"]
+    end
+
+    subgraph "Example: Procedure.reasonReference"
+        PHCCOND[PHCoreCondition]
+        PHCOBS[PHCoreObservation]
+        PHCPROC[PHCoreProcedure]
+        BASE_DIAG[DiagnosticReport - base FHIR]
+        BASE_DOC[DocumentReference - base FHIR]
+        NOTE["// Note: PHCoreDiagnosticReport when available"]
+        REF3["* reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure or DiagnosticReport)"]
+    end
+
+    P1 -->|preferred| PHCP
+    P1 -->|preferred| PHCPRAC
+    P1 -->|preferred| PHCPRR
+    P1 -->|preferred| PHCPAT
+    P1 -->|preferred| PHCRP
+    P1 -->|preferred| PHCCOND
+    P1 -->|preferred| PHCOBS
+    P1 -->|preferred| PHCPROC
+    
+    P2 -->|fallback| BASE_PAT
+    P2 -->|fallback| BASE_GROUP
+    P2 -->|fallback| BASE_DEV
+    P2 -->|fallback| BASE_DIAG
+    P2 -->|fallback| BASE_DOC
+    
+    P3 -->|document| NOTE
+
+    PHCP --> REF
+    BASE_GROUP --> REF
+    
+    PHCPRAC --> REF2
+    PHCPRR --> REF2
+    BASE_DEV --> REF2
+    
+    PHCCOND --> REF3
+    PHCOBS --> REF3
+    PHCPROC --> REF3
+    BASE_DIAG --> REF3
+    NOTE -.->|attached to| REF3
+
+    style P1 fill:#c8e6c9
+    style P2 fill:#fff9c4
+    style P3 fill:#ffcc80
+    style NOTE fill:#ffcc80

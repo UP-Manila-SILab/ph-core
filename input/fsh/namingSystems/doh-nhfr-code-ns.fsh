@@ -10,4 +10,4 @@ Description: "Health Facility Code (HFC) from the National Health Facility Regis
 * jurisdiction.coding = urn:iso:std:iso:3166#PH "Philippines"
 * publisher = "Philippines Department of Health"
 * uniqueId.type = #uri
-* uniqueId.value = "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"
+* uniqueId.value = "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"

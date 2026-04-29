@@ -8,7 +8,7 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 
 
 * active = true
-* identifier[NhfrCode].system = "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"
+* identifier[NhfrCode].system = "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"
 * identifier[NhfrCode].value = "1234567890"
 * identifier[PAN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
 * identifier[PAN].value = "PAN-2024-56789"

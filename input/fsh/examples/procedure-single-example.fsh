@@ -4,7 +4,7 @@ Usage: #example
 Description: "A comprehensive example of an appendectomy procedure performed on Juan Dela Cruz, demonstrating extensive use of Procedure resource elements including identifiers, status history, multiple performers, body site, complications, and follow-up care."
 
 * identifier[0].use = #usual
-* identifier[=].system = "http://doh.gov.ph/fhir/ph-core/NamingSystem/procedure-id"
+* identifier[=].system = "https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id"
 * identifier[=].value = "PROC-2024-000123"
 * identifier[+].use = #secondary
 * identifier[=].system = "http://philhealth.gov.ph/procedure"
