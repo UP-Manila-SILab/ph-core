@@ -18,3 +18,9 @@ Description: "Philippine General Hospital - A government tertiary hospital locat
 * address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region"
 * address.extension[cityMunicipality].valueCoding = $PSGC#1380600000 "City of Manila"
 * managingOrganization = Reference(Organization/organization-single-example)
+* type = $v3-roleCode#HOSP "Hospital"
+* physicalType = $location-physical-type#bu "Building"
+* position.longitude = 120.9856
+* position.latitude = 14.5764
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital Main Building - A tertiary hospital located in Manila.</div>"

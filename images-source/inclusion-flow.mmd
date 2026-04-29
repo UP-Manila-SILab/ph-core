@@ -1,0 +1,31 @@
+graph TB
+    START([Start]) --> IDENTIFY[Identify data element<br/>in use case analysis]
+    
+    IDENTIFY --> CHECK{Check existing<br/>PH Core profiles}
+    
+    CHECK -->|Profile exists| USE[Use existing<br/>PH Core profile]
+    CHECK -->|No profile| COUNT{Used by ≥2<br/>independent IGs?}
+    
+    COUNT -->|Yes| CANDIDATE[Mark as PH Core<br/>candidate]
+    COUNT -->|No| EXCEPTION{Exception criteria?<br/>Policy priority / Critical / Safety}
+    
+    EXCEPTION -->|Yes| APPRAISAL[Human appraisal<br/>by PH Core team]
+    EXCEPTION -->|No| PROGRAM[Keep as<br/>program-specific]
+    
+    APPRAISAL -->|Approved| CANDIDATE
+    APPRAISAL -->|Denied| PROGRAM
+    
+    CANDIDATE --> PROFILE[Create PH Core profile<br/>following conventions]
+    PROFILE --> DOCUMENT[Document in<br/>Decision Log]
+    DOCUMENT --> PUBLISH[Publish in<br/>PH Core IG]
+    
+    USE --> END([End])
+    PROGRAM --> END
+    PUBLISH --> END
+    
+    style START fill:#bbdefb
+    style END fill:#bbdefb
+    style CANDIDATE fill:#c8e6c9
+    style PROGRAM fill:#ffcc80
+    style COUNT fill:#fff9c4
+    style EXCEPTION fill:#fff9c4
