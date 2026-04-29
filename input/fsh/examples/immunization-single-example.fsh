@@ -16,12 +16,6 @@ Description: "Juan Dela Cruz received a completed intramuscular influenza (H5N1-
 
 * vaccineCode = http://hl7.org/fhir/sid/cvx#123 "influenza, H5N1-1203"
 * vaccineCode.text = "Influenza H5N1-1203 Vaccine"
-* vaccineCode.coding[amtVaccineCode].system = "https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-medicines-terminology"
-* vaccineCode.coding[amtVaccineCode].code = #1031000168103
-* vaccineCode.coding[amtVaccineCode].display = "Influenza vaccine"
-* vaccineCode.coding[airVaccineCode].system = "https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-immunisation-register-vaccine-code"
-* vaccineCode.coding[airVaccineCode].code = #FLU
-* vaccineCode.coding[airVaccineCode].display = "Influenza vaccine"
 
 * patient = Reference(Patient/patient-single-example)
 * encounter = Reference(Encounter/encounter-single-example)
