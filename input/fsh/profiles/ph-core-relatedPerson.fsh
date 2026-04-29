@@ -19,14 +19,14 @@ Description: "This profile localizes the FHIR R4 RelatedPerson resource to the P
 * identifier.use MS
 * identifier.use insert ObligationOptional
 
-* address 0..* MS
+* address MS
 * address insert ObligationOptional
 * address only PHCoreAddress
 
-* telecom 0..* MS
+* telecom MS
 * telecom insert ObligationOptional
 
-* name 0..* MS
+* name MS
 * name insert ObligationOptional
 * name only PHCoreName
 
