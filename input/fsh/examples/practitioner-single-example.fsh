@@ -22,7 +22,7 @@ Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-1
 * address.extension.url = "https://fhir.doh.gov.ph/ph-core/StructureDefinition/barangay"
 * address.extension.valueCoding = $PSGC#1339000003 "Ermita"
 * address.extension[+].url = "https://fhir.doh.gov.ph/ph-core/StructureDefinition/city-municipality"
-* address.extension[=].valueCoding = $PSGC#1339000000 "City of Manila"
+* address.extension[=].valueCoding = $PSGC#1380600000 "City of Manila"
 * address.extension[+].url = "https://fhir.doh.gov.ph/ph-core/StructureDefinition/region"
 * address.extension[=].valueCoding = $PSGC#1300000000 "National Capital Region"
 

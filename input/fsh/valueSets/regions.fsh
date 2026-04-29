@@ -7,4 +7,4 @@ Description: "The Region codes valueset includes all region values from the Phil
 * $PSGC#0102800000  "Ilocos Norte"
 * $PSGC#0102900000  "Ilocos Sur"
 * $PSGC#0103300000  "La Union" 
-* $PSGC#010000000  "Ilocos Region"
+* $PSGC#0100000000  "Ilocos Region"

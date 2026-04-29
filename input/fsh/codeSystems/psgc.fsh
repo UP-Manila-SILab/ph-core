@@ -5,7 +5,7 @@ Description: "Mock of the Philippine Standard Geographic Code."
 * insert ShareableCodeSystem
 * ^url = "https://psa.gov.ph/classification/psgc"
 * #1300000000 "National Capital Region"
-* #1339000000 "City of Manila"
+* #1380600000 "City of Manila"
 * #1339000003 "Ermita"
 * #1380100001 "Barangay 1"
 * #1380100000 "City of Caloocan"
