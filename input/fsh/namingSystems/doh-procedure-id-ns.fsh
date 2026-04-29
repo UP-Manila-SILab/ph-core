@@ -10,4 +10,4 @@ Description: "Identifier system for procedures assigned by the Department of Hea
 * jurisdiction.coding = urn:iso:std:iso:3166#PH "Philippines"
 * publisher = "Department of Health (DOH)"
 * uniqueId.type = #uri
-* uniqueId.value = "http://doh.gov.ph/fhir/ph-core/NamingSystem/procedure-id"
+* uniqueId.value = "https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id"
