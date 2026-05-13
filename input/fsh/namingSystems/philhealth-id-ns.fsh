@@ -1,7 +1,7 @@
 Instance: PhilHealthIDNS
 InstanceOf: NamingSystem
 Usage: #definition
-Title: "PIN - PhilHealth Identification Number"
+Title: "PIN - PhilHealth Identification Number NamingSystem"
 Description: "The permanent and unique number issued by PhilHealth to individual members and to each and every dependent."
 * name = "PhilHealthID"
 * kind = #identifier

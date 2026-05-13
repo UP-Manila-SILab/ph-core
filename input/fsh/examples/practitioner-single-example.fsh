@@ -1,7 +1,7 @@
 Instance: practitioner-single-example
 InstanceOf: PHCorePractitioner
 Usage: #example
-Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-15, residing in Manila, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. She is a Filipino national who speaks Filipino and English."
+Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-15, residing in Manila, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. She speaks Filipino and English."
 
 * name.use = #official
 * name.family = "Santos"
@@ -19,25 +19,22 @@ Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-1
 * address.line = "1234 Mabini Street"
 * address.postalCode = "1000"
 * address.country = "PH"
-* address.extension.url = "https://fhir.doh.gov.ph/ph-core/StructureDefinition/barangay"
+* address.extension.url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"
 * address.extension.valueCoding = $PSGC#1339000003 "Ermita"
-* address.extension[+].url = "https://fhir.doh.gov.ph/ph-core/StructureDefinition/city-municipality"
+* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"
 * address.extension[=].valueCoding = $PSGC#1380600000 "City of Manila"
-* address.extension[+].url = "https://fhir.doh.gov.ph/ph-core/StructureDefinition/region"
+* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"
 * address.extension[=].valueCoding = $PSGC#1300000000 "National Capital Region"
 
 * gender = #female
 * birthDate = "1985-05-15"
 
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines"
-* extension[nationality].extension[period].valuePeriod.start = "1985-05-15"
-
 * extension[sex].extension[value].valueCodeableConcept = $sct#248152002 "Female (finding)"
 * extension[sex].extension[type].valueCodeableConcept = http://loinc.org#76689-9 "Sex Assigned at Birth"
 
-* extension[genderIdentity].extension[value].valueCodeableConcept = http://loinc.org#LA22878-5 "Identifies as female"
+* extension[genderIdentity].extension[value].valueCodeableConcept = http://loinc.org#LA22879-3 "Identifies as female"
 
-* extension[individualPronouns].extension[value].valueCodeableConcept = http://loinc.org#LA29518-0 "she/her/her/hers/herself"
+* extension[individualPronouns].extension[value].valueCodeableConcept = http://loinc.org#LA29519-8 "she/her/her/hers/herself"
 
 * qualification[0].code = http://terminology.hl7.org/CodeSystem/v2-0360#MD "Doctor of Medicine"
 * qualification[=].identifier.system = "http://prc.gov.ph/fhir/Identifier/prc-license"
@@ -45,7 +42,7 @@ Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-1
 * qualification[=].period.start = "2010-07-15"
 * qualification[=].issuer = Reference(Organization/organization-single-example)
 
-* communication[0] = urn:ietf:bcp:47#tl "Filipino"
+* communication[0] = urn:ietf:bcp:47#fil "Filipino"
 * communication[+] = urn:ietf:bcp:47#en "English"
 
 * text.status = #generated

@@ -1,7 +1,7 @@
 Instance: PhilSysIDNS
 InstanceOf: NamingSystem
 Usage: #definition
-Title: "PhilSys Identification Number (PhilSys ID)"
+Title: "PhilSys Identification Number (PhilSys ID) NamingSystem"
 Description: "The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program."
 * name = "PhilSysID"
 * kind = #identifier

@@ -1,7 +1,7 @@
 Profile: PHCorePhilHealthID
 Parent: Identifier
 Id: ph-core-philhealth-id
-Title: "PIN - PhilHealth Identification Number"
+Title: "PIN - PhilHealth Identification Number Identifier"
 Description: "The permanent and unique number issued by PhilHealth to individual members and to each and every dependent."
 * system 1..
 * system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id" (exactly)

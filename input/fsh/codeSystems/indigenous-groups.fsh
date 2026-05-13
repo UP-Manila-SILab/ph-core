@@ -1,6 +1,6 @@
 CodeSystem: IndigenousGroupsCS
 Id: indigenous-groups-cs
-Title: "Indigenous Groups"
+Title: "Indigenous Groups CodeSystem"
 Description: "A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."
 * insert ShareableCodeSystem
 * #Aetas "Aetas" 

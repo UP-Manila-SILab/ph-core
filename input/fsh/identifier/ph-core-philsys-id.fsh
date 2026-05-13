@@ -1,7 +1,7 @@
 Profile: PHCorePhilSysID
 Parent: Identifier
 Id: ph-core-philsys-id
-Title: "PhilSys Identification Number (PhilSys ID)"
+Title: "PhilSys Identification Number (PhilSys ID) Identifier"
 Description: "The National ID Number PSA issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program."
 * system 1..
 * system = "http://philsys.gov.ph/fhir/Identifier/philsys-id" (exactly)
