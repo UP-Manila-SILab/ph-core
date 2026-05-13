@@ -35,6 +35,9 @@ jobs:
           fi
 
       - uses: actions/checkout@v4
+        with:
+          # Checkout the PR branch tip as-is, not a simulated merge commit
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Install dependencies
         run: |
@@ -49,6 +52,12 @@ jobs:
           ./_updatePublisher.sh -y
           chmod +x ./_genonce.sh
           ./_genonce.sh
+          
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-output
+          path: ./output
 
       - name: QA Gate
         run: |
@@ -63,12 +72,12 @@ jobs:
           fi
           echo "✅ QA passed: $ERRORS errors"
 
-      - name: Deploy to GitHub Pages
-        if: always() && github.event_name == 'push'
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./output
-          force_orphan: true
-          commit_message: "Deploy IG - ${{ github.sha }}"
+      # - name: Deploy to GitHub Pages
+      #   if: always() && github.event_name == 'push'
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_branch: gh-pages
+      #     publish_dir: ./output
+      #     force_orphan: true
+      #     commit_message: "Deploy IG - ${{ github.sha }}"
