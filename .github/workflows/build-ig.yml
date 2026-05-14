@@ -72,12 +72,12 @@ jobs:
           fi
           echo "✅ QA passed: $ERRORS errors"
 
-      # - name: Deploy to GitHub Pages
-      #   if: always() && github.event_name == 'push'
-      #   uses: peaceiris/actions-gh-pages@v4
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_branch: gh-pages
-      #     publish_dir: ./output
-      #     force_orphan: true
-      #     commit_message: "Deploy IG - ${{ github.sha }}"
+      - name: Deploy to GitHub Pages
+        if: always() && (github.event_name == 'push' || github.event_name == 'pull_request')
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./output
+          force_orphan: true
+          commit_message: "Deploy IG - ${{ github.sha }}"
