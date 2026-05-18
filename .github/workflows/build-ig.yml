@@ -14,7 +14,8 @@ on:
     branches: [main]
 
 permissions:
-  contents: write
+  contents: read
+  actions: write
 
 jobs:
   build:
@@ -75,15 +76,3 @@ jobs:
             exit 1
           fi
           echo "✅ QA passed: $ERRORS errors"
-
-      - name: Deploy to GitHub Pages
-        # Note: deploys on both push and PR for debugging.
-        # Security: PRs from forks can run this step; ensure the deploy key is repo-scoped.
-        if: always() && (github.event_name == 'push' || github.event_name == 'pull_request')
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_branch: gh-pages
-          publish_dir: ./output
-          force_orphan: true
-          commit_message: "Deploy IG - ${{ github.sha }}"
