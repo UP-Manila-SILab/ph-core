@@ -65,6 +65,10 @@ jobs:
             echo "::error::No qa.json found in output/. Failing for safety."
             exit 1
           fi
+
+          echo "📄 Printing qa.json for inspection..."
+          cat output/qa.json
+          
           ERRORS=$(jq -r '.errs // 0' output/qa.json)
           if [ "$ERRORS" -gt 0 ]; then
             echo "::error::QA errors found: $ERRORS"
