@@ -7,7 +7,7 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 * verificationStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification#confirmed "Confirmed"
 * verificationStatus.text = "Confirmed"
 * criticality = #high
-* code = $sct#294494002 "Benethamine penicillin allergy"
+* code = $sct#294494002 "Benethamine penicillin allergy" //allergies
 * code.text = "Benethamine penicillin allergy"
 * patient = Reference(Patient/patient-single-example)
 * onsetDateTime = "2023-01-15"
