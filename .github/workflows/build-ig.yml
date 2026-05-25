@@ -47,8 +47,8 @@ jobs:
           sudo gem install jekyll
           sudo npm install -g fsh-sushi
 
-          - name: Build IG
-          run: |
+      - name: Build IG
+        run: |
           mkdir -p ./input-cache
           # Pin to publisher 2.2.7 — 2.2.8+ introduces breaking changes that
           # cause build failures. Local builds via _updatePublisher.sh still
