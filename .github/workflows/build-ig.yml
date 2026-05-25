@@ -47,13 +47,21 @@ jobs:
           sudo gem install jekyll
           sudo npm install -g fsh-sushi
 
+      - name: Cache IG Publisher
+        uses: actions/cache@v4
+        with:
+          path: ./input-cache/publisher.jar
+          key: ig-publisher-2.2.7-${{ runner.os }}
+
       - name: Build IG
         run: |
           mkdir -p ./input-cache
           # Pin to publisher 2.2.7 — 2.2.8+ introduces breaking changes that
           # cause build failures. Local builds via _updatePublisher.sh still
           # fetch latest; this pin applies to CI only.
-          curl -L https://github.com/HL7/fhir-ig-publisher/releases/download/2.2.7/publisher.jar -o ./input-cache/publisher.jar
+          if [ ! -f ./input-cache/publisher.jar ]; then
+            curl -L https://github.com/HL7/fhir-ig-publisher/releases/download/2.2.7/publisher.jar -o ./input-cache/publisher.jar
+          fi
           chmod +x ./_genonce.sh
           ./_genonce.sh
           
