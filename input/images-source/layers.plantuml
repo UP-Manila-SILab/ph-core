@@ -4,23 +4,49 @@ skinparam backgroundColor #FEFEFE
 skinparam packageStyle rectangle
 skinparam linetype ortho
 skinparam wrapWidth 150
-scale max 900 width
+
+' Make the diagram more compact and vertical
+skinparam class {
+    BackgroundColor #FEFEFE
+    BorderColor #999999
+    FontSize 11
+}
+
+skinparam package {
+    BackgroundColor #FEFEFE
+    BorderColor #666666
+    FontSize 12
+}
+
+skinparam note {
+    BackgroundColor #FFFFCC
+    BorderColor #999999
+    FontSize 10
+}
 
 title PH Core IG Architecture Layers
 
 ' === R4 BASE LAYER (Blue) ===
 package "FHIR R4 Base" <<Layer>> #E3F2FD {
-    together {
-        class R4Patient as "Patient"
-        class R4Practitioner as "Practitioner"
-        class R4Organization as "Organization"
-        class R4Encounter as "Encounter"
-        class R4Observation as "Observation"
-        class R4Condition as "Condition"
-        class R4Medication as "Medication"
-        class R4Claim as "Claim"
-    }
-    note bottom of R4Patient
+    rectangle "Patient" as R4Patient
+    rectangle "Practitioner" as R4Practitioner
+    rectangle "Organization" as R4Organization
+    rectangle "Encounter" as R4Encounter
+    rectangle "Observation" as R4Observation
+    rectangle "Condition" as R4Condition
+    rectangle "Medication" as R4Medication
+    rectangle "Claim" as R4Claim
+
+    ' Force vertical stack
+    R4Patient -[hidden]down-> R4Practitioner
+    R4Practitioner -[hidden]down-> R4Organization
+    R4Organization -[hidden]down-> R4Encounter
+    R4Encounter -[hidden]down-> R4Observation
+    R4Observation -[hidden]down-> R4Condition
+    R4Condition -[hidden]down-> R4Medication
+    R4Medication -[hidden]down-> R4Claim
+
+    note right
         HL7 FHIR R4.0.1
         Foundation Resources
     end note
@@ -28,77 +54,120 @@ package "FHIR R4 Base" <<Layer>> #E3F2FD {
 
 ' === PH CORE LAYER (Green) ===
 package "PH Core IG" <<Layer>> #E8F5E9 {
-    
+
     package "Profiles" #C8E6C9 {
-        class PHCorePatient as "Patient"
-        class PHCorePractitioner as "Practitioner"
-        class PHCoreOrganization as "Organization"
-        class PHCoreEncounter as "Encounter"
-        class PHCoreObservation as "Observation"
-        class PHCoreCondition as "Condition"
-        class PHCoreMedication as "Medication"
-        class PHCoreClaim as "Claim"
-        class PHCoreProcedure as "Procedure"
-        class PHCoreImmunization as "Immunization"
-        class PHCoreAllergyIntolerance as "AllergyIntolerance"
-        class PHCoreServiceRequest as "ServiceRequest"
-        class PHCoreTask as "Task"
-        class PHCoreProvenance as "Provenance"
-        class "...(12 more)" as MoreProfiles
+        rectangle "Patient" as PHCorePatient
+        rectangle "Practitioner" as PHCorePractitioner
+        rectangle "Organization" as PHCoreOrganization
+        rectangle "Encounter" as PHCoreEncounter
+        rectangle "Observation" as PHCoreObservation
+        rectangle "Condition" as PHCoreCondition
+        rectangle "Medication" as PHCoreMedication
+        rectangle "Claim" as PHCoreClaim
+        rectangle "Procedure" as PHCoreProcedure
+        rectangle "Immunization" as PHCoreImmunization
+        rectangle "AllergyIntolerance" as PHCoreAllergyIntolerance
+        rectangle "ServiceRequest" as PHCoreServiceRequest
+        rectangle "Task" as PHCoreTask
+        rectangle "Provenance" as PHCoreProvenance
+        rectangle "...(12 more)" as MoreProfiles
+
+        PHCorePatient -[hidden]down-> PHCorePractitioner
+        PHCorePractitioner -[hidden]down-> PHCoreOrganization
+        PHCoreOrganization -[hidden]down-> PHCoreEncounter
+        PHCoreEncounter -[hidden]down-> PHCoreObservation
+        PHCoreObservation -[hidden]down-> PHCoreCondition
+        PHCoreCondition -[hidden]down-> PHCoreMedication
+        PHCoreMedication -[hidden]down-> PHCoreClaim
+        PHCoreClaim -[hidden]down-> PHCoreProcedure
+        PHCoreProcedure -[hidden]down-> PHCoreImmunization
+        PHCoreImmunization -[hidden]down-> PHCoreAllergyIntolerance
+        PHCoreAllergyIntolerance -[hidden]down-> PHCoreServiceRequest
+        PHCoreServiceRequest -[hidden]down-> PHCoreTask
+        PHCoreTask -[hidden]down-> PHCoreProvenance
+        PHCoreProvenance -[hidden]down-> MoreProfiles
     }
-    
+
     package "Extensions" #C8E6C9 {
-        class ExtBarangay as "Barangay"
-        class ExtCityMun as "City/Municipality"
-        class ExtProvince as "Province"
-        class ExtRegion as "Region"
-        class ExtIndigenous as "IndigenousGroup"
-        class ExtPWD as "PWDDisability"
-        class "...(7 more)" as MoreExtensions
+        rectangle "Barangay" as ExtBarangay
+        rectangle "City/Municipality" as ExtCityMun
+        rectangle "Province" as ExtProvince
+        rectangle "Region" as ExtRegion
+        rectangle "IndigenousGroup" as ExtIndigenous
+        rectangle "PWDDisability" as ExtPWD
+        rectangle "...(7 more)" as MoreExtensions
+
+        ExtBarangay -[hidden]down-> ExtCityMun
+        ExtCityMun -[hidden]down-> ExtProvince
+        ExtProvince -[hidden]down-> ExtRegion
+        ExtRegion -[hidden]down-> ExtIndigenous
+        ExtIndigenous -[hidden]down-> ExtPWD
+        ExtPWD -[hidden]down-> MoreExtensions
     }
-    
+
     package "Terminology" #C8E6C9 {
         package "CodeSystems" #A5D6A7 {
-            class CS_PSGC as "PSGC"
-            class CS_PSOC as "PSOC"
-            class CS_PSCED as "PSCED"
-            class CS_Drugs as "Drugs"
+            rectangle "PSGC" as CS_PSGC
+            rectangle "PSOC" as CS_PSOC
+            rectangle "PSCED" as CS_PSCED
+            rectangle "Drugs" as CS_Drugs
+
+            CS_PSGC -[hidden]down-> CS_PSOC
+            CS_PSOC -[hidden]down-> CS_PSCED
+            CS_PSCED -[hidden]down-> CS_Drugs
         }
         package "ValueSets" #A5D6A7 {
-            class VS_Regions as "Regions"
-            class VS_Provinces as "Provinces"
-            class VS_Cities as "Cities"
-            class VS_Barangays as "Barangays"
+            rectangle "Regions" as VS_Regions
+            rectangle "Provinces" as VS_Provinces
+            rectangle "Cities" as VS_Cities
+            rectangle "Barangays" as VS_Barangays
+
+            VS_Regions -[hidden]down-> VS_Provinces
+            VS_Provinces -[hidden]down-> VS_Cities
+            VS_Cities -[hidden]down-> VS_Barangays
         }
     }
-    
+
     package "Identifiers & Actors" #C8E6C9 {
-        class ID_PhilHealth as "PhilHealthID"
-        class ID_PhilSys as "PhilSysID"
-        class ActorServer as "Server"
-        class ActorConsumer as "Consumer"
-        class ActorCreator as "Creator"
+        rectangle "PhilHealthID" as ID_PhilHealth
+        rectangle "PhilSysID" as ID_PhilSys
+        rectangle "Server" as ActorServer
+        rectangle "Consumer" as ActorConsumer
+        rectangle "Creator" as ActorCreator
+
+        ID_PhilHealth -[hidden]down-> ID_PhilSys
+        ID_PhilSys -[hidden]down-> ActorServer
+        ActorServer -[hidden]down-> ActorConsumer
+        ActorConsumer -[hidden]down-> ActorCreator
     }
+
+    ' Stack inner packages vertically
+    Profiles -[hidden]down-> Extensions
+    Extensions -[hidden]down-> Terminology
+    Terminology -[hidden]down-> Identifiers
 }
 
 ' === PROGRAM IGs LAYER (Orange) ===
 package "Program-Specific IGs" <<Layer>> #FFF3E0 {
     package "Downstream Profiles" #FFE0B2 {
-        class DownstreamPatient as "Patient"
-        class DownstreamEncounter as "Encounter"
-        class "...(other profiles)" as DownstreamMore
+        rectangle "Patient" as DownstreamPatient
+        rectangle "Encounter" as DownstreamEncounter
+        rectangle "...(other profiles)" as DownstreamMore
+
+        DownstreamPatient -[hidden]down-> DownstreamEncounter
+        DownstreamEncounter -[hidden]down-> DownstreamMore
     }
 }
 
 ' === INHERITANCE / RELATIONSHIP ARROWS ===
-PHCorePatient --up-|> R4Patient
-PHCorePractitioner --up-|> R4Practitioner
-PHCoreOrganization --up-|> R4Organization
-PHCoreEncounter --up-|> R4Encounter
-PHCoreObservation --up-|> R4Observation
-PHCoreCondition --up-|> R4Condition
-PHCoreMedication --up-|> R4Medication
-PHCoreClaim --up-|> R4Claim
+PHCorePatient --down-|> R4Patient
+PHCorePractitioner --down-|> R4Practitioner
+PHCoreOrganization --down-|> R4Organization
+PHCoreEncounter --down-|> R4Encounter
+PHCoreObservation --down-|> R4Observation
+PHCoreCondition --down-|> R4Condition
+PHCoreMedication --down-|> R4Medication
+PHCoreClaim --down-|> R4Claim
 
 DownstreamPatient --up-|> PHCorePatient
 DownstreamEncounter --up-|> PHCoreEncounter

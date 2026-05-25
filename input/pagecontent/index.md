@@ -1,25 +1,16 @@
 <style>
-/* Container centers inline content */
-.svg-wrap {
+img, svg {
   max-width: 100%;
-  overflow: hidden;
-  text-align: center; /* center smaller images without forcing them to grow */
-}
-
-/* Keep intrinsic size (no upscaling), allow downscaling to fit width,
-   but constrain very tall/large images by viewport height so they don't stretch the page. */
-.svg-wrap svg {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 100%;       /* allow downscaling to container width */
-  height: auto !important; 
+  height: auto !important;
   box-sizing: border-box;
 }
 </style>
+
 # Draft Philippine Core FHIR Implementation Guide (PH Core IG)
-<div class="svg-wrap">
+
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc"
      width="100%" viewBox="0 0 1400 200" preserveAspectRatio="xMidYMin meet">
+
   <title id="title">DRAFT – PH-Core IG Disclaimer</title>
   <desc id="desc">This guide is a draft and under active development. Not for public consumption.</desc>
 
@@ -61,7 +52,7 @@
     <text x="0" y="19" text-anchor="middle" font-size="60" font-weight="700" fill="#c0392b">!</text>
   </g>
 </svg>
-</div>
+
 > **Project Status: In Development**  
 > This Implementation Guide is under active development and is not yet available for public or production use. Content, data models, and implementation details are subject to change.
 
@@ -73,11 +64,12 @@ PH Core IG standardizes commonly used FHIR profiles, extensions, terminology bin
 
 PH Core is actively being developed by UP Manila National TeleHealth Center, under the guidance of the Phillippines Department of Health, with technical assistance from CSIRO Australia.
 
-The initial draft of IG will be tested in the Connectathon to validate proof of concept and direction settings for the Philippines Core IG development process. 
+The initial draft of IG will be tested in the Connectathon to validate proof of concept and direction settings for the Philippines Core IG development process.
 
 # Purpose and Scope
 
 The PH Core IG aims to:
+
 1. Promote nationwide consistency and interoperability of health data
 2. Support alignment with national policies such as JAO 2021-0002
 3. Enable reuse of HL7 and international FHIR artifacts
@@ -86,6 +78,7 @@ The PH Core IG aims to:
 This guide focuses on core clinical and administrative resources (e.g., Patient, Practitioner, Organization, Encounter, Observation) that are widely applicable across multiple use cases. It does not define program-specific workflows or reporting payloads, which are addressed by downstream Implementation Guides.
 
 # Usage of this Guide
+
 - Health information systems implement PH Core profiles as a baseline for interoperability
 - Program-specific IGs inherit from PH Core and apply additional constraints
 - Developers and vendors use the guide to build and validate FHIR-conformant systems
@@ -98,13 +91,22 @@ The PH Core IG is developed through a collaborative, open, and standards-based p
 # Relationship with other IGs
 
 **PH Core:**
+
 - defines a set of conformance requirements that enforce a set of ‘minimum requirements’ on the local concepts, specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions.
 - for use by the stakeholders in the Philippines when implementing FHIR to provide a common implementation and to be built upon when creating further profiles and implementation guides.
 - conformance may become tied to regulatory and/or contractual agreements in order to necessitate adoption to this more prescriptive specification.
 
 The context of PH Core within the set of FHIR Standards is shown in the diagram below.
 
-{% include layers.svg %}
+<img
+  src="ph-ig-ecosystem.png"
+  alt="PH IG Ecosystem"
+  style="width: 100%; height: auto;"
+  loading="lazy"
+/>
+
+{% capture layers_svg %}{% include layers.svg %}{% endcapture %}
+{{ layers_svg | remove: '<?xml version="1.0" encoding="us-ascii" standalone="no"?>' }}
 
 # Usage
 
@@ -128,4 +130,3 @@ FHIR®© Connectathon events are key to the verification of the guide as being s
 {% include dependency-table-short.xhtml %}
 {% include dependency-table-nontech.xhtml %}
 {% include globals-table.xhtml %}
-
