@@ -40,6 +40,17 @@ jobs:
           # Checkout the PR branch tip as-is, not a simulated merge commit
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
+      # Cache system dependencies (gems + npm) to speed up install steps.
+      # To invalidate this cache (e.g. when bumping package versions), change
+      # the key suffix below: deps-v1 → deps-v2, deps-v3, etc.
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            /var/lib/gems
+          key: ${{ runner.os }}-deps-v1
+
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -47,6 +58,8 @@ jobs:
           sudo gem install jekyll
           sudo npm install -g fsh-sushi
 
+      # Cache the IG Publisher JAR. If you ever bump the publisher version,
+      # update the key below (e.g. 2.2.7 → 2.2.8) so the new JAR is fetched.
       - name: Cache IG Publisher
         uses: actions/cache@v4
         with:
