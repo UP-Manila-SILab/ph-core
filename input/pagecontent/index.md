@@ -67,7 +67,7 @@
 
 The Philippine Core FHIR Implementation Guide (PH Core IG) defines the nationally agreed core clinical and administrative data standards for interoperable health information exchange in the Philippines. It provides a common, implementable foundation for health systems to consistently exchange data using the HL7® FHIR® standard.
 
-PH Core IG standardizes commonly used FHIR profiles, extensions, terminology bindings, and conformance expectations that are applicable across health programs, facilities, and systems nationwide. Program- or use case–specific IGs (such as the NHDR IG) should use PH Core artifacts to avoid duplication and ensure nationwide interoperability.
+PH Core IG standardizes commonly used FHIR profiles, extensions, terminology bindings, and conformance expectations that are applicable across health programs, facilities, and systems nationwide. Program- or use case–specific IGs should use PH Core artifacts to avoid duplication and ensure nationwide interoperability.
 
 # Project Background
 

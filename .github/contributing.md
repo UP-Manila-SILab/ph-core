@@ -495,6 +495,19 @@ Severity: #error
 * Provide examples for new profiles.
 * Validate the IG builds successfully before submitting a PR.
 
+#### Examples
+
+* **Do NOT manually set `meta.profile` in example instances.** SUSHI automatically populates `meta.profile` from the `InstanceOf` declaration. Manual lines are redundant, risk stale canonical URLs when the IG canonical changes, and create maintenance burden.
+  ```fsh
+  // ❌ WRONG - redundant and brittle
+  * meta.profile = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim"
+
+  // ✅ CORRECT - SUSHI auto-generates meta.profile from InstanceOf
+  Instance: claim-single-example
+  InstanceOf: PHCoreClaim
+  Usage: #example
+  ```
+
 ---
 
 ## Branching Strategy

@@ -3,6 +3,8 @@
 skinparam backgroundColor #FEFEFE
 skinparam packageStyle rectangle
 skinparam linetype ortho
+skinparam wrapWidth 150
+scale max 900 width
 
 title PH Core IG Architecture Layers
 
@@ -81,13 +83,10 @@ package "PH Core IG" <<Layer>> #E8F5E9 {
 
 ' === PROGRAM IGs LAYER (Orange) ===
 package "Program-Specific IGs" <<Layer>> #FFF3E0 {
-    package "NHDR" #FFE0B2 {
-        class NhdrPatient as "Patient"
-        class NhdrEncounter as "Encounter"
-        class "...(other profiles)" as NhdrMore
-    }
-    package "Other IGs" #FFE0B2 {
-        class "Future IGs" as FutureIGs
+    package "Downstream Profiles" #FFE0B2 {
+        class DownstreamPatient as "Patient"
+        class DownstreamEncounter as "Encounter"
+        class "...(other profiles)" as DownstreamMore
     }
 }
 
@@ -101,8 +100,8 @@ PHCoreCondition --up-|> R4Condition
 PHCoreMedication --up-|> R4Medication
 PHCoreClaim --up-|> R4Claim
 
-NhdrPatient --up-|> PHCorePatient
-NhdrEncounter --up-|> PHCoreEncounter
+DownstreamPatient --up-|> PHCorePatient
+DownstreamEncounter --up-|> PHCoreEncounter
 
 ' === EXTENSION USAGE ===
 ExtBarangay ..> PHCorePatient : extends
@@ -116,10 +115,10 @@ note right of PHCorePatient
     address extensions)
 end note
 
-note right of NhdrPatient
-    Downstream IGs (NHDR, etc.)
-    inherit from PH Core
-    and add program-specific
+note right of DownstreamPatient
+    Downstream IGs inherit
+    from PH Core and add
+    program-specific
     constraints
 end note
 
