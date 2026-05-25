@@ -1,60 +1,133 @@
 @startuml
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam packageStyle rectangle
+skinparam linetype ortho
 
-'Hide empty parts:
-hide empty fields
-hide empty methods
-hide circles
+title PH Core IG Architecture Layers
 
-'You can find more examles at https://plantuml.com/class-diagram
-
-package r4 <<fhir_version>> {
-
-class R4Patient as "Patient"
-
+' === R4 BASE LAYER (Blue) ===
+package "FHIR R4 Base" <<Layer>> #E3F2FD {
+    together {
+        class R4Patient as "Patient"
+        class R4Practitioner as "Practitioner"
+        class R4Organization as "Organization"
+        class R4Encounter as "Encounter"
+        class R4Observation as "Observation"
+        class R4Condition as "Condition"
+        class R4Medication as "Medication"
+        class R4Claim as "Claim"
+    }
+    note bottom of R4Patient
+        HL7 FHIR R4.0.1
+        Foundation Resources
+    end note
 }
 
-package ph_core <<IG>>{
-
-package extensions {
-
+' === PH CORE LAYER (Green) ===
+package "PH Core IG" <<Layer>> #E8F5E9 {
+    
+    package "Profiles" #C8E6C9 {
+        class PHCorePatient as "Patient"
+        class PHCorePractitioner as "Practitioner"
+        class PHCoreOrganization as "Organization"
+        class PHCoreEncounter as "Encounter"
+        class PHCoreObservation as "Observation"
+        class PHCoreCondition as "Condition"
+        class PHCoreMedication as "Medication"
+        class PHCoreClaim as "Claim"
+        class PHCoreProcedure as "Procedure"
+        class PHCoreImmunization as "Immunization"
+        class PHCoreAllergyIntolerance as "AllergyIntolerance"
+        class PHCoreServiceRequest as "ServiceRequest"
+        class PHCoreTask as "Task"
+        class PHCoreProvenance as "Provenance"
+        class "...(12 more)" as MoreProfiles
+    }
+    
+    package "Extensions" #C8E6C9 {
+        class ExtBarangay as "Barangay"
+        class ExtCityMun as "City/Municipality"
+        class ExtProvince as "Province"
+        class ExtRegion as "Region"
+        class ExtIndigenous as "IndigenousGroup"
+        class ExtPWD as "PWDDisability"
+        class "...(7 more)" as MoreExtensions
+    }
+    
+    package "Terminology" #C8E6C9 {
+        package "CodeSystems" #A5D6A7 {
+            class CS_PSGC as "PSGC"
+            class CS_PSOC as "PSOC"
+            class CS_PSCED as "PSCED"
+            class CS_Drugs as "Drugs"
+        }
+        package "ValueSets" #A5D6A7 {
+            class VS_Regions as "Regions"
+            class VS_Provinces as "Provinces"
+            class VS_Cities as "Cities"
+            class VS_Barangays as "Barangays"
+        }
+    }
+    
+    package "Identifiers & Actors" #C8E6C9 {
+        class ID_PhilHealth as "PhilHealthID"
+        class ID_PhilSys as "PhilSysID"
+        class ActorServer as "Server"
+        class ActorConsumer as "Consumer"
+        class ActorCreator as "Creator"
+    }
 }
 
-package profiles {
-
-class PHCoreAddress as "Address"
-class PHCoreOtherID as "OtherID"
-class PHCorePatient as "Patient"
-class PHCorePddRegistration as "Registration"
-class PHCorePhilHealthID as "PhilHealthID"
-
-PHCorePatient -up-|> R4Patient
-
-
+' === PROGRAM IGs LAYER (Orange) ===
+package "Program-Specific IGs" <<Layer>> #FFF3E0 {
+    package "NHDR" #FFE0B2 {
+        class NhdrPatient as "Patient"
+        class NhdrEncounter as "Encounter"
+        class "...(other profiles)" as NhdrMore
+    }
+    package "Other IGs" #FFE0B2 {
+        class "Future IGs" as FutureIGs
+    }
 }
 
-package vocabulary {
+' === INHERITANCE / RELATIONSHIP ARROWS ===
+PHCorePatient --up-|> R4Patient
+PHCorePractitioner --up-|> R4Practitioner
+PHCoreOrganization --up-|> R4Organization
+PHCoreEncounter --up-|> R4Encounter
+PHCoreObservation --up-|> R4Observation
+PHCoreCondition --up-|> R4Condition
+PHCoreMedication --up-|> R4Medication
+PHCoreClaim --up-|> R4Claim
 
-}
+NhdrPatient --up-|> PHCorePatient
+NhdrEncounter --up-|> PHCoreEncounter
 
-package extension {
+' === EXTENSION USAGE ===
+ExtBarangay ..> PHCorePatient : extends
+ExtProvince ..> PHCorePatient : extends
 
-}
+note right of PHCorePatient
+    PH Core profiles inherit
+    from FHIR R4 and add
+    PH-specific constraints
+    (e.g., identifiers,
+    address extensions)
+end note
 
+note right of NhdrPatient
+    Downstream IGs (NHDR, etc.)
+    inherit from PH Core
+    and add program-specific
+    constraints
+end note
 
-
-}
-
-package ph_nhdr <<IG>>{ 
-
-package profiles_nhdr as "profiles" {
-
-class NhdrPatient as "Patient"
-
-NhdrPatient -up-|> PHCorePatient
-
-}
-
-}
-
+legend right
+    |= Color |= Meaning |
+    | <#E3F2FD> | FHIR R4 Base Resources |
+    | <#E8F5E9> | PH Core Artifacts |
+    | <#FFF3E0> | Program-Specific IGs |
+endlegend
 
 @enduml
