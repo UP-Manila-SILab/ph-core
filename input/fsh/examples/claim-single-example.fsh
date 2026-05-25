@@ -3,8 +3,6 @@ InstanceOf: PHCoreClaim
 Usage: #example
 Description: "A PhilHealth outpatient consultation claim for Juan Dela Cruz submitted by Dr. Maria Clara Santos for management of Type 2 Diabetes Mellitus."
 
-* meta.profile = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim"
-
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#professional "Professional"
 * use = #claim
