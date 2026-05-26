@@ -1,0 +1,343 @@
+# IG Release Publish — Versioned release workflow for PH Core FHIR IG
+# Based on: https://github.com/jgsuess/ph-ereferral/blob/main/.github/workflows/ig-release.yml
+# Chained from: build-ig.yml (reuses artifacts or builds fresh on tag push)
+
+name: IG Release Publish
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_run:
+    workflows: ["Build PH Core FHIR IG"]
+    types:
+      - completed
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ig-release
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish-release:
+    runs-on: ubuntu-latest
+    # Only run if triggered by tag push, or if workflow_run succeeded
+    if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Derive version from tag or workflow
+        id: v
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            TAG="${GITHUB_REF_NAME}"
+            VERSION="${TAG#v}"
+          else
+            # For workflow_run, use the triggering workflow's head SHA as dev version
+            VERSION="dev-${{ github.event.workflow_run.head_sha }}"
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Release version: $VERSION"
+
+      - name: Checkout (tag)
+        if: github.event_name == 'push'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Download build artifact (workflow_run)
+        if: github.event_name == 'workflow_run'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh run download ${{ github.event.workflow_run.id }} \
+            --name ig-output \
+            --dir ./output \
+            --repo ${{ github.repository }}
+
+      - name: Setup build environment (tag push only)
+        if: github.event_name == 'push'
+        run: |
+          # Setup Node
+          npm install -g fsh-sushi
+          # Setup Java
+          sudo apt-get update && sudo apt-get install -y default-jdk
+          # Setup Ruby + Jekyll
+          sudo apt-get install -y ruby-full
+          gem install jekyll
+          # Setup Graphviz
+          sudo apt-get install -y graphviz
+          # Download Publisher
+          mkdir -p input-cache
+          curl -L -o input-cache/publisher.jar \
+            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+
+      - name: Patch version for release build (sushi-config.yaml)
+        if: github.event_name == 'push'
+        env:
+          RELEASE_VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          python3 - <<'PY'
+          import re, pathlib, os
+          version = os.environ["RELEASE_VERSION"]
+          p = pathlib.Path("sushi-config.yaml")
+          txt = p.read_text(encoding="utf-8")
+          txt = re.sub(r'(?m)^(version:\s*).+$',       r'\g<1>' + version,  txt)
+          txt = re.sub(r'(?m)^(releaseLabel:\s*).+$',   r'\g<1>release',     txt)
+          p.write_text(txt, encoding="utf-8")
+          print(f"Patched sushi-config.yaml → version: {version}, releaseLabel: release")
+          PY
+
+      - name: Run IG Publisher (tag push only)
+        if: github.event_name == 'push'
+        run: java -jar input-cache/publisher.jar ig.ini
+
+      - name: Checkout gh-pages branch into workspace
+        run: |
+          rm -rf .gh-pages
+          git clone --depth 1 --branch gh-pages \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            .gh-pages 2>/dev/null || {
+              echo "gh-pages branch does not exist yet — creating it."
+              mkdir .gh-pages && cd .gh-pages && git init
+              git checkout -b gh-pages
+              git remote add origin \
+                "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+            }
+
+      - name: Refuse to overwrite an existing release
+        run: |
+          REL="${{ steps.v.outputs.version }}"
+          if [ -d ".gh-pages/$REL" ]; then
+            echo "::error::Release $REL already exists in gh-pages. Refusing to overwrite."
+            exit 1
+          fi
+
+      - name: Copy release output to gh-pages:/VERSION/
+        run: |
+          REL="${{ steps.v.outputs.version }}"
+          mkdir -p ".gh-pages/$REL"
+          rsync -a output/ ".gh-pages/$REL/"
+
+      - name: Update /current/ redirect
+        run: |
+          REL="${{ steps.v.outputs.version }}"
+          mkdir -p ".gh-pages/current"
+          cat > ".gh-pages/current/index.html" <<EOF
+          <!doctype html>
+          <html><head>
+          <meta http-equiv="refresh" content="0; url=../$REL/">
+          <title>Redirecting to latest release…</title>
+          </head><body>
+          <p>Redirecting to <a href="../$REL/">$REL</a>…</p>
+          </body></html>
+          EOF
+
+      - name: Update history.html
+        run: |
+          python3 - <<'PY'
+          import os, re, pathlib
+          root = pathlib.Path(".gh-pages")
+          versions = []
+          for p in root.iterdir():
+              if p.is_dir() and re.fullmatch(r"\d+\.\d+\.\d+([\-\.].+)?", p.name):
+                  versions.append(p.name)
+          versions.sort(
+              key=lambda s: [int(x) if x.isdigit() else x for x in re.split(r'(\d+)', s)],
+              reverse=True
+          )
+          html = [
+              "<!doctype html>",
+              "<html><head><meta charset='utf-8'>",
+              "<title>PH Core IG — Publication History</title>",
+              "<style>",
+              "  body { font-family: sans-serif; max-width: 800px; margin: 2em auto; }",
+              "  li   { margin: .5em 0; }",
+              "</style>",
+              "</head><body>",
+              "<h1>Publication History</h1>",
+              "<p>All published versions of the PH Core FHIR Implementation Guide.</p>",
+              "<ul>",
+          ]
+          for v in versions:
+              html.append(f'  <li><a href="./{v}/">{v}</a></li>')
+          html += [
+              "</ul>",
+              "<hr>",
+              '<p><a href="./dev/">Development build (latest CI)</a></p>',
+              "</body></html>",
+          ]
+          (root / "history.html").write_text("\n".join(html), encoding="utf-8")
+          print(f"Wrote history.html with {len(versions)} release(s)")
+          PY
+
+      - name: Update package-list.json
+        env:
+          RELEASE_VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, os, datetime
+          root     = pathlib.Path(".gh-pages")
+          pl_path  = root / "package-list.json"
+          version  = os.environ["RELEASE_VERSION"]
+          canonical = "https://up-manila-silab.github.io/ph-core"
+
+          if pl_path.exists():
+              pl = json.loads(pl_path.read_text(encoding="utf-8"))
+          else:
+              pl = {
+                  "package-id": "ph.core.fhir",
+                  "title": "PH Core FHIR Implementation Guide",
+                  "canonical": canonical,
+                  "introduction": "Philippine Core FHIR Implementation Guide",
+                  "list": []
+              }
+
+          # Mark all existing entries as not current
+          for entry in pl.get("list", []):
+              entry["current"] = False
+
+          # Prepend this release
+          pl["list"].insert(0, {
+              "version": version,
+              "date": datetime.date.today().isoformat(),
+              "path": f"{canonical}/{version}",
+              "status": "draft",
+              "fhirversion": "4.0.1",
+              "sequence": "Draft",
+              "current": True,
+          })
+
+          pl_path.write_text(json.dumps(pl, indent=2) + "\n", encoding="utf-8")
+          print(f"Updated package-list.json — now {len(pl['list'])} release(s)")
+          PY
+
+      - name: Update root index.html (landing page)
+        run: |
+          python3 - <<'PY'
+          import json, re, pathlib, datetime
+
+          root = pathlib.Path(".gh-pages")
+
+          # --- Discover releases from package-list.json ---
+          pl_path = root / "package-list.json"
+          releases = []
+          latest_version = None
+          if pl_path.exists():
+              pl = json.loads(pl_path.read_text(encoding="utf-8"))
+              for entry in pl.get("list", []):
+                  v = entry["version"]
+                  date = entry.get("date", "")
+                  is_current = entry.get("current", False)
+                  releases.append((v, date, is_current))
+                  if is_current:
+                      latest_version = v
+
+          # --- Build HTML ---
+          rows = []
+
+          # Dev row (always present)
+          rows.append(
+              '<tr>'
+              '<td><a href="./dev/">dev</a></td>'
+              '<td><span class="badge badge-dev">CI Build</span></td>'
+              '<td>Latest continuous-integration build from the <code>main</code> branch.</td>'
+              '</tr>'
+          )
+
+          # Release rows
+          for v, date, is_current in releases:
+              current_badge = ' <span class="badge badge-current">current</span>' if is_current else ""
+              date_str = f" &mdash; published {date}" if date else ""
+              rows.append(
+                  f'<tr>'
+                  f'<td><a href="./{v}/">{v}</a></td>'
+                  f'<td><span class="badge badge-release">Release</span>{current_badge}</td>'
+                  f'<td>Draft release{date_str}.</td>'
+                  f'</tr>'
+              )
+
+          html = f"""\
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>PH Core FHIR Implementation Guide</title>
+          <style>
+            body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                   max-width: 800px; margin: 2em auto; padding: 0 1em; color: #24292f; line-height: 1.6; }}
+            h1   {{ border-bottom: 1px solid #d1d9e0; padding-bottom: .3em; }}
+            h2   {{ margin-top: 1.5em; }}
+            a    {{ color: #0969da; text-decoration: none; }}
+            a:hover {{ text-decoration: underline; }}
+            table {{ border-collapse: collapse; width: 100%; margin: 1em 0; }}
+            th, td {{ text-align: left; padding: .5em .75em; border: 1px solid #d1d9e0; }}
+            th   {{ background: #f6f8fa; }}
+            .badge {{ display: inline-block; padding: .15em .5em; border-radius: 3px;
+                     font-size: .85em; font-weight: 600; }}
+            .badge-dev     {{ background: #ddf4ff; color: #0969da; }}
+            .badge-release {{ background: #dafbe1; color: #1a7f37; }}
+            .badge-current {{ background: #fff8c5; color: #9a6700; }}
+            footer {{ margin-top: 3em; padding-top: 1em; border-top: 1px solid #d1d9e0;
+                     font-size: .85em; color: #656d76; }}
+          </style>
+          </head>
+          <body>
+
+          <h1>PH Core FHIR Implementation Guide</h1>
+
+          <p>
+            This is the publication landing page for the <strong>Philippine Core
+            FHIR Implementation Guide</strong>&nbsp;&mdash; a national FHIR
+            implementation guide for the Philippine health information exchange.
+          </p>
+
+          <p>
+            <strong>Source repository:</strong>
+            <a href="https://github.com/UP-Manila-SILab/ph-core">github.com/UP-Manila-SILab/ph-core</a>
+          </p>
+
+          <h2>Published Versions</h2>
+
+          <table>
+            <thead>
+              <tr><th>Version</th><th>Status</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              {"".join(rows)}
+            </tbody>
+          </table>
+
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="./current/">Latest release</a> (redirects to newest tagged version)</li>
+            <li><a href="./history.html">Full publication history</a></li>
+            <li><a href="./package-list.json">package-list.json</a> (FHIR package feed)</li>
+          </ul>
+
+          <footer>
+            This page is regenerated automatically by the CI and release workflows.
+          </footer>
+
+          </body>
+          </html>
+          """
+
+          import textwrap
+          (root / "index.html").write_text(textwrap.dedent(html), encoding="utf-8")
+          print(f"Wrote index.html with {len(releases)} release(s)")
+          PY
+
+      - name: Deploy to GitHub Pages (force orphan)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./.gh-pages
+          force_orphan: true
+          commit_message: "release: publish ${{ steps.v.outputs.tag }} (IG ${{ steps.v.outputs.version }})"

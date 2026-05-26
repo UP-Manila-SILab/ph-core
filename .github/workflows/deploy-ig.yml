@@ -1,6 +1,6 @@
 # Deploy workflow triggered after the build completes.
-# This runs in the base repo's trusted context so it has access to ACTIONS_DEPLOY_KEY.
-# Fork PRs can now safely deploy because the untrusted build is isolated from the trusted deploy.
+# This workflow now chains into ig-release.yml for unified versioned publishing.
+# The actual deployment logic has been moved to ig-release.yml.
 
 name: Deploy PH Core FHIR IG
 
@@ -18,20 +18,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Download build artifact
+      - name: Trigger IG Release workflow
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh run download ${{ github.event.workflow_run.id }} \
-            --name ig-output \
-            --dir ./output \
-            --repo ${{ github.repository }}
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_branch: gh-pages
-          publish_dir: ./output
-          force_orphan: true
-          commit_message: "Deploy IG - ${{ github.event.workflow_run.head_sha }}"
+          # The ig-release.yml workflow listens for workflow_run events
+          # and handles the actual deployment with versioning
+          echo "Build succeeded. ig-release.yml will handle deployment with versioning."
+          echo "Workflow run ID: ${{ github.event.workflow_run.id }}"
