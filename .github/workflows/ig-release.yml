@@ -13,7 +13,6 @@ on:
     workflows: ["Build PH Core FHIR IG"]
     types:
       - completed
-    branches: [main]
   workflow_dispatch:
     inputs:
       version:
