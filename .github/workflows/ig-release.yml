@@ -8,11 +8,18 @@ on:
   push:
     tags:
       - "v*"
+      - "pr-*"
   workflow_run:
     workflows: ["Build PH Core FHIR IG"]
     types:
       - completed
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to test (e.g., 0.0.0-test, pr-312)'
+        required: true
+        default: '0.0.0-test'
 
 permissions:
   contents: write
@@ -28,12 +35,19 @@ jobs:
     if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - name: Derive version from tag or workflow
+      - name: Derive version from tag, workflow, or dispatch
         id: v
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          elif [ "${{ github.event_name }}" = "push" ]; then
             TAG="${GITHUB_REF_NAME}"
-            VERSION="${TAG#v}"
+            # Handle pr-* tags: pr-312 → pr-312 (keep as-is for test releases)
+            if echo "$TAG" | grep -q '^pr-'; then
+              VERSION="$TAG"
+            else
+              VERSION="${TAG#v}"
+            fi
           else
             # For workflow_run, use the triggering workflow's head SHA as dev version
             VERSION="dev-${{ github.event.workflow_run.head_sha }}"
@@ -109,12 +123,17 @@ jobs:
                 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
             }
 
-      - name: Refuse to overwrite an existing release
+      - name: Handle existing release (overwrite for pr-* tags, refuse for versioned)
         run: |
           REL="${{ steps.v.outputs.version }}"
           if [ -d ".gh-pages/$REL" ]; then
-            echo "::error::Release $REL already exists in gh-pages. Refusing to overwrite."
-            exit 1
+            if echo "$REL" | grep -q '^pr-'; then
+              echo "PR test release $REL exists — overwriting."
+              rm -rf ".gh-pages/$REL"
+            else
+              echo "::error::Release $REL already exists in gh-pages. Refusing to overwrite."
+              exit 1
+            fi
           fi
 
       - name: Copy release output to gh-pages:/VERSION/
