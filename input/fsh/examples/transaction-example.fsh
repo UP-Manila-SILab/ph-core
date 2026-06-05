@@ -15,8 +15,8 @@ Description: "Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara S
 * entry[=].resource = example-condition
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Medication/example-medication"
-* entry[=].resource = example-medication
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Medication/medication-single-example"
+* entry[=].resource = medication-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Medication"
 * entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Observation/blood-pressure"
@@ -89,13 +89,6 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 * encounter = Reference(Encounter/example-encounter)
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"
-
-Instance: example-medication
-InstanceOf: PHCoreMedication
-Usage: #example
-Description: "A medication resource with no specific details provided."
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">A medication resource has been created, but no specific details are provided.</div>"
 
 Instance: blood-pressure
 InstanceOf: PHCoreObservation
