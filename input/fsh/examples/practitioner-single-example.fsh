@@ -44,6 +44,3 @@ Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-1
 
 * communication[0] = urn:ietf:bcp:47#fil "Filipino"
 * communication[+] = urn:ietf:bcp:47#en "English"
-
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos, MD, is a licensed physician born on May 15, 1985, residing in Manila, NCR, Philippines. She can be reached via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.</div>"
