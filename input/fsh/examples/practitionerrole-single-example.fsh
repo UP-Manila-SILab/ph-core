@@ -3,7 +3,8 @@ InstanceOf: PHCorePractitionerRole
 Usage: #example
 Description: "Dr. Maria Clara Santos is a General Practitioner working with the Department of Health. One of her assignments is at the Philippine General Hospital."
 * active = true
-* identifier.system = "http://doh.gov.ph/fhir/Identifier/practitioner-role-id"
+* identifier.system = "http://fhir.doh.gov.ph/phcore/Identifier/practitioner-role-id"
+* identifier.value = "PRC-ROLE-001"
 * practitioner = Reference(Practitioner/practitioner-single-example)
 * organization = Reference(Organization/organization-single-example)
 * location = Reference(Location/location-single-example)
@@ -13,5 +14,3 @@ Description: "Dr. Maria Clara Santos is a General Practitioner working with the 
 * telecom[=].value = "+63-2-8651-7800"
 * telecom[+].system = #email
 * telecom[=].value = "maria.santos@doh.gov.ph"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos is a General Practitioner working with the Department of Health. One of her assignments is at the Philippine General Hospital.</div>"
