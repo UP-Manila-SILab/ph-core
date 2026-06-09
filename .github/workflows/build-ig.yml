@@ -40,6 +40,17 @@ jobs:
           # Checkout the PR branch tip as-is, not a simulated merge commit
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
+      # Cache system dependencies (gems + npm) to speed up install steps.
+      # To invalidate this cache (e.g. when bumping package versions), change
+      # the key suffix below: deps-v1 → deps-v2, deps-v3, etc.
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            /var/lib/gems
+          key: ${{ runner.os }}-deps-v1
+
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -47,10 +58,23 @@ jobs:
           sudo gem install jekyll
           sudo npm install -g fsh-sushi
 
+      # Cache the IG Publisher JAR. If you ever bump the publisher version,
+      # update the key below (e.g. 2.2.7 → 2.2.8) so the new JAR is fetched.
+      - name: Cache IG Publisher
+        uses: actions/cache@v4
+        with:
+          path: ./input-cache/publisher.jar
+          key: ig-publisher-2.2.7-${{ runner.os }}
+
       - name: Build IG
         run: |
-          chmod +x ./_updatePublisher.sh
-          ./_updatePublisher.sh -y
+          mkdir -p ./input-cache
+          # Pin to publisher 2.2.7 — 2.2.8+ introduces breaking changes that
+          # cause build failures. Local builds via _updatePublisher.sh still
+          # fetch latest; this pin applies to CI only.
+          if [ ! -f ./input-cache/publisher.jar ]; then
+            curl -L https://github.com/HL7/fhir-ig-publisher/releases/download/2.2.7/publisher.jar -o ./input-cache/publisher.jar
+          fi
           chmod +x ./_genonce.sh
           ./_genonce.sh
           

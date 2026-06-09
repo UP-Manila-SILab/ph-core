@@ -101,8 +101,6 @@ Instance: blood-pressure
 InstanceOf: PHCoreObservation
 Usage: #example
 Description: "Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal)."
-* meta.profile[0] = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/bp"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"
 * basedOn.identifier.system = "https://acme.org/identifiers"
