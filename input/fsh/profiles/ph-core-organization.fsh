@@ -13,10 +13,12 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 
 * identifier contains 
     NhfrCode 0..* MS and
+    HcpnCode 0..* MS and
     PAN 0..* MS and
     PEN 0..* MS
 
 * identifier[NhfrCode] only PHCoreDOHNHFRCode
+* identifier[HcpnCode] only PHCoreHCPNCode
 * identifier[PAN] only PHCorePhilHealthPAN
 * identifier[PEN] only PHCorePhilHealthPEN
 
