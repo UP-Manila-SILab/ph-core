@@ -11,7 +11,7 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 * identifier[NhfrCode].system = "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"
 * identifier[NhfrCode].value = "1234567890"
 * identifier[HcpnCode].system = "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"
-* identifier[HcpnCode].type.text = "Baguio City Health Care Provider Network"
+* identifier[HcpnCode].value = "Baguio City Health Care Provider Network"
 * identifier[PAN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
 * identifier[PAN].value = "PAN-2024-56789"
 * identifier[PEN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
