@@ -1,7 +1,7 @@
 Instance: organization-single-example
 InstanceOf: PHCoreOrganization
 Title: "Example PH Core Organization"
-Description: "An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, PAN, PEN) and Must Support fields."
+Description: "An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, HCPN, PAN, PEN) and Must Support fields."
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789, PEN: PEN-987654321) is an active PH Core Organization located at 123, Barangay 1, City of Las Piñas, Benguet, 1740, Philippines. The organization can be contacted via phone at +63-2-8651-7800 or email at contact@doh.gov.ph.</div>"
@@ -10,6 +10,8 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 * active = true
 * identifier[NhfrCode].system = "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"
 * identifier[NhfrCode].value = "1234567890"
+* identifier[HcpnCode].system = "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"
+* identifier[HcpnCode].type.text = "Baguio City Health Care Provider Network"
 * identifier[PAN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
 * identifier[PAN].value = "PAN-2024-56789"
 * identifier[PEN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
