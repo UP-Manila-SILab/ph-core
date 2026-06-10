@@ -34,8 +34,6 @@ Description: "Blood pressure observation for Juan Dela Cruz taken on 17 Septembe
 * component[=].valueQuantity = 60 'mm[Hg]' "mmHg"
 * component[=].interpretation = $v3-ObservationInterpretation#L "Low"
 * component[=].interpretation.text = "Below low normal"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">On 17 September 2012, a blood pressure observation was recorded for Juan Dela Cruz. The systolic pressure was 107 mmHg (Normal), and the diastolic pressure was 60 mmHg (Below low normal). The measurement was taken from the right arm and performed by a practitioner.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 2: Vitals with Encounter Reference
@@ -52,8 +50,6 @@ Description: "Body temperature observation for Juan Dela Cruz taken during an am
 * effectiveDateTime = "2023-01-01T10:30:00Z"
 * valueQuantity = 37.0 'Cel' "degrees Celsius"
 * performer = Reference(Practitioner/practitioner-single-example)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature: 37.0 degrees Celsius for Juan Dela Cruz during ambulatory encounter on 2023-01-01.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 3: Lab Panel with hasMember References
@@ -72,8 +68,6 @@ Description: "Basic Metabolic Panel with references to individual electrolyte ob
 * hasMember[+] = Reference(Observation/observation-sodium-example)
 * hasMember[+] = Reference(Observation/observation-potassium-example)
 * performer = Reference(Practitioner/practitioner-single-example)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic Metabolic Panel for Juan Dela Cruz including glucose, sodium, and potassium results.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 4: Individual Lab Result - Glucose
@@ -92,8 +86,6 @@ Description: "Fasting blood glucose observation for Juan Dela Cruz."
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 * referenceRange.low = 70 'mg/dL' "mg/dL"
 * referenceRange.high = 100 'mg/dL' "mg/dL"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fasting blood glucose: 95 mg/dL (Normal) for Juan Dela Cruz.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 5: Individual Lab Result - Sodium
@@ -112,8 +104,6 @@ Description: "Serum sodium observation for Juan Dela Cruz."
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 * referenceRange.low = 135 'mmol/L' "mmol/L"
 * referenceRange.high = 145 'mmol/L' "mmol/L"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Serum sodium: 140 mmol/L (Normal) for Juan Dela Cruz.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 6: Individual Lab Result - Potassium
@@ -132,8 +122,6 @@ Description: "Serum potassium observation for Juan Dela Cruz."
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 * referenceRange.low = 3.5 'mmol/L' "mmol/L"
 * referenceRange.high = 5.0 'mmol/L' "mmol/L"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Serum potassium: 4.0 mmol/L (Normal) for Juan Dela Cruz.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 7: BMI with derivedFrom References
@@ -152,8 +140,6 @@ Description: "BMI calculated from height and weight observations for Juan Dela C
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 * derivedFrom[0] = Reference(Observation/observation-weight-example)
 * derivedFrom[+] = Reference(Observation/observation-height-example)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">BMI: 23.5 kg/m2 (Normal) calculated from weight and height measurements for Juan Dela Cruz.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 8: Weight (for BMI calculation)
@@ -169,8 +155,6 @@ Description: "Body weight observation for Juan Dela Cruz."
 * effectiveDateTime = "2023-06-15T09:00:00Z"
 * valueQuantity = 70 'kg' "kg"
 * performer = Reference(Practitioner/practitioner-single-example)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight: 70 kg for Juan Dela Cruz.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 9: Height (for BMI calculation)
@@ -186,8 +170,6 @@ Description: "Body height observation for Juan Dela Cruz."
 * effectiveDateTime = "2023-06-15T09:00:00Z"
 * valueQuantity = 173 'cm' "cm"
 * performer = Reference(Practitioner/practitioner-single-example)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body height: 173 cm for Juan Dela Cruz.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 10: Intra-procedure Vitals (partOf reference)
@@ -207,8 +189,6 @@ Description: "Intraoperative blood pressure observation during appendectomy proc
 * component[=].valueQuantity = 120 'mm[Hg]' "mmHg"
 * component[+].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[=].valueQuantity = 80 'mm[Hg]' "mmHg"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Intraoperative blood pressure: 120/80 mmHg during appendectomy for Juan Dela Cruz.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 11: Lab Result based on ServiceRequest (basedOn reference)
@@ -226,8 +206,6 @@ Description: "Hemoglobin A1c lab result based on a service request for diabetes 
 * valueQuantity = 6.2 '%' "%"
 * performer = Reference(Organization/organization-single-example)
 * interpretation = $v3-ObservationInterpretation#N "Normal"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hemoglobin A1c: 6.2% (Normal) for Juan Dela Cruz based on diabetes monitoring request.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 12: Observation with PractitionerRole as performer
@@ -244,8 +222,6 @@ Description: "Heart rate observation performed by a practitioner in a specific r
 * valueQuantity = 72 '/min' "beats/minute"
 * performer = Reference(PractitionerRole/practitionerrole-single-example)
 * interpretation = $v3-ObservationInterpretation#N "Normal"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate: 72 beats/minute (Normal) for Juan Dela Cruz, performed by Dr. Santos in her General Practitioner role.</div>"
 
 // ----------------------------------------------------------------------------
 // Example 13: Environmental Observation (Location as subject)
@@ -262,5 +238,3 @@ Description: "Environmental temperature observation for a hospital ward (Locatio
 * effectiveDateTime = "2024-03-15T14:00:00Z"
 * valueQuantity = 22 'Cel' "degrees Celsius"
 * performer = Reference(Organization/organization-single-example)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Environmental temperature: 22 degrees Celsius recorded at Philippine General Hospital ward.</div>"

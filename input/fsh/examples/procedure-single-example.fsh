@@ -61,6 +61,3 @@ Description: "A comprehensive example of an appendectomy procedure performed on 
 
 * usedCode = $sct#261424001 "Primary operation"
 * usedCode.text = "Laparoscopic instruments"
-
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Procedure:</b> Laparoscopic appendectomy (SNOMED CT: 80146002)</p><p><b>Subject:</b> Juan Dela Cruz</p><p><b>Status:</b> Completed</p><p><b>Performed:</b> January 15, 2024, 08:30 - 10:15 (Asia/Manila)</p><p><b>Performer:</b> Dr. Maria Clara Santos (Healthcare professional) on behalf of Department of Health - Central Office</p><p><b>Reason:</b> Acute appendicitis with peritonitis (SNOMED CT: 74400008)</p><p><b>Body Site:</b> Entire appendix - Right lower quadrant abdomen</p><p><b>Outcome:</b> Successful - Procedure completed without complications</p><p><b>Follow-up:</b> Postsurgical wound care in 7 days</p><p><b>Notes:</b> Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact.</p></div>"
