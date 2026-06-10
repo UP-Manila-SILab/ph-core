@@ -20,6 +20,3 @@ Description: "Provenance record documenting that Dr. Maria Clara Santos created 
 * signature[=].targetFormat = #xml
 * signature[=].sigFormat = #xml
 * signature[=].data = "dGhpcyBibG9iIGlzIHNuZWFrZWQ="
-
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Provenance record documenting that Dr. Maria Clara Santos created the blood pressure observation for Juan Dela Cruz on September 17, 2012, on behalf of the Department of Health - Central Office.</div>"
