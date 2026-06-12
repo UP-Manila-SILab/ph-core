@@ -1,35 +1,40 @@
 Instance: transaction-example
 InstanceOf: Bundle
 Usage: #example
-Description: "Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos."
+Description: "Transaction bundle demonstrating a coherent clinical scenario: Juan Dela Cruz has a blood pressure check during an encounter with Dr. Maria Clara Santos, with his known allergies, conditions, and immunization history."
 * type = #transaction
-* entry[0].fullUrl = "https://fhir.doh.gov.ph/phcore/Patient/example-patient"
-* entry[=].resource = example-patient
+* entry[0].fullUrl = "https://fhir.doh.gov.ph/phcore/Patient/patient-single-example"
+* entry[=].resource = patient-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Encounter/example-encounter"
-* entry[=].resource = example-encounter
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example"
+* entry[=].resource = practitioner-single-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Practitioner"
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example"
+* entry[=].resource = encounter-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Encounter"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Condition/example-condition"
-* entry[=].resource = example-condition
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Condition/condition-single-example"
+* entry[=].resource = condition-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
 * entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Medication/medication-single-example"
 * entry[=].resource = medication-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Medication"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Observation/blood-pressure"
-* entry[=].resource = blood-pressure
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example"
+* entry[=].resource = observation-bp-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/AllergyIntolerance/example-allergy"
-* entry[=].resource = example-allergy
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example"
+* entry[=].resource = allergy-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "AllergyIntolerance"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Practitioner/example-practitioner"
-* entry[=].resource = example-practitioner
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example"
+* entry[=].resource = immunization-single-example
 * entry[=].request.method = #POST
+* entry[=].request.url = "Immunization"
 * entry[=].request.url = "Practitioner"
 
 Instance: example-patient
@@ -56,7 +61,6 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.district = "NCR"
 * address.postalCode = "1100"
 * address.country = "PH"
-
 * address.extension.url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"
 * address.extension.valueCoding = $PSGC#1380100001 "Barangay 1"
 
@@ -66,9 +70,6 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/province"
 * address.extension[=].valueCoding = $PSGC#0402100000  "Cavite"
 
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"
-
 Instance: example-encounter
 InstanceOf: PHCoreEncounter
 Usage: #example
@@ -76,8 +77,6 @@ Description: "An ambulatory encounter for Juan Dela Cruz that has been completed
 * status = #finished
 * class = $v3-ActCode#AMB "ambulatory"
 * subject = Reference(Patient/example-patient)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">An ambulatory encounter for Juan Dela Cruz that has been completed.</div>"
 
 Instance: example-condition
 InstanceOf: Condition
@@ -87,37 +86,6 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 * code = $sct#44054006 "Diabetes mellitus type 2"
 * subject = Reference(Patient/example-patient)
 * encounter = Reference(Encounter/example-encounter)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"
-
-Instance: blood-pressure
-InstanceOf: PHCoreObservation
-Usage: #example
-Description: "Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal)."
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"
-* basedOn.identifier.system = "https://acme.org/identifiers"
-* basedOn.identifier.value = "1234"
-* status = #final
-* category = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#85354-9 "Blood pressure panel with all children optional"
-* code.text = "Blood pressure systolic & diastolic"
-* subject = Reference(Patient/example-patient)
-* effectiveDateTime = "2012-09-17"
-* performer = Reference(Practitioner/example-practitioner)
-* interpretation = $v3-ObservationInterpretation#L "Low"
-* interpretation.text = "Below low normal"
-* bodySite = $sct#368209003 "Right arm"
-* component[0].code = $loinc#8480-6 "Systolic blood pressure"
-* component[=].valueQuantity = 107 'mm[Hg]' "mmHg"
-* component[=].interpretation = $v3-ObservationInterpretation#N "Normal"
-* component[=].interpretation.text = "Normal"
-* component[+].code = $loinc#8462-4 "Diastolic blood pressure"
-* component[=].valueQuantity = 60 'mm[Hg]' "mmHg"
-* component[=].interpretation = $v3-ObservationInterpretation#L "Low"
-* component[=].interpretation.text = "Below low normal"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">On 17 September 2012, a blood pressure observation was recorded for Juan Dela Cruz. The systolic pressure was 107 mmHg (Normal), and the diastolic pressure was 60 mmHg (Below low normal). The measurement was taken from the right arm and performed by a practitioner.</div>"
 
 Instance: example-allergy
 InstanceOf: AllergyIntolerance
@@ -127,8 +95,6 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 * criticality = #high
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * patient = Reference(Patient/example-patient)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>"
 
 Instance: example-immunization
 InstanceOf: PHCoreImmunization
@@ -153,8 +119,6 @@ Usage: #example
 * status = #completed
 * vaccineCode = http://hl7.org/fhir/sid/cvx#123
 * vaccineCode.text = "influenza, H5N1-1203"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz received a completed intramuscular flu shot (H5N1-1203) in the left arm on January 10, 2013. The vaccine lot number was AAJN11K and it was privately funded.</div>"
 
 Instance: example-practitioner
 InstanceOf: PHCorePractitioner
