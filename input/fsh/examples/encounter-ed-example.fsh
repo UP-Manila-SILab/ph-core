@@ -1,7 +1,7 @@
 Instance: encounter-ed-example
 InstanceOf: PHCoreEncounter
 Usage: #example
-Description: "Emergency Department encounter for Juan Dela Cruz — Acute Coronary Syndrome presentation. Triage at 08:30, PCI at 09:15, transferred to CCU at 10:30."
+Description: "Emergency Department encounter for Juan Dela Cruz — Acute Coronary Syndrome presentation. Triage at 08:30, evaluation and management, transferred to CCU at 10:30."
 
 * status = #finished
 * class = $v3-ActCode#EMER "emergency"
@@ -27,19 +27,14 @@ Description: "Emergency Department encounter for Juan Dela Cruz — Acute Corona
 * participant[=].type = $v3-ParticipationType#ADM "admitter"
 
 * diagnosis[0].condition = Reference(Condition/condition-acs-example)
-* diagnosis[=].use = http://terminology.hl7.org/CodeSystem/diagnosis-role#AD "Admission diagnosis"
+* diagnosis[=].use = $diagnosis-role#AD "Admission diagnosis"
 * diagnosis[=].rank = 1
 
 * diagnosis[+].condition = Reference(Condition/condition-t2dm-example)
-* diagnosis[=].use = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
+* diagnosis[=].use = $diagnosis-role#CC "Chief complaint"
 * diagnosis[=].rank = 2
 
 * reasonReference = Reference(Condition/condition-acs-example)
 
-* location[0].location = Reference(Location/location-ed-example)
-* location[=].status = #active
-* location[=].period.start = "2026-06-12T08:30:00+08:00"
-* location[=].period.end = "2026-06-12T09:15:00+08:00"
-
-* hospitalization.admitSource = http://terminology.hl7.org/CodeSystem/admit-source#emd "From accident/emergency department"
-* hospitalization.dischargeDisposition = http://terminology.hl7.org/CodeSystem/discharge-disposition#home "Home"
+* hospitalization.admitSource = $admit-source#emd "From accident/emergency department"
+* hospitalization.dischargeDisposition = $discharge-disposition#home "Home"

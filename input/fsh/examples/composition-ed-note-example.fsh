@@ -49,22 +49,6 @@ Description: "Emergency Department Clinical Note — Acute Coronary Syndrome cas
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><strong>Assessment:</strong> Acute Coronary Syndrome — Anterior STEMI (ST-elevation V1-V4 on ECG, elevated troponin 2.5 ng/mL).</p><p><strong>Plan:</strong> 1) Aspirin 325mg chewed, Clopidogrel 600mg loading, Metoprolol 25mg PO. 2) Cardiology consult for emergent PCI. 3) Admit to CCU post-PCI.</p></div>"
 * section[=].entry[0] = Reference(Condition/condition-acs-example)
-* section[=].entry[+] = Reference(Procedure/procedure-pci-example)
-* section[=].entry[+] = Reference(ServiceRequest/servicerequest-pci-example)
-
-* section[+].title = "Medications Administered"
-* section[=].code = $loinc#10160-0 "History of medication use Narrative"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><ul><li>Aspirin 325mg PO (chewed) — 08:40</li><li>Clopidogrel 600mg PO (loading) — 08:40</li><li>Metoprolol 25mg PO — 08:42</li></ul></div>"
-* section[=].entry[0] = Reference(MedicationRequest/medicationrequest-aspirin-acs)
-* section[=].entry[+] = Reference(MedicationRequest/medicationrequest-clopidogrel-acs)
-* section[=].entry[+] = Reference(MedicationRequest/medicationrequest-metoprolol-acs)
-
-* section[+].title = "Allergies and Adverse Reactions"
-* section[=].code = $loinc#48765-2 "Allergies and adverse reactions Document"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><strong>Penicillin allergy</strong> — High criticality. Anaphylaxis history (2018). Avoid all penicillin-class antibiotics.</p></div>"
-* section[=].entry = Reference(AllergyIntolerance/allergy-penicillin-example)
 
 * section[+].title = "Active Conditions"
 * section[=].code = $loinc#11493-4 "Hospital discharge studies summary Narrative"

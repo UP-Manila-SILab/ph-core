@@ -1,7 +1,7 @@
 Instance: bundle-acs-case-example
 InstanceOf: Bundle
 Usage: #example
-Description: "Transaction bundle for Acute Coronary Syndrome case — Juan Dela Cruz. Contains all resources for ED presentation, evaluation, and PCI management."
+Description: "Transaction bundle for Acute Coronary Syndrome case — Juan Dela Cruz. Contains core PH Core resources for ED presentation and evaluation."
 
 * type = #transaction
 
@@ -15,11 +15,6 @@ Description: "Transaction bundle for Acute Coronary Syndrome case — Juan Dela 
 * entry[=].request.method = #POST
 * entry[=].request.url = "Organization"
 
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Location/location-ed-example"
-* entry[=].resource = location-ed-example
-* entry[=].request.method = #POST
-* entry[=].request.url = "Location"
-
 * entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example"
 * entry[=].resource = practitioner-ed-example
 * entry[=].request.method = #POST
@@ -29,11 +24,6 @@ Description: "Transaction bundle for Acute Coronary Syndrome case — Juan Dela 
 * entry[=].resource = practitionerrole-ed-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "PractitionerRole"
-
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/RelatedPerson/relatedperson-mother-example"
-* entry[=].resource = relatedperson-mother-example
-* entry[=].request.method = #POST
-* entry[=].request.url = "RelatedPerson"
 
 * entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example"
 * entry[=].resource = condition-t2dm-example
@@ -114,36 +104,6 @@ Description: "Transaction bundle for Acute Coronary Syndrome case — Juan Dela 
 * entry[=].resource = observation-ecg-acs
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
-
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Procedure/procedure-pci-example"
-* entry[=].resource = procedure-pci-example
-* entry[=].request.method = #POST
-* entry[=].request.url = "Procedure"
-
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/ServiceRequest/servicerequest-pci-example"
-* entry[=].resource = servicerequest-pci-example
-* entry[=].request.method = #POST
-* entry[=].request.url = "ServiceRequest"
-
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-aspirin-acs"
-* entry[=].resource = medicationrequest-aspirin-acs
-* entry[=].request.method = #POST
-* entry[=].request.url = "MedicationRequest"
-
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-clopidogrel-acs"
-* entry[=].resource = medicationrequest-clopidogrel-acs
-* entry[=].request.method = #POST
-* entry[=].request.url = "MedicationRequest"
-
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-metoprolol-acs"
-* entry[=].resource = medicationrequest-metoprolol-acs
-* entry[=].request.method = #POST
-* entry[=].request.url = "MedicationRequest"
-
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-penicillin-example"
-* entry[=].resource = allergy-penicillin-example
-* entry[=].request.method = #POST
-* entry[=].request.url = "AllergyIntolerance"
 
 * entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Composition/composition-ed-note-example"
 * entry[=].resource = composition-ed-note-example
