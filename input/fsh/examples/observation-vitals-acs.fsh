@@ -3,39 +3,27 @@
 // Juan Dela Cruz, 45M, presenting to PGH ED with chest pain
 // ============================================================================
 
-Instance: observation-bp-systolic-acs
+Instance: observation-bp-acs
 InstanceOf: PHCoreObservation
 Usage: #example
-Description: "Systolic blood pressure — 160 mmHg (elevated) on arrival."
+Description: "Blood pressure — 160/95 mmHg (elevated) on arrival."
 
 * status = #final
 * category = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#8480-6 "Systolic blood pressure"
+* code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(Patient/patient-acs-example)
 * encounter = Reference(Encounter/encounter-ed-example)
 * effectiveDateTime = "2026-06-12T08:30:00+08:00"
 * performer = Reference(Practitioner/practitioner-ed-example)
-* valueQuantity = 160 'mm[Hg]' "mmHg"
-* interpretation = $v3-ObservationInterpretation#H "High"
 * bodySite = $sct#368209003 "Right arm"
 
-// ---
+* component[0].code = $loinc#8480-6 "Systolic blood pressure"
+* component[=].valueQuantity = 160 'mm[Hg]' "mmHg"
+* component[=].interpretation = $v3-ObservationInterpretation#H "High"
 
-Instance: observation-bp-diastolic-acs
-InstanceOf: PHCoreObservation
-Usage: #example
-Description: "Diastolic blood pressure — 95 mmHg (elevated) on arrival."
-
-* status = #final
-* category = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#8462-4 "Diastolic blood pressure"
-* subject = Reference(Patient/patient-acs-example)
-* encounter = Reference(Encounter/encounter-ed-example)
-* effectiveDateTime = "2026-06-12T08:30:00+08:00"
-* performer = Reference(Practitioner/practitioner-ed-example)
-* valueQuantity = 95 'mm[Hg]' "mmHg"
-* interpretation = $v3-ObservationInterpretation#H "High"
-* bodySite = $sct#368209003 "Right arm"
+* component[+].code = $loinc#8462-4 "Diastolic blood pressure"
+* component[=].valueQuantity = 95 'mm[Hg]' "mmHg"
+* component[=].interpretation = $v3-ObservationInterpretation#H "High"
 
 // ---
 
@@ -120,7 +108,7 @@ Description: "Pain severity — 8/10 (severe) on arrival."
 * subject = Reference(Patient/patient-acs-example)
 * encounter = Reference(Encounter/encounter-ed-example)
 * effectiveDateTime = "2026-06-12T08:30:00+08:00"
-* performer = Reference(Patient/patient-acs-example)
+* performer = Reference(Practitioner/practitioner-ed-example)
 * valueQuantity = 8 '{score}' "score"
 * interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * note.text = "Patient reports crushing substernal chest pain radiating to left arm."

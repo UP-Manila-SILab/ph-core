@@ -78,6 +78,7 @@ menu:
   Home: index.html
   Terminology: terminology.html
   Artifacts: artifacts.html
+  "Sample Case": sample-case.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

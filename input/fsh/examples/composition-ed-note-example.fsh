@@ -22,7 +22,7 @@ Description: "Emergency Department Clinical Note — Acute Coronary Syndrome cas
 * custodian = Reference(Organization/organization-pgh-example)
 
 * section[0].title = "Chief Complaint"
-* section[=].code = $loinc#10154-3 "Chief complaint Narrative"
+* section[=].code = $loinc#10154-3 "Chief complaint Reported"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm, associated with dyspnea and diaphoresis.</p></div>"
 * section[=].entry = Reference(Condition/condition-acs-example)
@@ -33,11 +33,10 @@ Description: "Emergency Department Clinical Note — Acute Coronary Syndrome cas
 * section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Patient Juan Dela Cruz, 45M, Filipino, presented to PGH ED at 08:30 with acute chest pain. Pain described as crushing, 8/10 severity, substernal with radiation to left arm. Associated with shortness of breath and sweating. No relief with rest. Known T2DM since 2020. Current smoker (1 pack/day x 20 years).</p></div>"
 
 * section[+].title = "Vital Signs"
-* section[=].code = $loinc#8716-3 "Vital signs"
+* section[=].code = $loinc#8716-3 "Vital signs note"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><ul><li>BP: 160/95 mmHg (elevated)</li><li>HR: 110 bpm (tachycardic)</li><li>RR: 24/min (tachypneic)</li><li>SpO2: 92% RA (hypoxemic)</li><li>Temp: 37.2°C</li><li>Pain: 8/10</li></ul></div>"
-* section[=].entry[0] = Reference(Observation/observation-bp-systolic-acs)
-* section[=].entry[+] = Reference(Observation/observation-bp-diastolic-acs)
+* section[=].entry[0] = Reference(Observation/observation-bp-acs)
 * section[=].entry[+] = Reference(Observation/observation-hr-acs)
 * section[=].entry[+] = Reference(Observation/observation-rr-acs)
 * section[=].entry[+] = Reference(Observation/observation-spo2-acs)

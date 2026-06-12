@@ -8,7 +8,7 @@ Description: "Acute Coronary Syndrome — ST-Elevation Myocardial Infarction (ST
 * category = $condition-category#encounter-diagnosis "Encounter Diagnosis"
 * category.text = "Acute Diagnosis"
 
-* code = $sct#401303003 "Acute coronary syndrome"
+* code = $sct#401303003 "Acute ST segment elevation myocardial infarction"
 * code.text = "Acute Coronary Syndrome - STEMI"
 
 * subject = Reference(Patient/patient-acs-example)

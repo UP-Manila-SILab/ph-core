@@ -37,4 +37,3 @@ Description: "Emergency Department encounter for Juan Dela Cruz — Acute Corona
 * reasonReference = Reference(Condition/condition-acs-example)
 
 * hospitalization.admitSource = $admit-source#emd "From accident/emergency department"
-* hospitalization.dischargeDisposition = $discharge-disposition#home "Home"

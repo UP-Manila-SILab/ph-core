@@ -10,8 +10,6 @@ Description: "Dr. Maria Clara Santos — Emergency Medicine Attending Physician 
 
 * practitioner = Reference(Practitioner/practitioner-ed-example)
 * organization = Reference(Organization/organization-pgh-example)
-* location = Reference(Location/location-ed-example)
-
 * code = $practitioner-role#doctor "Doctor"
 * specialty = $sct#773568002 "Emergency medicine"
 

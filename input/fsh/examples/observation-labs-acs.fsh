@@ -29,7 +29,7 @@ Description: "Random blood glucose — 180 mg/dL (hyperglycemia) on arrival."
 
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#33746-9 "Glucose [Mass/volume] in Serum or Plasma --1 hour post dose glucose"
+* code = $loinc#2345-7 "Glucose [Mass/volume] in Serum or Plasma"
 * subject = Reference(Patient/patient-acs-example)
 * encounter = Reference(Encounter/encounter-ed-example)
 * effectiveDateTime = "2026-06-12T08:45:00+08:00"
@@ -88,7 +88,7 @@ Description: "LDL cholesterol — 160 mg/dL (high)."
 
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#2085-9 "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+* code = $loinc#2089-1 "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
 * subject = Reference(Patient/patient-acs-example)
 * encounter = Reference(Encounter/encounter-ed-example)
 * effectiveDateTime = "2026-06-12T08:45:00+08:00"
@@ -107,7 +107,7 @@ Description: "12-lead ECG — ST-elevation in leads V1-V4 consistent with anteri
 
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $loinc#11524-6 "ECG study"
+* code = $loinc#11524-6 "EKG study"
 * subject = Reference(Patient/patient-acs-example)
 * encounter = Reference(Encounter/encounter-ed-example)
 * effectiveDateTime = "2026-06-12T08:35:00+08:00"

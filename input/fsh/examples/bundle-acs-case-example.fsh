@@ -40,13 +40,8 @@ Description: "Transaction bundle for Acute Coronary Syndrome case — Juan Dela 
 * entry[=].request.method = #POST
 * entry[=].request.url = "Encounter"
 
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Observation/observation-bp-systolic-acs"
-* entry[=].resource = observation-bp-systolic-acs
-* entry[=].request.method = #POST
-* entry[=].request.url = "Observation"
-
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Observation/observation-bp-diastolic-acs"
-* entry[=].resource = observation-bp-diastolic-acs
+* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Observation/observation-bp-acs"
+* entry[=].resource = observation-bp-acs
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
