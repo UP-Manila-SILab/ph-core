@@ -87,15 +87,6 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 * subject = Reference(Patient/example-patient)
 * encounter = Reference(Encounter/example-encounter)
 
-Instance: example-allergy
-InstanceOf: AllergyIntolerance
-Usage: #example
-Description: "Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin."
-* code = $sct#294494002 "Benethamine penicillin allergy"
-* criticality = #high
-* clinicalStatus = $allergyintolerance-clinical#active "Active"
-* patient = Reference(Patient/example-patient)
-
 Instance: example-practitioner
 InstanceOf: PHCorePractitioner
 Usage: #example
