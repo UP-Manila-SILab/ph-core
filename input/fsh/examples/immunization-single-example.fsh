@@ -50,6 +50,3 @@ Description: "Juan Dela Cruz received a completed intramuscular influenza (H5N1-
 * protocolApplied.targetDisease = $sct#772828001 "Influenza caused by Influenza A virus subtype H5N1"
 * protocolApplied.targetDisease.text = "Influenza H5N1"
 * protocolApplied.doseNumberPositiveInt = 1
-
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz received a completed intramuscular influenza (H5N1-1203) vaccine in the left arm on January 10, 2013, at Philippine General Hospital. The vaccine lot number was AAJN11K and was privately funded. Dose 1 was administered by Dr. Maria Clara Santos.</div>"
