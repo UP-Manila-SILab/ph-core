@@ -15,5 +15,3 @@ Description: "Juan Dela Cruz has a high criticality, active allergy to Benethami
 * reaction.manifestation.text = "Skin rash"
 * reaction.severity = #severe
 * note.text = "Patient reported rash and swelling after penicillin administration."
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>"
