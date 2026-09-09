@@ -67,6 +67,7 @@ jobs:
           key: ig-publisher-2.2.7-${{ runner.os }}
 
       - name: Build IG
+        timeout-minutes: 15
         run: |
           mkdir -p ./input-cache
           # Pin to publisher 2.2.7 — 2.2.8+ introduces breaking changes that
@@ -76,7 +77,11 @@ jobs:
             curl -L https://github.com/HL7/fhir-ig-publisher/releases/download/2.2.7/publisher.jar -o ./input-cache/publisher.jar
           fi
           chmod +x ./_genonce.sh
-          ./_genonce.sh
+          # Keep CI deterministic: the public terminology server can block for
+          # minutes per lookup and has previously stretched this step beyond
+          # 90 minutes. Terminology validation remains available in local or
+          # dedicated online builds; CI still runs the publisher and QA gate.
+          ./_genonce.sh -tx n/a
           
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
