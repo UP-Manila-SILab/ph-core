@@ -87,11 +87,6 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 * subject = Reference(Patient/example-patient)
 * encounter = Reference(Encounter/example-encounter)
 
-Instance: example-medication
-InstanceOf: PHCoreMedication
-Usage: #example
-Description: "A medication resource with no specific details provided."
-
 Instance: example-allergy
 InstanceOf: AllergyIntolerance
 Usage: #example
