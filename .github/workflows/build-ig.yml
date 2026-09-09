@@ -58,25 +58,38 @@ jobs:
           sudo gem install jekyll
           sudo npm install -g fsh-sushi
 
-      # Cache the IG Publisher JAR. If you ever bump the publisher version,
-      # update the key below (e.g. 2.2.7 → 2.2.8) so the new JAR is fetched.
+      # Cache the pinned IG Publisher JAR. The version is also part of the
+      # terminology-cache key because publisher upgrades can change validation
+      # and cache behavior.
       - name: Cache IG Publisher
         uses: actions/cache@v4
         with:
           path: ./input-cache/publisher.jar
-          key: ig-publisher-2.2.7-${{ runner.os }}
+          key: ig-publisher-2.3.4-${{ runner.os }}
+
+      - name: Cache terminology data
+        uses: actions/cache@v4
+        with:
+          path: ./input-cache/txcache
+          key: txcache-${{ runner.os }}-publisher-2.3.4-${{ hashFiles('sushi-config.yaml', 'input/fsh/**/*.fsh') }}
+          restore-keys: |
+            txcache-${{ runner.os }}-publisher-2.3.4-
 
       - name: Build IG
+        timeout-minutes: 15
         run: |
           mkdir -p ./input-cache
-          # Pin to publisher 2.2.7 — 2.2.8+ introduces breaking changes that
-          # cause build failures. Local builds via _updatePublisher.sh still
-          # fetch latest; this pin applies to CI only.
+          # Pin CI to a reviewed Publisher release for reproducible validation.
           if [ ! -f ./input-cache/publisher.jar ]; then
-            curl -L https://github.com/HL7/fhir-ig-publisher/releases/download/2.2.7/publisher.jar -o ./input-cache/publisher.jar
+            curl --fail --location --show-error \
+              https://github.com/HL7/fhir-ig-publisher/releases/download/2.3.4/publisher.jar \
+              --output ./input-cache/publisher.jar
           fi
-          chmod +x ./_genonce.sh
-          ./_genonce.sh
+          export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:-} -Dfile.encoding=UTF-8"
+          # Terminology validation remains mandatory. Use the explicit HTTPS R4
+          # endpoint and restored terminology cache; fail within the step timeout
+          # if the service cannot complete validation instead of disabling it.
+          java -jar ./input-cache/publisher.jar -ig . -tx https://tx.fhir.org/r4
           
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
